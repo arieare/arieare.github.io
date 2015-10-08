@@ -2,16 +2,58 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
-  body
-    h1 Hello World
+    //googlefont worksans
+    link(href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,500,600,700,800,300' rel='stylesheet' type='text/css')
+  body(style="font-family: 'Work Sans', sans-serif;color:#333643;")
+    h1(style="font-weight: 100;") Arie Aulia Nugraha
     .basic-info
-      span date of birth
-      span phone
-      span email
-      span website
+      h3 date of birth
+      h3 phone
+      h3 email
+      h3 website
     .education
+      h2(style="font-weight: 500;") 02. Education
+      .education-item
+        .when 2009 &mdash; 2013
+        .where Bandung, ID 
+        .education-title Telkom Institute of Technology
+        .education-description Bachelor of Engineering &mdash; 3.51 GPA, Informatics Engineering Major
+      .education-item
+        .when 2006 &mdash; 2009
+        .where Bandung, ID 
+        .education-title 8 Senior High School
+        .education-description Science Study
     .skills
+      h2 03. Skills
+      .skill-item
+        .what Language
+        .skill-title Indonesia
+        .skill-description primary language and formal writing.
+      .skill-item
+        .what Language
+        .skill-title English
+        .skill-description actively speaking and writing.
+      .skill-item
+        .what Computer and Programming
+        .skill-title Web
+        .skill-description HTML/Jade, CSS3, SASS, LESS
+      .skill-item
+        .what Computer and Programming
+        .skill-title Programming
+        .skill-description Java, Obective-C, .NET
+      .skill-item
+        .what Computer and Programming
+        .skill-title Tools
+        .skill-description Git, XCode, MATLAB, Sublime Text
+      .skill-item
+        .what Design
+        .skill-title Tools
+        .skill-description Git, XCode, MATLAB, Sublime Text
     .selected-experience
+      h2 04. Selected Experience
     .talks
+      h2 05. Talks
     .achievement
+      h2 06. Achievement
     .interest
+      h2 07. Interests

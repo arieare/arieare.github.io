@@ -1,0 +1,35 @@
+//mixins
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin button-box-shadow($top-in, $left-in, $blur-in, $color-in, $top-out, $left-out, $blur-out, $color-out) {
+   -webkit-box-shadow:inset $top-in $left-in $blur-in $color-in, $top-out $left-out $blur-out $color-out;
+   -moz-box-shadow:inset $top-in $left-in $blur-in $color-in, $top-out $left-out $blur-out $color-out;
+   box-shadow:inset $top-in $left-in $blur-in $color-in, $top-out $left-out $blur-out $color-out;
+}
+
+@mixin wrap-text() {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}

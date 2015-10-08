@@ -1,0 +1,14 @@
+//global parameter
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  margin: 0;
+  background: #EDEDED;
+}

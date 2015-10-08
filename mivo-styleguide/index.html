@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Mivo | Web Styleguide</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- Javascript this styleguide only (display clock)-->
+  <script>
+  function startTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML = h+"."+m;
+    var t = setTimeout(function(){startTime()},500);
+  }
+  function checkTime(i) {
+    if (i<10) {i = "0" + i};
+    return i;
+  }
+  </script>
+  <!-- CSS -->
+  <link href="stylesheets/main.css" rel="stylesheet">
+
+<!-- CSS this styleguide only-->
+<style type="text/css">
+#cd-nav {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+}
+#cd-nav ul {
+  /* mobile first */
+  padding: 0;
+  position: fixed;
+  width: 90%;
+  max-width: 200px;
+  right: 10px;
+  bottom: 32px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  background: white;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-padding-start:0;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transition: -webkit-transform 0.15s, visibility 0s 0.15s;
+  -moz-transition: -moz-transform 0.15s, visibility 0s 0.15s;
+  transition: transform 0.15s, visibility 0s 0.15s;
+}
+#cd-nav ul li {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  list-style: none;
+}
+#cd-nav ul.is-visible {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.1s, visibility 0s 0s;
+  -moz-transition: -moz-transform 0.1s, visibility 0s 0s;
+  transition: transform 0.1s, visibility 0s 0s;
+}
+#cd-nav li a {
+  display: block;
+  padding: 1em;
+  color: #303147;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EDEDED;
+}
+#cd-nav li a:hover {
+  background: #FF7B2B; 
+  color: #F7F7F7;
+}
+#cd-nav li:last-child a {
+  border-bottom: none;
+}
+</style>
+</head>
+<body onload="startTime()"> <!-- Javascript this styleguide only (display clock)-->
+  <!--navigation this styleguide only-->
+  <div id="cd-nav">
+    <a href="#0" class="cd-nav-trigger btn-special float-navigation"><span class="context-menu"></span></a>
+    <nav id="cd-main-nav">
+      <ul>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#grids">Grids</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#containers">Containers</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--/navigation-->
+  <div class="container">
+    <!--logo section-->
+    <div class="row">
+      <h2 class="section-title" id="logo">Logo</h2>
+      <hr class="primary">
+    </div>
+    <div class="row">
+      <div class="col-md-6" style="background:#F7F7F7;"><div class="vertical-center"><img src="img/icon_mivo_orange.png" style="width:176px;height:56px;"></div></div>
+      <div class="col-md-6" style="background:#FF7B2B;"><div class="vertical-center"><img src="img/icon_mivo_white.png" style="width:176px;height:56px;"></div>
+    </div>
+  </div>
+  <!--/logo section-->
+  <!--color section-->
+  <div class="row">
+    <h2 class="section-title" id="colors">Colors</h2>
+    <hr class="primary">
+  </div>
+  <div class="row">
+    <!--#primary color-->
+    <div class="col-md-2" style="background:#FF7B2B;text-align:center;color:#303147;padding:0.5em 0;">#FF7B2B (primary)</div>
+    <div class="col-md-2" style="background:#303147;text-align:center;color:#F7F7F7;padding:0.5em 0;">#303147 (secondary)</div>
+    <div class="col-md-4" style="background:#F8F8F8;text-align:center;color:#050517;padding:0.5em 0;">#F8F8F8 (light)</div>
+    <div class="col-md-4" style="background:#050517;text-align:center;color:#F7F7F7;padding:0.5em 0;">#050517 (dark)</div><!--/#primary color-->
+    <!--#secondary color-->
+    <div class="col-md-2" style="background:#B45013;text-align:center;padding:0.5em 0;">#B45013</div>
+    <div class="col-md-2" style="background:#8E95BB;text-align:center;padding:0.5em 0;">#8E95BB</div>
+    <div class="col-md-2" style="background:#EDEDED;text-align:center;padding:0.5em 0;">#EDEDED (background)</div>
+    <div class="col-md-2" style="background:#E2E5EB;text-align:center;padding:0.5em 0;">#E2E5EB</div>
+    <div class="col-md-2" style="background:#D8D8D8;text-align:center;padding:0.5em 0;">#D8D8D8</div>
+    <div class="col-md-2" style="background:#838689;text-align:center;padding:0.5em 0;">#838689</div><!--/#secondary color-->
+    <!--#tertiary color-->
+    <div class="col-md-6" style="background:#EE1E45;text-align:center;padding:0.5em 0;">#EE1E45 (nay)</div>
+    <div class="col-md-6" style="background:#33CA7F;text-align:center;padding:0.5em 0;">#33CA7F (yay)</div><!--/#tertiary color-->
+  </div>
+  <!--/color section-->
+  <!--typography section-->
+  <div class="row">
+    <h2 class="section-title" id="typography">Typography</h2> 
+    <hr class="primary">
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <h1 class="superbig">Superbig (32px / 267%)</h1>
+      <h1>H1 (22px / 183%)</h1>
+      <h2>H2 (20px / 167%)</h2>
+      <h2 class="section-title" title="section title is aligned slightly close to its content below">H2 - Section Title (20px / 167%)</h2>
+      <h3>H3–Lead Parapgraph (14px / 117%)</h3>
+      <h4>h4–Paragraph–Base–Normal (12px / 100%)</h4>
+      <h5>H5–Small–Metadata–Hashtags (10px / 80%)</h5>
+    </div>
+    <div class="col-md-7">
+      <p class="lead">There are two kind of paragraph text; body-text and article-text. Body-text mainly used in web app while article-text used in meta pages (blog, about, press). This parapgraph itself is using class="lead" and slightly bigger than base font-size.</p>
+      <p class="body">Using percentage for {font-size} is strongly recommended</p>
+      <small>This is information text, for metatag or #hashtag</small>
+    </div>
+  </div>
+
+  <!--blog text section-->
+  <div class="row">
+    <h3>BLOG TEXT</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-push-2 white-container">
+      <article>
+        <small class="meta-tag" title="metatag can be timestamp or article tags">Posted 12 Hour ago</small>
+        <h1 class="article-title" title="article title can be a link"><a href="#0" class="link">TECH IN ASIA; “These two entrepreneurs are taking Indonesia’s TV shows global”</a></h1>
+        <p title="all the article paragraph <p> must be inside <article> tag"><a href="#0" class="link" title="inline link have underline style when hovered">Ryan Handoyo</a> and <a href="#0" class="link">Budi Yuwono</a> are the founders of MIVO, and they’ve known each other since elementary school. They started MIVO after they each graduated from their respective universities in Canada and Australia. While working overseas in an Australian data server company, Yuwono saw an opportunity and roped in his buddy to help him found the project. Yuwono says : “While overseas, I missed watching Indonesian TV shows and I think many other Indonesians who live abroad felt the same. That is why I thought of the idea of partnering with Indonesian TV stations and having their content streamed on MIVO.”</p>
+        <h2 class="section-title" title="this is section title indicating different section on an article using <h2 class='section-title'> attribute">How it all began</h2>
+        <p>As fresh graduates, they didn’t have access to capital, and getting funding was rare at the time. Yuwono came up with a plan that let them start their own business with minimal funding. Yuwono says : “MIVO’s biggest cost comes from hosting content on servers. I leveraged on my job in a data centre to initiate this project. I convinced my company to let me use our idle server space to start this project. The company agreed, since it didn’t affect the company’s overall operation. As a result, our startup cost was minimal.”</p>
+        <blockquote>Love what you do and do what you love. Doing something you love will keep you going.</blockquote>
+      </article>
+    </div>
+  </div>
+  <!--/blog text section-->
+  <!--/typography section-->
+  <!--grid section-->
+  <div class="row">
+    <h2 class="section-title" id="grids">Grids</h2>
+    <hr class="primary">
+  </div>
+  <div class="row">
+    <div class="col-md-1" style="background:#F7F7F7;"><div class="vertical-center">col-1</div></div>
+    <div class="col-md-1" style="background:#EDEDED;"><div class="vertical-center">col-2</div></div>
+    <div class="col-md-1" style="background:#F7F7F7;"><div class="vertical-center">col-3</div></div>
+    <div class="col-md-1" style="background:#EDEDED;"><div class="vertical-center">col-4</div></div>
+
+    <div class="col-md-1" style="background:#F7F7F7;"><div class="vertical-center">col-5</div></div>
+    <div class="col-md-1" style="background:#EDEDED;"><div class="vertical-center">col-6</div></div>
+    <div class="col-md-1" style="background:#F7F7F7;"><div class="vertical-center">col-7</div></div>
+    <div class="col-md-1" style="background:#EDEDED;"><div class="vertical-center">col-8</div></div>
+
+    <div class="col-md-1" style="background:#F7F7F7;"><div class="vertical-center">col-9</div></div>
+    <div class="col-md-1" style="background:#EDEDED;"><div class="vertical-center">col-10</div></div>
+    <div class="col-md-1" style="background:#F7F7F7;"><div class="vertical-center">col-11</div></div>
+    <div class="col-md-1" style="background:#EDEDED;"><div class="vertical-center">col-12</div></div>
+  </div>
+  <!--/grid section-->
+  <!--/button section-->
+  <div class="row">
+    <h2 class="section-title" id="buttons">Buttons</h2>
+    <hr class="primary">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <a href="#0" class="btn primary" title="primary button used in positive call to action"><span>button primary</span></a>
+      <button class="btn primary" title="button can be a link <a> or button <button>"><span>button primary</span></button>
+    </div>
+    <div class="col-md-6"><!--code example-->
+      <pre><code>&lt;a href="#" class="<strong>btn primary</strong>"&gt;&lt;span&gt;button primary&lt;/span&gt;&lt;/a&gt; &lt;button class="btn primary"&gt;&lt;span&gt;button primary&lt;/span&gt;&lt;/button&gt; </code></pre>
+    </div><!--/code example-->
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <a href="#0" class="btn secondary" id="buttons"><span>button secondary</span></a>
+      <button class="btn secondary" title="button can be a link <a> or button <button>"><span>button secondary</span></button>
+    </div>
+    <div class="col-md-6"><!--code example-->
+      <pre><code>&lt;a href="#" class="btn secondary"&gt;&lt;span&gt;button secondary&lt;/span&gt;&lt;/a&gt; </code></pre>
+    </div><!--/code example-->
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <a href="#0" class="btn primary icon-left"><span class="arrow">button with icon left</span></a>
+      <a href="#0" class="btn secondary icon-right"><span class="arrow">button with icon right</span></a>
+    </div>
+    <div class="col-md-6"><!--code example-->
+      <pre><code>&lt;a href=&quot;#0&quot; class=&quot;btn secondary icon-right&quot;&gt;&lt;span class=&quot;arrow&quot;&gt;button with icon right&lt;/span&gt;&lt;/a&gt;</code></pre>
+    </div>
+    <div class="col-md-6"><!--/code example-->
+      <a href="#0" class="btn neutral primary"><span>button neutral</span></a>
+      <a href="#0" class="btn neutral secondary"><span>button neutral</span></a>
+      <a href="#0" class="btn disable"><span>button disabled</span></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="#0" class="btn primary full-width"><span>load more</span></a>
+    </div>
+    <div class="col-md-12">
+      <button class="btn secondary full-width"><span>full width button</span></button>
+    </div>
+  </div>
+  <div class="row"> <!--special button-->
+    <h3 title="special button serve for specific function">SPECIAL BUTTONS</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="#0" class="btn-special float-navigation" title="back to top"><span class="to-top"></span></a>
+      <a href="#0" class="btn-special float-navigation" title="menu"><span class="context-menu"></span></a>
+      <a href="#0" class="btn-special float-navigation" title="menu"><span class="close"></span></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="#0" class="btn-special video-ctrl" title="play"><span class="play"></span></a>
+      <a href="#0" class="btn-special video-ctrl" title="stop"><span class="stop"></span></a>
+      <a href="#0" class="btn-special video-ctrl" title="volume"><span class="volume"></span></a>
+      <a href="#0" class="btn-special video-ctrl" title="mute"><span class="mute"></span></a>
+      <a href="#0" class="btn-special video-ctrl" title="fullscreen"><span class="maximize"></span></a>
+      <a href="#0" class="btn-special video-ctrl" title="minimize"><span class="minimize"></span></a>
+      <a href="#0" class="btn-special video-ctrl"><span class="quality">auto</span></a>
+    </div>
+  </div> <!--/special button--> 
+  <!--/button section-->
+  <!--form section-->
+  <div class="row">
+    <h2 class="section-title" id="forms">Forms</h2> 
+    <hr class="primary">
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="white-container" title="white-container class can be used to contain widget or forms">
+      <div class="form-section"> 
+        <label>Textbox</label>
+        <input type="text" placeholder="Text Input"></input>
+        <label class="warning">Password mismatch</label>
+        <input type="password" placeholder="Password" class="warning"></input>
+        <label class="valid">Verified!</label>
+        <input type="password" placeholder="Password" class="valid"></input>
+        <label class="disable">Email disabled</label>
+        <input type="email" placeholder="email" class="disable"></input>
+      </div>
+
+      <div class="form-section dropdown"> <!--dropdown block-->
+        <span class="form-title">Language Settings</span>
+        <button class="btn secondary icon-right dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+          <span class="caret-down">Language Options</span>
+        </button>
+        <ul class="dropdown-menu animated swing" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#0">English</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#0">Indonesia</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#0">Swahili</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#0">Mozambique</a></li>
+        </ul>
+        <button class="btn primary"><span>Save Changes</span></button>
+      </div><!--/dropdown block-->
+
+      <div class="form-section radio">
+        <span class="form-title">Hearing Impaired</span>
+        <input id="label 1" type="radio" name="gender" value="label 1"><label for="label 1">label 1</label>
+        <input id="female" type="radio" name="gender" value="female"><label for="female">Yes</label>
+        <input id="undefined" type="radio" name="gender" value="undefined"><label for="undefined">No</label>
+      </div>
+
+      <div class="form-section checkbox">
+        <span class="form-title">Keep Signed In?</span>
+        <input id="check1" type="checkbox" name="check" value="check1">
+        <label for="check1">Remember Me</label>
+        <input id="check2" type="checkbox" name="check" value="check2">
+        <label for="check2">Whatever</label>
+      </div>
+    </div>
+  </div>
+    <div class="col-md-8"><pre><code>&lt;div class=&quot;form-section&quot;&gt;
+  &lt;label&gt;Textbox&lt;/label&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Text Input&quot;&gt;&lt;/input&gt;
+  &lt;label class=&quot;warning&quot;&gt;Password mismatch&lt;/label&gt;
+  &lt;input type=&quot;password&quot; placeholder=&quot;Password&quot; class=&quot;warning&quot;&gt;&lt;/input&gt;
+  &lt;label class=&quot;valid&quot;&gt;Verified!&lt;/label&gt;
+  &lt;input type=&quot;password&quot; placeholder=&quot;Password&quot; class=&quot;valid&quot;&gt;&lt;/input&gt;
+  &lt;label class=&quot;disable&quot;&gt;Email disabled&lt;/label&gt;
+  &lt;input type=&quot;email&quot; placeholder=&quot;email&quot; class=&quot;disable&quot;&gt;&lt;/input&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-section dropdown&quot;&gt;
+  &lt;span class=&quot;form-title&quot;&gt;Language Settings&lt;/span&gt;
+  &lt;button class=&quot;btn secondary icon-right dropdown-toggle&quot; type=&quot;button&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot;&gt;
+  &lt;span class=&quot;caret-down&quot;&gt;Language Options&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;Indonesia&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;Swahili&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#0&quot;&gt;Mozambique&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;button class=&quot;btn primary&quot;&gt;&lt;span&gt;Save Changes&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-section radio&quot;&gt;
+  &lt;span class=&quot;form-title&quot;&gt;Hearing Impaired&lt;/span&gt;
+  &lt;input id=&quot;label 1&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;label 1&quot;&gt;&lt;label for=&quot;label 1&quot;&gt;Both&lt;/label&gt;
+  &lt;input id=&quot;female&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;&lt;label for=&quot;female&quot;&gt;Yes&lt;/label&gt;
+  &lt;input id=&quot;undefined&quot; type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;undefined&quot;&gt;&lt;label for=&quot;undefined&quot;&gt;No&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-section checkbox&quot;&gt;
+  &lt;span class=&quot;form-title&quot;&gt;Checkbox Title&lt;/span&gt;
+  &lt;input id=&quot;check1&quot; type=&quot;checkbox&quot; name=&quot;check&quot; value=&quot;check1&quot;&gt;
+  &lt;label for=&quot;check1&quot;&gt;Remember Me&lt;/label&gt;
+  &lt;input id=&quot;check2&quot; type=&quot;checkbox&quot; name=&quot;check&quot; value=&quot;check2&quot;&gt;
+  &lt;label for=&quot;check2&quot;&gt;Whatever&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <!--/form section-->
+    <!--container section-->
+    <div class="row">
+      <h2 class="section-title" id="containers">Containers</h2> 
+      <hr class="primary">
+    </div>
+    <div class="row">
+    <h3>ALERT</h3>
+  </div>
+    <div class="row">
+      <div class="col-md-12">
+      <pre><code>&lt;div class=&quot;alert&quot; id=&quot;alert&quot;&gt;
+  &lt;span class=&quot;close&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    Alert content here
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <div class="col-md-12">
+        <button class="btn primary" id="showhidealert" value="show"><span>show/hide alert</span></button>
+        <div class="alert" id="alert">
+          <span class="close"></span>
+          <div class="content">.<a href="#0" class="link">@RaffiAhmad</a> mengeluarkan air mata saat menceritakan tentang sahabatnya Olga Syahputra <a href="#0" class="link">http://bit.ly/M-antv</a></div>
+        </div>
+      </div>
+            </div>
+        <div class="row">
+    <h3>WIDGET</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="widget">
+        <div class="title" title="Widget Title">Now Playing | <span id="clock"></span></div>
+        <div class="content">
+          <div class="row" style="background-image:url('img/thumbnails/Indosiar-DA2.png');">
+            <div class="col-md-5 col"><a href="#0">Indosiar</a></div>
+            <div class="col-md-7 col"><a href="#0">Dangdut Academy 2</a></div>
+          </div>
+          <div class="row" style="background-image:url('img/thumbnails/MetroTV-Berita.png');">
+            <div class="col-md-5 col"><a href="#0">Metro TV</a></div>
+            <div class="col-md-7 col"><a href="#0">Berita Petang</a></div>
+          </div>
+          <div class="row" style="background-image:url('img/thumbnails/Net-IniTalkshow.png');">
+            <div class="col-md-5 col"><a href="#0">Net tv</a></div>
+            <div class="col-md-7 col"><a href="#0">Ini Talkshow</a></div>
+          </div>
+          <div class="row" style="background-image:url('img/thumbnails/RTV-RunningMan.png');">
+            <div class="col-md-5 col"><a href="#0">RTV</a></div>
+            <div class="col-md-7 col"><a href="#0">Running Man</a></div>
+          </div>
+          <div class="row" style="background-image:url('img/thumbnails/MivoChannel-Mivostik.png');">
+            <div class="col-md-5 col"><a href="#0">Mivo channel</a></div>
+            <div class="col-md-7 col"><a href="#0">Mivostik</a></div>
+          </div>
+          <div class="row" style="background-image:url('');">
+            <div class="col-md-5 col"><a href="#0">SCTV</a></div>
+            <div class="col-md-7 col"><a href="#0">No Information</a></div>
+          </div>
+          <div class="row" style="background-image:url('');">
+            <div class="col-md-5 col"><a href="#0">RCTI</a></div>
+            <div class="col-md-7 col"><a href="#0">No Information</a></div>
+          </div>
+        </div><a href="#0" class="btn primary full-width"><span>load more</span></a>
+      </div>
+    </div>
+
+     <div class="col-md-7">
+        <pre><code>&lt;div class=&quot;col-md-4 widget&quot;&gt;
+  &lt;div class=&quot;title&quot;&gt;Widget Title here&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-5 col&quot;&gt;Left Column Content&lt;/div&gt;
+      &lt;div class=&quot;col-md-7 col&quot;&gt;Right Column Content&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-md-5 col&quot;&gt;Left Column Content&lt;/div&gt;
+      &lt;div class=&quot;col-md-7 col&quot;&gt;Right Column Content&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+      </div>
+  </div>
+<!--/container section-->
+
+  <!--player section-->
+  <div class="row">
+    <h3>VIDEO PLAYER</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p>Video player size keeps within 16:9 ratio <!--with 750-px min-width /--> 100% container max-width (try resizing this browser). The calculation already done in <strong>video-container</strong> class.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+        <div class="video-container">
+          <div class="title-bar" title="title bar">Program Title</div>
+          <div class="video-player" title="video goes here" style="background-position:center;background-size:cover;background-image:url('img/errors/bg.png');"></div>
+          <div class="video-control" title="video control">
+
+              <a href="#0" class="btn-special video-ctrl" title="play"><span class="play"></span></a>
+
+              <a href="#0" class="btn-special video-ctrl" title="volume"><span class="volume"></span></a>
+
+              <a href="#0" class="btn-special video-ctrl" title="fullscreen" style="float:right;margin-right:0;"><span class="maximize"></span></a>
+
+              <a href="#0" class="btn-special video-ctrl" style="float:right;"><span class="quality">hq</span></a>
+
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <pre><code>&lt;div class=&quot;video-container&quot;&gt;
+  &lt;div class=&quot;title-bar&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;video-player&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;video-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div><!--/player section-->
+  </div>
+  <div class="row">
+    <hr class="primary">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+    <a class="btn primary full-width" href="source.zip">Download HTML + SCSS source</a>
+  </div>
+  </div>
+    </div> <!--/end of container-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--<script src="js/jquery-2.1.1.js"></script>-->
+    <script src="js/components/dropdown.js"></script> <!-- for dropdown -->
+    <script src="js/components/modal.js"></script> <!-- for modal -->
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <script type="text/javascript"> //show alert this styleguide only
+    var alertdiv = document.getElementById('alert');
+    var showhidealertbtn = document.getElementById('showhidealert');
+    showhidealert.onclick = function() {
+      if(showhidealertbtn.value=="show")
+      {
+        alertdiv.className = 'alert visible animated fadeInRightBig'
+        showhidealertbtn.value="hide";
+        showhidealertbtn.className = 'btn secondary'
+      }
+      else
+      {
+        alertdiv.className = 'alert visible animated bounceOutRight'
+        showhidealertbtn.value="show";
+        showhidealertbtn.className = 'btn primary'
+      }
+    };
+    </script>
+</body>
+</html>

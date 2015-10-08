@@ -1,0 +1,207 @@
+@import "base";
+.form-title {
+   display: block;
+   font-size: $h3;
+   font-weight: $medium;
+}
+.form-section {
+   padding-bottom: 1em;
+}
+//text input
+label {
+   display: block;
+   padding-left: 4px;
+   letter-spacing: 0.5px;
+   color: #838689;
+   font-weight: $medium;
+   text-transform: uppercase;
+   margin-top: 1.5em;
+   &.warning {
+      color: $warning;
+   }
+   &.valid {
+      color: $valid;
+   }
+   &.disable {
+      color: $text-disable;
+   }
+}
+input:not([type=submit]):not([type=file]) {
+   line-height: 1.3;
+   width: 100%;
+   letter-spacing: 0.5px;
+   font-weight: $medium;
+   background: white;
+   border: 1px solid #E2E5EB;
+   @include rounded();
+   @include button-box-shadow(0, 0, 0, rgba(#fff, 0 ), 0, 1px, 0, rgba(#8E95BB, .5));
+   padding: 8px 12px;
+   font-size: $base-font-size;
+   font-family: $base-font-family;
+   cursor: pointer;
+   display: block;
+   &:hover {
+      border: 1px solid #8E95BB;
+   }
+   &:focus {
+      border: 1px solid $primary-color;
+      outline: none;
+      @include button-box-shadow(0, 1px, 0, rgba(#8E95BB, .2 ), 0, 0, 0, rgba(#fff, 0));
+      cursor: text;
+   }
+   &.warning {
+      border: 1px solid $warning;
+      color: $warning;
+   }
+   &.valid {
+      border: 1px solid $valid;
+      color: $valid;
+   }
+   &.disable {
+      background-color: $bg-disable;
+      color: $text-disable;
+      cursor: not-allowed;
+      pointer-events: none;
+      @include button-box-shadow(0, 0, 0, rgba(#fff, 0 ), 0, 0, 0, rgba(#fff, 0 ));
+      text-shadow: none;
+      border: none;
+   }
+}
+//dropdown
+.dropdown {
+   display: inline-block;
+   position: relative;
+   .dropdown-menu {
+      background: $neutral-color;
+      @include rounded ();
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      padding: 0;
+      list-style: none;
+      margin-top: 0;
+      display: none;
+      position: absolute;
+      min-width: 100%;
+      right:0;
+      border: none;
+      overflow: hidden;
+      li {
+         list-style: none;
+         a {
+            display: block;
+            outline-color: $primary-color;
+            padding: 1.2em;
+            color: $secondary-color;
+            font-size: $base-font-size;
+            font-weight: $medium;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-bottom: 1px solid #EDEDED;
+            &:hover {
+               color: $white;
+               background: $primary-color;
+            }
+         }
+         &:last-child a {
+            border-bottom: none;
+         }
+      } 
+   }
+}
+.open>.dropdown-menu{
+   display: block;
+   z-index: 99;
+}
+//radionbutton
+.radio {
+   input[type=radio] {
+      display: none;
+   }
+   label {
+      cursor: pointer;
+      position: relative;
+      padding: 0 2em;
+      margin: 1em 0 1em 0.5em;
+      display: inline-block !important;
+      font-weight: $demi-bold;
+      color: $secondary-color;
+      &:before {
+         content: "";
+         display: inline-block;
+         @include rounded-maximum();
+         @include square-size (16px);
+         @include button-box-shadow(0, 1px, 0, rgba(#fff, .2 ), 0, 1px, 0, rgba(#000, .2 ));
+         border: solid 2px $secondary-color;
+         background: none;
+         position: absolute;
+         left: 0;
+         bottom: 2px;
+      }
+      &:hover {
+         &:before {
+            border: solid 2px $primary-color;
+         }
+      }
+
+   }
+   input[type=radio]:checked + label{
+      color: $primary-color;
+      &:before {
+       background: url(../img/icon_form_radio.svg) no-repeat;
+       background-size: 100%;
+         background-color: $primary-color;
+      }
+      &:hover {
+         &:before {
+            border: solid 2px $primary-color;
+            background-color: $secondary-color;
+         }
+      }
+   }
+}
+//checkbox
+.checkbox {
+   input[type=checkbox] {
+      display: none;
+   }
+   label {
+      cursor: pointer;
+      position: relative;
+      padding: 0 2em;
+      margin: 1em 0 1em 0.5em;
+      display: inline-block !important;
+      font-weight: $demi-bold;
+      color: $secondary-color;
+      &:before {
+         content: "";
+         display: inline-block;
+         @include rounded();
+         @include square-size (16px);
+         @include button-box-shadow(0, 1px, 0, rgba(#fff, .2 ), 0, 1px, 0, rgba(#000, .2 ));
+         border: solid 2px $secondary-color;
+         background: none;
+         position: absolute;
+         left: 0;
+         bottom: 2px;
+      }
+      &:hover {
+         &:before {
+            border: solid 2px $primary-color;
+         }
+      }
+
+   }
+   input[type=checkbox]:checked + label{
+      color: $primary-color;
+      &:before {
+       background: url(../img/icon_form_check.svg) no-repeat;
+       background-size: 100%;
+         background-color: $primary-color;
+      }
+      &:hover {
+         &:before {
+            border: solid 2px $primary-color;
+            background-color: $secondary-color;
+         }
+      }
+   }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_play</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0196078431   0 0 0 0 0.0196078431   0 0 0 0 0.0901960784  0 0 0 0.07 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_play" sketch:type="MSLayerGroup">
+            <path d="M0,0 L32,0 L32,32 L0,32 L0,0 Z" id="bound_28" fill-opacity="0.01" fill="#F7F7F7" sketch:type="MSShapeGroup"></path>
+            <path d="M16.7456374,22.191364 C14.2564088,23.3806246 8.84742405,25.5496145 8.34894915,24.8714603 C7.85047425,24.1933062 7.91812079,7.75783418 8.34894915,7.11775085 C8.77977751,6.47766752 14.240093,8.60079152 16.7211637,9.7861546 C19.2022344,10.9715177 25.9938857,15.1160933 25.9999959,15.9946056 C26.006106,16.8731179 19.2348659,21.0021034 16.7456374,22.191364 Z" stroke="#FF7B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#filter-1)" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

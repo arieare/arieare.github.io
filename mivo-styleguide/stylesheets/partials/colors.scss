@@ -1,0 +1,30 @@
+//Named Colors
+$orange: #FF7B2B; //primary
+$dark-orange: #B45013; //primary-shadow
+$dark-purple: #303147; //secondary
+$dark-dark-purple: #050517; //primary-shadow
+$grey: #D8D8D8;
+$light-light-grey: #FCFDFD;
+$light-grey: #F7F9FA;
+$white: #F8F8F8;
+$black: #050517;
+$red: #EE1E45; //nay
+$green: #33CA7F; //yay
+
+//Color Hierarchy
+$primary-color: $orange;
+$secondary-color: $dark-purple;
+$light-color: $white;
+$dark-color: $black;
+$neutral-color: $light-light-grey;
+
+//Functional Colors
+$btn-shadow-primary: $dark-orange;
+$btn-shadow-secondary: $dark-dark-purple;
+$bg-disable: $light-grey;
+$text-disable: $grey;
+$warning: $red;
+$valid: $green;
+
+//Text Colors
+$text-color: $dark-purple;
