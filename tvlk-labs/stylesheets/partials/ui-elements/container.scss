@@ -1,0 +1,135 @@
+@import "base";
+
+//alert
+.alert {
+	position: fixed;
+	color: rgba($secondary-color, 1);
+	@include rounded();
+	max-width: 350px;
+	top: 10px;
+	right: 10px;
+	background: white;
+	display: none;
+	@include button-box-shadow(0, 0, 0, rgba(#fff, 0 ), 0, 1px, 3px, rgba(0, 0, 0, 0.4));
+	&.visible {
+		display: block !important;
+	}
+	.close {
+		display: block;
+		position: absolute;
+		top: calc(50% - 11px);
+		right: 1em;
+		@include square-size(22px);
+		background: url(../img/icon_float_close.svg) no-repeat;
+		background-size: 100%;
+	}
+	.content {
+		position: relative;
+		font-size: $h3;
+		text-align: left;
+		padding: 1em 3em 1em 1em;
+		@include wrap-text();
+	}
+}
+//white container
+.white-container {
+	@include rounded();
+	background-color: white;
+	border: solid thin #E2E5EB;
+	@include button-box-shadow(0, 0, 0, rgba(#fff, 0 ), 0, 1px, 0, rgba(#8E95BB, .5));
+	padding: 1em 2em;
+	.form-title {
+		padding-top: 0.5em;
+	}
+}
+//widget
+.widget {
+	@include rounded();
+	background-color: white;
+	border: solid thin #E2E5EB;
+	@include button-box-shadow(0, 0, 0, rgba(#fff, 0 ), 0, 1px, 0, rgba(#8E95BB, .5));
+	padding: 0;
+	overflow: hidden;
+	.title {
+		display: block;
+		font-size: $h3;
+		font-weight: $demi-bold;
+		text-transform: uppercase;
+		border-bottom: solid thin $grey;
+		padding: 0.5em 1em;
+		letter-spacing: 1px;
+	}
+	.content {
+		.row {
+			@include vendor-prefix(background-size, cover);
+			@include vendor-prefix(background-repeat, no-repeat);
+			@include vendor-prefix(background-position, center);
+			border-bottom: solid thin $grey;
+		}
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		font-size: $base-font-size;
+		font-weight: $medium;
+		color: $white;
+		.col {
+			background-color: rgba($black, .5);
+			&:hover {
+				background-color: rgba($black, .2);
+			}
+		}
+		a {
+			display:block;
+			padding: 1em 1em;
+			text-decoration: none;
+			color: $white;
+		}
+	}
+}
+
+//video-player
+.video-container {
+	width: 100%;
+	//min-width: 750px; //keeping the minimum width
+	padding-bottom: 56.25%; //keeping the ratio 16:9 //
+	//min-height: 422px; //keeping the minimum height
+	position: relative;
+	.title-bar {
+		background: $secondary-color;
+		height: 28px;
+		width:100%;
+	    -webkit-border-radius: 4px 4px 0 0;
+ 		-moz-border-radius: 4px 4px 0 0;
+  		border-radius: 4px 4px 0 0;
+  		color: $white;
+  		font-weight: $medium;
+  		letter-spacing: 0.8px;
+  		text-transform: uppercase;
+  		padding: 0.5em 1em ;
+  		postion: absolute;
+  		top:0;
+  		left:0;
+  		z-index: 2;
+	}
+	.video-player {
+		height: calc(100% - 71px);
+		margin: 0;
+		background: $black;
+		position: absolute;
+		top: 28px;
+		left: 0;
+		width:100%;
+	}
+	.video-control {
+		padding: 0 1em ;
+		position: absolute;
+		bottom: 0;
+	    -webkit-border-radius: 0 0 4px 4px;
+ 		-moz-border-radius: 0 0 4px 4px;
+  		border-radius: 0 0 4px 4px;
+		background-color: $white;
+		border: solid thin #E2E5EB;
+		@include button-box-shadow(0, 0, 0, rgba(#fff, 0 ), 0, 1px, 0, $grey);
+		height: 44px;
+		width:100%;
+	}
+}
