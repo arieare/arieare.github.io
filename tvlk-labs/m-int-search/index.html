@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/autoNumeric-min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script>
+  $(document).ready(function(){
+    $(".price-update").sticky({bottomSpacing:0});
+  });
+</script>
+	<link href="style/main.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			color: #434343;
+		}
+		#book {
+			outline: none;
+			border: 0;
+			background: rgb(249,109,1);
+			padding: 15px 40px 15px 40px;
+			border-radius: 3px;
+			color: #ffffff;
+			transform: translateY(15%); 
+		}
+
+		#book:hover {
+			background-color: #F57D00;
+			transition: background-color 0.2s ease;
+		}
+
+		#book:active {
+			background-color: #E26A00;
+			transition: background-color 0.2s ease;
+		}
+
+		#book:disabled {
+			background-color: rgba(249, 109, 1, 0.6);
+			color: rgba(255, 255, 255, 0.6);
+			cursor: not-allowed;
+		}
+
+		.search-item {
+			border: 1px solid #dadada;
+			border-radius: 3px; 
+			padding: 24px !important;
+			display: block;
+			margin-bottom: 0.5em;
+		}
+
+		.search-item:hover {
+			background-color: #F6F6F6;
+			cursor: pointer;
+		}
+
+		.price-update {
+			background-color:#F6F6F6;
+			margin-bottom: 0;
+		}
+
+		#totalprice {
+			color: rgb(249,109,1);
+		}
+
+		.dpt-column, .rtn-column {
+			overflow: scroll;
+		}
+
+	</style>
+	<title>Search Results</title>
+</head>
+<body>
+<div class="navbar-fixed">
+	<nav>
+		<div class=" nav-wrapper">
+			<span>Traveloka</span>
+			<a href="#" class="departure-date center">Jakarta–Seoul (15 Feb 2015)</a>
+		</div> 
+	</nav>
+	</div>
+<div class="cd-tabs">
+	<nav>
+		<ul class="cd-tabs-navigation nav-wrapper">
+			<li class="col s6"><a data-content="Departure" class="selected" href="#0">Departure</a></li>
+			
+			<li class="col s6"><a data-content="Return" class="selected" href="#0">Return</a></li>
+		</ul> <!-- cd-tabs-navigation -->
+	</nav>
+ 
+	<ul class="cd-tabs-content">
+		<li data-content="Departure" class="selected">
+			<p>content for Departure</p>
+		</li>
+ 
+		<li data-content="Return" class="selected">
+			<p>content for Return</p>
+		</li>
+	</ul> <!-- cd-tabs-content -->
+</div> <!-- cd-tabs -->
+
+	<div class="container"> 
+		<div class="row">  
+			<form action="" class="col s12 dpt-column">
+				<h4>Departure</h4>
+				<h5>Jakarta–Seoul (15 Feb 2015)</h5>
+				<label class="col s12 search-item">
+					<input type="radio" name="dpt" value="3596550"> &emsp; CGK – ICN <strong class="currency">3596550</strong>
+				</label>
+				<label class="col s12 search-item">
+					<input type="radio" name="dpt" value="3792000"> &emsp; CGK – ICN <strong class="currency">3792000</strong>
+				</label>
+				<label class="col s12 search-item">
+					<input type="radio" name="dpt" value="3792000"> &emsp; CGK – ICN <strong class="currency">3792000</strong>
+				</label>
+			</form>
+			<form action="" class="col s12 rtn-column">
+				<h4>Return</h4>
+				<h5>Seoul–Jakarta (17 Feb 2015)</h5>
+				<label class="col s12 search-item">
+					<input type="radio" name="rtn" value="3596550"> &emsp; ICN – CGK <strong class="currency">3596550</strong>
+				</label>
+				<label class="col s12 search-item">
+					<input type="radio" name="rtn" value="3596550"> &emsp; ICN – CGK <strong class="currency">3596550</strong>
+				</label>
+				<label class="col s12 search-item">
+					<input type="radio" name="rtn" value="3608800"> &emsp; ICN – CGK <strong class="currency">3608800</strong>
+					<label class="col s12">
+					</form>
+				</div>
+			</div>
+
+			<div class="row price-update navbar-fixed">
+				<div class="container">
+				<h5 class="col s6">Total <span id="totalprice" class="currency">0</span></h5>
+				<div class="col s6"><button id="book" class="right" disabled="true">Book Now</button></div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				$(".currency").autoNumeric('init',{
+        aSep: '.',
+        aDec: ',', 
+        aSign: 'Rp '
+    });
+
+			</script>
+		</body>
+		</html>

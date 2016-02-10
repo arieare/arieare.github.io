@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/autoNumeric-min.js"></script>
 	<script src="js/script.js"></script>
 	<link href="style/main.css" rel="stylesheet">
 	<style type="text/css">
@@ -17,8 +18,7 @@
 			padding: 15px 40px 15px 40px;
 			border-radius: 3px;
 			color: #ffffff;
-			top: 50%;
-			transform: translateY(35%); 
+			transform: translateY(15%); 
 		}
 
 		#book:hover {
@@ -61,6 +61,7 @@
 
 		.dpt-column, .rtn-column {
 			max-height: 80vh;
+			overflow: scroll;
 		}
 
 	</style>
@@ -74,26 +75,26 @@
 				<h4>Departure</h4>
 				<h5>Jakarta–Seoul (15 Feb 2015)</h5>
 				<label class="col s12 search-item">
-					<input type="radio" name="dpt" value="3596550"> &emsp; CGK – ICN <strong>Rp 3.596.550</strong>
+					<input type="radio" name="dpt" value="3596550"> &emsp; CGK – ICN <strong class="currency">3596550</strong>
 				</label>
 				<label class="col s12 search-item">
-					<input type="radio" name="dpt" value="3792000"> &emsp; CGK – ICN <strong>Rp 3.792.000</strong>
+					<input type="radio" name="dpt" value="3792000"> &emsp; CGK – ICN <strong class="currency">3792000</strong>
 				</label>
 				<label class="col s12 search-item">
-					<input type="radio" name="dpt" value="3792000"> &emsp; CGK – ICN <strong>Rp 3.792.000</strong>
+					<input type="radio" name="dpt" value="3792000"> &emsp; CGK – ICN <strong class="currency">3792000</strong>
 				</label>
 			</form>
 			<form action="" class="col s6 rtn-column">
 				<h4>Return</h4>
 				<h5>Seoul–Jakarta (17 Feb 2015)</h5>
 				<label class="col s12 search-item">
-					<input type="radio" name="rtn" value="3596550"> &emsp; ICN – CGK <strong>Rp 3.596.550</strong>
+					<input type="radio" name="rtn" value="3596550"> &emsp; ICN – CGK <strong class="currency">3596550</strong>
 				</label>
 				<label class="col s12 search-item">
-					<input type="radio" name="rtn" value="3596550"> &emsp; ICN – CGK <strong>Rp 3.596.550</strong>
+					<input type="radio" name="rtn" value="3596550"> &emsp; ICN – CGK <strong class="currency">3596550</strong>
 				</label>
 				<label class="col s12 search-item">
-					<input type="radio" name="rtn" value="3608800"> &emsp; ICN – CGK <strong>Rp 3.608.800</strong>
+					<input type="radio" name="rtn" value="3608800"> &emsp; ICN – CGK <strong class="currency">3608800</strong>
 					<label class="col s12">
 					</form>
 				</div>
@@ -101,9 +102,17 @@
 
 			<div class="row price-update">
 				<div class="container">
-				<h3 class="col s6">Total Rp <span id="totalprice">0</span></h3>
+				<h4 class="col s6">Total <span id="totalprice" class="currency">0</span></h4>
 				<div class="col s6"><button id="book" class="right" disabled="true">Book Now</button></div>
 				</div>
 			</div>
+
+			<script type="text/javascript">
+				$(".currency").autoNumeric('init',{
+        aSep: '.',
+        aDec: ',', 
+        aSign: 'Rp '
+    });
+			</script>
 		</body>
 		</html>
