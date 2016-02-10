@@ -82,6 +82,7 @@
 			background-color: #0770CD;
 			color: #ffffff;
 			border-radius: 999px;
+			padding: 0.2em 0.5em;
 		}
 
 	</style>
@@ -98,12 +99,12 @@
 	<div class="row">
 		<div class="col s12">
 			<ul class="tabs">
-				<li class="tab col s6"><a class="active" href="#dpt-column"><span class="bullet-number">1.</span> Departure</a></li>
-				<li class="tab col s6"><a href="#rtn-column"><span class="bullet-number">2.</span> Arrival</a></li>
+				<li class="tab col s6"><a class="active" href="#dpt-column"><span class="bullet-number">1</span> &ensp; Departure</a></li>
+				<li class="tab col s6"><a href="#rtn-column"><span class="bullet-number">2</span> &ensp; Arrival</a></li>
 			</ul>
 		</div>
 		<div id="dpt-column" class="col s12">
-			<form action="" class="col s12 dpt-column">
+			<form action="" class="dpt-column">
 				<h5>Jakarta–Seoul</h5>
 				<h6>15 Feb 2015</h6>
 				<label class="col s12 search-item">
@@ -118,7 +119,7 @@
 			</form>
 		</div>
 		<div id="rtn-column" class="col s12">
-			<form action="" class="col s12 rtn-column">
+			<form action="" class="rtn-column">
 				<h5>Seoul–Jakarta</h5>
 				<h6>17 Feb 2015</h6>
 				<label class="col s12 search-item">
@@ -131,20 +132,21 @@
 					<input type="radio" name="rtn" value="3608800"> &emsp; ICN – CGK <strong class="currency">3608800</strong>
 					<label class="col s12">
 					</form>
-		</div>
-	</div>
+				</div>
+			</div>
 
-	<div class="container">  
+			<div class="container">  
 
-			
+
 			</div>
 
 			<div class="row price-update">
-					<div class="col s6">
-						<small class="col s12">Total</small> 
-						<strong class="col s12 currency" id="totalprice">0</strong>
-					</div>
-					<div class="col s6"><button id="book" class="right" disabled="true">Book Now</button></div>
+
+				<div class="col s6">
+					<small class="col s12">Total</small> 
+					<strong class="col s12 currency" id="totalprice">0</strong>
+				</div>
+				<div class="col s6"><button id="book" class="right" disabled="true">Book Now</button></div>
 			</div>
 
 			<script type="text/javascript">
