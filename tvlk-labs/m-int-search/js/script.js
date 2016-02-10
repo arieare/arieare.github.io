@@ -8,6 +8,14 @@ $(function() {
 		totalPrice = Number(dptPrice) + Number(rtnPrice);
 		$("#totalprice").html(totalPrice);
 		$("#bullet-number-1").html("✓");
+		if ($("#bullet-number-2").html() != "✓") {
+			setTimeout(function(){
+				$('ul.tabs').tabs('select_tab', 'rtn-column');
+			},1000);
+		}
+		else {
+			
+		}
 
 		// $("#totalprice").autoNumeric('update');
 
@@ -25,6 +33,14 @@ $(function() {
 		totalPrice = Number(dptPrice) + Number(rtnPrice);
 		$("#totalprice").html(totalPrice);
 		$("#bullet-number-2").html("✓");
+		if ($("#bullet-number-1").html() != "✓") {
+			setTimeout(function(){
+				$('ul.tabs').tabs('select_tab', 'dpt-column');
+			},1000);
+		}
+		else {
+			
+		}
 
 		// $("#totalprice").autoNumeric('update');
 
