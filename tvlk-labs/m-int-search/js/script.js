@@ -7,8 +7,9 @@ $(function() {
 		dptPrice = $('input[name=dpt]:checked').val();
 		totalPrice = Number(dptPrice) + Number(rtnPrice);
 		$("#totalprice").html(totalPrice);
+		$("#bullet-number-1").html("✓");
 
-		$("#totalprice").autoNumeric('update');
+		// $("#totalprice").autoNumeric('update');
 
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
 			$("#book").prop("disabled", false);
@@ -23,8 +24,9 @@ $(function() {
 		rtnPrice = $('input[name=rtn]:checked').val();
 		totalPrice = Number(dptPrice) + Number(rtnPrice);
 		$("#totalprice").html(totalPrice);
+		$("#bullet-number-2").html("✓");
 
-		$("#totalprice").autoNumeric('update');
+		// $("#totalprice").autoNumeric('update');
 
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
 			$("#book").prop("disabled", false);

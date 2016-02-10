@@ -7,6 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="js/autoNumeric-min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/odometer.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/velocity.min.js"></script>
 	<script src="js/tabs.js"></script>
@@ -18,6 +19,7 @@
 		});
 	</script>
 	<link href="style/main.css" rel="stylesheet">
+	<link href="style/odometer-theme-default.css" rel="stylesheet">
 	<style type="text/css">
 		body {
 			color: #434343;
@@ -29,6 +31,8 @@
 			padding: 10px 20px 10px 20px;
 			border-radius: 3px;
 			color: #ffffff;
+			font-weight: bold;
+			letter-spacing: 0.0625em;
 
 		}
 
@@ -92,15 +96,15 @@
 	<div class="navbar-fixed">
 		<nav>
 			<div class=" nav-wrapper">
-				<span class="brand-logo center">traveloka</span>
+				<span class="brand-logo center">Jakarta↩︎Seoul</span>
 			</div> 
 		</nav>
 	</div>
 	<div class="row">
 		<div class="col s12">
 			<ul class="tabs">
-				<li class="tab col s6"><a class="active" href="#dpt-column"><span class="bullet-number">1</span> &ensp; Departure</a></li>
-				<li class="tab col s6"><a href="#rtn-column"><span class="bullet-number">2</span> &ensp; Arrival</a></li>
+				<li class="tab col s6"><a class="active" href="#dpt-column"><span class="bullet-number" id="bullet-number-1">1</span>&ensp;Departure</a></li>
+				<li class="tab col s6"><a href="#rtn-column"><span class="bullet-number" id="bullet-number-2">2</span>&ensp;Arrival</a></li>
 			</ul>
 		</div>
 		<div id="dpt-column" class="col s12">
@@ -142,11 +146,11 @@
 
 			<div class="row price-update">
 
-				<div class="col s6">
+				<div class="col s7">
 					<small class="col s12">Total</small> 
-					<strong class="col s12 currency" id="totalprice">0</strong>
+					<h5 class="col s12" style="margin-top: 0;margin-bottom: 0;">Rp <strong class="currency odometer" id="totalprice">0</strong></h5>
 				</div>
-				<div class="col s6"><button id="book" class="right" disabled="true">Book Now</button></div>
+				<div class="col s5 valign-wrapper"><button id="book" class="right" disabled="true">Book Now</button></div>
 			</div>
 
 			<script type="text/javascript">
