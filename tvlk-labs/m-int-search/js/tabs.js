@@ -87,7 +87,7 @@
         }
         // Change url to current tab
         // window.location.hash = $active.attr('href');
-
+        
         $content.show();
 
         // Update indicator
