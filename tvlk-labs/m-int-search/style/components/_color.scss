@@ -331,6 +331,19 @@ $grey: (
   "darken-4":   #212121
 );
 
+$tvlk-blue: (
+  "lighten-5":  #f4fbfe,
+  "lighten-4":  #d2ecfa,
+  "lighten-3":  #a4d9f4,
+  "lighten-2":  #77c6ee,
+  "lighten-1":  #49b3e8,
+  "base":       #1ba0e2,
+  "darken-1":   #219ede,
+  "darken-2":   #1188d7,
+  "darken-3":   #0c7cd2,
+  "darken-4":   #0770cd
+);
+
 $shades: (
   "black":        #000000,
   "white":        #FFFFFF,
@@ -358,7 +371,8 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
+  "tvlk-blue": $tvlk-blue
 );
 
 
