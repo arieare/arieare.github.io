@@ -2,7 +2,7 @@ $(function() {
 	var dptPrice = 0;
 	var rtnPrice = 0;
 	var totalPrice = 0;
-
+	FastClick.attach(document.body);
 	$('input[name="dpt"]').on('click', function() {
 		dptPrice = $('input[name=dpt]:checked').val();
 		totalPrice = Number(dptPrice) + Number(rtnPrice);
