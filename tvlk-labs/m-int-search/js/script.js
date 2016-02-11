@@ -11,7 +11,7 @@ $(function() {
 		if ($("#bullet-number-2").html() != "✓") {
 			setTimeout(function(){
 				$('ul.tabs').tabs('select_tab', 'rtn-column');
-			},1500);
+			},1000);
 		}
 		else {
 			
@@ -36,7 +36,7 @@ $(function() {
 		if ($("#bullet-number-1").html() != "✓") {
 			setTimeout(function(){
 				$('ul.tabs').tabs('select_tab', 'dpt-column');
-			},1500);
+			},1000);
 		}
 		else {
 			
