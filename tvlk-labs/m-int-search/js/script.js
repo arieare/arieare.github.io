@@ -1,13 +1,10 @@
-$( document ).ready(function() {
-    $('a[href="#go-to-dpt-column"]').trigger('click');
-});
-
 $(function() {
 	var dptPrice = 0;
 	var rtnPrice = 0;
 	var totalPrice = 0;
 	//modal for summary
 	$('.modal-trigger').leanModal();
+  $('a[href="#go-to-rtn-column"]').trigger('click');
 	// attach fastclick
 	FastClick.attach(document.body);
 	// grab an element
@@ -36,8 +33,8 @@ $(function() {
 		$(".tab-nav-wrapper").removeClass( "dpt-active" );
 		$(".tab-nav-wrapper").addClass( "rtn-active" );
 
-		$("#tab-content-container").removeClass( "dpt-active" );
-		$("#tab-content-container").addClass( "rtn-active" );
+		$("#view-port-container").removeClass( "dpt-active" );
+		$("#view-port-container").addClass( "rtn-active" );
 	});
 	$('a[href$="#go-to-dpt-column"]').on('click', function() {
 		$( this ).css( "color", "rgba(255,255,255,1)" )
@@ -49,8 +46,8 @@ $(function() {
 		$(".tab-nav-wrapper").removeClass( "rtn-active" );
 		$(".tab-nav-wrapper").addClass( "dpt-active" );
 		
-		$("#tab-content-container").removeClass( "rtn-active" );
-		$("#tab-content-container").addClass( "dpt-active" );
+		$("#view-port-container").removeClass( "rtn-active" );
+		$("#view-port-container").addClass( "dpt-active" );
 	});
 
 	$('input[name="dpt"]').on('click', function() {
