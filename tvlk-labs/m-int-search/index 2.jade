@@ -1,0 +1,168 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Intl. Search Result"
+    - var author = "arieare"
+    include ./includes/head.jade
+  body
+    //- navbar start
+    .navbar-fixed
+      nav
+        .nav-wrapper
+          span.brand-logo.center
+            span.flight-route Jakarta–Seoul
+            span.flight-date 15 Feb 2015
+          ul.left
+            li
+              a.back-button(href="#back" style="font-size:2em;") &#x2190;
+    //- navbar end
+    //- tab bar start
+    #tab-nav-container.headroom
+      ul.row.tab-nav-wrapper
+        .active-indicator
+        li.tab.col.s6.center-align
+          a(href="#go-to-dpt-column")
+            span#bullet-number-1.bullet-number 1
+            | &ensp;Outbound
+
+        li.tab.col.s6.center-align
+          a(href="#go-to-rtn-column")
+            span#bullet-number-2.bullet-number 2
+            | &ensp;Return
+
+    //- tab bar end
+    #tab-content-container.col.s12
+      #view-port-container
+        #dpt-column
+          form.dpt-column(action="")
+            span#dpt-route.hide Jakarta–Seoul
+            span#dpt-flight-date.hide 15 Feb 2015
+            //- search result
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3596550")
+              span &emsp; CGK – ICN 
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="dpt" value="3792000")
+              span &emsp; CGK – ICN 
+              strong.currency 3792000
+
+        #rtn-column
+          form.rtn-column(action="")
+            
+            span#rtn-route.hide Seoul–Jakarta
+            span#rtn-flight-date.hide 17 Feb 2015
+            //- search result
+            label.col.s12.search-item
+              input(type="radio" name="rtn" value="3596550")
+              span &emsp; ICN – CGK
+              strong.currency 3596550
+            label.col.s12.search-item
+              input(type="radio" name="rtn" value="3608800")
+              span &emsp; ICN – CGK
+              strong.currency 3608800
+        
+    .row.price-update
+      .col.s7
+        small.col.s12 Total for 
+          strong 2 
+          | pax • 
+          a.modal-trigger(href="#flight-detail-modal") Summary
+        span.col.s12(style="margin-top: 0;margin-bottom: 0;font-size:1.3em;") Rp 
+          strong#totalprice.currency.odometer 0
+      .col.s5
+        button#book.right(disabled="true") Book Now
+ 
+  #flight-detail-modal.modal
+    .modal-content
+      span JAKARTA &#8633; SEOUL
+      a.right(href="#!").modal-action.modal-close Close
+      hr(style="padding-top:6px;")
+      p(style="margin:0.2em 0;") 
+        strong Departure
+      p(style="margin:0.2em 0;") CGK – ICN Mon, 15 Feb 2016
+      span 15:10 – 17:55 (1h 45m)
+      hr(style="padding-top:6px;")
+      p(style="margin:0.2em 0;")
+        strong Return
+      p(style="margin:0.2em 0;") ICN – CGK Wed, 17 Feb 2016
+      span 15:10 – 17:55 (1h 45m)
+      hr(style="padding-top:6px;")
+      p(style="margin:0.2em 0;") 
+        strong Total Price for 2 pax
+      span Rp 14,801,600
+    //- .modal-footer
+    //-   a(href="#!").modal-action.modal-close Share
+    //-   a.right(href="#!").modal-action.modal-close Book
+ 
+
+    script(type="text/javascript")
+      | $(".currency").autoNumeric('init',{
+      |  aSep: '.',
+      |  aDec: ',', 
+      |  aSign: 'Rp '
+      | });

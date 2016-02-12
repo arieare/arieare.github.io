@@ -2089,13 +2089,13 @@ ul {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav {
+.z-depth-1 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .z-depth-1-half {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
-.z-depth-2 {
+.z-depth-2, .modal {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .z-depth-3 {
@@ -3309,52 +3309,72 @@ small {
     .flow-text {
       font-size: 1.2rem; } }
 
-.tabs {
-  display: flex;
-  position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 48px;
-  background-color: #fff;
-  margin: 0 auto;
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  transform: translateY(-50%) !important;
+  border-radius: 2px;
+  will-change: top, opacity; }
+  @media only screen and (max-width: 992px) {
+    .modal {
+      width: 80%; } }
+  .modal h1, .modal h2, .modal h3, .modal h4 {
+    margin-top: 0; }
+  .modal .modal-content {
+    padding: 8px 16px; }
+  .modal .modal-close {
+    cursor: pointer; }
+  .modal .modal-footer {
+    border-radius: 0 0 2px 2px;
+    background-color: #fafafa;
+    padding: 4px 16px;
+    width: 100%; }
+    .modal .modal-footer .btn, .modal .modal-footer .btn-flat {
+      float: right;
+      margin: 6px 0; }
+
+.lean-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
   width: 100%;
-  white-space: nowrap; }
-  .tabs .tab {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    display: block;
-    float: left;
-    text-align: center;
-    line-height: 48px;
-    height: 48px;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    letter-spacing: .8px;
-    width: 15%;
-    min-width: 80px; }
-    .tabs .tab a {
-      color: #1ba0e2;
-      display: block;
-      width: 100%;
-      height: 100%;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      transition: color .28s ease; }
-      .tabs .tab a:hover {
-        color: #75c6ee; }
-    .tabs .tab.disabled a {
-      color: #75c6ee;
-      cursor: default; }
-  .tabs .indicator {
+  background: #000;
+  display: none;
+  will-change: opacity; }
+
+.modal.modal-fixed-footer {
+  padding: 0;
+  height: 70%; }
+  .modal.modal-fixed-footer .modal-content {
     position: absolute;
-    bottom: 0;
-    height: 2px;
-    background-color: #5ebdec;
-    will-change: left, right; }
+    height: calc(100% - 56px);
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto; }
+  .modal.modal-fixed-footer .modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0; }
+
+.modal.bottom-sheet {
+  top: auto;
+  bottom: -100%;
+  margin: 0;
+  width: 100%;
+  max-height: 45%;
+  border-radius: 0;
+  will-change: bottom, opacity; }
 
 /*# sourceMappingURL=main.css.map */

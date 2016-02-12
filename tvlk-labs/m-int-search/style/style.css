@@ -1,0 +1,140 @@
+body {
+  color: #434343;
+}
+#book {
+  outline: none;
+  border: 0;
+  background: rgb(249,109,1);
+  padding: 8px 20px 8px 20px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.0625em;
+
+}
+#book:hover {
+  background-color: #F57D00;
+  transition: background-color 0.2s ease;
+}
+#book:active {
+  background-color: #E26A00;
+  transition: background-color 0.2s ease;
+}
+#book:disabled {
+  background-color: rgba(249, 109, 1, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+}
+.search-item {
+  border: 1px solid #dadada;
+  border-radius: 3px; 
+  padding: 24px !important;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.search-item:hover {
+  background-color: #F6F6F6;
+  cursor: pointer;
+}
+.price-update {
+  background-color:#F6F6F6;
+  border-top: solid 1px #dadada;
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+#totalprice {
+  color: rgb(249,109,1);
+}
+#dpt-column, #rtn-column {
+  width:50%;
+  height: auto;
+  position: relative;
+  display: inline-block !important;
+  float: left;
+}
+#tab-content-container {
+  position: relative;
+  // overflow-x:hidden;
+  height: auto;
+  transition: .3s all ease;
+}
+#tab-content-container.rtn-active {
+ transform:translateX(-100%);
+}
+#view-port-container {
+  width:200%;
+  // min-height:100vh;
+  height: auto;
+  position: absolute;
+  display: block;
+  overflow: auto;
+}
+.dpt-column, .rtn-column {
+  overflow: scroll;
+  padding: 0 0.75rem;
+}
+.flight-date {
+  display: block;
+  font-size: 0.6em;
+  margin: -2.8em 0;
+}
+.bullet-number {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8em;
+  line-height: 1.5em;
+  color: #1ba0e2;
+  border-radius: 999px;
+  padding: 0.2em 0.5em;
+}
+.active-indicator {
+    position: absolute;
+    height: 3px;
+    bottom: 0px;
+    left: 0;
+    width: 50%;
+    background: rgba(255,255,255,0.8);
+    transition: .3s all ease;
+}
+#tab-nav-container {
+  background-color: #1ba0e2;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+li.tab a{
+  color: #ffffff;
+  font-weight: bold;
+}
+#tab-nav-container ul.row{
+  margin: 0.5em 0;
+}
+
+.shrink {
+  font-size: 0.8em;
+}
+
+.headroom {
+  position: fixed;
+  top: 56px;left: 0;right: 0;
+  z-index: 2;
+  transition: all .2s ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  top: 0;
+}
+.headroom--pinned {
+  position: fixed;
+  // font-size: 0.8em;
+  // top: 56px;
+}
+.rtn-active > .active-indicator {
+  transform:translateX(100%);
+}        
+hr {
+    border: 0;
+    border-bottom: 1px solid #dadada;
+    margin: 0 -16px;
+}

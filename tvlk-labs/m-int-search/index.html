@@ -10,14 +10,14 @@
 	<script src="js/odometer.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/velocity.min.js"></script>
-	<script src="js/tabs.js"></script>
+	<!-- <script src="js/tabs.js"></script> -->
 	<script src="js/fastclick.js"></script>
 	<script src="js/headroom.min.js"></script>
 
 
 	<script>
 		$(document).ready(function(){
-			$('ul.tabs').tabs();
+			// $('ul.tabs').tabs();
 		});
 	</script>
 	<link href="style/main.css" rel="stylesheet">
@@ -95,6 +95,7 @@
 	<title>Search Results</title>
 </head>
 <body>
+	<!-- start of navbar -->
 	<div class="navbar-fixed">
 		<nav>
 			<div class=" nav-wrapper">
@@ -102,14 +103,18 @@
 			</div> 
 		</nav>
 	</div>
-	<div class="row">
-		<div class="col s12">
-			<ul class="tabs">
+	<!-- end of navbar -->
+	<!-- start of tab-bar -->
+	<div id="tab-nav-container" class=""  style="position: relative;">
+			<ul class="row tabs">
 				<li class="tab col s6"><a class="active" href="#dpt-column"><span class="bullet-number" id="bullet-number-1">1</span>&ensp;Outbound</a></li>
 				<li class="tab col s6"><a href="#rtn-column"><span class="bullet-number" id="bullet-number-2">2</span>&ensp;Return</a></li>
 			</ul>
 		</div>
-		<div id="dpt-column" class="col s12">
+
+		<div id="tab-content-container" style="position: relative;">
+		<div id="view-port-container" style="width:100%;min-height:100vh;position: absolute;display: block;overflow: auto;">
+		<div id="dpt-column" class="" style="width:100%;position: absolute;display: inline-block !important;">
 			<form action="" class="dpt-column">
 				<span class="hide" id="dpt-route">Jakarta–Seoul</span>
 				<h6>15 Feb 2015</h6>
@@ -124,7 +129,7 @@
 				</label>
 			</form>
 		</div>
-		<div id="rtn-column" class="col s12">
+		<div id="rtn-column" class="" style="width:100%;position: absolute;display: inline-block !important;transform:translateX(100%);">
 			<form action="" class="rtn-column">
 				<span class="hide" id="rtn-route">Seoul–Jakarta</span>
 				<h6>17 Feb 2015</h6>
@@ -139,29 +144,23 @@
 					<label class="col s12">
 					</form>
 				</div>
-			</div>
-
-			<div class="container">  
-
-
-			</div>
-
-			<div class="row price-update">
-
-				<div class="col s7">
-					<small class="col s12">Total</small> 
-					<h5 class="col s12" style="margin-top: 0;margin-bottom: 0;">Rp <strong class="currency odometer" id="totalprice">0</strong></h5>
+</div>
+</div>
+				<div class="row price-update">
+					<div class="col s7">
+						<small class="col s12">Total</small> 
+						<h5 class="col s12" style="margin-top: 0;margin-bottom: 0;">Rp <strong class="currency odometer" id="totalprice">0</strong></h5>
+					</div>
+					<div class="col s5"><button id="book" class="right" disabled="true">Book Now</button></div>
 				</div>
-				<div class="col s5"><button id="book" class="right" disabled="true">Book Now</button></div>
-			</div>
 
-			<script type="text/javascript">
-				$(".currency").autoNumeric('init',{
-					aSep: '.',
-					aDec: ',', 
-					aSign: 'Rp '
-				});
+				<script type="text/javascript">
+					$(".currency").autoNumeric('init',{
+						aSep: '.',
+						aDec: ',', 
+						aSign: 'Rp '
+					});
 
-			</script>
-		</body>
-		</html>
+				</script>
+			</body>
+			</html>
