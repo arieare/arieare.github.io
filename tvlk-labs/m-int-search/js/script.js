@@ -5,7 +5,7 @@ $(function() {
 	//modal for summary
 	$('.modal-trigger').leanModal();
 	// attach fastclick
-	// FastClick.attach(document.body);
+	FastClick.attach(document.body);
 // grab an element
 //var myElement = document.querySelector("#tab-nav-container");
 // construct an instance of Headroom, passing the element
