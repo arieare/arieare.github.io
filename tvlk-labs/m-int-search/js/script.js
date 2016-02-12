@@ -4,15 +4,14 @@ $(function() {
 	var totalPrice = 0;
 	//modal for summary
 	$('.modal-trigger').leanModal();
-  $('a[href="#go-to-rtn-column"]').trigger('click');
 	// attach fastclick
 	// FastClick.attach(document.body);
 // grab an element
-var myElement = document.querySelector("#tab-nav-container");
+//var myElement = document.querySelector("#tab-nav-container");
 // construct an instance of Headroom, passing the element
-var headroom  = new Headroom(myElement);
+//var headroom  = new Headroom(myElement);
 // initialise
-headroom.init(); 
+//headroom.init(); 
 	//tabs set up
 	//updating navbar title
 	$('a[href$="#go-to-rtn-column"]').on('click', function() {
