@@ -7,22 +7,16 @@ $(function() {
   $('a[href="#go-to-rtn-column"]').trigger('click');
 	// attach fastclick
 	// FastClick.attach(document.body);
-var lastScrollTop = 0, delta = 5;
- $("#dpt-column").scroll(function(){
- var nowScrollTop = $(this).scrollTop();
- if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
- if (nowScrollTop > lastScrollTop){
- // ACTION ON
- // SCROLLING DOWN 
- $("#tab-nav-container").addClass( "shrink" );
- } else {
- // ACTION ON
- // SCROLLING UP 
- $("#tab-nav-container").removeClass( "shrink" );
- }
- lastScrollTop = nowScrollTop;
- }
- });
+var iScrollPos = 0;
+$("#dpt-column").scroll(function () {
+    var iCurScrollPos = $(this).scrollTop();
+    if (iCurScrollPos > iScrollPos) {
+        $("#tab-nav-container").addClass( "shrink" );
+    } else {
+       $("#tab-nav-container").removeClass( "shrink" );
+    }
+    iScrollPos = iCurScrollPos;
+});
 	//tabs set up
 	//updating navbar title
 	$('a[href$="#go-to-rtn-column"]').on('click', function() {
