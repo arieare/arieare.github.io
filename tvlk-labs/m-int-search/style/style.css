@@ -76,14 +76,23 @@ body {
 #view-port-container.rtn-active {
  transform: translateX(-50%);
 }
+#dpt-column, #rtn-column {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
 .dpt-column, .rtn-column {
-  overflow: scroll;
-  padding: 0 0.75rem;
+  padding: 5em 0.75rem;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  min-height: 10px;
+  // background-color: red;
+  overflow-x: hidden;
 }
 .flight-date {
   display: block;
   font-size: 0.6em;
-  margin: -2.8em 0;
+  margin: -3.5em 0;
 }
 .bullet-number {
   background-color: rgba(255, 255, 255, 0.4);
@@ -106,13 +115,14 @@ body {
   background-color: #1ba0e2;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   height: 48px;
+  position: fixed;
+  top: 56px;left: 0;right: 0;
+  z-index: 2;
+  transition: all .2s ease-in-out;
 }
 li.tab a{
   color: #ffffff;
   font-weight: bold;
-}
-#tab-nav-container ul.row{
-  // margin: 0.5em 0;
 }
 
 .shrink {
@@ -121,21 +131,6 @@ li.tab a{
 }
 .shrink > ul > .active-indicator {
     height: 1px;
-}
-.headroom {
-  position: fixed;
-  top: 56px;left: 0;right: 0;
-  z-index: 2;
-  transition: all .2s ease-in-out;
-}
-.headroom--unpinned {
-  position: fixed;
-  top: 0;
-}
-.headroom--pinned {
-  position: fixed;
-  // font-size: 0.8em;
-  // top: 56px;
 }
 .rtn-active > .active-indicator {
   transform:translateX(100%);

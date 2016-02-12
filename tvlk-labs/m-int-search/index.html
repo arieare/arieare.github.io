@@ -17,7 +17,6 @@
     <script src="js/odometer.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/leanModal.js"> </script>
-    <script src="js/headroom.min.js"></script>
     <script>
       $(document).ready(function(){
         //- $('ul.tabs').tabs();
@@ -34,14 +33,15 @@
         </div>
       </nav>
     </div>
-    <div id="tab-nav-container" class="headroom">
-      <ul class="row tab-nav-wrapper">
-        <div class="active-indicator"></div>
-        <li class="tab col s6 center-align"><a href="#go-to-dpt-column"><span id="bullet-number-1" class="bullet-number">1</span>&ensp;Outbound</a></li>
-        <li class="tab col s6 center-align"><a href="#go-to-rtn-column"><span id="bullet-number-2" class="bullet-number">2</span>&ensp;Return</a></li>
-      </ul>
-    </div>
+    
     <div id="tab-content-container" class="col s12">
+      <div id="tab-nav-container">
+        <ul class="row tab-nav-wrapper">
+          <div class="active-indicator"></div>
+          <li class="tab col s6 center-align"><a href="#go-to-dpt-column"><span id="bullet-number-1" class="bullet-number">1</span>&ensp;Outbound</a></li>
+          <li class="tab col s6 center-align"><a href="#go-to-rtn-column"><span id="bullet-number-2" class="bullet-number">2</span>&ensp;Return</a></li>
+        </ul>
+      </div>
       <div id="view-port-container">
         <div id="dpt-column">
           <form action="" class="dpt-column"><span id="dpt-route" class="hide">Jakarta–Seoul</span><span id="dpt-flight-date" class="hide">15 Feb 2015</span>
@@ -122,14 +122,14 @@
   </body>
   <div id="flight-detail-modal" class="modal">
     <div class="modal-content"><span>JAKARTA &#8633; SEOUL</span><a href="#!" class="right modal-action modal-close">Close</a>
-      <hr style="padding-top:6px;">
-      <p style="margin:0.2em 0;"> <strong>Departure</strong></p>
-      <p style="margin:0.2em 0;">CGK – ICN Mon, 15 Feb 2016</p><span>15:10 – 17:55 (1h 45m)</span>
-      <hr style="padding-top:6px;">
-      <p style="margin:0.2em 0;"><strong>Return</strong></p>
-      <p style="margin:0.2em 0;">ICN – CGK Wed, 17 Feb 2016</p><span>15:10 – 17:55 (1h 45m)</span>
-      <hr style="padding-top:6px;">
-      <p style="margin:0.2em 0;"> <strong>Total Price for 2 pax</strong></p><span>Rp 14,801,600</span>
+      <hr style="padding-top:8px;">
+      <p style="margin:0.4em 0;"> <strong>Departure</strong></p>
+      <p style="margin:0.4em 0;">CGK – ICN Mon, 15 Feb 2016</p><span>15:10 – 17:55 (1h 45m)</span>
+      <hr style="padding-top:8px;">
+      <p style="margin:0.4em 0;"><strong>Return</strong></p>
+      <p style="margin:0.4em 0;">ICN – CGK Wed, 17 Feb 2016</p><span>15:10 – 17:55 (1h 45m)</span>
+      <hr style="padding-top:8px;">
+      <p style="margin:0.4em 0;"> <strong>Total Price for 2 pax</strong></p><span>Rp 14,801,600</span>
     </div>
     
     <script type="text/javascript">

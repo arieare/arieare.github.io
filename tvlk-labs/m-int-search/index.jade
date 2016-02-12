@@ -17,21 +17,22 @@ html(lang="en")
               a.back-button(href="#back" style="font-size:2em;") &#x2190;
     //- navbar end
     //- tab bar start
-    #tab-nav-container.headroom
-      ul.row.tab-nav-wrapper
-        .active-indicator
-        li.tab.col.s6.center-align
-          a(href="#go-to-dpt-column")
-            span#bullet-number-1.bullet-number 1
-            | &ensp;Outbound
 
-        li.tab.col.s6.center-align
-          a(href="#go-to-rtn-column")
-            span#bullet-number-2.bullet-number 2
-            | &ensp;Return
 
     //- tab bar end
     #tab-content-container.col.s12
+      #tab-nav-container
+        ul.row.tab-nav-wrapper
+          .active-indicator
+          li.tab.col.s6.center-align
+            a(href="#go-to-dpt-column")
+              span#bullet-number-1.bullet-number 1
+              | &ensp;Outbound
+
+          li.tab.col.s6.center-align
+            a(href="#go-to-rtn-column")
+              span#bullet-number-2.bullet-number 2
+              | &ensp;Return
       #view-port-container
         #dpt-column
           form.dpt-column(action="")
@@ -141,18 +142,18 @@ html(lang="en")
     .modal-content
       span JAKARTA &#8633; SEOUL
       a.right(href="#!").modal-action.modal-close Close
-      hr(style="padding-top:6px;")
-      p(style="margin:0.2em 0;") 
+      hr(style="padding-top:8px;")
+      p(style="margin:0.4em 0;") 
         strong Departure
-      p(style="margin:0.2em 0;") CGK – ICN Mon, 15 Feb 2016
+      p(style="margin:0.4em 0;") CGK – ICN Mon, 15 Feb 2016
       span 15:10 – 17:55 (1h 45m)
-      hr(style="padding-top:6px;")
-      p(style="margin:0.2em 0;")
+      hr(style="padding-top:8px;")
+      p(style="margin:0.4em 0;")
         strong Return
-      p(style="margin:0.2em 0;") ICN – CGK Wed, 17 Feb 2016
+      p(style="margin:0.4em 0;") ICN – CGK Wed, 17 Feb 2016
       span 15:10 – 17:55 (1h 45m)
-      hr(style="padding-top:6px;")
-      p(style="margin:0.2em 0;") 
+      hr(style="padding-top:8px;")
+      p(style="margin:0.4em 0;") 
         strong Total Price for 2 pax
       span Rp 14,801,600
     //- .modal-footer

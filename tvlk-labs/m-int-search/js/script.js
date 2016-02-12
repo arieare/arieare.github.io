@@ -7,20 +7,22 @@ $(function() {
   $('a[href="#go-to-rtn-column"]').trigger('click');
 	// attach fastclick
 	// FastClick.attach(document.body);
-	// grab an element
-	var myElement = document.querySelector("#tab-nav-container");
-	// construct an instance of Headroom, passing the element
-	var headroom  = new Headroom(myElement, {
-  "offset": 5,
-  "tolerance": 5,
-  "classes": {
-    "initial": "animated",
-    "pinned": "slideDown",
-    "unpinned": "shrink"
-  }
-});
-	// initialise
-	headroom.init();
+var lastScrollTop = 0, delta = 5;
+ $("#dpt-column").scroll(function(){
+ var nowScrollTop = $(this).scrollTop();
+ if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+ if (nowScrollTop > lastScrollTop){
+ // ACTION ON
+ // SCROLLING DOWN 
+ $("#tab-nav-container").addClass( "shrink" );
+ } else {
+ // ACTION ON
+ // SCROLLING UP 
+ $("#tab-nav-container").removeClass( "shrink" );
+ }
+ lastScrollTop = nowScrollTop;
+ }
+ });
 	//tabs set up
 	//updating navbar title
 	$('a[href$="#go-to-rtn-column"]').on('click', function() {
