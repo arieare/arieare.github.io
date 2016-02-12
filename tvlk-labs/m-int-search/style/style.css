@@ -58,8 +58,8 @@ body {
 }
 #tab-content-container {
   position: relative;
-  // overflow-x:hidden;
-  height: auto;
+  overflow-x:hidden;
+  height: 100vh;
   transition: .3s all ease;
 }
 #tab-content-container.rtn-active {
