@@ -6,7 +6,7 @@ $(function() {
 	$('.modal-trigger').leanModal();
   $('a[href="#go-to-rtn-column"]').trigger('click');
 	// attach fastclick
-	FastClick.attach(document.body);
+	// FastClick.attach(document.body);
 	// grab an element
 	var myElement = document.querySelector("#tab-nav-container");
 	// construct an instance of Headroom, passing the element
