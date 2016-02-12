@@ -125,12 +125,12 @@ li.tab a{
   font-weight: bold;
 }
 
-.shrink {
+.headroom--unpinned {
   font-size: 0.8em;
   height: 28px !important;
 }
-.shrink > ul > .active-indicator {
-    height: 1px;
+.headroom--unpinned > ul > .active-indicator {
+    height: 0px;
 }
 .rtn-active > .active-indicator {
   transform:translateX(100%);
