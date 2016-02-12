@@ -3066,7 +3066,7 @@ nav {
     position: absolute;
     color: #fff;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0;
     white-space: nowrap; }
     nav .brand-logo.center {
@@ -3140,11 +3140,11 @@ nav {
 
 @media only screen and (min-width: 601px) {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    height: 64px;
-    line-height: 64px; }
+    height: 56px;
+    line-height: 56px; }
 
   .navbar-fixed {
-    height: 64px; } }
+    height: 56px; } }
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../font/roboto/Roboto-Thin.eot");
