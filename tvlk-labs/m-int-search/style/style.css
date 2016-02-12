@@ -68,10 +68,10 @@ body {
 #view-port-container {
   width:200%;
   // min-height:100vh;
-  height: auto;
+  height: 100vh;
   position: absolute;
   display: block;
-  overflow: auto;
+  overflow: hidden;
 }
 .dpt-column, .rtn-column {
   overflow: scroll;
