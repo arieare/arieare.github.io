@@ -78,7 +78,7 @@ body {
 }
 #dpt-column, #rtn-column {
   max-height: 100vh;
-  overflow-y: scroll;
+  //overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 .dpt-column, .rtn-column {
