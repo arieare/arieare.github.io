@@ -6,6 +6,17 @@ $(function() {
 	$('.modal-trigger').leanModal();
 	// attach fastclick
 	FastClick.attach(document.body);
+	//gesture recognizer
+var rtn = $("#rtn-column");
+var dpt = $("#dpt-column");
+rtn.hammer().on("swiperight", function(ev) {
+    console.log('left: ', ev);
+		$('a[href="#go-to-dpt-column"]').trigger('click');
+});
+dpt.hammer().on("swipeleft", function(ev) {
+    console.log('left: ', ev);
+		$('a[href="#go-to-rtn-column"]').trigger('click');
+});
 // grab an element
 //var myElement = document.querySelector("#tab-nav-container");
 // construct an instance of Headroom, passing the element
