@@ -5,7 +5,7 @@ $(function() {
 	//modal for summary
 	$('.modal-trigger').leanModal();
 	// attach fastclick
-	// FastClick.attach(document.body);
+	FastClick.attach(document.body);
 //gesture recognizer
 var rtn = $("#tab-content-container");
 
@@ -82,6 +82,7 @@ dpt.hammer().on("panleft", {
 			$( this ).parent().css("box-shadow","0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)");
 			$('.dpt-column .search-item').css("background-color","#ffffff");
 			$( this ).parent().css("background-color","#fbfbfb");
+			
 		}
 		dptPrice = $('input[name=dpt]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice))*2;
