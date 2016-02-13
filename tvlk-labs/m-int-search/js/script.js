@@ -21,6 +21,7 @@ $(function() {
 		$(".flight-route").html($("#rtn-route").html());
 		$(".flight-date").html($("#rtn-flight-date").html());
 
+
 		$(".tab-nav-wrapper").removeClass( "dpt-active" );
 		$(".tab-nav-wrapper").addClass( "rtn-active" );
 
