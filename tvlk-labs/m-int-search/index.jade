@@ -36,12 +36,12 @@ html(lang="en")
             span#dpt-route.hide Jakarta–Seoul
             span#dpt-flight-date.hide 15 Feb 2015
             //- search result
-            label.col.s12.search-item
+            label.col.s12.search-item.needsclick
               .row(style="padding:0;margin:0;")
                 span.left Lion
                 a.flight-detail-trigger.right(href="#detail") Detail ▾
               hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-              input.needsclick(type="radio" name="dpt" value="3596550")
+              input(type="radio" name="dpt" value="3596550")
               .row(style="padding:0;margin:0;")
                 div.col.s6(style="padding-left:0")
                   span(style="color:#8f8f8f") CGK – ICN
@@ -64,8 +64,8 @@ html(lang="en")
             span#rtn-route.hide Seoul–Jakarta
             span#rtn-flight-date.hide 17 Feb 2015
             //- search result
-            label.col.s12.search-item
-              input.needsclick(type="radio" name="rtn" value="3596550")
+            label.col.s12.search-item.needsclick
+              input(type="radio" name="rtn" value="3596550")
               span &emsp; ICN – CGK
               strong.currency 3596550
         
