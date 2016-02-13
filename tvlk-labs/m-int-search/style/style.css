@@ -1,5 +1,6 @@
 body {
   color: #434343;
+  background-color: #f1f1f1;
 }
 #book {
   outline: none;
@@ -27,14 +28,30 @@ body {
 }
 .search-item {
   border: 1px solid #dadada;
+  background-color: #ffffff;
   border-radius: 3px; 
-  padding: 24px !important;
+  padding: 8px !important;
   display: block;
   margin-bottom: 0.5em;
+  transition: .1s all ease-in;
 }
 .search-item:hover {
   background-color: #F6F6F6;
   cursor: pointer;
+}
+input[type="radio"]{
+    visibility:hidden;
+    margin-left: -30px;
+    position: absolute;
+}
+.flight-detail-trigger {
+  position: relative;
+}
+.flight-detail-trigger:after {
+  content:'';
+  position:absolute;
+  top:-2em; bottom:-2em; 
+  left:-3em; right:-3em; 
 }
 .price-update {
   background-color:#F6F6F6;
@@ -82,7 +99,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 .dpt-column, .rtn-column {
-  padding: 5em 0.75rem;
+  padding: 4em 0.4rem;
   width: 100%;
   float: left;
   box-sizing: border-box;

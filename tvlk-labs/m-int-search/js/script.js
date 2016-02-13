@@ -54,6 +54,18 @@ dpt.hammer().on("panleft", function(ev) {
 	});
 
 	$('input[name="dpt"]').on('click', function() {
+		if($('input[name="dpt"]').is(':checked')) {
+			//add selected class
+			$('.dpt-column .search-item').removeClass("dpt-selected");
+			$( this ).parent().addClass("dpt-selected");
+			//style
+			$('.dpt-column .search-item').css("border","1px solid #dadada");
+			$( this ).parent().css("border","1px solid #1BA0E2");
+			$('.dpt-column .search-item').css("box-shadow","none");
+			$( this ).parent().css("box-shadow","0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)");
+			$('.dpt-column .search-item').css("background-color","#ffffff");
+			$( this ).parent().css("background-color","#fbfbfb");
+		}
 		dptPrice = $('input[name=dpt]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice))*2;
 		$("#totalprice").html(totalPrice);
@@ -63,7 +75,7 @@ dpt.hammer().on("panleft", function(ev) {
 			setTimeout(function(){
 				$('a[href="#go-to-rtn-column"]').trigger('click');
 				//$('ul.tabs').tabs('select_tab', 'rtn-column');
-			},1000);
+			},500);
 		}
 		else {
 			
@@ -81,6 +93,18 @@ dpt.hammer().on("panleft", function(ev) {
 	});
 
 	$('input[name="rtn"]').on('click', function() {
+	  if($('input[name="rtn"]').is(':checked')) {
+	  	//add selected class
+			$('.rtn-column .search-item').removeClass("rtn-selected");
+			$( this ).parent().addClass("rtn-selected");
+			//style
+			$('.rtn-column .search-item').css("border","1px solid #dadada");
+			$( this ).parent().css("border","1px solid #1BA0E2");
+			$('.rtn-column .search-item').css("box-shadow","none");
+			$( this ).parent().css("box-shadow","0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)");
+			$('.rtn-column .search-item').css("background-color","#ffffff");
+			$( this ).parent().css("background-color","#fbfbfb");
+	   }
 		rtnPrice = $('input[name=rtn]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice)) * 2;
 		$("#totalprice").html(totalPrice);
@@ -90,7 +114,7 @@ dpt.hammer().on("panleft", function(ev) {
 			setTimeout(function(){
 				$('a[href="#go-to-dpt-column"]').trigger('click');
 				//$('ul.tabs').tabs('select_tab', 'dpt-column');
-			},1000);
+			},500);
 		}
 		else {
 			
