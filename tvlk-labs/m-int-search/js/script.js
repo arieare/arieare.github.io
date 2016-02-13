@@ -5,7 +5,7 @@ $(function() {
 	//modal for summary
 	$('.modal-trigger').leanModal();
 	// attach fastclick
-	FastClick.attach(document.body);
+	//FastClick.attach(document.body);
 //gesture recognizer
 var rtn = $("#tab-content-container");
 
