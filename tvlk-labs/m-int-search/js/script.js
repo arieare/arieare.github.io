@@ -10,7 +10,7 @@ $(function() {
 var rtn = $("#rtn-column");
 var dpt = $("#dpt-column");
 rtn.hammer().on("panright", function(ev) {
-    console.log('left: ', ev);
+    console.log('right: ', ev);
 		$('a[href="#go-to-dpt-column"]').trigger('click');
 });
 dpt.hammer().on("panleft", function(ev) {
