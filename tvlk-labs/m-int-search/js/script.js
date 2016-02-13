@@ -9,7 +9,7 @@ $(function() {
 //gesture recognizer
 var rtn = $("#tab-content-container");
 
-rtn.hammer().on("panright", {
+rtn.hammer().on("swiperight", {
        threshold: '10000',
        }, function(ev) {
     console.log('right: ', ev);
@@ -19,7 +19,7 @@ rtn.hammer().on("panright", {
 });
 
 var dpt = $("#tab-content-container");
-dpt.hammer().on("panleft", {
+dpt.hammer().on("swipeleft", {
        threshold: '10000',
        }, function(ev) {
     console.log('left: ', ev);
@@ -147,5 +147,9 @@ dpt.hammer().on("panleft", {
 			$("#book").prop("disabled", true);
 		}
 
+	});
+
+	$('a[href$="#detail"]').on('click', function() {
+			$(".detail").css("display","block");
 	});
 });

@@ -42,13 +42,23 @@ body {
 .modal-trigger:after {
   content:'';
   position:absolute;
-  top:-1em; bottom:0em; 
-  left:0em; right:70%; 
+  top: -1em;
+  bottom: -0em; 
+  left: -0em;
+  right: 45%; 
 }
 input[type="radio"]{
     visibility:hidden;
-    margin-left: -30px;
+    margin-left: 0px;
     position: absolute;
+}
+input[type="radio"]:after{
+  content: "";
+  position: absolute;
+  top: -3em;
+  bottom: -4em; 
+  left: 0em;
+  right: -15em;
 }
 .flight-detail-trigger {
   position: relative;
@@ -56,8 +66,19 @@ input[type="radio"]{
 .flight-detail-trigger:after {
   content:'';
   position:absolute;
-  top:-2em; bottom:-2em; 
-  left:-3em; right:-3em; 
+  top: -0.5em;
+  bottom: -1em; 
+  left: -3em;
+  right: -0.5em; 
+}
+.detail {
+  border: 1px solid #dadada;
+  background-color: #ffffff;
+  border-radius: 3px; 
+  padding: 8px !important;
+  display: none;
+  margin-bottom: 0.5em;
+  transition: .1s all ease-in;
 }
 .price-update {
   background-color:#F6F6F6;
