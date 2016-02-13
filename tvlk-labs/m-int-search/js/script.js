@@ -9,11 +9,11 @@ $(function() {
 	//gesture recognizer
 var rtn = $("#rtn-column");
 var dpt = $("#dpt-column");
-rtn.hammer().on("swiperight", function(ev) {
+rtn.hammer().on("panright", function(ev) {
     console.log('left: ', ev);
 		$('a[href="#go-to-dpt-column"]').trigger('click');
 });
-dpt.hammer().on("swipeleft", function(ev) {
+dpt.hammer().on("panleft", function(ev) {
     console.log('left: ', ev);
 		$('a[href="#go-to-rtn-column"]').trigger('click');
 });
