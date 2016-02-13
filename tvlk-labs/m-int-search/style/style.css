@@ -47,6 +47,17 @@ body {
   left: -0em;
   right: 45%; 
 }
+.modal-close {
+  position: relative;
+}
+.modal-close:after {
+  content:'';
+  position:absolute;
+  top: -2em;
+  bottom: -1em; 
+  left: -2em;
+  right: -2em;
+}
 input[type="radio"]{
     visibility:hidden;
     margin-left: 0px;
@@ -78,7 +89,7 @@ input[type="radio"]:after{
   padding: 8px !important;
   display: none;
   margin-bottom: 0.5em;
-  transition: .1s all ease-in;
+  transition: .3s all ease-in;
 }
 .price-update {
   background-color:#F6F6F6;
@@ -89,6 +100,12 @@ input[type="radio"]:after{
   width: 100%;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+li.tab a {
+  transition: .3s all ease-in;
+}
+li.tab a:active{
+  color: #ffffff;
 }
 #totalprice {
   color: rgb(249,109,1);

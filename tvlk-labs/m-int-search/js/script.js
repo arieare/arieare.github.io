@@ -8,10 +8,7 @@ $(function() {
 	//FastClick.attach(document.body);
 //gesture recognizer
 var rtn = $("#tab-content-container");
-
-rtn.hammer().on("swiperight", {
-       threshold: '10000',
-       }, function(ev) {
+rtn.hammer({"threshold":100}).on("panright", function(ev) {
     console.log('right: ', ev);
 		$('a[href="#go-to-dpt-column"]').trigger('click');
 		$( this ).removeClass( "rtn-active" );
@@ -19,9 +16,7 @@ rtn.hammer().on("swiperight", {
 });
 
 var dpt = $("#tab-content-container");
-dpt.hammer().on("swipeleft", {
-       threshold: '10000',
-       }, function(ev) {
+dpt.hammer({"threshold":100}).on("panleft", function(ev){
     console.log('left: ', ev);
 		$('a[href="#go-to-rtn-column"]').trigger('click');
 		$(this ).removeClass( "dpt-active" );
@@ -76,31 +71,19 @@ dpt.hammer().on("swipeleft", {
 			$('.dpt-column .search-item').removeClass("dpt-selected");
 			$( this ).parent().addClass("dpt-selected");
 			//style
-			$('.dpt-column .search-item').css("border","1px solid #dadada");
-			$( this ).parent().css("border","1px solid #1BA0E2");
-			$('.dpt-column .search-item').css("box-shadow","none");
-			$( this ).parent().css("box-shadow","0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)");
-			$('.dpt-column .search-item').css("background-color","#ffffff");
-			$( this ).parent().css("background-color","#fbfbfb");
-			
+			$('.dpt-column .search-item').css({"border":"1px solid #dadada", "box-shadow":"none", "background-color":"#ffffff"});
+			$( this ).parent().css({"border":"1px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});			
 		}
 		dptPrice = $('input[name=dpt]:checked').val();
-		totalPrice = (Number(dptPrice) + Number(rtnPrice))*2;
+		totalPrice = (Number(dptPrice) + Number(rtnPrice))*2; //sesuai jumlah passengers
 		$("#totalprice").html(totalPrice);
 		$("#bullet-number-1").html("✓");
 		$("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
 		if ($("#bullet-number-2").html() != "✓") {
 			setTimeout(function(){
 				$('a[href="#go-to-rtn-column"]').trigger('click');
-				//$('ul.tabs').tabs('select_tab', 'rtn-column');
 			},500);
 		}
-		else {
-			
-		}
-
-		// $("#totalprice").autoNumeric('update');
-
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
 			$("#book").prop("disabled", false);
 		} 
@@ -116,12 +99,8 @@ dpt.hammer().on("swipeleft", {
 			$('.rtn-column .search-item').removeClass("rtn-selected");
 			$( this ).parent().addClass("rtn-selected");
 			//style
-			$('.rtn-column .search-item').css("border","1px solid #dadada");
-			$( this ).parent().css("border","1px solid #1BA0E2");
-			$('.rtn-column .search-item').css("box-shadow","none");
-			$( this ).parent().css("box-shadow","0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)");
-			$('.rtn-column .search-item').css("background-color","#ffffff");
-			$( this ).parent().css("background-color","#fbfbfb");
+			$('.rtn-column .search-item').css({"border":"1px solid #dadada", "box-shadow":"none", "background-color":"#ffffff"});
+			$( this ).parent().css({"border":"1px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});
 	   }
 		rtnPrice = $('input[name=rtn]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice)) * 2;
@@ -131,14 +110,11 @@ dpt.hammer().on("swipeleft", {
 		if ($("#bullet-number-1").html() != "✓") {
 			setTimeout(function(){
 				$('a[href="#go-to-dpt-column"]').trigger('click');
-				//$('ul.tabs').tabs('select_tab', 'dpt-column');
 			},500);
 		}
 		else {
 			
 		}
-
-		// $("#totalprice").autoNumeric('update');
 
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
 			$("#book").prop("disabled", false);
