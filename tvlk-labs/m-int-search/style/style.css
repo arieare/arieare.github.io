@@ -60,11 +60,12 @@ body {
   right: -2em;
 }
 input[type="radio"]{
-  //visibility: hidden;
-  margin-left: 0px;
-  position: absolute;
-  top: 0;
-  margin: 0.9em 3em;
+ visibility: hidden;
+margin-left: 0px;
+position: absolute;
+top: 0;
+left: 0;
+margin: 3.6em 7em;
 }
 input[type="radio"]:after{
   content: "";
