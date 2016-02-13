@@ -11,7 +11,7 @@
     <link href="style/main.css" rel="stylesheet">
     <link href="style/odometer-theme-default.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/autoNumeric-min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/odometer.min.js"></script>
@@ -33,12 +33,11 @@
       <nav>
         <div class="nav-wrapper"><span class="brand-logo center"><span class="flight-route">Jakarta–Seoul</span><span class="flight-date">15 Feb 2015</span></span>
           <ul class="left">
-            <li><a href="#back" style="font-size:2em;" class="back-button">&#x2190;</a></li>
+            <li><a href="#back" style="font-size:2em;" class="back-button">&#x2190;               </a></li>
           </ul>
         </div>
       </nav>
     </div>
-    
     <div id="tab-content-container" class="col s12">
       <div id="tab-nav-container">
         <ul class="row tab-nav-wrapper">
@@ -55,11 +54,9 @@
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <input type="radio" name="dpt" value="3596550">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6">
-                  <div style="padding-left:0" class="col s5"><span style="color:#8f8f8f">○ CGK</span><br><span style="color:#8f8f8f">○ ICN</span><br><span style="font-weight: light;">direct</span></div>
-                  <div style="padding-left:0" class="col s7"><span>• 14:30</span><br><span>• 12:00</span><br><span>• 1h 2min</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
+                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#8f8f8f; text-decoration:line-through;font-size:0.8em;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong></div>
               </div>
             </label>
             <label class="col s12 search-item">
@@ -80,7 +77,7 @@
       </div>
     </div>
     <div class="row price-update">
-      <div class="col s7"><span class="col s12"><a href="#flight-detail-modal" style="padding: 1em 0em;" class="modal-trigger">Total for <strong>2 </strong>pax</a></span><span style="margin-top: 0;margin-bottom: 0;font-size:1.3em;" class="col s12">Rp <strong id="totalprice" class="currency odometer">0</strong></span></div>
+      <div class="col s7"><span class="col s12"><a href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;" class="modal-trigger"><span style="color:#434343;">Total for <span style="font-weight:bolder;">2 </span>pax • </span><span>Summary</span></a></span><span style="margin-top: 0;margin-bottom: 0;font-size:1.3em;" class="col s12">Rp <strong id="totalprice" class="currency odometer">0</strong></span></div>
       <div class="col s5">
         <button id="book" disabled="true" class="right">Book Now</button>
       </div>

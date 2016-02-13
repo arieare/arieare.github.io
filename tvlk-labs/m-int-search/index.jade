@@ -14,12 +14,9 @@ html(lang="en")
             span.flight-date 15 Feb 2015
           ul.left
             li
-              a.back-button(href="#back" style="font-size:2em;") &#x2190;
+              a.back-button(href="#back" style="font-size:2em;") &#x2190;               
     //- navbar end
     //- tab bar start
-
-
-    //- tab bar end
     #tab-content-container.col.s12
       #tab-nav-container
         ul.row.tab-nav-wrapper
@@ -47,22 +44,17 @@ html(lang="en")
               input(type="radio" name="dpt" value="3596550")
               .row(style="padding:0;margin:0;")
                 div.col.s6(style="padding-left:0")
-                  .col.s5(style="padding-left:0")
-                    span(style="color:#8f8f8f") ○ CGK
-                    br
-                    span(style="color:#8f8f8f") ○ ICN
-                    br
-                    span(style="font-weight: light;") direct
-                  .col.s7(style="padding-left:0")
-                    span • 14:30
-                    br
-                    span • 12:00
-                    br
-                    span • 1h 2min
+                  span(style="color:#8f8f8f") CGK – ICN
+                  br
+                  strong 14:30 – 12:00
+                  br
+                  span(style="color:#8f8f8f;") direct • 1h 2min
                 div.col.s6.right-align(style="padding-right:0")
-                  span.currency(style="color:#8f8f8f; text-decoration:line-through;font-size:0.8em;") 4000000
+                  span.currency(style="color:#b4b4b4; text-decoration:line-through;") 4000000
                   br
                   strong.currency(style="color:rgb(249,109,1);font-size:1.2em;") 3596550
+                  br
+                  //- span(style="color:#1ba0e2; font-size:0.8em;") Smart-combo
             
             label.col.s12.search-item
               input(type="radio" name="dpt" value="3792000")
@@ -87,9 +79,11 @@ html(lang="en")
     .row.price-update
       .col.s7
         span.col.s12
-          a.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em;") Total for 
-            strong 2 
-            | pax
+          a.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;")
+            span(style="color:#434343;") Total for 
+              span(style="font-weight:bolder;") 2 
+              | pax • 
+            span Summary
         span.col.s12(style="margin-top: 0;margin-bottom: 0;font-size:1.3em;") Rp 
           strong#totalprice.currency.odometer 0
       .col.s5

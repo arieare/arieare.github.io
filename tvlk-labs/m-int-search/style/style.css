@@ -39,6 +39,12 @@ body {
   background-color: #F6F6F6;
   cursor: pointer;
 }
+.modal-trigger:after {
+  content:'';
+  position:absolute;
+  top:-2em; bottom:-5em; 
+  left:-3em; right:-3em; 
+}
 input[type="radio"]{
     visibility:hidden;
     margin-left: -30px;

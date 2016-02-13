@@ -5,18 +5,25 @@ $(function() {
 	//modal for summary
 	$('.modal-trigger').leanModal();
 	// attach fastclick
-	FastClick.attach(document.body);
-	//gesture recognizer
-var rtn = $("#rtn-column");
-var dpt = $("#dpt-column");
+	// FastClick.attach(document.body);
+//gesture recognizer
+var rtn = $("#tab-content-container");
+
 rtn.hammer().on("panright", function(ev) {
     console.log('right: ', ev);
 		$('a[href="#go-to-dpt-column"]').trigger('click');
+		$( this ).removeClass( "rtn-active" );
+		$( this ).addClass( "dpt-active" );
 });
+
+var dpt = $("#tab-content-container");
 dpt.hammer().on("panleft", function(ev) {
     console.log('left: ', ev);
 		$('a[href="#go-to-rtn-column"]').trigger('click');
+		$(this ).removeClass( "dpt-active" );
+		$( this ).addClass( "rtn-active" );
 });
+
 // grab an element
 //var myElement = document.querySelector("#tab-nav-container");
 // construct an instance of Headroom, passing the element
@@ -38,6 +45,9 @@ dpt.hammer().on("panleft", function(ev) {
 
 		$("#view-port-container").removeClass( "dpt-active" );
 		$("#view-port-container").addClass( "rtn-active" );
+
+		$("#tab-content-container").removeClass( "dpt-active" );
+		$("#tab-content-container").addClass( "rtn-active" );
 	});
 	$('a[href$="#go-to-dpt-column"]').on('click', function() {
 		$( this ).css( "color", "rgba(255,255,255,1)" )
@@ -51,6 +61,9 @@ dpt.hammer().on("panleft", function(ev) {
 		
 		$("#view-port-container").removeClass( "rtn-active" );
 		$("#view-port-container").addClass( "dpt-active" );
+
+		$("#tab-content-container").removeClass( "rtn-active" );
+		$("#tab-content-container").addClass( "dpt-active" );
 	});
 
 	$('input[name="dpt"]').on('click', function() {
