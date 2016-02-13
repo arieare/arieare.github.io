@@ -34,6 +34,7 @@ body {
   display: block;
   margin-bottom: 0.5em;
   transition: .1s all ease-in;
+  position: relative;
 }
 .search-item:hover {
   background-color: #F6F6F6;
@@ -59,9 +60,11 @@ body {
   right: -2em;
 }
 input[type="radio"]{
-    visibility:hidden;
-    margin-left: 0px;
-    position: absolute;
+  //visibility: hidden;
+  margin-left: 0px;
+  position: absolute;
+  top: 0;
+  margin: 0.9em 3em;
 }
 input[type="radio"]:after{
   content: "";
