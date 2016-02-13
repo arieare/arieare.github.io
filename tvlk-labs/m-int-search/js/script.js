@@ -9,7 +9,9 @@ $(function() {
 //gesture recognizer
 var rtn = $("#tab-content-container");
 
-rtn.hammer().on("swiperight", function(ev) {
+rtn.hammer().on("panright", {
+       threshold: '10000',
+       }, function(ev) {
     console.log('right: ', ev);
 		$('a[href="#go-to-dpt-column"]').trigger('click');
 		$( this ).removeClass( "rtn-active" );
@@ -17,7 +19,9 @@ rtn.hammer().on("swiperight", function(ev) {
 });
 
 var dpt = $("#tab-content-container");
-dpt.hammer().on("swipeleft", function(ev) {
+dpt.hammer().on("panleft", {
+       threshold: '10000',
+       }, function(ev) {
     console.log('left: ', ev);
 		$('a[href="#go-to-rtn-column"]').trigger('click');
 		$(this ).removeClass( "dpt-active" );
