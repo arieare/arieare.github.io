@@ -60,7 +60,7 @@ body {
   right: -2em;
 }
 input[type="radio"]{
- visibility: hidden;
+opacity: 0;
 margin-left: 0px;
 position: absolute;
 top: 0;
