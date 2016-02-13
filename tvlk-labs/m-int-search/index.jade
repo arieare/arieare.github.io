@@ -31,12 +31,12 @@ html(lang="en")
               span#bullet-number-2.bullet-number 2
               | &ensp;Return
       #view-port-container
-        #dpt-column
+        #dpt-column.needsclick
           form.dpt-column(action="")
             span#dpt-route.hide Jakarta–Seoul
             span#dpt-flight-date.hide 15 Feb 2015
             //- search result
-            label.col.s12.search-item.needsclick
+            label.col.s12.search-item
               .row(style="padding:0;margin:0;")
                 span.left Lion
                 a.flight-detail-trigger.right(href="#detail") Detail ▾
@@ -58,13 +58,13 @@ html(lang="en")
             .detail
               p isi detailnya
             //- search result
-        #rtn-column
+        #rtn-column.needsclick
           form.rtn-column(action="")
             
             span#rtn-route.hide Seoul–Jakarta
             span#rtn-flight-date.hide 17 Feb 2015
             //- search result
-            label.col.s12.search-item.needsclick
+            label.col.s12.search-item
               input(type="radio" name="rtn" value="3596550")
               span &emsp; ICN – CGK
               strong.currency 3596550
