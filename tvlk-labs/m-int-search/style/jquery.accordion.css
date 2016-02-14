@@ -38,11 +38,13 @@
     position: absolute;
     background-size: 50%;
     top: -0.5em;
-bottom: -1em; 
-left: -3em;
-right: -0.5em;
+    bottom: -1em; 
+    left: -3em;
+    right: -0.5em;
 }
-
+[data-accordion].open > [data-control] {
+    opacity: 0.5;
+}
 [data-accordion].open > [data-control]:after {
     -webkit-transform: rotate(-180deg); 
     -ms-transform: rotate(-180deg); 

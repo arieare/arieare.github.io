@@ -1,32 +1,32 @@
 label.col.s12.search-item(data-accordion)
   a.flight-detail-trigger.right(href="#" style="z-index:99;" data-control) Detail ▾
   .row(style="padding:0;margin:0;")
-    span.left= dpt_airlines
+    span.left= rtn_airlines
   hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-  input(type="radio" name="dpt" value= dpt_price)
+  input(type="radio" name="rtn" value= rtn_price)
   .row(style="padding:0;margin:0;")
     div.col.s6(style="padding-left:0")
-      span(style="color:#8f8f8f")= dpt_route
+      span(style="color:#8f8f8f")= rtn_route
       br
-      strong= dpt_time
+      strong= rtn_time
       br
       span(style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;")
-        span=dpt_transit
-        span(style="color:#8f8f8f;")=dpt_duration
+        span=rtn_transit
+        span(style="color:#8f8f8f;")=rtn_duration
     div.col.s6.right-align(style="padding-right:0")
-      span.currency(style="color:#b4b4b4; text-decoration:line-through;")= dpt_price_before
+      span.currency(style="color:#b4b4b4; text-decoration:line-through;")= rtn_price_before
       br
-      strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt_price
+      strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= rtn_price
       br
-      span(style="color:#434343; font-size:0.8em;")=dpt_smart_combo
+      span(style="color:#434343; font-size:0.8em;")=rtn_smart_combo
   .row.detail(data-content)
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
-    //- h5.center-align(style="font-size:1.3em;")= dpt_route_city
+    //- h5.center-align(style="font-size:1.3em;")= rtn_route_city
     p.center-align Inclusive of airline Fee & Taxes
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
     .row(style="margin-bottom:16px;")
       .col.s12 
-        h5(style="font-size:1.3em;")= dpt_flight_code
+        h5(style="font-size:1.3em;")= rtn_flight_code
         span PSC Free baggage 20kg
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
     .row

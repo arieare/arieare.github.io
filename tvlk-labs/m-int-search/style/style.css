@@ -89,7 +89,6 @@ input[type="radio"]:after{
 .detail {
   margin-bottom: 0;
   transition: .3s all ease-in;
-  //min-height: 50vh;
 }
 .price-update {
   background-color:#F6F6F6;

@@ -33,39 +33,63 @@ html(lang="en")
       #view-port-container
         #dpt-column
           form#only-one.dpt-column(action="" data-accordion-group)
-            span#dpt-route.hide Jakarta–Seoul
-            span#dpt-flight-date.hide 15 Feb 2015
+            - var dpt_route_city =  'Jakarta – Seoul'
+            - var dpt_date =  '15 Feb 2016'
+            span#dpt-route.hide= dpt_route_city
+            span#dpt-flight-date.hide= dpt_date
             //- search result
+            //- item 1
+            - var dpt_airlines = 'Korean Air'
+            - var dpt_route =  'CGK – ICN'
+            - var dpt_transit = 'direct'
+            - var dpt_price_before = '3595200'
+            - var dpt_price =  '3594850'
+            - var dpt_time =  '08:20 – 17:25'
+            - var dpt_duration =  ' • 7h 5min'
+            - var dpt_flight_code = 'Korean Air KE-626'
+            - var dpt_smart_combo = 'Smart Combo'
             include ./includes/search-item-dpt.jade  
-            include ./includes/search-item-dpt.jade  
-            include ./includes/search-item-dpt.jade  
+            //- item 2
+            - var dpt_airlines = 'AirAsia + Lion + Jetstar'
+            - var dpt_route =  'CGK – ICN'
+            - var dpt_transit = '2 transit(s)'
+            - var dpt_price_before = ''
+            - var dpt_price =  '200'
+            - var dpt_time =  '15:00 – 11:00'
+            - var dpt_duration =  ' • 2h 30min'
+            - var dpt_flight_code = 'Lion JT-150'
+            - var dpt_smart_combo = 'Smart Combo'
             include ./includes/search-item-dpt.jade  
             //- search result
         #rtn-column
-          form.rtn-column(action="")
-            
-            span#rtn-route.hide Seoul–Jakarta
-            span#rtn-flight-date.hide 17 Feb 2015
-            //- search result
-            label.col.s12.search-item
-              .row(style="padding:0;margin:0;")
-                span.left Lion
-                a.flight-detail-trigger.right(href="#detail" style="z-index:99;") Detail ▾
-              hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-              input(type="radio" name="rtn" value="3596550")
-              .row(style="padding:0;margin:0;")
-                div.col.s6(style="padding-left:0")
-                  span(style="color:#8f8f8f") ICN – CGK
-                  br
-                  strong 14:30 – 12:00
-                  br
-                  span(style="color:#8f8f8f;") direct • 1h 2min
-                div.col.s6.right-align(style="padding-right:0")
-                  span.currency(style="color:#b4b4b4; text-decoration:line-through;") 4000000
-                  br
-                  strong.currency(style="color:rgb(249,109,1);font-size:1.2em;") 3596550
-                  br
-                  //- span(style="color:#1ba0e2; font-size:0.8em;") Smart-combo
+          form#only-one.rtn-column(action="" data-accordion-group)
+            - var rtn_route_city =  'Seoul – Jakarta'
+            - var rtn_date =  '17 Feb 2016'
+            span#rtn-route.hide= rtn_route_city
+            span#rtn-flight-date.hide= rtn_date
+            //- search result 
+            //- item 1
+            - var rtn_airlines = 'AirAsia + Lion + Jetstar'
+            - var rtn_route =  'ICN – CGK'
+            - var rtn_transit = '4 transit(s)'
+            - var rtn_price_before = ''
+            - var rtn_price =  '1231231432'
+            - var rtn_time =  '15:00 – 11:00'
+            - var rtn_duration =  ' • 2h 30min'
+            - var rtn_flight_code = 'Lion JT-150'
+            - var rtn_smart_combo = ''
+            include ./includes/search-item-rtn.jade
+            //- item 2
+            - var rtn_airlines = 'Jetstar'
+            - var rtn_route =  'ICN – CGK'
+            - var rtn_transit = '6 transit(s)'
+            - var rtn_price_before = ''
+            - var rtn_price =  '123213123'
+            - var rtn_time =  '15:00 – 11:00'
+            - var rtn_duration =  ' • 2h 30min'
+            - var rtn_flight_code = 'Lion JT-150'
+            - var rtn_smart_combo = 'Smart Combo'
+            include ./includes/search-item-rtn.jade 
             //- search result
         
     .row.price-update(style="z-index:100;")
