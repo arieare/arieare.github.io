@@ -87,13 +87,9 @@ input[type="radio"]:after{
   right: -0.5em; 
 }
 .detail {
-  border: 1px solid #dadada;
-  background-color: #ffffff;
-  border-radius: 3px; 
-  padding: 8px !important;
-  display: none;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   transition: .3s all ease-in;
+  //min-height: 50vh;
 }
 .price-update {
   background-color:#F6F6F6;

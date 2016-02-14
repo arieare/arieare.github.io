@@ -10,6 +10,7 @@
     <title>Intl. Search Result</title>
     <link href="style/main.css" rel="stylesheet">
     <link href="style/odometer-theme-default.css" rel="stylesheet">
+    <link href="style/jquery.accordion.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/autoNumeric-min.js"></script>
@@ -21,6 +22,7 @@
     <script src="js/inobounce.min.js"></script>
     <script src="js/hammer-time.js"></script>
     <script src="js/jquery.hammer.js"></script>
+    <script src="js/jquery.accordion.js"></script>
     <script src="js/script.js"></script>
     <script>
       $(document).ready(function(){
@@ -48,9 +50,10 @@
       </div>
       <div id="view-port-container">
         <div id="dpt-column">
-          <form action="" class="dpt-column"><span id="dpt-route" class="hide">Jakarta–Seoul</span><span id="dpt-flight-date" class="hide">15 Feb 2015</span>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
+          <form id="only-one" action="" data-accordion-group class="dpt-column"><span id="dpt-route" class="hide">Jakarta–Seoul</span><span id="dpt-flight-date" class="hide">15 Feb 2015</span>
+            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span>
+              </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <input type="radio" name="dpt" value="3596550">
               <div style="padding:0;margin:0;" class="row">
@@ -58,12 +61,18 @@
                 <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
                 </div>
               </div>
+              <div data-content class="row detail">
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Jakarta – Seoul</h5>
+                <p>Inclusive of airline Fee & Taxes</p>
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Lion JT-150</h5>
+                <p>PSC Free baggage 20kg</p>
+              </div>
             </label>
-            <div class="detail">
-              <p>isi detailnya</p>
-            </div>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
+            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span>
+              </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <input type="radio" name="dpt" value="3596550">
               <div style="padding:0;margin:0;" class="row">
@@ -71,9 +80,18 @@
                 <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
                 </div>
               </div>
+              <div data-content class="row detail">
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Jakarta – Seoul</h5>
+                <p>Inclusive of airline Fee & Taxes</p>
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Lion JT-150</h5>
+                <p>PSC Free baggage 20kg</p>
+              </div>
             </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
+            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span>
+              </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <input type="radio" name="dpt" value="3596550">
               <div style="padding:0;margin:0;" class="row">
@@ -81,9 +99,18 @@
                 <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
                 </div>
               </div>
+              <div data-content class="row detail">
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Jakarta – Seoul</h5>
+                <p>Inclusive of airline Fee & Taxes</p>
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Lion JT-150</h5>
+                <p>PSC Free baggage 20kg</p>
+              </div>
             </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
+            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span>
+              </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <input type="radio" name="dpt" value="3596550">
               <div style="padding:0;margin:0;" class="row">
@@ -91,261 +118,19 @@
                 <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
                 </div>
               </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
+              <div data-content class="row detail">
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Jakarta – Seoul</h5>
+                <p>Inclusive of airline Fee & Taxes</p>
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <h5 style="font-size:1.3em;">Lion JT-150</h5>
+                <p>PSC Free baggage 20kg</p>
               </div>
             </label>
           </form>
         </div>
         <div id="rtn-column">
           <form action="" class="rtn-column"><span id="rtn-route" class="hide">Seoul–Jakarta</span><span id="rtn-flight-date" class="hide">17 Feb 2015</span>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
-            <label class="col s12 search-item">
-              <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="3596550">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>14:30 – 12:00</strong><br><span style="color:#8f8f8f;">direct • 1h 2min</span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">4000000</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3596550</strong><br>
-                </div>
-              </div>
-            </label>
             <label class="col s12 search-item">
               <div style="padding:0;margin:0;" class="row"><span class="left">Lion</span><a href="#detail" style="z-index:99;" class="flight-detail-trigger right">Detail ▾</a></div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
@@ -388,3 +173,17 @@
     </script>
   </div>
 </html>
+<script>
+  $(document).ready(function() {
+    $('#only-one [data-accordion]').accordion();
+  
+    $('#multiple [data-accordion]').accordion({
+      singleOpen: false
+    });
+  
+    $('#single[data-accordion]').accordion({
+      transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
+      transitionSpeed: 200
+    });
+  });
+</script>

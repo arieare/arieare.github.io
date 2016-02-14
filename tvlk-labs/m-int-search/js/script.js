@@ -72,7 +72,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 			$( this ).parent().addClass("dpt-selected");
 			//style
 			$('.dpt-column .search-item').css({"border":"1px solid #dadada", "box-shadow":"none", "background-color":"#ffffff"});
-			$( this ).parent().css({"border":"1px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});			
+			$( this ).parent().css({"border":"2px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});			
 		}
 		dptPrice = $('input[name=dpt]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice))*2; //sesuai jumlah passengers
@@ -100,7 +100,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 			$( this ).parent().addClass("rtn-selected");
 			//style
 			$('.rtn-column .search-item').css({"border":"1px solid #dadada", "box-shadow":"none", "background-color":"#ffffff"});
-			$( this ).parent().css({"border":"1px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});
+			$( this ).parent().css({"border":"2px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});
 	   }
 		rtnPrice = $('input[name=rtn]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice)) * 2;
@@ -125,7 +125,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 
 	});
 
-	$('a[href$="#detail"]').on('click', function() {
-			$(".detail").css("display","block");
-	});
+	// $('a[href$="#detail"]').on('click', function() {
+	// 		$(".detail").css("display","block");
+	// });
 });
