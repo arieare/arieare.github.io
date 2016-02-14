@@ -8,7 +8,7 @@ $(function() {
 	FastClick.attach(document.body);
 //gesture recognizer
 var rtn = $("#tab-content-container");
-rtn.hammer({"threshold":100}).on("panright", function(ev) {
+rtn.hammer({"threshold":5,"velocity":0.1}).on("swiperight", function(ev) {
     console.log('right: ', ev);
 		$('a[href="#go-to-dpt-column"]').trigger('click');
 		$( this ).removeClass( "rtn-active" );
@@ -16,7 +16,7 @@ rtn.hammer({"threshold":100}).on("panright", function(ev) {
 });
 
 var dpt = $("#tab-content-container");
-dpt.hammer({"threshold":100}).on("panleft", function(ev){
+dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
     console.log('left: ', ev);
 		$('a[href="#go-to-rtn-column"]').trigger('click');
 		$(this ).removeClass( "dpt-active" );

@@ -147,7 +147,7 @@ li.tab a:active{
   -webkit-overflow-scrolling: touch;
 }
 .dpt-column, .rtn-column {
-  padding: 4em 0.4rem;
+  padding: 4em 0.4rem 8em 0.4rem;
   width: 100%;
   float: left;
   box-sizing: border-box;
