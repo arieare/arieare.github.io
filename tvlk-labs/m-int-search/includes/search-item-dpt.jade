@@ -15,6 +15,8 @@ label.col.s12.search-item(data-accordion)
         span(style="color:#8f8f8f;")=dpt_duration
     div.col.s6.right-align(style="padding-right:0")
       span.currency(style="color:#b4b4b4; text-decoration:line-through;")= dpt_price_before
+      i
+        span(style="color:#434343;font-size:0.8em;")= dpt_total_combo
       br
       strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt_price
       br
@@ -27,7 +29,7 @@ label.col.s12.search-item(data-accordion)
     .row(style="margin-bottom:16px;")
       .col.s12 
         h5(style="font-size:1.3em;")= dpt_flight_code
-        span PSC Free baggage 20kg
+        span= dpt_psc
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
     .row
       .col.s3.right-align
@@ -42,7 +44,8 @@ label.col.s12.search-item(data-accordion)
       .col.s3
         span &emsp;
       .col.s9
-        span(style="color:#8f8f8f;") Duration: 4 hours 10 minutes
+        span(style="color:#8f8f8f;") Duration: 
+          span=dpt_duration
     .row
       .col.s3.right-align
         strong 20:20

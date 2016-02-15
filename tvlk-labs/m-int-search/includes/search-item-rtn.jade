@@ -27,7 +27,7 @@ label.col.s12.search-item(data-accordion)
     .row(style="margin-bottom:16px;")
       .col.s12 
         h5(style="font-size:1.3em;")= rtn_flight_code
-        span PSC Free baggage 20kg
+        span= rtn_psc
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
     .row
       .col.s3.right-align
@@ -42,7 +42,8 @@ label.col.s12.search-item(data-accordion)
       .col.s3
         span &emsp;
       .col.s9
-        span(style="color:#8f8f8f;") Duration: 4 hours 10 minutes
+        span(style="color:#8f8f8f;") Duration: 
+          span=rtn_duration
     .row
       .col.s3.right-align
         strong 20:20

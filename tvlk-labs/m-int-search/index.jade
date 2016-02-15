@@ -18,7 +18,7 @@ html(lang="en")
     //- navbar end
     //- tab bar start
     #tab-content-container.col.s12
-      #tab-nav-container
+      #tab-nav-container(style="z-index:100;")
         ul.row.tab-nav-wrapper
           .active-indicator
           li.tab.col.s6.center-align
@@ -34,61 +34,102 @@ html(lang="en")
         #dpt-column
           form#only-one.dpt-column(action="" data-accordion-group)
             - var dpt_route_city =  'Jakarta – Seoul'
-            - var dpt_date =  '15 Feb 2016'
+            - var dpt_date =  'Sat, 20 Feb 2016'
             span#dpt-route.hide= dpt_route_city
             span#dpt-flight-date.hide= dpt_date
             //- search result
             //- item 1
-            - var dpt_airlines = 'Korean Air'
+            - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
-            - var dpt_transit = 'direct'
-            - var dpt_price_before = '3595200'
-            - var dpt_price =  '3594850'
-            - var dpt_time =  '08:20 – 17:25'
-            - var dpt_duration =  ' • 7h 5min'
-            - var dpt_flight_code = 'Korean Air KE-626'
-            - var dpt_smart_combo = 'Smart Combo'
+            - var dpt_transit = '1 transit(s) • '
+            - var dpt_price_before = '2226480'
+            - var dpt_price =  '2226400'
+            - var dpt_time =  '20:25 – 15:05(+1d)'
+            - var dpt_duration =  '16h 40m'
+            - var dpt_flight_code = 'AirAsia AK-387'
+            - var dpt_psc = 'PSC'
+            - var dpt_smart_combo = ''
             include ./includes/search-item-dpt.jade  
             //- item 2
-            - var dpt_airlines = 'AirAsia + Lion + Jetstar'
+            - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
-            - var dpt_transit = '2 transit(s)'
+            - var dpt_transit = '1 transit(s) • '
+            - var dpt_price_before = '2306480'
+            - var dpt_price =  '2306400'
+            - var dpt_time =  '18:50 – 15:05(+1d)'
+            - var dpt_duration =  '18h 15m'
+            - var dpt_flight_code = 'AirAsia QZ-206'
+            - var dpt_psc = 'PSC, Free baggage 25kg'
+            - var dpt_smart_combo = ''
+            include ./includes/search-item-dpt.jade 
+            //- item 3
+            - var dpt_airlines = 'AirAsia'
+            - var dpt_route =  'CGK – ICN'
+            - var dpt_transit = '1 transit(s) • '
+            - var dpt_price_before = '2394480'
+            - var dpt_price =  '2394400'
+            - var dpt_time =  '15:10 – 15:05(+1d)'
+            - var dpt_duration =  '21h 55m'
+            - var dpt_flight_code = 'AirAsia Ak-385'
+            - var dpt_psc = 'PSC'
+            - var dpt_smart_combo = ''
+            include ./includes/search-item-dpt.jade 
+            //- item 4
+            - var dpt_airlines = 'AirAsia'
+            - var dpt_route =  'CGK – ICN'
+            - var dpt_transit = '1 transit(s) • '
+            - var dpt_price_before = '3265200'
+            - var dpt_price =  '3265100'
+            - var dpt_time =  '20:25 – 08:20(+1d)'
+            - var dpt_duration =  '9h 55m'
+            - var dpt_flight_code = 'AirAsia AK-387'
+            - var dpt_psc = 'PSC, Free baggage 20kg'
+            - var dpt_smart_combo = ''
+            include ./includes/search-item-dpt.jade 
+            //- item 5
+            - var dpt_airlines = 'AirAsia'
+            - var dpt_route =  'CGK – ICN'
+            - var dpt_transit = '1 transit • '
             - var dpt_price_before = ''
-            - var dpt_price =  '200'
-            - var dpt_time =  '15:00 – 11:00'
-            - var dpt_duration =  ' • 2h 30min'
-            - var dpt_flight_code = 'Lion JT-150'
-            - var dpt_smart_combo = 'Smart Combo'
-            include ./includes/search-item-dpt.jade  
+            - var dpt_total_combo = 'round-trip price combo'
+            - var dpt_price =  '6690200'
+            - var dpt_time =  '06:25 – 08:20(+1d)'
+            - var dpt_duration =  '23h 55m'
+            - var dpt_flight_code = 'AirAsia QZ-202'
+            - var dpt_psc = 'PSC'
+            - var dpt_smart_combo = '✹ Smart-Combo⍰'
+            include ./includes/search-item-dpt.jade 
             //- search result
         #rtn-column
           form#only-one.rtn-column(action="" data-accordion-group)
             - var rtn_route_city =  'Seoul – Jakarta'
-            - var rtn_date =  '17 Feb 2016'
+            - var rtn_date =  'Sun, 21 Feb 2016'
             span#rtn-route.hide= rtn_route_city
             span#rtn-flight-date.hide= rtn_date
             //- search result 
             //- item 1
-            - var rtn_airlines = 'AirAsia + Lion + Jetstar'
+            - var rtn_airlines = 'Philippine Airlines'
             - var rtn_route =  'ICN – CGK'
-            - var rtn_transit = '4 transit(s)'
-            - var rtn_price_before = ''
-            - var rtn_price =  '1231231432'
-            - var rtn_time =  '15:00 – 11:00'
-            - var rtn_duration =  ' • 2h 30min'
-            - var rtn_flight_code = 'Lion JT-150'
+            - var rtn_transit = '1 transit(s) • '
+            - var rtn_price_before = '5327300'
+            - var rtn_price =  '5326800'
+            - var rtn_time =  '22:05 – 12:35(+1d)'
+            - var rtn_duration =  '16h 30m'
+            - var rtn_flight_code = 'Philippine Airlines PR-1139'
+            - var rtn_psc = 'Free baggage 20kg, Meal, Late-night flight'
             - var rtn_smart_combo = ''
             include ./includes/search-item-rtn.jade
             //- item 2
-            - var rtn_airlines = 'Jetstar'
+            - var rtn_airlines = 'Thai'
             - var rtn_route =  'ICN – CGK'
-            - var rtn_transit = '6 transit(s)'
+            - var rtn_transit = '1 transit(s) • '
             - var rtn_price_before = ''
-            - var rtn_price =  '123213123'
-            - var rtn_time =  '15:00 – 11:00'
-            - var rtn_duration =  ' • 2h 30min'
-            - var rtn_flight_code = 'Lion JT-150'
-            - var rtn_smart_combo = 'Smart Combo'
+            - var rtn_price =  '13095800'
+            - var rtn_time =  '21:25 – 11:55(+1d)'
+            - var rtn_duration =  '16h 30m'
+            - var rtn_flight_code = 'Thai TG-657'
+            - var rtn_psc = 'Free baggage 30kg, Meal, Late-night flight'
+            - var rtn_smart_combo = ''
             include ./includes/search-item-rtn.jade 
             //- search result
         
@@ -122,7 +163,8 @@ html(lang="en")
       hr(style="padding-top:8px;")
       p(style="margin:0.4em 0;") 
         strong Total Price for 2 pax
-      span Rp 14,801,600
+      span Rp  
+      span#totalpricesummary 0
     //- .modal-footer
     //-   a(href="#!").modal-action.modal-close Share
     //-   a.right(href="#!").modal-action.modal-close Book
