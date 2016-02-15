@@ -43,35 +43,41 @@ html(lang="en")
             - var dpt_route =  'CGK – ICN'
             - var dpt_transit = '1 transit(s) • '
             - var dpt_price_before = '2226480'
+            - var dpt_total_combo = ''
             - var dpt_price =  '2226400'
             - var dpt_time =  '20:25 – 15:05(+1d)'
             - var dpt_duration =  '16h 40m'
             - var dpt_flight_code = 'AirAsia AK-387'
             - var dpt_psc = 'PSC'
+            - var dpt_smart_combo_bool = false
             - var dpt_smart_combo = ''
             include ./includes/search-item-dpt.jade  
             //- item 2
             - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
             - var dpt_transit = '1 transit(s) • '
-            - var dpt_price_before = '2306480'
-            - var dpt_price =  '2306400'
+            - var dpt_price_before = ''
+            - var dpt_total_combo = 'Round-trip price combo'
+            - var dpt_price =  '4612800'
             - var dpt_time =  '18:50 – 15:05(+1d)'
             - var dpt_duration =  '18h 15m'
             - var dpt_flight_code = 'AirAsia QZ-206'
             - var dpt_psc = 'PSC, Free baggage 25kg'
-            - var dpt_smart_combo = ''
+            - var dpt_smart_combo_bool = true
+            - var dpt_smart_combo = 'Smart-Combo '
             include ./includes/search-item-dpt.jade 
             //- item 3
             - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
             - var dpt_transit = '1 transit(s) • '
             - var dpt_price_before = '2394480'
+            - var dpt_total_combo = ''
             - var dpt_price =  '2394400'
             - var dpt_time =  '15:10 – 15:05(+1d)'
             - var dpt_duration =  '21h 55m'
             - var dpt_flight_code = 'AirAsia Ak-385'
             - var dpt_psc = 'PSC'
+            - var dpt_smart_combo_bool = false
             - var dpt_smart_combo = ''
             include ./includes/search-item-dpt.jade 
             //- item 4
@@ -79,25 +85,28 @@ html(lang="en")
             - var dpt_route =  'CGK – ICN'
             - var dpt_transit = '1 transit(s) • '
             - var dpt_price_before = '3265200'
+            - var dpt_total_combo = ''
             - var dpt_price =  '3265100'
             - var dpt_time =  '20:25 – 08:20(+1d)'
             - var dpt_duration =  '9h 55m'
             - var dpt_flight_code = 'AirAsia AK-387'
             - var dpt_psc = 'PSC, Free baggage 20kg'
+            - var dpt_smart_combo_bool = false
             - var dpt_smart_combo = ''
             include ./includes/search-item-dpt.jade 
             //- item 5
             - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
             - var dpt_transit = '1 transit • '
-            - var dpt_price_before = ''
-            - var dpt_total_combo = 'round-trip price combo'
-            - var dpt_price =  '6690200'
+            - var dpt_price_before = '3345200'
+            - var dpt_total_combo = ''
+            - var dpt_price =  '3345100'
             - var dpt_time =  '06:25 – 08:20(+1d)'
             - var dpt_duration =  '23h 55m'
             - var dpt_flight_code = 'AirAsia QZ-202'
             - var dpt_psc = 'PSC'
-            - var dpt_smart_combo = '✹ Smart-Combo⍰'
+            - var dpt_smart_combo_bool = false
+            - var dpt_smart_combo = ''
             include ./includes/search-item-dpt.jade 
             //- search result
         #rtn-column
@@ -136,7 +145,7 @@ html(lang="en")
     .row.price-update(style="z-index:100;")
       .col.s7
         span.col.s12
-          a.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;")
+          a.flight-detail-modal-trigger.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;")
             span(style="color:#434343;") Total for 
               span(style="font-weight:bolder;") 2 
               | pax • 
@@ -165,9 +174,20 @@ html(lang="en")
         strong Total Price for 2 pax
       span Rp  
       span#totalpricesummary 0
-    //- .modal-footer
-    //-   a(href="#!").modal-action.modal-close Share
-    //-   a.right(href="#!").modal-action.modal-close Book
+
+  #smart-combo-modal.modal
+    .modal-content
+      strong What is Smart-Combo?
+      a.right(href="#!").modal-action.modal-close Close
+      hr(style="padding-top:8px;")
+      p(style="margin:0.4em 0;").
+      | The price shown here is already total for 
+      strong departure and return
+      | . You only need to pick the schedule within this combo.
+      p(style="margin:0.4em 0;").
+      | Premium service flights with Smart Combo icon are 
+      strong cheaper 
+      | than any round-trip flights of the similar class.
  
 
     script(type="text/javascript")

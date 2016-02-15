@@ -40,13 +40,24 @@ body {
   background-color: #F6F6F6;
   cursor: pointer;
 }
-.modal-trigger:after {
+.flight-detail-modal-trigger:after {
   content:'';
   position:absolute;
   top: -1em;
   bottom: -0em; 
   left: -0em;
   right: 45%; 
+}
+.smart-combo-modal-trigger:after {
+    content:'';
+  position:absolute;
+top: 2em;
+bottom: -0em; 
+left: 3em;
+right: -0.5em;
+}
+.modal-trigger:after {
+
 }
 .modal-close {
   position: relative;

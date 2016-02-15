@@ -13,14 +13,20 @@ label.col.s12.search-item(data-accordion)
       span(style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;")
         span=dpt_transit
         span(style="color:#8f8f8f;")=dpt_duration
-    div.col.s6.right-align(style="padding-right:0")
+    div.col.s6.right-align(style="padding-right:0;position:relative;")
       span.currency(style="color:#b4b4b4; text-decoration:line-through;")= dpt_price_before
-      i
-        span(style="color:#434343;font-size:0.8em;")= dpt_total_combo
+      span(style="color:#434343;font-size:0.8em;")= dpt_total_combo
       br
-      strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt_price
+      unless !dpt_smart_combo_bool  
+        i
+          strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt_price
+      else
+        strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt_price
       br
-      span(style="color:#434343; font-size:0.8em;")=dpt_smart_combo
+      unless !dpt_smart_combo_bool
+        a.smart-combo-modal-trigger.modal-trigger(href="#smart-combo-modal" style="z-index:110;")
+          span(style="font-size:0.8em;")= dpt_smart_combo
+          span(style="color:#ffffff;background:#1ba0e2;font-size:0.8em;padding:1px 5px;border-radius:100%;") ?
   .row.detail(data-content)
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
     //- h5.center-align(style="font-size:1.3em;")= dpt_route_city
