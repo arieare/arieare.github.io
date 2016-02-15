@@ -51,13 +51,15 @@ html(lang="en")
             - var dpt_psc = 'PSC'
             - var dpt_smart_combo_bool = false
             - var dpt_smart_combo = ''
-            include ./includes/search-item-dpt.jade  
+            include ./includes/search-item-dpt.jade
             //- item 2
+            .smart-combo-banner(style="width:100%;padding:0.2em 1em; color:#b4b4b4;")
+              span Harga paket pulang+pergi /pax
             - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
             - var dpt_transit = '1 transit(s) • '
             - var dpt_price_before = ''
-            - var dpt_total_combo = 'Round-trip price combo'
+            - var dpt_total_combo = 'Save up to 40%'
             - var dpt_price =  '4612800'
             - var dpt_time =  '18:50 – 15:05(+1d)'
             - var dpt_duration =  '18h 15m'
@@ -66,6 +68,8 @@ html(lang="en")
             - var dpt_smart_combo_bool = true
             - var dpt_smart_combo = 'Smart-Combo '
             include ./includes/search-item-dpt.jade 
+            .non-smart-combo-banner(style="width:100%;padding:0.2em 1em; color:#8f8f8f; text-align:center;")
+              span Lihat 20 pilihan smart combo lainnya ▾
             //- item 3
             - var dpt_airlines = 'AirAsia'
             - var dpt_route =  'CGK – ICN'
@@ -181,13 +185,15 @@ html(lang="en")
       a.right(href="#!").modal-action.modal-close Close
       hr(style="padding-top:8px;")
       p(style="margin:0.4em 0;").
-      | The price shown here is already total for 
-      strong departure and return
+      | The price shown here is already  
+      strong total for departure + return
       | . You only need to pick the schedule within this combo.
       p(style="margin:0.4em 0;").
       | Premium service flights with Smart Combo icon are 
       strong cheaper 
       | than any round-trip flights of the similar class.
+      p.
+      a(href="https://www.traveloka.com/en/promo/smartcombo") More Info
  
 
     script(type="text/javascript")
