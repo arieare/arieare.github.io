@@ -35,6 +35,7 @@ body {
   margin-bottom: 0.2em;
   transition: .1s all ease-in;
   position: relative;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
 }
 .search-item:hover {
   background-color: #F6F6F6;

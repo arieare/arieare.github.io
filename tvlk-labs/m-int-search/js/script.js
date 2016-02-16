@@ -64,14 +64,14 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$("#tab-content-container").removeClass( "rtn-active" );
 		$("#tab-content-container").addClass( "dpt-active" );
 	});
-
+//update data on selecting departure flight
 	$('input[name="dpt"]').on('click', function() {
 		if($('input[name="dpt"]').is(':checked')) {
 			//add selected class
 			$('.dpt-column .search-item').removeClass("dpt-selected");
 			$( this ).parent().addClass("dpt-selected");
 			//style
-			$('.dpt-column .search-item').css({"border":"1px solid #dadada", "box-shadow":"none", "background-color":"#ffffff"});
+			$('.dpt-column .search-item').css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
 			$( this ).parent().css({"border":"2px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});			
 		}
 		dptPrice = $('input[name=dpt]:checked').val();
@@ -93,14 +93,14 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		}
 
 	});
-
+//update data on selecting return flight
 	$('input[name="rtn"]').on('click', function() {
 	  if($('input[name="rtn"]').is(':checked')) {
 	  	//add selected class
 			$('.rtn-column .search-item').removeClass("rtn-selected");
 			$( this ).parent().addClass("rtn-selected");
 			//style
-			$('.rtn-column .search-item').css({"border":"1px solid #dadada", "box-shadow":"none", "background-color":"#ffffff"});
+			$('.rtn-column .search-item').css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
 			$( this ).parent().css({"border":"2px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});
 	   }
 		rtnPrice = $('input[name=rtn]:checked').val();
@@ -117,7 +117,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		else {
 			
 		}
-
+    // activate or inactivate book button
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
 			$("#book").prop("disabled", false);
 		} 
@@ -126,8 +126,4 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		}
 
 	});
-
-	// $('a[href$="#detail"]').on('click', function() {
-	// 		$(".detail").css("display","block");
-	// });
 });
