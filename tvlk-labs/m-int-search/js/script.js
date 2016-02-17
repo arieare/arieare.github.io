@@ -75,9 +75,9 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 			$( this ).parent().css({"border":"2px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});			
 		}
 		dptPrice = $('input[name=dpt]:checked').val();
-		totalPrice = (Number(dptPrice) + Number(rtnPrice))*2; //sesuai jumlah passengers
+		totalPrice = (Number(dptPrice) + Number(rtnPrice));
 		$("#totalprice").html(totalPrice);
-		$("#totalpricesummary").html(totalPrice);
+		$("#totalpricesummary").html(totalPrice*2); //sesuai jumlah passengers
 		$("#bullet-number-1").html("✓");
 		$("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
 		if ($("#bullet-number-2").html() != "✓") {

@@ -1,0 +1,33 @@
+.row.detail(data-content)
+  hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
+  p.center-align Inclusive of airline Fee & Taxes
+  hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+  .row(style="margin-bottom:16px;")
+    .col.s12 
+      h5(style="font-size:1.3em;")= dpt_flight_code
+      span= dpt_psc
+  hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+  .row
+    .col.s3.right-align
+      strong 20:20
+      br
+      span(style="color:#8f8f8f;") 17 Feb
+    .col.s9
+      strong Seoul (ICN)
+      br
+      span(style="color:#8f8f8f;") Incheon Intl.
+  .row
+    .col.s3
+      span &emsp;
+    .col.s9
+      span(style="color:#8f8f8f;") Duration: 
+        span=dpt_duration
+  .row
+    .col.s3.right-align
+      strong 20:20
+      br
+      span(style="color:#8f8f8f;") 17 Feb
+    .col.s9
+      strong Seoul (ICN)
+      br
+      span(style="color:#8f8f8f;") Incheon Intl.

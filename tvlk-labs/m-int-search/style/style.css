@@ -106,11 +106,10 @@ input[type="radio"]:after{
   background-color:#F6F6F6;
   border-top: solid 1px #dadada;
   margin-bottom: 0;
+  height: 48px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
 }
 li.tab a {
   transition: .3s all ease-in;
