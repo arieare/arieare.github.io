@@ -39,13 +39,9 @@ html(lang="en")
             span#dpt-route.hide= dpt_route_city
             span#dpt-flight-date.hide= dpt_date
             //- search result
-<<<<<<< HEAD
+
             .col.s12(style="background-color: #dadada;font-size: 0.8em;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.3em;")
               span 4 outbound flights found, sorted by round-trip price.
-=======
-            .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 4 outbound + 2 smart combo found, sorted by price
->>>>>>> parent of bb2feed... changing how to display prices
             //- item 2
             //- .smart-combo-banner(style="width:100%;padding:0.2em 1em; color:#8f8f8f;")
               span Harga paket pulang+pergi /pax
@@ -62,8 +58,6 @@ html(lang="en")
             - var dpt_smart_combo_bool = true
             - var dpt_smart_combo = 'Smart Combo ?'
             include ./includes/search-item-dpt.jade
-            .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: 0.5em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;text-align:center")
-              span See 1 more Smart Combo ▾
             //- .non-smart-combo-banner(style="width:100%;padding:0.2em 1em; color:#8f8f8f; text-align:center;")
               a(href='#') See 1 more Smart Combo ▾
             //- item 1
