@@ -26,4 +26,36 @@ label.col.s12.search-item(data-accordion)
       unless !dpt_smart_combo_bool
         a.smart-combo-modal-trigger.modal-trigger(href="#smart-combo-modal" style="z-index:110;")
           span(style="border:1px solid rgb(249,109,1);color:rgb(249,109,1);font-size:0.8em;padding: 0.2em 0.5em;border-radius:4px;")= dpt_smart_combo
-  include ./accordion-dpt-flight-detail.jade
+  .row.detail(data-content)
+    hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
+    p.center-align Inclusive of airline Fee & Taxes
+    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+    .row(style="margin-bottom:16px;")
+      .col.s12 
+        h5(style="font-size:1.3em;")= dpt_flight_code
+        span= dpt_psc
+    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+    .row
+      .col.s3.right-align
+        strong 20:20
+        br
+        span(style="color:#8f8f8f;") 17 Feb
+      .col.s9
+        strong Seoul (ICN)
+        br
+        span(style="color:#8f8f8f;") Incheon Intl.
+    .row
+      .col.s3
+        span &emsp;
+      .col.s9
+        span(style="color:#8f8f8f;") Duration: 
+          span=dpt_duration
+    .row
+      .col.s3.right-align
+        strong 20:20
+        br
+        span(style="color:#8f8f8f;") 17 Feb
+      .col.s9
+        strong Seoul (ICN)
+        br
+        span(style="color:#8f8f8f;") Incheon Intl.

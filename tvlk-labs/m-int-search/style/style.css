@@ -166,10 +166,22 @@ input[type="radio"]:after{
   margin-bottom: 0;
   transition: .3s all ease-in;
 }
+<<<<<<< HEAD
 hr {
     border: 0;
     border-bottom: 1px solid #dadada;
     margin: 0 -16px;
+=======
+.price-update {
+  background-color:#F6F6F6;
+  border-top: solid 1px #dadada;
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+>>>>>>> parent of bb2feed... changing how to display prices
 }
 
 li.tab a {
