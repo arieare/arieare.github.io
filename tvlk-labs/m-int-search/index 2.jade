@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Traveloka"
+    - var author = "arieare"
+    include ./includes/head.jade
+  body
+    //- navbar start
+    - var dpt_route_city =  'Jakarta – Seoul'
+    - var dpt_date =  'Sat, 20 Feb 2016'
+    - var rtn_route_city =  'Seoul – Jakarta'
+    - var rtn_date =  'Sun, 21 Feb 2016'
+    .navbar-fixed
+      nav
+        .nav-wrapper
+          span.brand-logo.center
+            span.flight-route traveloka              
+    //- navbar end
+    //- tab bar start
+    .container
+      .row.s12
+        label Origin
+        h5 Jakarta (JKTA)
+      .row.s12
+        Label Destination
+        h5 Seoul (SEOA)
+      .row.s12
+        a#btn-search-fight(href="index.html") Search Flight
+//- accordion script
+script.
+  $(document).ready(function() {
+    $('#only-one [data-accordion]').accordion();
+
+    $('#multiple [data-accordion]').accordion({
+      singleOpen: false
+    });
+
+    $('#single[data-accordion]').accordion({
+      transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
+      transitionSpeed: 200
+    });
+  });
+//- unselect radio script
+script.
+  var allRadios = document.getElementsByName('dpt');
+    var booRadio;
+    var x = 0;
+    for(x = 0; x < allRadios.length; x++){
+
+      allRadios[x].onclick = function() {
+        if(booRadio == this){
+          this.checked = false;
+          booRadio = null;
+          $( this ).parent().removeClass("dpt-selected");
+          //style
+          $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
+        }else{
+          booRadio = this;
+        }
+        dptPrice = $('input[name=dpt]:checked').val();
+        totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
+        $("#totalprice").html(totalPrice);
+        $("#totalpricesummary").html(totalPrice);
+        $("#bullet-number-1").html("1");
+        $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
+      };
+    }

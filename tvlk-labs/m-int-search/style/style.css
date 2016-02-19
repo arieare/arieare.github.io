@@ -26,6 +26,32 @@ body {
   color: rgba(255, 255, 255, 0.6);
   cursor: not-allowed;
 }
+#btn-search-fight {
+  outline: none;
+  border: 0;
+  background: rgb(249,109,1);
+  padding: 15px 40px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: bold;
+  width: 100%;
+  letter-spacing: 0.0625em;
+  display: block;
+
+}
+#btn-search-flight:hover {
+  background-color: #F57D00;
+  transition: background-color 0.2s ease;
+}
+#btn-search-flight:active {
+  background-color: #E26A00;
+  transition: background-color 0.2s ease;
+}
+#btn-search-flight:disabled {
+  background-color: rgba(249, 109, 1, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+}
 .search-item {
   border: 1px solid #dadada;
   background-color: #ffffff;
@@ -190,7 +216,7 @@ li.tab a:active{
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   height: 48px;
   position: fixed;
-  top: 56px;left: 0;right: 0;
+  top: 48px;left: 0;right: 0;
   z-index: 2;
   transition: all .2s ease-in-out;
 }
