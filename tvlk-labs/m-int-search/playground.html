@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  label{
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<p id="dpt-col-price"></p>
+<p id="rtn-col-price"></p>
+
+<p id="output"></p>
+
+<script>
+var dpt_prices = [100, 200, 300, 400];
+var rtn_prices = [150, 250, 350, 450];
+var dpt_col_prices = [];
+var rtn_col_prices = [];
+
+dpt_prices.sort();
+rtn_prices.sort();
+
+for(var i=0; i< dpt_prices.length; i++) {
+    dpt_col_prices[i] = dpt_prices[i] + rtn_prices[0];
+}
+document.getElementById("dpt-col-price").innerHTML = dpt_col_prices.toString();
+
+for(i=0; i< rtn_prices.length; i++) {
+    rtn_col_prices[i] = rtn_prices[i] + dpt_prices[0];
+}
+document.getElementById("rtn-col-price").innerHTML = rtn_col_prices.toString();
+</script>
+
+<script>
+
+var dpt = [{
+id: 1,
+airlines: "AirAsia",
+flight_code: "AirAsia QZ-206",
+psc: "PSC, Free baggage 25kg",
+city_route_out: "Jakarta",
+airport_route_out: "CGK",
+city_route_arvl: "Seoul", 
+airport_route_arvl: "ICN",
+transit: 1, 
+price_before: 123123,
+price: 4612800,
+time_out: "18:50",
+time_arvl: "15:05",
+time_duration: "18h 15m",
+time_tomorrow: true
+},
+{
+id: 2,
+airlines: "AirAsia + Sriwijaya",
+flight_code: "AirAsia QZ-206",
+psc: "PSC, Free baggage 25kg",
+city_route_out: "Jakarta",
+airport_route_out: "CGK",
+city_route_arvl: "Seoul", 
+airport_route_arvl: "ICN",
+transit: 1, 
+price_before: 5327300,
+price: 5326800,
+time_out: "18:50",
+time_arvl: "15:05",
+time_duration: "18h 15m",
+time_tomorrow: true
+}];
+
+dpt.forEach(function(flight) {
+  var label = document.createElement('label');
+  var input = document.createElement('input');
+  document.body.appendChild(label);
+  input.type = "radio";
+  input.name = "dpt";
+  input.value = flight.price;
+  label.appendChild(input);
+  
+  var search_item_elmt = document.createElement('p');
+  search_item_elmt.innerHTML = flight.airlines;
+  label.appendChild(search_item_elmt);
+  
+  search_item_elmt = document.createElement('strong');
+  search_item_elmt.innerHTML = flight.time_out + " – " + flight.time_arvl;
+  label.appendChild(search_item_elmt);
+  
+  search_item_elmt = document.createElement('p');
+  search_item_elmt.style = "color:#8f8f8f";
+  search_item_elmt.innerHTML = flight.airport_route_out + " ⇄ " + flight.airport_route_arvl;
+  label.appendChild(search_item_elmt);
+
+  search_item_elmt = document.createElement('p');
+  search_item_elmt.style = "color:#8f8f8f";;
+  search_item_elmt.innerHTML = flight.time_duration;
+  label.appendChild(search_item_elmt);
+  
+  search_item_elmt = document.createElement('p');
+  search_item_elmt.style = "color:#8f8f8f";
+  search_item_elmt.innerHTML = flight.transit + " transit(s)";
+  label.appendChild(search_item_elmt);
+
+  search_item_elmt = document.createElement('p');
+  search_item_elmt.innerHTML = flight.price + "/pax";
+  label.appendChild(search_item_elmt);
+});
+
+document.getElementById("output").innerHTML = dpt[1].price;
+
+</script>
+</body>
+</html>

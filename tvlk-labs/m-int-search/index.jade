@@ -18,7 +18,7 @@ html(lang="en")
             span.flight-date= dpt_date
           ul.left
             li
-              a.back-button(href="index 2.html" style="font-size:2em;") &#x2190;               
+              a.back-button(href="index 2.html" style="font-size:2em;") &#x2190;
     //- navbar end
     //- tab bar start
     #tab-content-container.col.s12
@@ -42,80 +42,7 @@ html(lang="en")
 
             .col.s12(style="background-color: #dadada;font-size: 0.8em;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.3em;")
               span 4 outbound flights found, sorted by round-trip price.
-            //- item 2
-            //- .smart-combo-banner(style="width:100%;padding:0.2em 1em; color:#8f8f8f;")
-              span Harga paket pulang+pergi /pax
-            - var dpt_airlines = 'AirAsia'
-            - var dpt_route =  'CGK ⇄ ICN'
-            - var dpt_transit = '1 transit(s) • '
-            - var dpt_price_before = ''
-            - var dpt_total_combo = 'Round-trip total price:'
-            - var dpt_price =  '4612800'
-            - var dpt_time =  '18:50 – 15:05(+1d)'
-            - var dpt_duration =  '18h 15m'
-            - var dpt_flight_code = 'AirAsia QZ-206'
-            - var dpt_psc = 'PSC, Free baggage 25kg'
-            - var dpt_smart_combo_bool = true
-            - var dpt_smart_combo = 'Smart Combo ?'
             include ./includes/search-item-dpt.jade
-            //- .non-smart-combo-banner(style="width:100%;padding:0.2em 1em; color:#8f8f8f; text-align:center;")
-              a(href='#') See 1 more Smart Combo ▾
-            //- item 1
-            - var dpt_airlines = 'AirAsia'
-            - var dpt_route =  'CGK – ICN'
-            - var dpt_transit = '1 transit(s) • '
-            - var dpt_price_before = '2226480'
-            - var dpt_total_combo = ''
-            - var dpt_price =  '2226400'
-            - var dpt_time =  '20:25 – 15:05(+1d)'
-            - var dpt_duration =  '16h 40m'
-            - var dpt_flight_code = 'AirAsia AK-387'
-            - var dpt_psc = 'PSC'
-            - var dpt_smart_combo_bool = false
-            - var dpt_smart_combo = ''
-            include ./includes/search-item-dpt.jade
-            //- item 3
-            - var dpt_airlines = 'AirAsia'
-            - var dpt_route =  'CGK – ICN'
-            - var dpt_transit = '1 transit(s) • '
-            - var dpt_price_before = '2394480'
-            - var dpt_total_combo = ''
-            - var dpt_price =  '2394400'
-            - var dpt_time =  '15:10 – 15:05(+1d)'
-            - var dpt_duration =  '21h 55m'
-            - var dpt_flight_code = 'AirAsia Ak-385'
-            - var dpt_psc = 'PSC'
-            - var dpt_smart_combo_bool = false
-            - var dpt_smart_combo = ''
-            include ./includes/search-item-dpt.jade 
-            //- item 4
-            - var dpt_airlines = 'AirAsia'
-            - var dpt_route =  'CGK – ICN'
-            - var dpt_transit = '1 transit(s) • '
-            - var dpt_price_before = '3265200'
-            - var dpt_total_combo = ''
-            - var dpt_price =  '3265100'
-            - var dpt_time =  '20:25 – 08:20(+1d)'
-            - var dpt_duration =  '9h 55m'
-            - var dpt_flight_code = 'AirAsia AK-387'
-            - var dpt_psc = 'PSC, Free baggage 20kg'
-            - var dpt_smart_combo_bool = false
-            - var dpt_smart_combo = ''
-            include ./includes/search-item-dpt.jade 
-            //- item 5
-            - var dpt_airlines = 'AirAsia'
-            - var dpt_route =  'CGK – ICN'
-            - var dpt_transit = '1 transit • '
-            - var dpt_price_before = '3345200'
-            - var dpt_total_combo = ''
-            - var dpt_price =  '3345100'
-            - var dpt_time =  '06:25 – 08:20(+1d)'
-            - var dpt_duration =  '23h 55m'
-            - var dpt_flight_code = 'AirAsia QZ-202'
-            - var dpt_psc = 'PSC'
-            - var dpt_smart_combo_bool = false
-            - var dpt_smart_combo = ''
-            include ./includes/search-item-dpt.jade 
             //- search result
         #rtn-column
           form#only-one.rtn-column(action="" data-accordion-group)
@@ -124,46 +51,21 @@ html(lang="en")
             //- search result
             .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
               span 2 return flights found, sorted by price
-            //- item 1
-            - var rtn_airlines = 'Philippine Airlines'
-            - var rtn_route =  'ICN – CGK'
-            - var rtn_transit = '1 transit(s) • '
-            - var rtn_price_before = '5327300'
-            - var rtn_price =  '5326800'
-            - var rtn_time =  '22:05 – 12:35(+1d)'
-            - var rtn_duration =  '16h 30m'
-            - var rtn_flight_code = 'Philippine Airlines PR-1139'
-            - var rtn_psc = 'Free baggage 20kg, Meal, Late-night flight'
-            - var rtn_smart_combo = ''
             include ./includes/search-item-rtn.jade
-            //- item 2
-            - var rtn_airlines = 'Thai'
-            - var rtn_route =  'ICN – CGK'
-            - var rtn_transit = '1 transit(s) • '
-            - var rtn_price_before = ''
-            - var rtn_price =  '13095800'
-            - var rtn_time =  '21:25 – 11:55(+1d)'
-            - var rtn_duration =  '16h 30m'
-            - var rtn_flight_code = 'Thai TG-657'
-            - var rtn_psc = 'Free baggage 30kg, Meal, Late-night flight'
-            - var rtn_smart_combo = ''
-            include ./includes/search-item-rtn.jade 
             //- search result
         
-    .row.price-update(style="z-index:100;")
+    .row.price-update.valign-wrapper(style="z-index:100;")
       .col.s7
         span.col.s12
           a.flight-detail-modal-trigger.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;")
-            span(style="color:#434343;") Total for 
-              span(style="font-weight:bolder;") 2 
-              | pax • 
+            span(style="color:#434343;") Round-trip Price • 
             span Summary
         span.col.s12(style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;") Rp 
           strong#totalprice.currency.odometer 0
       .col.s5
         button#book.right(disabled="true") Book Now
  
-  include ./includes/modal-flight-detail.jade 
+  include ./includes/modal-flight-summary.jade 
   include ./includes/modal-smart-combo.jade
  
 //- currency script

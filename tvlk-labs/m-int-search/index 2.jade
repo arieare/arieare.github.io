@@ -3,6 +3,7 @@ html(lang="en")
   head
     - var pagetitle = "Traveloka"
     - var author = "arieare"
+    link(href="style/main-screen-style.css", rel="stylesheet")
     include ./includes/head.jade
   body
     //- navbar start
@@ -17,14 +18,25 @@ html(lang="en")
             span.flight-route traveloka              
     //- navbar end
     //- tab bar start
+    .container.flight-form-container
+      .row.s12.flight-spec-input
+        label(style="color:#8f8f8f;") Origin
+        span(style="font-size:1.3em;display:block;") Jakarta (JKTA)
+        hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row.s12.flight-spec-input
+        label(style="color:#8f8f8f;") Destination
+        span(style="font-size:1.3em;display:block;") Seoul (SEOA)
+        hr
+      .row.s12.flight-spec-input
+        label(style="color:#8f8f8f;") Departure Date
+        span(style="font-size:1.3em;display:block;") Saturday, 20 Feb 2016
+        hr
+      .row.s12.flight-spec-input
+        label(style="color:#8f8f8f;") Return Date
+        span(style="font-size:1.3em;display:block;") Sunday, 21 Feb 2016
+        hr
     .container
-      .row.s12
-        label Origin
-        h5 Jakarta (JKTA)
-      .row.s12
-        Label Destination
-        h5 Seoul (SEOA)
-      .row.s12
+      .row.s12.center-align
         a#btn-search-fight(href="index.html") Search Flight
 //- accordion script
 script.

@@ -115,6 +115,7 @@ input[type="radio"]:after{
 }
 .flight-detail-trigger {
   position: relative;
+  z-index: 99;
 }
 .flight-detail-trigger:after {
   content:'';
@@ -144,7 +145,8 @@ li.tab a:active{
   color: #ffffff;
 }
 #totalprice {
-  color: rgb(249,109,1);
+  // color: rgb(249,109,1);
+  color: #434343;
 }
 #dpt-column, #rtn-column {
   width:50%;
@@ -187,10 +189,14 @@ li.tab a:active{
   // background-color: red;
   overflow-x: hidden;
 }
+.flight-route {
+  display: block;
+  margin: -0.4em 0;
+}
 .flight-date {
   display: block;
   font-size: 0.8em;
-  margin: -2.8em 0;
+  margin: -2.1em 0;
   color: rgba(255,255,255,1);
   transition: .3s all ease;
 }

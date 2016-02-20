@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="style/main-screen-style.css" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
@@ -36,16 +37,26 @@
         <div class="nav-wrapper"><span class="brand-logo center"><span class="flight-route">traveloka              </span></span></div>
       </nav>
     </div>
+    <div class="container flight-form-container">
+      <div class="row s12 flight-spec-input">
+        <label style="color:#8f8f8f;">Origin</label><span style="font-size:1.3em;display:block;">Jakarta (JKTA)</span>
+        <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+      </div>
+      <div class="row s12 flight-spec-input">
+        <label style="color:#8f8f8f;">Destination</label><span style="font-size:1.3em;display:block;">Seoul (SEOA)</span>
+        <hr>
+      </div>
+      <div class="row s12 flight-spec-input">
+        <label style="color:#8f8f8f;">Departure Date</label><span style="font-size:1.3em;display:block;">Saturday, 20 Feb 2016</span>
+        <hr>
+      </div>
+      <div class="row s12 flight-spec-input">
+        <label style="color:#8f8f8f;">Return Date</label><span style="font-size:1.3em;display:block;">Sunday, 21 Feb 2016</span>
+        <hr>
+      </div>
+    </div>
     <div class="container">
-      <div class="row s12">
-        <label>Origin</label>
-        <h5>Jakarta (JKTA)</h5>
-      </div>
-      <div class="row s12">
-        <Label>Destination</Label>
-        <h5>Seoul (SEOA)</h5>
-      </div>
-      <div class="row s12"><a id="btn-search-fight" href="index.html">Search Flight</a></div>
+      <div class="row s12 center-align"><a id="btn-search-fight" href="index.html">Search Flight</a></div>
     </div>
   </body>
 </html>

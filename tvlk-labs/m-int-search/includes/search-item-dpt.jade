@@ -1,61 +1,98 @@
-label.col.s12.search-item(data-accordion)
-  a.flight-detail-trigger.right(href="#" style="z-index:99;" data-control) Detail ▾
-  .row(style="padding:0;margin:0;")
-    span.left= dpt_airlines
-  hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-  input(type="radio" name="dpt" value= dpt_price)
-  .row(style="padding:0;margin:0;")
-    div.col.s6(style="padding-left:0")
-      span(style="color:#8f8f8f")= dpt_route
-      br
-      strong= dpt_time
-      br
-      span(style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;")
-        span=dpt_transit
-        span(style="color:#8f8f8f;")=dpt_duration
-    div.col.s6.right-align(style="padding-right:0;position:relative;")
-      span.currency(style="color:#b4b4b4; text-decoration:line-through;")= dpt_price_before
-      span(style="color:#434343;font-size:0.8em;")= dpt_total_combo
-      br
-      unless !dpt_smart_combo_bool  
-        i
-          strong.currency(style="color:#1ba0e2;font-size:1.2em;")= dpt_price
-      else
-        strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt_price
-      br
-      unless !dpt_smart_combo_bool
-        a.smart-combo-modal-trigger.modal-trigger(href="#smart-combo-modal" style="z-index:110;")
-          span(style="border:1px solid rgb(249,109,1);color:rgb(249,109,1);font-size:0.8em;padding: 0.2em 0.5em;border-radius:4px;")= dpt_smart_combo
-  .row.detail(data-content)
-    hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
-    p.center-align Inclusive of airline Fee & Taxes
-    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-    .row(style="margin-bottom:16px;")
-      .col.s12 
-        h5(style="font-size:1.3em;")= dpt_flight_code
-        span= dpt_psc
-    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-    .row
-      .col.s3.right-align
-        strong 20:20
+- var dpt_prices = [200, 300];
+- var rtn_prices = [100, 150];
+- var dpt_col_prices = [];
+// - dpt_prices.sort();
+-
+ for(var i=0; i< dpt_prices.length; i++) {
+    dpt_col_prices[i] = dpt_prices[i] + rtn_prices[0];
+ };
+-
+ var dpt = [{
+ id: 1,
+ airlines: "AirAsia", flight_code: "AirAsia QZ-206",
+ psc: "PSC, Free baggage 25kg",
+ city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
+ city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Int.",
+ transit: 1,
+ price_before: 0, price: dpt_col_prices[0],
+ day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
+ day_arvl: "Sun", date_arvl: 8, month_arvl: "Feb", year_arvl: 2016, 
+ time_out: "18:50", time_arvl: "15:05", time_duration: "18h 15m", time_tomorrow: true},
+ {id: 2,
+ airlines: "AirAsia + Sriwijaya", flight_code: "AirAsia QZ-208",
+ psc: "PSC, Free baggage 25kg",
+ city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
+ city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Int.",
+ transit: 0,
+ price_before: 5327300, price: dpt_col_prices[1],
+ day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 7, month_arvl: "Feb", year_arvl: 2016,
+ time_out: "06:00",time_arvl: "04:00",time_duration: "2h 15m",time_tomorrow: false}];
+
+each val, index in dpt
+  label.col.s12.search-item(data-accordion)
+    a.flight-detail-trigger.right(href="#" data-control) Detail ▾
+    .row(style="padding:0;margin:0;margin-bottom:0.5em;")
+      //- airlines name
+      span.left= dpt[index].airlines
+    input(type="radio" name="dpt" value=dpt[index].price)
+    
+    .row(style="padding:0;margin:0;")
+      .col.s6(style="padding-left:0")
+        strong= dpt[index].time_out + " – " + dpt[index].time_arvl
+        unless !dpt[index].time_tomorrow
+          strong  (+1)
         br
-        span(style="color:#8f8f8f;") 17 Feb
-      .col.s9
-        strong Seoul (ICN)
+        span(style="color:#8f8f8f")= dpt[index].airport_route_out + " ⇄ " + dpt[index].airport_route_arvl
+      .col.s6.right-align(style="padding-right:0")
+        span=dpt[index].time_duration
         br
-        span(style="color:#8f8f8f;") Incheon Intl.
-    .row
-      .col.s3
-        span &emsp;
-      .col.s9
-        span(style="color:#8f8f8f;") Duration: 
-          span=dpt_duration
-    .row
-      .col.s3.right-align
-        strong 20:20
-        br
-        span(style="color:#8f8f8f;") 17 Feb
-      .col.s9
-        strong Seoul (ICN)
-        br
-        span(style="color:#8f8f8f;") Incheon Intl.
+        if dpt[index].transit > 0
+          span(style="color:#8f8f8f;")=dpt[index].transit + " transit(s)"
+        else
+          span(style="color:#8f8f8f;") direct flight
+    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")  
+    .row.valign-wrapper(style="padding:0;margin:0;")
+      .col.s6(style="padding-left:0;position:relative;")
+        span(style="color:#8f8f8f;") Round-trip Price
+      .col.s6.right-align(style="padding-right:0;position:relative;")
+        unless dpt[index].price_before == 0
+          span.currency(style="color:#b4b4b4; text-decoration:line-through;")= dpt[index].price_before
+          br
+        strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= dpt[index].price
+        span(style="color:rgb(249,109,1);") /pax
+    
+    //- flight details
+    .row.detail(data-content)
+      hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
+      p.center-align Inclusive of airline Fee & Taxes
+      hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row(style="margin-bottom:16px;")
+        .col.s12 
+          h5(style="font-size:1.3em;")= dpt[index].flight_code
+          span= dpt[index].psc
+      hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row
+        .col.s3.right-align
+          strong= dpt[index].time_out
+          br
+          span(style="color:#8f8f8f;")= dpt[index].date_out + " " + dpt[index].month_out
+        .col.s9
+          strong=dpt[index].city_route_out +"("+ dpt[index].airport_route_out +")"
+          br
+          span(style="color:#8f8f8f;")=dpt[index].long_airport_route_out
+      .row
+        .col.s3
+          span &emsp;
+        .col.s9
+          span(style="color:#8f8f8f;") Duration: 
+            span= dpt[index].time_duration
+      .row
+        .col.s3.right-align
+          strong= dpt[index].time_arvl
+          br
+          span(style="color:#8f8f8f;")= dpt[index].date_arvl + " " + dpt[index].month_arvl
+        .col.s9
+          strong=dpt[index].city_route_arvl +"("+ dpt[index].airport_route_arvl +")"
+          br
+          span(style="color:#8f8f8f;")=dpt[index].long_airport_route_arvl

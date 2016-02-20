@@ -35,7 +35,7 @@
       <nav>
         <div class="nav-wrapper"><span class="brand-logo center"><span class="flight-route">Jakarta – Seoul</span><span class="flight-date">Sat, 20 Feb 2016</span></span>
           <ul class="left">
-            <li><a href="index 2.html" style="font-size:2em;" class="back-button">&#x2190;               </a></li>
+            <li><a href="index 2.html" style="font-size:2em;" class="back-button">&#x2190;</a></li>
           </ul>
         </div>
       </nav>
@@ -52,13 +52,21 @@
         <div id="dpt-column">
           <form id="only-one" action="" data-accordion-group class="dpt-column"><span id="dpt-route" class="hide">Jakarta – Seoul</span><span id="dpt-flight-date" class="hide">Sat, 20 Feb 2016</span>
             <div style="background-color: #dadada;font-size: 0.8em;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.3em;" class="col s12"><span>4 outbound flights found, sorted by round-trip price.</span></div>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">AirAsia</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="4612800">
+            <!-- - dpt_prices.sort();-->
+            <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia</span>
+              </div>
+              <input type="radio" name="dpt" value="300">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK ⇄ ICN</span><br><strong>18:50 – 15:05(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit(s) • </span><span style="color:#8f8f8f;">18h 15m</span></span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency"></span><span style="color:#434343;font-size:0.8em;">Round-trip total price:</span><br><i><strong style="color:#1ba0e2;font-size:1.2em;" class="currency">4612800</strong></i><br><a href="#smart-combo-modal" style="z-index:110;" class="smart-combo-modal-trigger modal-trigger"><span style="border:1px solid rgb(249,109,1);color:rgb(249,109,1);font-size:0.8em;padding: 0.2em 0.5em;border-radius:4px;">Smart Combo ?</span></a>
+                <div style="padding-left:0" class="col s6"><strong>18:50 – 15:05</strong><strong> (+1)</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
+                </div>
+                <div style="padding-right:0" class="col s6 right-align"><span>18h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                </div>
+              </div>
+              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+              <div style="padding:0;margin:0;" class="row valign-wrapper">
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">300</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
               <div data-content class="row detail">
@@ -72,26 +80,33 @@
                 </div>
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>18:50</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Jakarta(CGK)</strong><br><span style="color:#8f8f8f;">Soekarno-Hatta Intl.</span></div>
                 </div>
                 <div class="row">
                   <div class="col s3"><span>&emsp;</span></div>
                   <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>18h 15m</span></span></div>
                 </div>
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>15:05</strong><br><span style="color:#8f8f8f;">8 Feb</span></div>
+                  <div class="col s9"><strong>Seoul(ICN)</strong><br><span style="color:#8f8f8f;">Incheon Int.</span></div>
                 </div>
               </div>
             </label>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">AirAsia</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="2226400">
+            <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia + Sriwijaya</span>
+              </div>
+              <input type="radio" name="dpt" value="400">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>20:25 – 15:05(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit(s) • </span><span style="color:#8f8f8f;">16h 40m</span></span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">2226480</span><span style="color:#434343;font-size:0.8em;"></span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">2226400</strong><br>
+                <div style="padding-left:0" class="col s6"><strong>06:00 – 04:00</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
+                </div>
+                <div style="padding-right:0" class="col s6 right-align"><span>2h 15m</span><br><span style="color:#8f8f8f;">direct flight</span>
+                </div>
+              </div>
+              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+              <div style="padding:0;margin:0;" class="row valign-wrapper">
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">400</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
               <div data-content class="row detail">
@@ -100,120 +115,21 @@
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div style="margin-bottom:16px;" class="row">
                   <div class="col s12"> 
-                    <h5 style="font-size:1.3em;">AirAsia AK-387</h5><span>PSC</span>
+                    <h5 style="font-size:1.3em;">AirAsia QZ-208</h5><span>PSC, Free baggage 25kg</span>
                   </div>
                 </div>
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>06:00</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Jakarta(CGK)</strong><br><span style="color:#8f8f8f;">Soekarno-Hatta Intl.</span></div>
                 </div>
                 <div class="row">
                   <div class="col s3"><span>&emsp;</span></div>
-                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>16h 40m</span></span></div>
+                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>2h 15m</span></span></div>
                 </div>
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
-                </div>
-              </div>
-            </label>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">AirAsia</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="2394400">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>15:10 – 15:05(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit(s) • </span><span style="color:#8f8f8f;">21h 55m</span></span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">2394480</span><span style="color:#434343;font-size:0.8em;"></span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">2394400</strong><br>
-                </div>
-              </div>
-              <div data-content class="row detail">
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
-                <p class="center-align">Inclusive of airline Fee & Taxes</p>
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-                <div style="margin-bottom:16px;" class="row">
-                  <div class="col s12"> 
-                    <h5 style="font-size:1.3em;">AirAsia Ak-385</h5><span>PSC</span>
-                  </div>
-                </div>
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-                <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
-                </div>
-                <div class="row">
-                  <div class="col s3"><span>&emsp;</span></div>
-                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>21h 55m</span></span></div>
-                </div>
-                <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
-                </div>
-              </div>
-            </label>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">AirAsia</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3265100">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>20:25 – 08:20(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit(s) • </span><span style="color:#8f8f8f;">9h 55m</span></span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">3265200</span><span style="color:#434343;font-size:0.8em;"></span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3265100</strong><br>
-                </div>
-              </div>
-              <div data-content class="row detail">
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
-                <p class="center-align">Inclusive of airline Fee & Taxes</p>
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-                <div style="margin-bottom:16px;" class="row">
-                  <div class="col s12"> 
-                    <h5 style="font-size:1.3em;">AirAsia AK-387</h5><span>PSC, Free baggage 20kg</span>
-                  </div>
-                </div>
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-                <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
-                </div>
-                <div class="row">
-                  <div class="col s3"><span>&emsp;</span></div>
-                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>9h 55m</span></span></div>
-                </div>
-                <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
-                </div>
-              </div>
-            </label>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">AirAsia</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="dpt" value="3345100">
-              <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">CGK – ICN</span><br><strong>06:25 – 08:20(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit • </span><span style="color:#8f8f8f;">23h 55m</span></span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">3345200</span><span style="color:#434343;font-size:0.8em;"></span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">3345100</strong><br>
-                </div>
-              </div>
-              <div data-content class="row detail">
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
-                <p class="center-align">Inclusive of airline Fee & Taxes</p>
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-                <div style="margin-bottom:16px;" class="row">
-                  <div class="col s12"> 
-                    <h5 style="font-size:1.3em;">AirAsia QZ-202</h5><span>PSC</span>
-                  </div>
-                </div>
-                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-                <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
-                </div>
-                <div class="row">
-                  <div class="col s3"><span>&emsp;</span></div>
-                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>23h 55m</span></span></div>
-                </div>
-                <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>04:00</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Seoul(ICN)</strong><br><span style="color:#8f8f8f;">Incheon Int.</span></div>
                 </div>
               </div>
             </label>
@@ -222,13 +138,22 @@
         <div id="rtn-column">
           <form id="only-one" action="" data-accordion-group class="rtn-column"><span id="rtn-route" class="hide">Seoul – Jakarta</span><span id="rtn-flight-date" class="hide">Sun, 21 Feb 2016</span>
             <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="col s12"><span>2 return flights found, sorted by price</span></div>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">Philippine Airlines</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="5326800">
+            <!-- - dpt_prices.sort();-->
+            <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia</span>
+              </div>
+              <input type="radio" name="rtn" value="300">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>22:05 – 12:35(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit(s) • </span><span style="color:#8f8f8f;">16h 30m</span></span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5326800</strong><br><span style="color:#434343; font-size:0.8em;"></span></div>
+                <div style="padding-left:0" class="col s6"><strong>18:50 – 15:05</strong><strong> (+1)</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
+                </div>
+                <div style="padding-right:0" class="col s6 right-align"><span>18h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                </div>
+              </div>
+              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+              <div style="padding:0;margin:0;" class="row valign-wrapper">
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">300</strong><span style="color:rgb(249,109,1);">/pax</span>
+                </div>
               </div>
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
@@ -236,31 +161,39 @@
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div style="margin-bottom:16px;" class="row">
                   <div class="col s12"> 
-                    <h5 style="font-size:1.3em;">Philippine Airlines PR-1139</h5><span>Free baggage 20kg, Meal, Late-night flight</span>
+                    <h5 style="font-size:1.3em;">AirAsia QZ-206</h5><span>PSC, Free baggage 25kg</span>
                   </div>
                 </div>
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>18:50</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Jakarta(CGK)</strong><br><span style="color:#8f8f8f;">Soekarno-Hatta Intl.</span></div>
                 </div>
                 <div class="row">
                   <div class="col s3"><span>&emsp;</span></div>
-                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>16h 30m</span></span></div>
+                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>18h 15m</span></span></div>
                 </div>
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>15:05</strong><br><span style="color:#8f8f8f;">8 Feb</span></div>
+                  <div class="col s9"><strong>Seoul(ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
                 </div>
               </div>
             </label>
-            <label data-accordion class="col s12 search-item"><a href="#" style="z-index:99;" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;" class="row"><span class="left">Thai</span></div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
-              <input type="radio" name="rtn" value="13095800">
+            <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia + Sriwijaya</span>
+              </div>
+              <input type="radio" name="rtn" value="350">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><span style="color:#8f8f8f">ICN – CGK</span><br><strong>21:25 – 11:55(+1d)</strong><br><span style="color:#8f8f8f;font-size:0.8em;letter-spacing:0.05em;"><span>1 transit(s) • </span><span style="color:#8f8f8f;">16h 30m</span></span></div>
-                <div style="padding-right:0" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency"></span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">13095800</strong><br><span style="color:#434343; font-size:0.8em;"></span></div>
+                <div style="padding-left:0" class="col s6"><strong>06:00 – 04:00</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
+                </div>
+                <div style="padding-right:0" class="col s6 right-align"><span>2h 15m</span><br><span style="color:#8f8f8f;">direct flight</span>
+                </div>
+              </div>
+              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+              <div style="padding:0;margin:0;" class="row valign-wrapper">
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">350</strong><span style="color:rgb(249,109,1);">/pax</span>
+                </div>
               </div>
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
@@ -268,21 +201,21 @@
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div style="margin-bottom:16px;" class="row">
                   <div class="col s12"> 
-                    <h5 style="font-size:1.3em;">Thai TG-657</h5><span>Free baggage 30kg, Meal, Late-night flight</span>
+                    <h5 style="font-size:1.3em;">AirAsia QZ-208</h5><span>PSC, Free baggage 25kg</span>
                   </div>
                 </div>
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>06:00</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Jakarta(CGK)</strong><br><span style="color:#8f8f8f;">Soekarno-Hatta Intl.</span></div>
                 </div>
                 <div class="row">
                   <div class="col s3"><span>&emsp;</span></div>
-                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>16h 30m</span></span></div>
+                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>2h 15m</span></span></div>
                 </div>
                 <div class="row">
-                  <div class="col s3 right-align"><strong>20:20</strong><br><span style="color:#8f8f8f;">17 Feb</span></div>
-                  <div class="col s9"><strong>Seoul (ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                  <div class="col s3 right-align"><strong>04:00</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Seoul(ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
                 </div>
               </div>
             </label>
@@ -290,8 +223,8 @@
         </div>
       </div>
     </div>
-    <div style="z-index:100;" class="row price-update">
-      <div class="col s7"><span class="col s12"><a href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;" class="flight-detail-modal-trigger modal-trigger"><span style="color:#434343;">Total for <span style="font-weight:bolder;">2 </span>pax • </span><span>Summary</span></a></span><span style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;" class="col s12">Rp <strong id="totalprice" class="currency odometer">0</strong></span></div>
+    <div style="z-index:100;" class="row price-update valign-wrapper">
+      <div class="col s7"><span class="col s12"><a href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;" class="flight-detail-modal-trigger modal-trigger"><span style="color:#434343;">Round-trip Price • </span><span>Summary</span></a></span><span style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;" class="col s12">Rp <strong id="totalprice" class="currency odometer">0</strong></span></div>
       <div class="col s5">
         <button id="book" disabled="true" class="right">Book Now</button>
       </div>
