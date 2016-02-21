@@ -219,8 +219,55 @@
                 </div>
               </div>
             </label>
+            <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia + Sriwijaya</span>
+              </div>
+              <input type="radio" name="rtn" value="700">
+              <div style="padding:0;margin:0;" class="row">
+                <div style="padding-left:0" class="col s6"><strong>06:00 – 04:00</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
+                </div>
+                <div style="padding-right:0" class="col s6 right-align"><span>2h 15m</span><br><span style="color:#8f8f8f;">direct flight</span>
+                </div>
+              </div>
+              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+              <div style="padding:0;margin:0;" class="row valign-wrapper">
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">700</strong><span style="color:rgb(249,109,1);">/pax</span>
+                </div>
+              </div>
+              <div data-content class="row detail">
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
+                <p class="center-align">Inclusive of airline Fee & Taxes</p>
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <div style="margin-bottom:16px;" class="row">
+                  <div class="col s12"> 
+                    <h5 style="font-size:1.3em;">AirAsia QZ-208</h5><span>PSC, Free baggage 25kg</span>
+                  </div>
+                </div>
+                <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
+                <div class="row">
+                  <div class="col s3 right-align"><strong>06:00</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Jakarta(CGK)</strong><br><span style="color:#8f8f8f;">Soekarno-Hatta Intl.</span></div>
+                </div>
+                <div class="row">
+                  <div class="col s3"><span>&emsp;</span></div>
+                  <div class="col s9"><span style="color:#8f8f8f;">Duration: <span>2h 15m</span></span></div>
+                </div>
+                <div class="row">
+                  <div class="col s3 right-align"><strong>04:00</strong><br><span style="color:#8f8f8f;">7 Feb</span></div>
+                  <div class="col s9"><strong>Seoul(ICN)</strong><br><span style="color:#8f8f8f;">Incheon Intl.</span></div>
+                </div>
+              </div>
+            </label>
           </form>
         </div>
+      </div>
+    </div>
+    <div class="row"> 
+      <div style="bottom: 56px; right: 8px;" class="fixed-action-btn click-to-toggle horizontal"><a style="font-size:2em;line-height:33px;" class="btn-floating grey center-align"><strong>⌗</strong></a>
+        <ul style="right: 24px;top: 15%;">
+          <li><a style="width:auto;padding:0 0.5em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius: 8px 0 0 8px;transition: .15s" class="btn-floating grey">Sort</a><a style="width:auto;padding:0 0.5em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;transition: .15s" class="btn-floating grey">Filter</a><a style="width:auto;padding:0 0.5em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius:0 8px 8px 0;transition: .15s" class="btn-floating grey">Change Date</a></li>
+        </ul>
       </div>
     </div>
     <div style="z-index:100;" class="row price-update valign-wrapper">
@@ -275,9 +322,7 @@
 <script>
   var allRadios = document.getElementsByName('dpt');
     var booRadio;
-    var x = 0;
-    for(x = 0; x < allRadios.length; x++){
-  
+    for(var x = 0; x < allRadios.length; x++){
       allRadios[x].onclick = function() {
         if(booRadio == this){
           this.checked = false;
@@ -285,15 +330,20 @@
           $( this ).parent().removeClass("dpt-selected");
           //style
           $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
+  
         }else{
+          console.log($(this).val());
+          //insert formula here to subtract from kolom sebelah
           booRadio = this;
         }
+  
         dptPrice = $('input[name=dpt]:checked').val();
-        totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
-        $("#totalprice").html(totalPrice);
-        $("#totalpricesummary").html(totalPrice);
-        $("#bullet-number-1").html("1");
-        $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
+        
+        //- totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
+        //- $("#totalprice").html(totalPrice);
+        //- $("#totalpricesummary").html(totalPrice);
+        //- $("#bullet-number-1").html("1");
+        //- $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
       };
     }
 </script>
