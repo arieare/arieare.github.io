@@ -67,32 +67,49 @@ each val, index in dpt
       hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
       p.center-align Inclusive of airline Fee & Taxes
       hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-      .row(style="margin-bottom:16px;")
-        .col.s12 
-          h5(style="font-size:1.3em;")= dpt[index].flight_code
-          span= dpt[index].psc
+      //- detail tabs here
+      .row
+        .col.s12
+          ul.tabs
+            li.tab.col.s6.center-align
+              a.detail-tab.active(href= "#dpt-flight-detail-" + [index] style="color:#1ba0e2;") Flight
+            li.tab.col.s6.center-align
+              a.detail-tab(href="#dpt-facility-detail-" + [index] style="color:#1ba0e2;") Facilities
+            //- li.tab.col.s4.center-align
+              a.detail-tab(href="#price-detail-" + [index] style="color:#1ba0e2;") Price
+      //- detail tabs end
+
       hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
-      .row
-        .col.s3.right-align
-          strong= dpt[index].time_out
-          br
-          span(style="color:#8f8f8f;")= dpt[index].date_out + " " + dpt[index].month_out
-        .col.s9
-          strong=dpt[index].city_route_out +"("+ dpt[index].airport_route_out +")"
-          br
-          span(style="color:#8f8f8f;")=dpt[index].long_airport_route_out
-      .row
-        .col.s3
-          span &emsp;
-        .col.s9
-          span(style="color:#8f8f8f;") Duration: 
-            span= dpt[index].time_duration
-      .row
-        .col.s3.right-align
-          strong= dpt[index].time_arvl
-          br
-          span(style="color:#8f8f8f;")= dpt[index].date_arvl + " " + dpt[index].month_arvl
-        .col.s9
-          strong=dpt[index].city_route_arvl +"("+ dpt[index].airport_route_arvl +")"
-          br
-          span(style="color:#8f8f8f;")=dpt[index].long_airport_route_arvl
+      div(id="dpt-flight-detail-"+ [index] class=".col.s12")
+        .row(style="margin-bottom:16px;")
+          .col.s12 
+            h5(style="font-size:1.3em;")= dpt[index].flight_code    
+        .row
+          .col.s3.right-align
+            strong= dpt[index].time_out
+            br
+            span(style="color:#8f8f8f;")= dpt[index].date_out + " " + dpt[index].month_out
+          .col.s9
+            strong=dpt[index].city_route_out +"("+ dpt[index].airport_route_out +")"
+            br
+            span(style="color:#8f8f8f;")=dpt[index].long_airport_route_out
+        .row
+          .col.s3
+            span &emsp;
+          .col.s9
+            span(style="color:#8f8f8f;") Duration: 
+              span= dpt[index].time_duration
+        .row
+          .col.s3.right-align
+            strong= dpt[index].time_arvl
+            br
+            span(style="color:#8f8f8f;")= dpt[index].date_arvl + " " + dpt[index].month_arvl
+          .col.s9
+            strong=dpt[index].city_route_arvl +"("+ dpt[index].airport_route_arvl +")"
+            br
+            span(style="color:#8f8f8f;")=dpt[index].long_airport_route_arvl 
+      div(id="dpt-facility-detail-"+ [index] class=".col.s12")
+        .row
+          .col.s12
+            span= dpt[index].psc
+      //- div(id="price-detail-"+ [index] class=".col.s12") Test 3

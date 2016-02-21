@@ -230,7 +230,16 @@ li.tab a{
   color: #ffffff;
   font-weight: bold;
 }
-
+.detail-tab {
+  color: #1b0ae2;
+  opacity: .5;
+  font-weight: normal !important;
+  font-size: 1.2em;
+  transition: .3 ease-in;
+}
+.detail-tab.active {
+  opacity: 1;
+}
 .headroom--unpinned {
   font-size: 0.8em;
   height: 28px !important;

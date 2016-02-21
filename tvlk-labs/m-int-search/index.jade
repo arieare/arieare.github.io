@@ -40,7 +40,7 @@ html(lang="en")
             span#dpt-flight-date.hide= dpt_date
             //- search result
 
-            .col.s12(style="background-color: #dadada;font-size: 0.8em;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.3em;")
+            .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
               span 4 outbound flights found, sorted by round-trip price.
             include ./includes/search-item-dpt.jade
             //- search result
@@ -50,7 +50,7 @@ html(lang="en")
             span#rtn-flight-date.hide= rtn_date
             //- search result
             .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 2 return flights found, sorted by price
+              span 2 return flights found, sorted by round-trip price.
             include ./includes/search-item-rtn.jade
             //- search result
         
@@ -60,9 +60,9 @@ html(lang="en")
           strong ⌗
         ul(style="right: 24px;top: 15%;")
           li
-            a.btn-floating.grey(style="width:auto;padding:0 0.5em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius: 8px 0 0 8px;transition: .15s") Sort
-            a.btn-floating.grey(style="width:auto;padding:0 0.5em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;transition: .15s") Filter
-            a.btn-floating.grey(style="width:auto;padding:0 0.5em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius:0 8px 8px 0;transition: .15s") Change Date
+            a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius: 8px 0 0 8px;transition: .15s") Sort
+            a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;transition: .15s") Filter
+            a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius:0 8px 8px 0;transition: .15s") Change Date
     .row.price-update.valign-wrapper(style="z-index:100;")
       .col.s7
         span.col.s12
@@ -101,8 +101,8 @@ script.
   });
 //- unselect radio script
 script.
-  var allRadios = document.getElementsByName('dpt');
-    var booRadio;
+ var allRadios = document.getElementsByName('dpt');
+ var booRadio;
     for(var x = 0; x < allRadios.length; x++){
       allRadios[x].onclick = function() {
         if(booRadio == this){

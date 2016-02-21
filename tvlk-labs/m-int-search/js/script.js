@@ -39,7 +39,6 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$(".flight-route").html($("#rtn-route").html());
 		$(".flight-date").html($("#rtn-flight-date").html());
 
-
 		$(".tab-nav-wrapper").removeClass( "dpt-active" );
 		$(".tab-nav-wrapper").addClass( "rtn-active" );
 
@@ -65,6 +64,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$("#tab-content-container").removeClass( "rtn-active" );
 		$("#tab-content-container").addClass( "dpt-active" );
 	});
+
 //update data on selecting departure flight
 	$('input[name="dpt"]').on('click', function() {
 		if($('input[name="dpt"]').is(':checked')) {
