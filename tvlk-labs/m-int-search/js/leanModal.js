@@ -13,7 +13,7 @@
 
       var defaults = {
         opacity: 0.5,
-        in_duration: 200,
+        in_duration: 250,
         out_duration: 250,
         ready: undefined,
         complete: undefined,

@@ -1,19 +1,23 @@
 #flight-detail-modal.modal
-  .modal-content
-    span JAKARTA &#x21c4; SEOUL
-    a.right(href="#!").modal-action.modal-close Close
+  .modal-content(style="padding-top:1em;")
+    h5(style="display:inline;")= route
+    h5(style="display:inline;")
+      strong
+        a.right(href="#!").modal-action.modal-close ✕
     hr(style="padding-top:8px;")
     p(style="margin:0.4em 0;") 
       strong Departure
-    p(style="margin:0.4em 0;") CGK – ICN Mon, 15 Feb 2016
+    p(style="margin:0.4em 0;") CGK – ICN  
+      span= dpt_date
     span 15:10 – 17:55 (1h 45m)
     hr(style="padding-top:8px;")
     p(style="margin:0.4em 0;")
       strong Return
-    p(style="margin:0.4em 0;") ICN – CGK Wed, 17 Feb 2016
+    p(style="margin:0.4em 0;") ICN – CGK 
+      span= rtn_date
     span 15:10 – 17:55 (1h 45m)
     hr(style="padding-top:8px;")
     p(style="margin:0.4em 0;") 
       strong Total Price for 2 pax
-    span Rp  
+    //- span Rp  
     span#totalpricesummary.currency 0

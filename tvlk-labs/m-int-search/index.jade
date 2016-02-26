@@ -6,6 +6,7 @@ html(lang="en")
     include ./includes/head.jade
   body
     //- navbar start
+    - var route = 'Jakarta ⇄ Seoul'
     - var dpt_route_city = 'Jakarta – Seoul'
     - var dpt_date = 'Sat, 20 Feb 2016'
     - var rtn_route_city = 'Seoul – Jakarta'
@@ -18,7 +19,8 @@ html(lang="en")
             span.flight-date= dpt_date
           ul.left
             li
-              a.back-button(href="index 2.html" style="font-size:2em;") &#x2190;
+              a.back-button(href="index 2.html" style="font-size:2em;")
+                img(src="img/ic_arrow_back.png" width="32px" height="auto" style="margin-top:0.35em;")
     //- navbar end
     //- tab bar start
     #tab-content-container.col.s12
@@ -57,7 +59,8 @@ html(lang="en")
     .row 
       .fixed-action-btn.click-to-toggle.horizontal(style="bottom: 56px; right: 8px;")
         a.btn-floating.grey.center-align(style="font-size:2em;line-height:33px;")
-          strong ⌗
+          //- strong ⌗
+          img(src="img/ic_tune.png" width="24px" height="auto" style="margin-top:6px;")
         ul(style="right: 24px;top: 15%;")
           li
             a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius: 8px 0 0 8px;transition: .15s") Sort
@@ -93,32 +96,31 @@ script.
   });
 //- unselect radio script
 script.
-  var allRadios = document.getElementsByName('dpt');
-  var booRadio;
-  for(var x = 0; x < allRadios.length; x++){
-    allRadios[x].onclick = function() {
-      if(booRadio == this){
-        this.checked = false;
-        booRadio = null;
-        $( this ).parent().removeClass("dpt-selected");
-        //style
-        $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
+  //- var allRadios = document.getElementsByName('dpt');
+  //- var booRadio;
+  //- for(var x = 0; x < allRadios.length; x++){
+  //-   allRadios[x].onclick = function() {
+  //-     if(booRadio == this){
+  //-       this.checked = false;
+  //-       booRadio = null;
+  //-       $( this ).parent().removeClass("dpt-selected");
+  //-       //style
+  //-       $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
 
-      }else{
-        console.log($(this).val());
-        //insert formula here to subtract from kolom sebelah
-        booRadio = this;
-      }
+  //-     }else{
+  //-       console.log($(this).val());
+  //-       booRadio = this;
+  //-     }
 
-      dptPrice = $('input[name=dpt]:checked').val();
+  //-     dptPrice = $('input[name=dpt]:checked').val();
         
-        //- totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
-        //- $("#totalprice").html(totalPrice);
-        //- $("#totalpricesummary").html(totalPrice);
-        //- $("#bullet-number-1").html("1");
-        //- $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
-      };
-    }
+  //-       //- totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
+  //-       //- $("#totalprice").html(totalPrice);
+  //-       //- $("#totalpricesummary").html(totalPrice);
+  //-       //- $("#bullet-number-1").html("1");
+  //-       //- $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
+  //-     };
+  //-   }
   
   //collect all dpt price value in array
   var dpt_radios = document.getElementsByName('dpt');
