@@ -21,11 +21,12 @@ body {
   background-color: #E26A00;
   transition: background-color 0.2s ease;
 }
-#book:disabled {
+#book.disabled {
   background-color: rgba(249, 109, 1, 0.6);
   color: rgba(255, 255, 255, 0.6);
   cursor: not-allowed;
 }
+
 #btn-search-fight {
   outline: none;
   border: 0;

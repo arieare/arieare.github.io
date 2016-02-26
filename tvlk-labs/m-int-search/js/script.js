@@ -89,10 +89,10 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 			},500);
 		}
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
-			$("#book").prop("disabled", false);
+			$("#book").removeClass("disabled");
 		} 
 		else {
-			$("#book").prop("disabled", true);
+			$("#book").addClass("disabled");
 		}
 
 	});
@@ -122,10 +122,10 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		}
     // activate or inactivate book button
 		if (($("input[name='rtn']").is(':checked')) && ($("input[name='dpt']").is(':checked'))) {
-			$("#book").prop("disabled", false);
+			$("#book").removeClass("disabled");
 		} 
 		else {
-			$("#book").prop("disabled", true);
+			$("#book").addClass("disabled");;
 		}
 
 	});
