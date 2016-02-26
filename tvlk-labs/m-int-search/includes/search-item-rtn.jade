@@ -1,20 +1,13 @@
-- var dpt_prices = [200, 300];
-- var rtn_prices = [100, 150, 500];
-- var rtn_col_prices = [];
-// - dpt_prices.sort();
--
- for(var i=0; i< rtn_prices.length; i++) {
-    rtn_col_prices[i] = rtn_prices[i] + dpt_prices[0];
- };
+- var rtn_prices = [1500, 2500, 5500];
 -
  var rtn = [{
  id: 1,
  airlines: "AirAsia", flight_code: "AirAsia QZ-206",
  psc: "PSC, Free baggage 25kg",
  city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
- city_route_arvl: "Seoul", airport_route_arvl: "ICN",  long_airport_route_arvl: "Incheon Intl.",
+ city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Intl.",
  transit: 1,
- price_before: 0, price: rtn_col_prices[0],
+ price_before: 0, price: rtn_prices[0],
  day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
  day_arvl: "Sun", date_arvl: 8, month_arvl: "Feb", year_arvl: 2016, 
  time_out: "18:50", time_arvl: "15:05", time_duration: "18h 15m", time_tomorrow: true},
@@ -24,7 +17,7 @@
  city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
  city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Intl.",
  transit: 0,
- price_before: 5327300, price: rtn_col_prices[1],
+ price_before: 5327300, price: rtn_prices[1],
  day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
  day_arvl: "Sat", date_arvl: 7, month_arvl: "Feb", year_arvl: 2016,
  time_out: "06:00",time_arvl: "04:00",time_duration: "2h 15m",time_tomorrow: false},
@@ -34,7 +27,7 @@
  city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
  city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Intl.",
  transit: 0,
- price_before: 5327300, price: rtn_col_prices[2],
+ price_before: 5327300, price: rtn_prices[2],
  day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
  day_arvl: "Sat", date_arvl: 7, month_arvl: "Feb", year_arvl: 2016,
  time_out: "06:00",time_arvl: "04:00",time_duration: "2h 15m",time_tomorrow: false}];
@@ -45,7 +38,7 @@ each val, index in rtn
     .row(style="padding:0;margin:0;margin-bottom:0.5em;")
       //- airlines name
       span.left= rtn[index].airlines
-    input(type="radio" name="rtn" value=rtn[index].price)
+
     
     .row(style="padding:0;margin:0;")
       .col.s6(style="padding-left:0")
@@ -64,15 +57,17 @@ each val, index in rtn
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")  
     .row.valign-wrapper(style="padding:0;margin:0;")
       .col.s6(style="padding-left:0;position:relative;")
-        span(style="color:#8f8f8f;") Round-trip Price
+        span(style="color:#434343;") Round-trip Price
       .col.s6.right-align(style="padding-right:0;position:relative;")
         unless rtn[index].price_before == 0
           span.currency(style="color:#b4b4b4; text-decoration:line-through;")= rtn[index].price_before
           br
-        strong.currency(style="color:rgb(249,109,1);font-size:1.2em;")= rtn[index].price
+        strong(id="rtn-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")
+        strong.currency(id="rtn-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= rtn[index].price
         span(style="color:rgb(249,109,1);") /pax
+    input(type="radio" name="rtn" value=rtn[index].price)
     
-     //- flight details
+    //- flight details
     .row.detail(data-content)
       hr(style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;")
       p.center-align Inclusive of airline Fee & Taxes
@@ -122,4 +117,3 @@ each val, index in rtn
         .row
           .col.s12
             span= rtn[index].psc
-      //- div(id="price-detail-"+ [index] class=".col.s12") Test 3

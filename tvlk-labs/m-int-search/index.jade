@@ -41,7 +41,7 @@ html(lang="en")
             //- search result
 
             .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 4 outbound flights found, sorted by round-trip price.
+              span 4 departure flights found, sorted by round-trip price.
             include ./includes/search-item-dpt.jade
             //- search result
         #rtn-column
@@ -77,14 +77,6 @@ html(lang="en")
   include ./includes/modal-flight-summary.jade 
   include ./includes/modal-smart-combo.jade
  
-//- currency script
-script.
-  $(".currency").autoNumeric('init',{
-    aSep: ',',
-    aDec: '.', 
-    aSign: 'Rp ',
-    mDec: '0'
-  });
 //- accordion script
 script.
   $(document).ready(function() {
@@ -101,24 +93,24 @@ script.
   });
 //- unselect radio script
 script.
- var allRadios = document.getElementsByName('dpt');
- var booRadio;
-    for(var x = 0; x < allRadios.length; x++){
-      allRadios[x].onclick = function() {
-        if(booRadio == this){
-          this.checked = false;
-          booRadio = null;
-          $( this ).parent().removeClass("dpt-selected");
-          //style
-          $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
+  var allRadios = document.getElementsByName('dpt');
+  var booRadio;
+  for(var x = 0; x < allRadios.length; x++){
+    allRadios[x].onclick = function() {
+      if(booRadio == this){
+        this.checked = false;
+        booRadio = null;
+        $( this ).parent().removeClass("dpt-selected");
+        //style
+        $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
 
-        }else{
-          console.log($(this).val());
-          //insert formula here to subtract from kolom sebelah
-          booRadio = this;
-        }
+      }else{
+        console.log($(this).val());
+        //insert formula here to subtract from kolom sebelah
+        booRadio = this;
+      }
 
-        dptPrice = $('input[name=dpt]:checked').val();
+      dptPrice = $('input[name=dpt]:checked').val();
         
         //- totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
         //- $("#totalprice").html(totalPrice);
@@ -127,3 +119,111 @@ script.
         //- $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
       };
     }
+  
+  //collect all dpt price value in array
+  var dpt_radios = document.getElementsByName('dpt');
+  var dpt_col = [];
+  dpt_col.push(#{dpt_prices});
+  var rtn_radios = document.getElementsByName('rtn');
+  var rtn_col = [];
+  rtn_col.push(#{rtn_prices});
+
+  var dpt_col_prices = [];
+  var rtn_col_prices = [];
+
+  for(var i=0; i< dpt_col.length; i++) {
+    dpt_col_prices[i] = parseInt(dpt_col[i]) + parseInt(rtn_col[0]);
+  };
+  for(var i=0; i< rtn_col.length; i++) {
+    rtn_col_prices[i] = parseInt(rtn_col[i]) + parseInt(dpt_col[0]);
+  };
+  console.log(dpt_col);
+  console.log(rtn_col);
+  console.log(dpt_col_prices);
+  console.log(rtn_col_prices);
+  //- update value for both columns
+  for( var i = 0; i < dpt_radios.length; i++ ) {
+      if(dpt_radios[i].type=='radio' ) {
+          dpt_radios[i].value = dpt_col_prices[i];
+          $("#dpt-price-"+[i]).html(dpt_col_prices[i].toString())
+      }
+  }
+  for( var i = 0; i < rtn_radios.length; i++ ) {
+      if(rtn_radios[i].type=='radio' ) {
+          rtn_radios[i].value = rtn_col_prices[i];
+          $("#rtn-price-"+[i]).html(rtn_col_prices[i].toString());
+      }
+  }
+
+  function updatePrice(price1, price2, price3) {
+    var updated_price = [];
+    updated_price.push((parseInt(price1)+parseInt(price2))- parseInt(price3));
+    return updated_price;
+  }
+  
+  //- value for rtn_col_prices[0] if dpt_col_prices[1] selected
+  //- price1 = original value before total roundtrip on those index
+  //- price2 = original value before total roundtrip on those index (iterated for update)
+  //- price3 = selected total roundtrip price, index same with price1
+  console.log("if dpt_col_prices[1] selected");
+  for(var i=0; i< rtn_col.length; i++) {
+  console.log(updatePrice(dpt_col[1], rtn_col[i], dpt_col_prices[1]));
+  }
+  
+  console.log("if rtn_col_prices[1] selected");
+  for(var i=0; i< dpt_col.length; i++) {
+  console.log(updatePrice(rtn_col[1], dpt_col[i], rtn_col_prices[1]));
+  }
+  
+
+  // cek mana yang dipilih duluan buat milih harga
+  $('input[type="radio"]').on('click', function() {
+  //- kalau dpt yang kepilih duluan
+  if (($("input[name='dpt']").is(':checked')) && (!$("input[name='rtn']").is(':checked'))) {
+      var a = $('input[name=dpt]').index($(this));
+      console.log(a);
+      console.log("Update Price RTN");
+      var price_update = [];
+      for(var i=0; i< rtn_col.length; i++) {
+        price_update[i] = updatePrice(dpt_col[a], rtn_col[i], dpt_col_prices[a]);
+        console.log(price_update);
+      }
+      for( var i = 0; i < rtn_radios.length; i++ ) {
+          if(rtn_radios[i].type=='radio' ) {
+              rtn_radios[i].value = price_update[i];
+              $("#rtn-plussign-"+[i]).html("+");
+              $("#rtn-price-"+[i]).html(price_update[i].toString())
+              $("#rtn-price-"+[i]).autoNumeric('update');
+          }
+      }
+    }
+
+   //- kalau rtn yang kepilih duluan 
+    else if (($("input[name='rtn']").is(':checked')) && (!$("input[name='dpt']").is(':checked'))) {
+      var a = $('input[name=rtn]').index($(this));
+      console.log(a);
+      console.log("Update Price DPT");
+      var price_update = [];
+      for(var i=0; i< dpt_col.length; i++) {
+        price_update[i] = updatePrice(rtn_col[a], dpt_col[i], rtn_col_prices[a]);
+        console.log(price_update);
+      }
+      for( var i = 0; i < dpt_radios.length; i++ ) {
+          if(dpt_radios[i].type=='radio' ) {
+              dpt_radios[i].value = price_update[i];
+              $("#dpt-plussign-"+[i]).html("+");
+              $("#dpt-price-"+[i]).html(price_update[i].toString())
+              $("#dpt-price-"+[i]).autoNumeric('update');
+          }
+      }
+    }
+  });
+
+//- currency script
+script.
+  $(".currency").autoNumeric('init',{
+    aSep: ',',
+    aDec: '.', 
+    aSign: 'Rp ',
+    mDec: '0'
+  });

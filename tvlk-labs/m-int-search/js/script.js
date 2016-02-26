@@ -78,7 +78,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		dptPrice = $('input[name=dpt]:checked').val();
 
 		totalPrice = (Number(dptPrice) + Number(rtnPrice));
-		totalPriceAllPassengers = totalPrice * 2;  //sesuai jumlah passengers
+		totalPriceAllPassengers = totalPrice * 1;  //sesuai jumlah passengers
 		$("#totalprice").html(totalPrice);
 		$("#totalpricesummary").html(totalPriceAllPassengers);
 		$("#bullet-number-1").html("✓");
@@ -107,7 +107,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 			$( this ).parent().css({"border":"2px solid #1BA0E2", "box-shadow":"0 1px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#fbfbfb"});
 	   }
 		rtnPrice = $('input[name=rtn]:checked').val();
-		totalPrice = (Number(dptPrice) + Number(rtnPrice)) * 2;
+		totalPrice = (Number(dptPrice) + Number(rtnPrice)) * 1;
 		$("#totalprice").html(totalPrice);
 		$("#totalpricesummary").html(totalPrice);
 		$("#bullet-number-2").html("✓");

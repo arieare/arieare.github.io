@@ -51,12 +51,10 @@
       <div id="view-port-container">
         <div id="dpt-column">
           <form id="only-one" action="" data-accordion-group class="dpt-column"><span id="dpt-route" class="hide">Jakarta – Seoul</span><span id="dpt-flight-date" class="hide">Sat, 20 Feb 2016</span>
-            <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="col s12"><span>4 outbound flights found, sorted by round-trip price.</span></div>
-            <!-- - dpt_prices.sort();-->
+            <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="col s12"><span>4 departure flights found, sorted by round-trip price.</span></div>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
               <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia</span>
               </div>
-              <input type="radio" name="dpt" value="300">
               <div style="padding:0;margin:0;" class="row">
                 <div style="padding-left:0" class="col s6"><strong>18:50 – 15:05</strong><strong> (+1)</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
                 </div>
@@ -65,10 +63,11 @@
               </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">300</strong><span style="color:rgb(249,109,1);">/pax</span>
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#434343;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><strong id="dpt-plussign-0" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-0" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">1000</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
+              <input type="radio" name="dpt" value="1000">
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
                 <p class="center-align">Inclusive of airline Fee & Taxes</p>
@@ -111,7 +110,6 @@
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
               <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia + Sriwijaya</span>
               </div>
-              <input type="radio" name="dpt" value="400">
               <div style="padding:0;margin:0;" class="row">
                 <div style="padding-left:0" class="col s6"><strong>06:00 – 04:00</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
                 </div>
@@ -120,10 +118,11 @@
               </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">400</strong><span style="color:rgb(249,109,1);">/pax</span>
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#434343;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong id="dpt-plussign-1" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-1" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">2000</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
+              <input type="radio" name="dpt" value="2000">
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
                 <p class="center-align">Inclusive of airline Fee & Taxes</p>
@@ -168,11 +167,9 @@
         <div id="rtn-column">
           <form id="only-one" action="" data-accordion-group class="rtn-column"><span id="rtn-route" class="hide">Seoul – Jakarta</span><span id="rtn-flight-date" class="hide">Sun, 21 Feb 2016</span>
             <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="col s12"><span>2 return flights found, sorted by round-trip price.</span></div>
-            <!-- - dpt_prices.sort();-->
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
               <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia</span>
               </div>
-              <input type="radio" name="rtn" value="300">
               <div style="padding:0;margin:0;" class="row">
                 <div style="padding-left:0" class="col s6"><strong>18:50 – 15:05</strong><strong> (+1)</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
                 </div>
@@ -181,10 +178,11 @@
               </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">300</strong><span style="color:rgb(249,109,1);">/pax</span>
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#434343;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><strong id="rtn-plussign-0" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-0" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">1500</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
+              <input type="radio" name="rtn" value="1500">
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
                 <p class="center-align">Inclusive of airline Fee & Taxes</p>
@@ -227,7 +225,6 @@
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
               <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia + Sriwijaya</span>
               </div>
-              <input type="radio" name="rtn" value="350">
               <div style="padding:0;margin:0;" class="row">
                 <div style="padding-left:0" class="col s6"><strong>06:00 – 04:00</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
                 </div>
@@ -236,10 +233,11 @@
               </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">350</strong><span style="color:rgb(249,109,1);">/pax</span>
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#434343;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong id="rtn-plussign-1" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-1" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">2500</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
+              <input type="radio" name="rtn" value="2500">
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
                 <p class="center-align">Inclusive of airline Fee & Taxes</p>
@@ -282,7 +280,6 @@
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
               <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">AirAsia + Sriwijaya</span>
               </div>
-              <input type="radio" name="rtn" value="700">
               <div style="padding:0;margin:0;" class="row">
                 <div style="padding-left:0" class="col s6"><strong>06:00 – 04:00</strong><br><span style="color:#8f8f8f">CGK ⇄ ICN</span>
                 </div>
@@ -291,10 +288,11 @@
               </div>
               <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#8f8f8f;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong style="color:rgb(249,109,1);font-size:1.2em;" class="currency">700</strong><span style="color:rgb(249,109,1);">/pax</span>
+                <div style="padding-left:0;position:relative;" class="col s6"><span style="color:#434343;">Round-trip Price</span></div>
+                <div style="padding-right:0;position:relative;" class="col s6 right-align"><span style="color:#b4b4b4; text-decoration:line-through;" class="currency">5327300</span><br><strong id="rtn-plussign-2" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-2" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5500</strong><span style="color:rgb(249,109,1);">/pax</span>
                 </div>
               </div>
+              <input type="radio" name="rtn" value="5500">
               <div data-content class="row detail">
                 <hr style="width:100%;margin:0.5em auto;border-bottom:1px solid #dadada;">
                 <p class="center-align">Inclusive of airline Fee & Taxes</p>
@@ -373,14 +371,6 @@
   </div>
 </html>
 <script>
-  $(".currency").autoNumeric('init',{
-    aSep: ',',
-    aDec: '.', 
-    aSign: 'Rp ',
-    mDec: '0'
-  });
-</script>
-<script>
   $(document).ready(function() {
     $('#only-one [data-accordion]').accordion();
   
@@ -397,28 +387,136 @@
 <script>
   var allRadios = document.getElementsByName('dpt');
   var booRadio;
-     for(var x = 0; x < allRadios.length; x++){
-       allRadios[x].onclick = function() {
-         if(booRadio == this){
-           this.checked = false;
-           booRadio = null;
-           $( this ).parent().removeClass("dpt-selected");
-           //style
-           $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
+  for(var x = 0; x < allRadios.length; x++){
+    allRadios[x].onclick = function() {
+      if(booRadio == this){
+        this.checked = false;
+        booRadio = null;
+        $( this ).parent().removeClass("dpt-selected");
+        //style
+        $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
   
-         }else{
-           console.log($(this).val());
-           //insert formula here to subtract from kolom sebelah
-           booRadio = this;
-         }
+      }else{
+        console.log($(this).val());
+        //insert formula here to subtract from kolom sebelah
+        booRadio = this;
+      }
   
-         dptPrice = $('input[name=dpt]:checked').val();
-         
-         //- totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
-         //- $("#totalprice").html(totalPrice);
-         //- $("#totalpricesummary").html(totalPrice);
-         //- $("#bullet-number-1").html("1");
-         //- $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
-       };
-     }
+      dptPrice = $('input[name=dpt]:checked').val();
+        
+        //- totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
+        //- $("#totalprice").html(totalPrice);
+        //- $("#totalpricesummary").html(totalPrice);
+        //- $("#bullet-number-1").html("1");
+        //- $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
+      };
+    }
+  
+  //collect all dpt price value in array
+  var dpt_radios = document.getElementsByName('dpt');
+  var dpt_col = [];
+  dpt_col.push(1000,2000);
+  var rtn_radios = document.getElementsByName('rtn');
+  var rtn_col = [];
+  rtn_col.push(1500,2500,5500);
+  
+  var dpt_col_prices = [];
+  var rtn_col_prices = [];
+  
+  for(var i=0; i< dpt_col.length; i++) {
+    dpt_col_prices[i] = parseInt(dpt_col[i]) + parseInt(rtn_col[0]);
+  };
+  for(var i=0; i< rtn_col.length; i++) {
+    rtn_col_prices[i] = parseInt(rtn_col[i]) + parseInt(dpt_col[0]);
+  };
+  console.log(dpt_col);
+  console.log(rtn_col);
+  console.log(dpt_col_prices);
+  console.log(rtn_col_prices);
+  //- update value for both columns
+  for( var i = 0; i < dpt_radios.length; i++ ) {
+      if(dpt_radios[i].type=='radio' ) {
+          dpt_radios[i].value = dpt_col_prices[i];
+          $("#dpt-price-"+[i]).html(dpt_col_prices[i].toString())
+      }
+  }
+  for( var i = 0; i < rtn_radios.length; i++ ) {
+      if(rtn_radios[i].type=='radio' ) {
+          rtn_radios[i].value = rtn_col_prices[i];
+          $("#rtn-price-"+[i]).html(rtn_col_prices[i].toString());
+      }
+  }
+  
+  function updatePrice(price1, price2, price3) {
+    var updated_price = [];
+    updated_price.push((parseInt(price1)+parseInt(price2))- parseInt(price3));
+    return updated_price;
+  }
+  
+  //- value for rtn_col_prices[0] if dpt_col_prices[1] selected
+  //- price1 = original value before total roundtrip on those index
+  //- price2 = original value before total roundtrip on those index (iterated for update)
+  //- price3 = selected total roundtrip price, index same with price1
+  console.log("if dpt_col_prices[1] selected");
+  for(var i=0; i< rtn_col.length; i++) {
+  console.log(updatePrice(dpt_col[1], rtn_col[i], dpt_col_prices[1]));
+  }
+  
+  console.log("if rtn_col_prices[1] selected");
+  for(var i=0; i< dpt_col.length; i++) {
+  console.log(updatePrice(rtn_col[1], dpt_col[i], rtn_col_prices[1]));
+  }
+  
+  
+  // cek mana yang dipilih duluan buat milih harga
+  $('input[type="radio"]').on('click', function() {
+  //- kalau dpt yang kepilih duluan
+  if (($("input[name='dpt']").is(':checked')) && (!$("input[name='rtn']").is(':checked'))) {
+      var a = $('input[name=dpt]').index($(this));
+      console.log(a);
+      console.log("Update Price RTN");
+      var price_update = [];
+      for(var i=0; i< rtn_col.length; i++) {
+        price_update[i] = updatePrice(dpt_col[a], rtn_col[i], dpt_col_prices[a]);
+        console.log(price_update);
+      }
+      for( var i = 0; i < rtn_radios.length; i++ ) {
+          if(rtn_radios[i].type=='radio' ) {
+              rtn_radios[i].value = price_update[i];
+              $("#rtn-plussign-"+[i]).html("+");
+              $("#rtn-price-"+[i]).html(price_update[i].toString())
+              $("#rtn-price-"+[i]).autoNumeric('update');
+          }
+      }
+    }
+  
+   //- kalau rtn yang kepilih duluan 
+    else if (($("input[name='rtn']").is(':checked')) && (!$("input[name='dpt']").is(':checked'))) {
+      var a = $('input[name=rtn]').index($(this));
+      console.log(a);
+      console.log("Update Price DPT");
+      var price_update = [];
+      for(var i=0; i< dpt_col.length; i++) {
+        price_update[i] = updatePrice(rtn_col[a], dpt_col[i], rtn_col_prices[a]);
+        console.log(price_update);
+      }
+      for( var i = 0; i < dpt_radios.length; i++ ) {
+          if(dpt_radios[i].type=='radio' ) {
+              dpt_radios[i].value = price_update[i];
+              $("#dpt-plussign-"+[i]).html("+");
+              $("#dpt-price-"+[i]).html(price_update[i].toString())
+              $("#dpt-price-"+[i]).autoNumeric('update');
+          }
+      }
+    }
+  });
+  
+</script>
+<script>
+  $(".currency").autoNumeric('init',{
+    aSep: ',',
+    aDec: '.', 
+    aSign: 'Rp ',
+    mDec: '0'
+  });
 </script>
