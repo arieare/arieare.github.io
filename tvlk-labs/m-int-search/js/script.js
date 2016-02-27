@@ -80,7 +80,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		totalPrice = (Number(dptPrice) + Number(rtnPrice));
 		totalPriceAllPassengers = totalPrice * 1;  //sesuai jumlah passengers
 		$("#totalprice").html(totalPrice);
-		$("#totalpricesummary").html(totalPriceAllPassengers);
+		$("#totalpricesummary").html(totalPriceAllPassengers * 2);
 		$("#totalpricesummary").autoNumeric('update');
 		$("#bullet-number-1").html("✓");
 		$("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
@@ -110,7 +110,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		rtnPrice = $('input[name=rtn]:checked').val();
 		totalPrice = (Number(dptPrice) + Number(rtnPrice)) * 1;
 		$("#totalprice").html(totalPrice);
-		$("#totalpricesummary").html(totalPrice);
+		$("#totalpricesummary").html(totalPrice * 2);
 		$("#totalpricesummary").autoNumeric('update');
 		$("#bullet-number-2").html("✓");
 		$("#bullet-number-2").css("background-color", "rgba(255,255,255,.8)");

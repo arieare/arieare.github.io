@@ -1,11 +1,12 @@
-- var dpt_prices = [1000, 2000];
+- var dpt_prices = [3056900, 3136900];
+- var routes = ["Jakarta", "Seoul"];
 -
  var dpt = [{
  id: 1,
  airlines: "AirAsia", flight_code: "AirAsia QZ-206",
- psc: "PSC, Free baggage 25kg",
- city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
- city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Int.",
+ psc: "PSC, Free baggage 25kg, Legroom, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
+ city_route_arvl: routes[1], airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Int.",
  transit: 1,
  price_before: 0, price: dpt_prices[0],
  day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
@@ -14,10 +15,10 @@
  {id: 2,
  airlines: "AirAsia + Sriwijaya", flight_code: "AirAsia QZ-208",
  psc: "PSC, Free baggage 25kg",
- city_route_out: "Jakarta", airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
- city_route_arvl: "Seoul", airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Int.",
+ city_route_out: routes[0], airport_route_out: "CGK", long_airport_route_out: "Soekarno-Hatta Intl.",
+ city_route_arvl: routes[1], airport_route_arvl: "ICN", long_airport_route_arvl: "Incheon Int.",
  transit: 0,
- price_before: 5327300, price: dpt_prices[1],
+ price_before: 0, price: dpt_prices[1],
  day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
  day_arvl: "Sat", date_arvl: 7, month_arvl: "Feb", year_arvl: 2016,
  time_out: "06:00",time_arvl: "04:00",time_duration: "2h 15m",time_tomorrow: false}];

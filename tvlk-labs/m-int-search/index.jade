@@ -8,14 +8,14 @@ html(lang="en")
     //- navbar start
     - var route = 'Jakarta ⇄ Seoul'
     - var dpt_route_city = 'Jakarta – Seoul'
-    - var dpt_date = 'Sat, 20 Feb 2016'
+    - var dpt_date = 'Sat, 20 Feb 2016 • 2 Passenger(s)'
     - var rtn_route_city = 'Seoul – Jakarta'
-    - var rtn_date = 'Sun, 21 Feb 2016'
+    - var rtn_date = 'Sun, 21 Feb 2016 • 2 Passenger(s)'
     .navbar-fixed
       nav
         .nav-wrapper
           span.brand-logo.center
-            span.flight-route= dpt_route_city
+            strong.flight-route= dpt_route_city
             span.flight-date= dpt_date
           ul.left
             li
@@ -28,11 +28,13 @@ html(lang="en")
         ul.row.tab-nav-wrapper
           .active-indicator
           li.tab.col.s6.center-align
-            a(href="#go-to-dpt-column" style="padding: 2em 1em;")
+            a(href="#go-to-dpt-column" style="padding: 1em 1em;")
               span#bullet-number-1.bullet-number 1
-              | &ensp;Departure
+              //- img(src="img/ic_check.png" width="24px" height="auto" style="display:inline;")
+              span
+                | &ensp;Departure
           li.tab.col.s6.center-align
-            a(href="#go-to-rtn-column" style="padding: 2em 1em;")
+            a(href="#go-to-rtn-column" style="padding: 1em 1em;")
               span#bullet-number-2.bullet-number 2
               | &ensp;Return
       #view-port-container
@@ -71,7 +73,7 @@ html(lang="en")
         span.col.s12
           a.flight-detail-modal-trigger.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;")
             span(style="color:#434343;") Round-trip Price • 
-            span Summary
+            strong Summary
         span.col.s12(style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;") Rp 
           strong#totalprice.currency.odometer 0
       .col.s5
@@ -179,9 +181,14 @@ script.
   
 
   // cek mana yang dipilih duluan buat milih harga
+  var dpt_selected_first = false;
+  var rtn_selected_first = false;
   $('input[type="radio"]').on('click', function() {
   //- kalau dpt yang kepilih duluan
   if (($("input[name='dpt']").is(':checked')) && (!$("input[name='rtn']").is(':checked'))) {
+      dpt_selected_first = true;
+      rtn_selected_first = false;
+      console.log("departure dipilih duluan!")
       var a = $('input[name=dpt]').index($(this));
       console.log(a);
       console.log("Update Price RTN");
@@ -202,6 +209,9 @@ script.
 
    //- kalau rtn yang kepilih duluan 
     else if (($("input[name='rtn']").is(':checked')) && (!$("input[name='dpt']").is(':checked'))) {
+      dpt_selected_first = false;
+      rtn_selected_first = true;
+      console.log("return dipilih duluan!")
       var a = $('input[name=rtn]').index($(this));
       console.log(a);
       console.log("Update Price DPT");
