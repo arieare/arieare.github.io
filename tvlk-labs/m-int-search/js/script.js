@@ -1,8 +1,8 @@
+var dptPrice = 0;
+var rtnPrice = 0;
+var totalPrice = 0;
+var totalPriceAllPassengers = 0;
 $(function() {
-	var dptPrice = 0;
-	var rtnPrice = 0;
-	var totalPrice = 0;
-	var totalPriceAllPassengers = 0;
 	//modal for summary
 	$('.modal-trigger').leanModal();
 	// attach fastclick
@@ -37,7 +37,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$('a[href$="#go-to-dpt-column"]').css( "color", "rgba(255,255,255,.5)" )
 
 		$(".flight-route").html($("#rtn-route").html());
-		$(".flight-date").html($("#rtn-flight-date").html());
+		$(".flight-date").html($("#rtn-flight-date").html()+" • 2 Passenger(s)");
 
 		$(".tab-nav-wrapper").removeClass( "dpt-active" );
 		$(".tab-nav-wrapper").addClass( "rtn-active" );
@@ -53,7 +53,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$('a[href$="#go-to-rtn-column"]').css( "color", "rgba(255,255,255,.5)" )
 
 		$(".flight-route").html($("#dpt-route").html());
-		$(".flight-date").html($("#dpt-flight-date").html());
+		$(".flight-date").html($("#dpt-flight-date").html()+" • 2 Passenger(s)");
 		
 		$(".tab-nav-wrapper").removeClass( "rtn-active" );
 		$(".tab-nav-wrapper").addClass( "dpt-active" );
@@ -83,7 +83,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$("#totalpricesummary").html(totalPriceAllPassengers * 2);
 		$("#totalpricesummary").autoNumeric('update');
 		$("#bullet-number-1").html("✓");
-		$("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
+		$("#bullet-number-1").css("background-color", "rgba(255,255,255,1)");
 		if ($("#bullet-number-2").html() != "✓") {
 			setTimeout(function(){
 				$('a[href="#go-to-rtn-column"]').trigger('click');
@@ -113,7 +113,7 @@ dpt.hammer({"threshold":5,"velocity":0.1}).on("swipeleft", function(ev){
 		$("#totalpricesummary").html(totalPrice * 2);
 		$("#totalpricesummary").autoNumeric('update');
 		$("#bullet-number-2").html("✓");
-		$("#bullet-number-2").css("background-color", "rgba(255,255,255,.8)");
+		$("#bullet-number-2").css("background-color", "rgba(255,255,255,1)");
 		if ($("#bullet-number-1").html() != "✓") {
 			setTimeout(function(){
 				$('a[href="#go-to-dpt-column"]').trigger('click');
