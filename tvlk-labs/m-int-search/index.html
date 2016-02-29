@@ -17,6 +17,8 @@
     <script src="js/odometer.min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/leanModal.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/toasts.js"></script>
     <script src="js/fastclick.js"></script>
     <script src="js/headroom.js"></script>
     <script src="js/inobounce.min.js"></script>
@@ -1170,9 +1172,7 @@
     </div>
     <div style="z-index:100;" class="row price-update valign-wrapper">
       <div class="col s7"><span class="col s12"><a href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;" class="flight-detail-modal-trigger modal-trigger"><span style="color:#434343;">Round-trip Price • </span><strong>Summary</strong></a></span><span style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;" class="col s12">Rp <strong id="totalprice" class="currency odometer">0</strong></span></div>
-      <div class="col s5">
-        <button id="book" class="right disabled">Book Now</button>
-      </div>
+      <div class="col s5"><a id="book" class="right disabled">Book Now</a></div>
     </div>
   </body>
   <div id="flight-detail-modal" class="modal">
@@ -1367,6 +1367,11 @@
     }
   });
   
+  $('#book').on('click', function() {
+    if ($('#book').hasClass( "disabled" )) {
+       Materialize.toast('Choose departure & return flight to Book', 2500)
+      }
+  });
   
 </script>
 <script>

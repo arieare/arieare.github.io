@@ -77,7 +77,7 @@ html(lang="en")
         span.col.s12(style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;") Rp 
           strong#totalprice.currency.odometer 0
       .col.s5
-        button#book.right.disabled Book Now
+        a#book.right.disabled Book Now
  
   include ./includes/modal-flight-summary.jade 
   include ./includes/modal-smart-combo.jade
@@ -252,7 +252,12 @@ script.
       $('#selected-rtn-time').html($('input[name=rtn]:checked').attr("data-time")+" ("+$('input[name=rtn]:checked').attr("data-duration")+")");
     }
   });
-
+  
+  $('#book').on('click', function() {
+    if ($('#book').hasClass( "disabled" )) {
+       Materialize.toast('Choose departure & return flight to Book', 2500)
+      }
+  });
 
 //- currency script
 script.
