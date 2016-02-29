@@ -1,37 +1,116 @@
-- var rtn_prices = [100, 300, 500];
+- var rtn_prices = [5850450, 5850450, 6875450, 6971550, 7038200, 7056200, 7416150,7416150, 7587000, 7587000];
 - var routes = ["Seoul", "Jakarta"];
 -
  var rtn = [{
  id: 1,
- airlines: "AirAsia", flight_code: "AirAsia QZ-206",
- psc: "PSC, Free baggage 25kg",
- city_route_out: routes[0], airport_route_out: "ICN", long_airport_route_out: "Incheon Intl.",
+ airlines: "Cathay", flight_code: "Cathay CX-252",
+ psc: "Free baggage 20kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LHR", long_airport_route_out: "Heathrow",
  city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
  transit: 1,
  price_before: 0, price: rtn_prices[0],
- day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
- day_arvl: "Sun", date_arvl: 8, month_arvl: "Feb", year_arvl: 2016, 
- time_out: "18:50", time_arvl: "15:05", time_duration: "18h 15m", time_tomorrow: true},
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016, 
+ time_out: "11:25", time_arvl: "13:20", time_duration: "18h 55m", time_tomorrow: true},
  {id: 2,
- airlines: "AirAsia + Sriwijaya", flight_code: "AirAsia QZ-208",
- psc: "PSC, Free baggage 25kg",
- city_route_out: routes[0], airport_route_out: "ICN", long_airport_route_out: "Incheon Intl.",
+ airlines: "Cathay", flight_code: "Cathay CX-250",
+ psc: "Free baggage 20kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LHR", long_airport_route_out: "Heathrow",
  city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
- transit: 0,
+ transit: 1,
  price_before: 0, price: rtn_prices[1],
- day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
- day_arvl: "Sat", date_arvl: 7, month_arvl: "Feb", year_arvl: 2016,
- time_out: "06:00",time_arvl: "04:00",time_duration: "2h 15m",time_tomorrow: false},
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "18:05",time_arvl: "19:50",time_duration: "2h 15m",time_tomorrow: true},
  {id: 3,
- airlines: "AirAsia + Sriwijaya", flight_code: "AirAsia QZ-208",
- psc: "PSC, Free baggage 25kg",
- city_route_out: routes[0], airport_route_out: "ICN", long_airport_route_out: "Incheon Intl.",
+ airlines: "Cathay", flight_code: "Cathay CX-254",
+ psc: "Free baggage 20kg, In-Flight Meal, Late night flight",
+ city_route_out: routes[0], airport_route_out: "LHR", long_airport_route_out: "Heathrow",
  city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
- transit: 0,
+ transit: 1,
  price_before: 0, price: rtn_prices[2],
- day_out: "Sat", date_out: 7, month_out: "Feb", year_out: 2016,
- day_arvl: "Sat", date_arvl: 7, month_arvl: "Feb", year_arvl: 2016,
- time_out: "06:00",time_arvl: "04:00",time_duration: "2h 15m",time_tomorrow: false}];
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "22:00",time_arvl: "22:55",time_duration: "17h 55m",time_tomorrow: true},
+
+ {id: 4,
+ airlines: "Thai", flight_code: "Thai TG-911",
+ psc: "Free baggage 30kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LHR", long_airport_route_out: "Heathrow",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[3],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "11:50",time_arvl: "11:55",time_duration: "17h 5m",time_tomorrow: true},
+
+
+ {id: 5,
+ airlines: "Emirates", flight_code: "Emirates EK-16",
+ psc: "Free baggage 30kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LGW", long_airport_route_out: "Gatwick",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[4],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "13:35",time_arvl: "22:10",time_duration: "25h 35m",time_tomorrow: true},
+
+ {id: 6,
+ airlines: "Emirates", flight_code: "Emirates EK-12",
+ psc: "Free baggage 30kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LGW", long_airport_route_out: "Gatwick",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[5],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "09:40",time_arvl: "22:10",time_duration: "29h 30m",time_tomorrow: true},
+
+ {id: 7,
+ airlines: "Turkish Airlines", flight_code: "Turkish Airlines TK-1982",
+ psc: "Free baggage 20kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LGW", long_airport_route_out: "Gatwick",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[6],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "10:10",time_arvl: "18:10",time_duration: "25h",time_tomorrow: true},
+
+  {id: 8,
+ airlines: "Turkish Airlines", flight_code: "Turkish Airlines TK-1966",
+ psc: "Free baggage 20kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LGW", long_airport_route_out: "Gatwick",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[7],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "12:35",time_arvl: "18:10",time_duration: "22h 35m",time_tomorrow: true},
+
+ {id: 9,
+ airlines: "Emirates", flight_code: "Emirates EK-12",
+ psc: "Free baggage 30kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LGW", long_airport_route_out: "Gatwick",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[8],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "09:40",time_arvl: "15:45",time_duration: "23h 30m",time_tomorrow: true},
+
+  {id: 10,
+ airlines: "Emirates", flight_code: "Emirates EK-16",
+ psc: "Free baggage 30kg, In-Flight Meal",
+ city_route_out: routes[0], airport_route_out: "LGW", long_airport_route_out: "Gatwick",
+ city_route_arvl: routes[1], airport_route_arvl: "CGK", long_airport_route_arvl: "Soekarno-Hatta Intl.",
+ transit: 1,
+ price_before: 0, price: rtn_prices[9],
+ day_out: "Fri", date_out: 11, month_out: "Mar", year_out: 2016,
+ day_arvl: "Sat", date_arvl: 12, month_arvl: "Mar", year_arvl: 2016,
+ time_out: "13:35",time_arvl: "15:45",time_duration: "19h 10m",time_tomorrow: true}
+ ];
 
 each val, index in rtn
   label.col.s12.search-item(data-accordion)
@@ -45,7 +124,7 @@ each val, index in rtn
       .col.s6(style="padding-left:0")
         strong= rtn[index].time_out + " – " + rtn[index].time_arvl
         unless !rtn[index].time_tomorrow
-          strong  (+1)
+          strong  (+1D)
         br
         span(style="color:#8f8f8f")= rtn[index].airport_route_out + " ⇄ " + rtn[index].airport_route_arvl
       .col.s6.right-align(style="padding-right:0")
@@ -57,16 +136,16 @@ each val, index in rtn
           span(style="color:#8f8f8f;") direct flight
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")  
     .row.valign-wrapper(style="padding:0;margin:0;")
-      .col.s6(style="padding-left:0;position:relative;")
+      .col.s5(style="padding-left:0;position:relative;")
         span(style="color:#434343;") Round-trip Price
-      .col.s6.right-align(style="padding-right:0;position:relative;")
+      .col.s7.right-align(style="padding-right:0;position:relative;")
         unless rtn[index].price_before == 0
           span.currency(style="color:#b4b4b4; text-decoration:line-through;")= rtn[index].price_before
           br
         strong(id="rtn-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")
         strong.currency(id="rtn-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= rtn[index].price
         span(style="color:rgb(249,109,1);") /pax
-    input(type="radio" name="rtn" value=rtn[index].price)
+    input(type="radio" name="rtn" value=rtn[index].price data-route= rtn[index].airport_route_out+" – "+rtn[index].airport_route_arvl data-time= rtn[index].time_out+" – "+rtn[index].time_arvl data-duration=rtn[index].time_duration)
     
     //- flight details
     .row.detail(data-content)

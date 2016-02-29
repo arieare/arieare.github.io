@@ -34,14 +34,14 @@
   <body>
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper"><span class="brand-logo center"><span style="margin:0;" class="flight-route">Challenge              </span></span></div>
+        <div class="nav-wrapper"><span class="brand-logo center"><strong style="margin:0;" class="flight-route">Challenge              </strong></span></div>
       </nav>
     </div>
     <div style="margin-bottom:1em;margin-top:1em;" class="container flight-form-container">
       <div style="padding:16px !important;margin:0;" class="row s12 flight-spec-input">
-        <p style="color:#434343;">Bayangkan anda mendapatkan sejumlah uang (bayangkan saja jumlahnya) untuk berlibur ke Seoul, Korea (sudah termasuk uang untuk beli oleh-oleh, mengaturnya terserah anda).</p>
+        <p style="color:#434343;">Bayangkan anda mendapatkan sejumlah uang (bayangkan saja jumlahnya) untuk berlibur ke London, Inggris berangkat di hari Jumat, 4 Maret 2016 selama seminggu bersama adik/kakak anda (sudah termasuk uang untuk beli oleh-oleh, mengaturnya terserah anda).</p>
         <p style="color:#434343;">Teman-teman anda mengetahui hal ini dan meminta anda membawakan banyak sekali souvenir (mungkin anda memerlukan bagasi extra).</p>
-        <p style="color:#434343;">Pilihlah penerbangan yang paling sesuai dengan preferensi anda. (why?)</p>
+        <p style="color:#434343;">Pilihlah penerbangan yang paling sesuai dengan preferensi anda.</p>
       </div>
     </div>
     <div class="container">     
@@ -49,42 +49,3 @@
     </div>
   </body>
 </html>
-<script>
-  $(document).ready(function() {
-    $('#only-one [data-accordion]').accordion();
-  
-    $('#multiple [data-accordion]').accordion({
-      singleOpen: false
-    });
-  
-    $('#single[data-accordion]').accordion({
-      transitionEasing: 'cubic-bezier(0.455, 0.030, 0.515, 0.955)',
-      transitionSpeed: 200
-    });
-  });
-</script>
-<script>
-  var allRadios = document.getElementsByName('dpt');
-    var booRadio;
-    var x = 0;
-    for(x = 0; x < allRadios.length; x++){
-  
-      allRadios[x].onclick = function() {
-        if(booRadio == this){
-          this.checked = false;
-          booRadio = null;
-          $( this ).parent().removeClass("dpt-selected");
-          //style
-          $( this ).parent().css({"border":"1px solid #dadada", "box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02)", "background-color":"#ffffff"});
-        }else{
-          booRadio = this;
-        }
-        dptPrice = $('input[name=dpt]:checked').val();
-        totalPrice = (totalPrice - Number(dptPrice))*2; //sesuai jumlah passengers
-        $("#totalprice").html(totalPrice);
-        $("#totalpricesummary").html(totalPrice);
-        $("#bullet-number-1").html("1");
-        $("#bullet-number-1").css("background-color", "rgba(255,255,255,.8)");
-      };
-    }
-</script>

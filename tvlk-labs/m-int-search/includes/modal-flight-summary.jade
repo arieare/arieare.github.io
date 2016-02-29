@@ -7,16 +7,16 @@
     hr(style="padding-top:8px;")
     p(style="margin:0.4em 0;") 
       strong Departure
-    p(style="margin:0.4em 0;") CGK – ICN  
+    p(id="selected-dpt-route" style="margin:0.4em 0;") CGK – ICN  
       span= dpt_date
-    span 15:10 – 17:55 (1h 45m)
+    span(id="selected-dpt-time") 15:10 – 17:55 (1h 45m)
     hr(style="padding-top:8px;")
     p(style="margin:0.4em 0;")
       strong Return
-    p(style="margin:0.4em 0;") ICN – CGK 
+    p(id="selected-rtn-route" style="margin:0.4em 0;") ICN – CGK 
       span= rtn_date
-    span 15:10 – 17:55 (1h 45m)
+    span(id="selected-rtn-time") 15:10 – 17:55 (1h 45m)
     hr(style="padding-top:8px;")
     p(style="margin:0.4em 0;") 
-      strong Total Price for 2 pax 
+      strong Total Price for 2 passenger(s) 
     strong#totalpricesummary.currency(style="color:rgb(249,109,1);") 0

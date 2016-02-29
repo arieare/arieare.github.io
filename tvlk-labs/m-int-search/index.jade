@@ -6,11 +6,11 @@ html(lang="en")
     include ./includes/head.jade
   body
     //- navbar start
-    - var route = 'Jakarta ⇄ Seoul'
-    - var dpt_route_city = 'Jakarta – Seoul'
-    - var dpt_date = 'Sat, 20 Feb 2016'
-    - var rtn_route_city = 'Seoul – Jakarta'
-    - var rtn_date = 'Sun, 21 Feb 2016'
+    - var route = 'Jakarta ⇄ London'
+    - var dpt_route_city = 'Jakarta – London'
+    - var dpt_date = 'Fri, 4 mar 2016'
+    - var rtn_route_city = 'London – Jakarta'
+    - var rtn_date = 'Fri, 11 Feb 2016'
     .navbar-fixed
       nav
         .nav-wrapper
@@ -45,7 +45,7 @@ html(lang="en")
             //- search result
 
             .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 4 departure flights found, sorted by round-trip price.
+              span 10 departure flights found, sorted by round-trip price.
             include ./includes/search-item-dpt.jade
             //- search result
         #rtn-column
@@ -54,7 +54,7 @@ html(lang="en")
             span#rtn-flight-date.hide= rtn_date
             //- search result
             .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 2 return flights found, sorted by round-trip price.
+              span 10 return flights found, sorted by round-trip price.
             include ./includes/search-item-rtn.jade
             //- search result
         
@@ -228,6 +228,31 @@ script.
       $("#bullet-number-1").css("background-color", "rgba(255,255,255,.4)")
     }
   });
+  //- Isi data ke flight summary
+  $('.flight-detail-modal-trigger').on('click', function() {
+    if ((!$("input[name='dpt']").is(':checked'))) {
+      $('#selected-dpt-route').css({"color":"#8f8f8f"});
+      $('#selected-dpt-route').html("Please choose departure flight");
+      $('#selected-dpt-time').html("");
+    }
+    else if (($("input[name='dpt']").is(':checked'))){
+      $('#selected-dpt-route').css({"color":"#434343"});
+      $('#selected-dpt-route').html("#{dpt_date}"+" • "+$('input[name=dpt]:checked').attr("data-route"));
+      $('#selected-dpt-time').html($('input[name=dpt]:checked').attr("data-time")+" ("+$('input[name=dpt]:checked').attr("data-duration")+")");
+    }
+
+    if ((!$("input[name='rtn']").is(':checked'))) {
+      $('#selected-rtn-route').css({"color":"#8f8f8f"});
+      $('#selected-rtn-route').html("Please choose return flight");
+      $('#selected-rtn-time').html("");
+    }
+    else if (($("input[name='rtn']").is(':checked'))){
+      $('#selected-rtn-route').css({"color":"#434343"});
+      $('#selected-rtn-route').html("#{rtn_date}"+" • "+$('input[name=rtn]:checked').attr("data-route"));
+      $('#selected-rtn-time').html($('input[name=rtn]:checked').attr("data-time")+" ("+$('input[name=rtn]:checked').attr("data-duration")+")");
+    }
+  });
+
 
 //- currency script
 script.
