@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="arieare">
+    <title>Online Rescheduling</title>
+    <link href="style/main.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/toasts.js"></script>
+    <script>
+      $( document ).ready(function() {
+        $(".dropdown-button").dropdown(function (){ hover: true });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper"><span class="brand-logo center"><strong class="flight-route"></strong><span class="flight-date"></span></span></div>
+      </nav>
+    </div>
+    <div class="container">
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" class="normal">⏰ Normal︎</a></li>
+        <li><a href="#!" class="instant">⚡ Instant︎</a></li>
+      </ul>
+      <div class="row">
+        <div style="background:#dadada;padding:72em 1em 1em;border-radius:4px;margin-top:4em;" class="col s3"></div>
+        <div style="padding-top:4em;" class="col s9 right-align">
+          <div style="background:#fff;padding:20em 1em 1em;border-radius:4px;" class="row"><a href="#!" style="margin-right:1em;" class="btn disabled">Refund</a><a href="#!" class="instant valign btn tvlk-blue">Reschedule</a></div>
+          <div style="background:#fff;padding:20em 1em 1em;border-radius:4px;" class="row"><a href="#!" style="margin-right:1em;" class="btn disabled">Refund</a><a href="#!" data-activates="dropdown1" class="valign btn tvlk-blue dropdown-button">Reschedule ▾</a></div>
+          <div style="background:#fff;padding:20em 1em 1em;border-radius:4px;margin-bottom:4em;" class="row"><a href="#!" style="margin-right:1em;" class="btn disabled">Refund</a><a href="#!" class="normal valign btn tvlk-blue">Reschedule</a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  $('.normal').on('click', function() {
+       Materialize.toast('Normal Reschedule Selected', 2500)
+  });
+  $('.instant').on('click', function() {
+       Materialize.toast('Instant Reschedule Selected', 2500)
+  });
+</script>
