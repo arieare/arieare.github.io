@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Online Rescheduling"
+    - var author = "arieare"
+    include ./includes/head.jade
+  body
+    //- navbar start
+    .navbar-fixed
+      nav
+        .nav-wrapper
+          span.brand-logo.center
+            strong.flight-route= dpt_route_city
+            span.flight-date= dpt_date
+      //- navbar end
+    .container
+      ul#dropdown1.dropdown-content
+        li
+          a.normal(href="#!") ⏰ Normal︎
+        li
+          a.instant.tooltipped(href="#!" data-position="left" data-delay="25" data-tooltip="Lebih fleksibel dan cepat! (mungkin dikenakan biaya tambahan)") ⚡ Instant︎
+      .row
+        .col.s3(style="background:#dadada;padding:72em 1em 1em;border-radius:4px;margin-top:4em;")
+        .col.s9.right-align(style="padding-top:4em;")
+          .row(style="background:#fff;padding:20em 1em 1em;border-radius:4px;")
+              a.btn.disabled(href="#!" style="margin-right:1em;") Refund
+              a.instant.valign.btn.tvlk-blue(href="#!") Reschedule
+          .row(style="background:#fff;padding:20em 1em 1em;border-radius:4px;")
+            a.btn.disabled(href="#!" style="margin-right:1em;") Refund
+            a.valign.btn.tvlk-blue.dropdown-button(href="#!" data-activates="dropdown1") Reschedule ▾
+          .row(style="background:#fff;padding:20em 1em 1em;border-radius:4px;margin-bottom:4em;")
+            a.btn.disabled(href="#!" style="margin-right:1em;") Refund
+            a.normal.valign.btn.tvlk-blue(href="#!") Reschedule
+script.
+  $('.normal').on('click', function() {
+       Materialize.toast('Normal Reschedule Selected', 2500)
+  });
+  $('.instant').on('click', function() {
+       Materialize.toast('Instant Reschedule Selected', 2500)
+  });
