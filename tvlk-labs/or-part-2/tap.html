@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="arieare">
+    <title>Flight Online Rescheduling Tools</title>
+    <link href="style/main.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/leanModal.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/toasts.js"></script>
+    <script>
+      $( document ).ready(function() {
+        $(".dropdown-button").dropdown(function (){ hover: true });
+      //modal for summary
+        $('.modal-trigger').leanModal();
+      });
+    </script>
+  </head>
+  <body style="background-color:#fff;">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper"><span style="margin-left:1em;" class="brand-logo left">TAP Agent Center</span></div>
+      </nav>
+    </div>
+    <div class="row">
+      <div style="background-color:#b4b4b4;padding-bottom:100vh;" class="col s2"></div>
+      <div class="col s10">
+        <div class="col s12">
+          <h5>Flight Online Rescheduling Tools</h5>
+        </div>
+        <div class="col s4"><span>Sort By:</span>
+          <select class="browser-default">
+            <option value="Submission Time">Submission Time</option>
+            <option value="Old Booking ID.">Old Booking ID.</option>
+            <option value="Rescheduled ID.">Rescheduled ID.</option>
+            <option value="Time to Departure">Time to Departure</option>
+            <option value="Fulfillment ID.">Fulfillment ID.</option>
+            <option value="Status">Status</option>
+          </select>
+        </div>
+        <table class="striped responsive-table">
+          <thead>
+            <tr>
+              <th data-field="Submission Time"><a data-activates="dropdown1" class="dropdown-button">Submission Time ▾</a></th>
+              <th data-field="Old Booking ID.">Old Booking ID.</th>
+              <th data-field="Rescheduled ID.">Rescheduled ID.</th>
+              <th data-field="Time to Departure"><a data-activates="dropdown2" class="dropdown-button">Time to Departure ▾</a></th>
+              <th data-field="Fullfilment ID."><a data-activates="dropdown3" class="dropdown-button">Fullfilment ID. ▾</a></th>
+              <th data-field="Status"><a data-activates="dropdown4" class="dropdown-button">Status ▾</a></th>
+              <th data-field="Update"><a>Download CSV </a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sab, 12 Feb 2016</td>
+              <td><a href="#modal1" class="modal-trigger">3452342</a></td>
+              <td>3452351</td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td><span style="font-size:0.8em;background-color:green;padding: 0.5em 0.8em;border-radius:99px;color:white;">ACTIVE</span></td>
+              <td> <a href="#!" class="btn tvlk-blue">Update ▸</a></td>
+            </tr>
+            <tr>
+              <td>Sab, 12 Feb 2016</td>
+              <td>3452342</td>
+              <td>3452351</td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td> <span style="font-size:0.8em;background-color:red;padding: 0.5em 0.8em;border-radius:99px;color:white;">NON-RESCHEDULABLE</span></td>
+              <td><a href="tap_form_sriwijaya.html" class="btn tvlk-blue">Update ▸</a></td>
+            </tr>
+          </tbody>
+          <div class="row">
+            <div class="col s2"> 
+              <form>
+                <ul id="dropdown1" class="dropdown-content">
+                  <li>
+                    <input type="checkbox" id="submit-time-0" class="filled-in">
+                    <label for="submit-time-0">SHOW ALL</label>
+                  </li>
+                  <hr>
+                  <li>Show Only:</li>
+                  <li>
+                    <input type="checkbox" id="submit-time-1" class="filled-in">
+                    <label for="submit-time-1"> 2 Week</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="submit-time-2" class="filled-in">
+                    <label for="submit-time-2">< 1 Week</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="col s2"> 
+              <form>
+                <ul id="dropdown2" class="dropdown-content">
+                  <li>
+                    <input type="checkbox" id="time-to-depart-0" class="filled-in">
+                    <label for="time-to-depart-0">SHOW ALL</label>
+                  </li>
+                  <hr>
+                  <li>Show Only:</li>
+                  <li>
+                    <input type="checkbox" id="time-to-depart-1" class="filled-in">
+                    <label for="time-to-depart-1">< 24 Hour</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="time-to-depart-2" class="filled-in">
+                    <label for="time-to-depart-2">< 12 Hour</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="col s2"> 
+              <form>
+                <ul id="dropdown3" class="dropdown-content">
+                  <li>
+                    <input type="checkbox" id="fulfil-id-0" class="filled-in">
+                    <label for="fulfil-id-0">SHOW ALL</label>
+                  </li>
+                  <hr>
+                  <li>Show Only:</li>
+                  <li>
+                    <input type="checkbox" id="fulfil-id-1" class="filled-in">
+                    <label for="fulfil-id-1">ABACUS</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="fulfil-id-2" class="filled-in">
+                    <label for="fulfil-id-2">GALILEO</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="fulfil-id-3" class="filled-in">
+                    <label for="fulfil-id-3">SJ_trinusa</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="fulfil-id-4" class="filled-in">
+                    <label for="fulfil-id-4">XN_trinusa</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="col s2"> 
+              <form>
+                <ul id="dropdown4" class="dropdown-content">
+                  <li>
+                    <input type="checkbox" id="status-0" class="filled-in">
+                    <label for="status-0">SHOW ALL</label>
+                  </li>
+                  <hr>
+                  <li>Show Only:</li>
+                  <li>
+                    <input type="checkbox" id="status-1" class="filled-in">
+                    <label for="status-1">ACTIVE</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="status-2" class="filled-in">
+                    <label for="status-2">WAITING FOR PAYMENT</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="status-3" class="filled-in">
+                    <label for="status-3">PAYMENT VERIFIED</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="status-4" class="filled-in">
+                    <label for="status-4">CLOSED</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="status-5" class="filled-in">
+                    <label for="status-5">CANCELLED</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="status-6" class="filled-in">
+                    <label for="status-6">NON-RESCHEDULABLE</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="status-7" class="filled-in">
+                    <label for="status-7">EXPIRED</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </table>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Old booking ID</h4>
+            <h5>itinerary Detail</h5>
+            <ul>
+              <li>Flight number</li>
+              <li>Airline PNR</li>
+              <li>Fullfilment ID</li>
+              <li>Route (e.g. CGK DPS)</li>
+              <li>Departure Date & Time</li>
+              <li>Arrival Date & Time</li>
+              <li>Class (e.g. Business, Economy, Promo, etc.)</li>
+              <li>Sub Class (e.g. A, B, X, etc.)</li>
+            </ul>
+            <h5>Passenger details - passenger that being rescheduled</h5>
+            <ul>
+              <li>Title (e.g. Mr., Mrs., Miss)</li>
+              <li>Passenger name</li>
+              <li>Passenger type (e.g. Adult, child, infant)</li>
+            </ul>
+            <h5>Fare details</h5>
+            <ul>
+              <li>Provider PNR code</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <p>tes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

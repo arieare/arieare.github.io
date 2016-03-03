@@ -11,7 +11,7 @@
     var defaults = {
       inDuration: 300,
       outDuration: 225,
-      constrain_width: true, // Constrains width of dropdown to the activator
+      constrain_width: false, // Constrains width of dropdown to the activator
       hover: true,
       gutter: 0, // Spacing from edge
       belowOrigin: true,

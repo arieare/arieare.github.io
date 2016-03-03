@@ -1,0 +1,43 @@
+//- Meta
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0")
+meta(name="apple-mobile-web-app-capable" content="yes")
+meta(name="description", content="")
+meta(name="author", content= author)
+//- Title
+title= pagetitle
+//- Core CSS & Jquery
+link(href="style/style.css", rel="stylesheet")
+script(src="js/jquery-2.2.0.min.js")
+script(src="js/pseudoloc.js")
+
+script.
+  //- var pseudolocalize = function pseudolocalize(arg){
+  //-     if(typeof arg === 'string'){
+  //-         var elements = document.querySelectorAll(arg);
+  //-         for(var i=0, len=elements.length; i<len; i++){
+  //-             pseudolocalize(elements[i]);
+  //-         }
+  //-     } else if(arg.nodeType === 1){
+  //-         for(var i=0, len=arg.childNodes.length; i<len; i++){
+  //-             pseudolocalize(arg.childNodes[i]);
+  //-         }
+  //-     } else if(arg.nodeType === 3){
+  //-         arg.nodeValue = arg.nodeValue.replace(/(.)/g, '$1$1');
+  //-     }
+  //- }
+  var pseudolocalize = function pseudolocalize(arg){
+        if(typeof arg === 'string'){
+            var elements = document.querySelectorAll(arg);
+            for(var i=0, len=elements.length*1.3; i<len; i++){
+                pseudolocalize(elements[i]);
+            }
+        } else if(arg.nodeType === 1){
+            for(var i=0, len=arg.childNodes.length; i<len; i++){
+                pseudolocalize(arg.childNodes[i]);
+            }
+        } else if(arg.nodeType === 3){
+            arg.nodeValue = arg.nodeValue.replace(/(.)/g, '$1$1');
+        }
+    }

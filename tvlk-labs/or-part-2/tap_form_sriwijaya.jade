@@ -1,0 +1,94 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Sriwijaya Form"
+    - var author = "arieare"
+    include ./includes/head.jade
+  body(style="background-color:#fff;")
+    //- navbar start
+    .navbar-fixed
+      nav
+        .nav-wrapper
+          span.brand-logo.left(style="margin-left:1em;") TAP Agent Center
+      //- navbar end
+    .row
+      .col.s2(style="background-color:#b4b4b4;padding-bottom:100vh;")
+      .col.s10
+        .col.s12
+          h5 
+            a(href="tap.html") Flight Online Rescheduling Tools
+            span  > Update
+        //- .input-field.col.s4
+        //-   input(id="password" type="text" class="")
+        //-   label(for="password") Cari
+        .row
+          .col.12
+            span Update Form for 3452351
+        .row
+          .col.s4
+            h5 Provided PNR
+            label Name
+              input(type="text" value="Mr. X") 
+            label Contact
+              input(type="tel" value="08565656") 
+            label Itinerary
+              input(type="text" value="CGK - DPS")
+          .col.s4
+            h5 Airlines PNR
+            label Name
+              input(type="text" value="Mr. X")
+            label Contact
+              input(type="tel" value="08565656") 
+            label Itinerary
+              input(type="text" value="CGK - DPS")
+          .col.s4
+            label Subclass
+              select.browser-default
+                option(value="A") A
+                option(value="B") B
+                option(value="C") C
+                option(value="D") D
+                option(value="E") E
+                option(value="F") F
+                option(value="G") G
+                option(value="H") H
+                option(value="I") I
+                option(value="J") J
+                option(value="K") K
+                option(value="L") L
+                option(value="M") M
+                option(value="N") N
+                option(value="O") O
+                option(value="P") P
+                option(value="Q") Q
+                option(value="R") R
+                option(value="S") S
+                option(value="T") T
+                option(value="U") U
+                option(value="V") V
+                option(value="W") W
+                option(value="X") X
+                option(value="Y") Y
+                option(value="Z") Z
+        .row      
+          .col.s3
+            label Total (Amount+Currency)
+              input(type="text" placeholder="[Currency] [Amount]")
+          .col.s3
+            label NTA (Amount+Currency)
+              input(type="text")
+          .col.s3
+            label CF (Amount+Currency)
+              input(type="text")
+          .col.s3
+            label ADM (Amount+Currency)
+              input(type="text")
+        .row
+          .col.s3
+            label Balance Due (Amount+Currency)
+              input(type="text")
+        .row
+          .col.s3
+            label Payment Limit
+              input(type="text")
+

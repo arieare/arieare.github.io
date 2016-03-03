@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Pseudolocalization"
+    - var author = "arieare"
+    include ./includes/head.jade
+  body
+    .container
+      p#originalString pseudoloc
+      p#pseudolocString
+
+script.
+  console.log($('#originalString').html());
+  var pseudoloced;
+  //- .on('click', function() {
+  pseudoloc.option.extend = 0;
+  pseudoloced = pseudoloc.str($('#originalString').html());
+  $('#pseudolocString').html(pseudoloced);
+  console.log(pseudoloced);
