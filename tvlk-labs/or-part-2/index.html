@@ -31,162 +31,214 @@
       </nav>
     </div>
     <div class="row">
-      <div style="background-color:#b4b4b4;padding-bottom:100vh;" class="col s2"></div>
+      <div style="background-color:#dadada;padding-bottom:100vh;" class="col s2"></div>
       <div class="col s10">
-        <div class="col s12">
+        <div class="row">
           <h5>Flight Online Rescheduling Tools</h5>
         </div>
-        <div class="col s4"><span>Sort By:</span>
-          <select class="browser-default">
-            <option value="Submission Time">Submission Time</option>
-            <option value="Old Booking ID.">Old Booking ID.</option>
-            <option value="Rescheduled ID.">Rescheduled ID.</option>
-            <option value="Time to Departure">Time to Departure</option>
-            <option value="Fulfillment ID.">Fulfillment ID.</option>
-            <option value="Status">Status</option>
-          </select>
+        <div style="margin-bottom:0;" class="row">
+          <div class="col s1">
+            <h6>Sort By:</h6>
+          </div>
+          <div class="col s4">
+            <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default">
+              <option value="Submission Time">Latest Submission Time (Default)</option>
+              <option value="Submission Time">Oldest Submission Time</option>
+              <option value="Old Booking ID.">Old Booking ID.</option>
+              <option value="Rescheduled ID.">Rescheduled ID.</option>
+              <option value="Time to Departure">Shorter Time to Departure</option>
+              <option value="Time to Departure">Longer Time to Departure</option>
+              <option value="Fulfillment ID.">Fulfillment ID. A → Z</option>
+              <option value="Status">Status A → Z</option>
+            </select>
+          </div>
+          <div class="col s7"><a href="#!" class="button right">Download CSV</a></div>
         </div>
         <table class="striped responsive-table">
           <thead>
             <tr>
-              <th data-field="Submission Time"><a data-activates="dropdown1" class="dropdown-button">Submission Time ▾</a></th>
+              <th data-field="Submission Time">Submission Time
+              </th>
               <th data-field="Old Booking ID.">Old Booking ID.</th>
               <th data-field="Rescheduled ID.">Rescheduled ID.</th>
               <th data-field="Time to Departure"><a data-activates="dropdown2" class="dropdown-button">Time to Departure ▾</a></th>
               <th data-field="Fullfilment ID."><a data-activates="dropdown3" class="dropdown-button">Fullfilment ID. ▾</a></th>
               <th data-field="Status"><a data-activates="dropdown4" class="dropdown-button">Status ▾</a></th>
-              <th data-field="Update"><a>Download CSV </a></th>
+              <th data-field="Update"> </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Sab, 12 Feb 2016</td>
-              <td><a href="#modal1" class="modal-trigger">3452342</a></td>
-              <td>3452351</td>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
-              <td><span style="font-size:0.8em;background-color:green;padding: 0.5em 0.8em;border-radius:99px;color:white;">ACTIVE</span></td>
-              <td> <a href="#!" class="btn tvlk-blue">Update ▸</a></td>
+              <td><span class="status st-ACTIVE">ACTIVE</span></td>
+              <td> <a href="tap_form.html" class="button btn-ACTIVE">Update ▸</a></td>
             </tr>
             <tr>
-              <td>Sab, 12 Feb 2016</td>
-              <td>3452342</td>
-              <td>3452351</td>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
-              <td> <span style="font-size:0.8em;background-color:red;padding: 0.5em 0.8em;border-radius:99px;color:white;">NON-RESCHEDULABLE</span></td>
-              <td><a href="tap_form_sriwijaya.html" class="btn tvlk-blue">Update ▸</a></td>
+              <td><span class="status st-NON-RESCHEDULABLE">NON-RESCHEDULABLE</span></td>
+              <td> <a href="tap_form.html" class="button btn-NON-RESCHEDULABLE">Update ▸</a></td>
+            </tr>
+            <tr>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td><span class="status st-WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</span></td>
+              <td> <a href="tap_form.html" class="button btn-WAITING-FOR-PAYMENT">Update ▸</a></td>
+            </tr>
+            <tr>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td><span class="status st-PAYMENT-VERIFIED">PAYMENT-VERIFIED</span></td>
+              <td> <a href="tap_form.html" class="button btn-PAYMENT-VERIFIED">Update ▸</a></td>
+            </tr>
+            <tr>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td><span class="status st-CLOSED">CLOSED</span></td>
+              <td> <a href="tap_form.html" class="button btn-CLOSED">Update ▸</a></td>
+            </tr>
+            <tr>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td><span class="status st-CANCELED">CANCELED</span></td>
+              <td> <a href="tap_form.html" class="button btn-CANCELED">Update ▸</a></td>
+            </tr>
+            <tr>
+              <td>17:00 (Sab, 12 Feb 2016)</td>
+              <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
+              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td>24 Hours</td>
+              <td>ABACUS</td>
+              <td><span class="status st-EXPIRED">EXPIRED</span></td>
+              <td> <a href="tap_form.html" class="button btn-EXPIRED">Update ▸</a></td>
             </tr>
           </tbody>
-          <div class="row">
-            <div class="col s2"> 
-              <form>
-                <ul id="dropdown1" class="dropdown-content">
-                  <li>
-                    <input type="checkbox" id="submit-time-0" class="filled-in">
-                    <label for="submit-time-0">SHOW ALL</label>
-                  </li>
-                  <hr>
-                  <li>Show Only:</li>
-                  <li>
-                    <input type="checkbox" id="submit-time-1" class="filled-in">
-                    <label for="submit-time-1"> 2 Week</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="submit-time-2" class="filled-in">
-                    <label for="submit-time-2">< 1 Week</label>
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <div class="col s2"> 
-              <form>
-                <ul id="dropdown2" class="dropdown-content">
-                  <li>
-                    <input type="checkbox" id="time-to-depart-0" class="filled-in">
-                    <label for="time-to-depart-0">SHOW ALL</label>
-                  </li>
-                  <hr>
-                  <li>Show Only:</li>
-                  <li>
-                    <input type="checkbox" id="time-to-depart-1" class="filled-in">
-                    <label for="time-to-depart-1">< 24 Hour</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="time-to-depart-2" class="filled-in">
-                    <label for="time-to-depart-2">< 12 Hour</label>
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <div class="col s2"> 
-              <form>
-                <ul id="dropdown3" class="dropdown-content">
-                  <li>
-                    <input type="checkbox" id="fulfil-id-0" class="filled-in">
-                    <label for="fulfil-id-0">SHOW ALL</label>
-                  </li>
-                  <hr>
-                  <li>Show Only:</li>
-                  <li>
-                    <input type="checkbox" id="fulfil-id-1" class="filled-in">
-                    <label for="fulfil-id-1">ABACUS</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="fulfil-id-2" class="filled-in">
-                    <label for="fulfil-id-2">GALILEO</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="fulfil-id-3" class="filled-in">
-                    <label for="fulfil-id-3">SJ_trinusa</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="fulfil-id-4" class="filled-in">
-                    <label for="fulfil-id-4">XN_trinusa</label>
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <div class="col s2"> 
-              <form>
-                <ul id="dropdown4" class="dropdown-content">
-                  <li>
-                    <input type="checkbox" id="status-0" class="filled-in">
-                    <label for="status-0">SHOW ALL</label>
-                  </li>
-                  <hr>
-                  <li>Show Only:</li>
-                  <li>
-                    <input type="checkbox" id="status-1" class="filled-in">
-                    <label for="status-1">ACTIVE</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="status-2" class="filled-in">
-                    <label for="status-2">WAITING FOR PAYMENT</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="status-3" class="filled-in">
-                    <label for="status-3">PAYMENT VERIFIED</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="status-4" class="filled-in">
-                    <label for="status-4">CLOSED</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="status-5" class="filled-in">
-                    <label for="status-5">CANCELLED</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="status-6" class="filled-in">
-                    <label for="status-6">NON-RESCHEDULABLE</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="status-7" class="filled-in">
-                    <label for="status-7">EXPIRED</label>
-                  </li>
-                </ul>
-              </form>
-            </div>
+          <div class="col s2"> 
+            <form>
+              <ul id="dropdown1" class="dropdown-content">
+                <li>
+                  <input type="checkbox" id="submit-time-0" class="filled-in">
+                  <label for="submit-time-0">SHOW ALL</label>
+                </li>
+                <hr>
+                <li>Show Only:</li>
+                <li>
+                  <input type="checkbox" id="submit-time-1" class="filled-in">
+                  <label for="submit-time-1"> 2 Week</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="submit-time-2" class="filled-in">
+                  <label for="submit-time-2">< 1 Week</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="col s2"> 
+            <form>
+              <ul id="dropdown2" class="dropdown-content">
+                <li>
+                  <input type="checkbox" id="time-to-depart-0" class="filled-in">
+                  <label for="time-to-depart-0">SHOW ALL</label>
+                </li>
+                <hr>
+                <li>Show Only:</li>
+                <li>
+                  <input type="checkbox" id="time-to-depart-1" class="filled-in">
+                  <label for="time-to-depart-1">< 24 Hour</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="time-to-depart-2" class="filled-in">
+                  <label for="time-to-depart-2">< 12 Hour</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="col s2"> 
+            <form>
+              <ul id="dropdown3" class="dropdown-content">
+                <li>
+                  <input type="checkbox" id="fulfil-id-0" class="filled-in">
+                  <label for="fulfil-id-0">SHOW ALL</label>
+                </li>
+                <hr>
+                <li>Show Only:</li>
+                <li>
+                  <input type="checkbox" id="fulfil-id-1" class="filled-in">
+                  <label for="fulfil-id-1">ABACUS</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="fulfil-id-2" class="filled-in">
+                  <label for="fulfil-id-2">GALILEO</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="fulfil-id-3" class="filled-in">
+                  <label for="fulfil-id-3">SJ_trinusa</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="fulfil-id-4" class="filled-in">
+                  <label for="fulfil-id-4">XN_trinusa</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="col s2"> 
+            <form>
+              <ul id="dropdown4" class="dropdown-content">
+                <li>
+                  <input type="checkbox" id="status-0" class="filled-in">
+                  <label for="status-0">SHOW ALL</label>
+                </li>
+                <hr>
+                <li>Show Only:</li>
+                <li>
+                  <input type="checkbox" id="status-1" class="filled-in">
+                  <label for="status-1">ACTIVE</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="status-2" class="filled-in">
+                  <label for="status-2">WAITING FOR PAYMENT</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="status-3" class="filled-in">
+                  <label for="status-3">PAYMENT VERIFIED</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="status-4" class="filled-in">
+                  <label for="status-4">CLOSED</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="status-5" class="filled-in">
+                  <label for="status-5">CANCELLED</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="status-6" class="filled-in">
+                  <label for="status-6">NON-RESCHEDULABLE</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="status-7" class="filled-in">
+                  <label for="status-7">EXPIRED</label>
+                </li>
+              </ul>
+            </form>
           </div>
         </table>
         <div id="modal1" class="modal">

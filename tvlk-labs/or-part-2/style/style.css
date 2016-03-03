@@ -2,31 +2,76 @@ body {
   color: #434343;
   background-color: #f1f1f1;
 }
-#book {
+label {
+  font-size: 1rem !important;
+  color:#434343 !important;
+}
+.status {
+  font-size:0.7em;
+  padding: 0.5em 1em;
+  border-radius:999px;
+  color:white;
+  font-weight: bold;
+}
+.st-ACTIVE {
+  background-color:DodgerBlue ;
+}
+.st-NON-RESCHEDULABLE {
+  background-color:red;
+}
+.st-WAITING-FOR-PAYMENT {
+  background-color:GoldenRod;
+}
+.st-PAYMENT-VERIFIED {
+  background-color:LimeGreen;
+}
+.st-CLOSED, .st-CANCELED {
+  background-color:SlateGray;
+}
+.st-EXPIRED {
+  background-color:GainsBoro;
+  color: Grey;
+}
+.button {
   outline: none;
-  border: 0;
-  background: rgb(249,109,1);
+  border: 1px solid black;
+  background: #F1F1F2;
   padding: 8px 20px 8px 20px;
   border-radius: 3px;
-  color: #ffffff;
-  font-weight: bold;
+  color: black;
+  font-weight: normal;
   letter-spacing: 0.0625em;
-
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
 }
-#book:hover {
-  background-color: #F57D00;
-  transition: background-color 0.2s ease;
+.button:hover {
+  background-color: white;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20), 0 2px 4px 0 rgba(0, 0, 0, 0.02); 
 }
-#book:active {
-  background-color: #E26A00;
-  transition: background-color 0.2s ease;
+.btn-WAITING-FOR-PAYMENT, .btn-PAYMENT-VERIFIED, .btn-CLOSED, .btn-EXPIRED {
+  background-color: LightGray;
+  color: Grey;
+  box-shadow: none; 
+  cursor: not-allowed;
+  border: LightSlateGray 1px solid;
 }
-#book.disabled {
-  background-color: rgba(249, 109, 1, 0.6);
-  color: rgba(255, 255, 255, 0.6);
+.btn-WAITING-FOR-PAYMENT:hover {
+  background-color: LightGray;
+  color: Grey;
+  box-shadow: none; 
   cursor: not-allowed;
 }
-
+.form-card {
+  border: 1px solid black;
+  background: #FFF;
+  // padding: 8px 20px 8px 20px;
+  border-radius: 8px;
+  // color: black;
+  font-weight: normal;
+  // letter-spacing: 0.0625em;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  margin-bottom: 1em;
+  padding: 1em auto;
+}
 #btn-search-fight {
   outline: none;
   border: 0;

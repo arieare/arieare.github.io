@@ -1,0 +1,101 @@
+.container.col.s12.form-card
+  .row.col.s12
+    h5 Update Reschedule ID: 3452351 (Express)
+  .row.col.s5     
+    .row(style="margin-bottom:0;")
+      .col.s12
+        strong Additional Base Fare – Adult
+      .col.s2
+        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="Dollar") $
+        //-   option(value="yen") ¥
+        input(type="text" value="Rp." disabled)
+      .col.s10
+        input(type="number" placeholder="Amount" required)
+    .row(style="margin-bottom:0;")
+      .col.s12
+        strong Additional Base Fare – Child (If Any)
+      .col.s2
+        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="Dollar") $
+        //-   option(value="yen") ¥
+        input(type="text" value="Rp." disabled)
+      .col.s10
+        input(type="number" placeholder="Amount")
+    .row(style="margin-bottom:0;")
+      .col.s12
+        strong Additional Base Fare – Infant (If Any)
+      .col.s2
+        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="Dollar") $
+        //-   option(value="yen") ¥
+        input(type="text" value="Rp." disabled)
+      .col.s10
+        input(type="number" placeholder="Amount")
+    .row(style="margin-bottom:0;")
+      .col.s12
+        strong Biaya Lainnya
+      .col.s2
+        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="Dollar") $
+        //-   option(value="yen") ¥
+        input(type="text" value="Rp." disabled)
+      .col.s10
+        input(type="number" placeholder="Amount" required)
+    .row(style="margin-bottom:0;")
+      .col.s12
+        strong Total Tax
+      .col.s2
+        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="Dollar") $
+        //-   option(value="yen") ¥
+        input(type="text" value="Rp." disabled)
+      .col.s10
+        input(type="number" placeholder="Amount" required)
+    .row(style="margin-bottom:0;")
+      .col.s12
+        Strong Total
+      .col.s2
+        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="Dollar") $
+        //-   option(value="yen") ¥
+        input(type="text" value="Rp." disabled)
+      .col.s10
+        input(type="number" placeholder="Amount" required)
+    .row
+      .col.s12
+        form(action="#")
+          label
+            strong Payment Limit
+            select.browser-default(style="height:2rem;padding:1em;border:1px solid black;margin-top:0.8em;")
+              option(value="15") 15 Minutes
+              option(value="20") 20 Minutes
+              option(value="25") 25 Minutes
+              option(value="30") 30 Minutes
+  .row.col.s1
+  .row.col.s5
+    .row.col.s12(style="margin-bottom:0;")
+      //- h5 Provider PNR
+      label
+        strong Provider PNR
+        input(type="text" value="1234324") 
+    .row.col.s12(style="margin-bottom:0;")
+      //- h5 Airlines PNR
+      label
+        strong Airlines PNR
+        input(type="text" value="1234324")
+    .row.col.s12
+      label
+        strong Class
+        select.browser-default(style="height:2rem;padding:1em;border:1px solid black;margin-top:0.8em;")
+          option(value="Promo") Promo
+          option(value="Normal") Normal
+          option(value="Flexi") Flexi
+    .row.col.s12
+      a.button(href="index.html" style="display:inline-block;margin: 0.82rem 0 0.656rem 0;") Done

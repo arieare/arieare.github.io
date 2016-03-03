@@ -12,27 +12,34 @@ html(lang="en")
           span.brand-logo.left(style="margin-left:1em;") TAP Agent Center
       //- navbar end
     .row
-      .col.s2(style="background-color:#b4b4b4;padding-bottom:100vh;")
+      .col.s2(style="background-color:#dadada;padding-bottom:100vh;")
       .col.s10
-        .col.s12
+        .row
           h5 Flight Online Rescheduling Tools
-        //- .input-field.col.s4
-        //-   input(id="password" type="text" class="")
-        //-   label(for="password") Cari
-        .col.s4
-          span Sort By:
-          select.browser-default
-            option(value="Submission Time") Submission Time
-            option(value="Old Booking ID.") Old Booking ID.
-            option(value="Rescheduled ID.") Rescheduled ID.
-            option(value="Time to Departure") Time to Departure
-            option(value="Fulfillment ID.") Fulfillment ID.
-            option(value="Status") Status
+        .row(style="margin-bottom:0;")
+          .col.s1
+            h6 Sort By:
+          .col.s4
+            select.browser-default(style="height:2rem;padding:1em;border:1px solid black;")
+              option(value="Submission Time") Latest Submission Time (Default)
+              option(value="Submission Time") Oldest Submission Time
+              option(value="Old Booking ID.") Old Booking ID.
+              option(value="Rescheduled ID.") Rescheduled ID.
+              option(value="Time to Departure") Shorter Time to Departure
+              option(value="Time to Departure") Longer Time to Departure
+              option(value="Fulfillment ID.") Fulfillment ID. A → Z
+              option(value="Status") Status A → Z
+          .col.s7
+            a.button.right(href="#!") Download CSV
+          //- .col.s8.input-field
+          //-   label(for="password") Cari
+          //-     input(id="password" type="text" class="")
         table.striped.responsive-table
           thead
             tr
               th(data-field="Submission Time")
-                a.dropdown-button(data-activates="dropdown1") Submission Time ▾
+                //- a.dropdown-button(data-activates="dropdown1") Submission Time ▾
+                | Submission Time
               th(data-field="Old Booking ID.") Old Booking ID.
               th(data-field="Rescheduled ID.") Rescheduled ID.
               th(data-field="Time to Departure")
@@ -41,108 +48,99 @@ html(lang="en")
                 a.dropdown-button(data-activates="dropdown3") Fullfilment ID. ▾
               th(data-field="Status")
                 a.dropdown-button(data-activates="dropdown4") Status ▾
-              th(data-field="Update")
-                a Download CSV 
+              th(data-field="Update") 
           tbody
-            tr
-              td Sab, 12 Feb 2016
-              td
-                a.modal-trigger(href="#modal1") 3452342
-              td 3452351
-              td 24 Hours
-              td ABACUS
-              td
-                span(style="font-size:0.8em;background-color:green;padding: 0.5em 0.8em;border-radius:99px;color:white;") ACTIVE
-              td 
-                a.btn.tvlk-blue(href="#!") Update ▸
-            tr
-              td Sab, 12 Feb 2016
-              td 3452342
-              td 3452351
-              td 24 Hours
-              td ABACUS
-              td 
-                span(style="font-size:0.8em;background-color:red;padding: 0.5em 0.8em;border-radius:99px;color:white;") NON-RESCHEDULABLE
-              td
-                a.btn.tvlk-blue(href="tap_form_sriwijaya.html") Update ▸
-          .row
-            .col.s2 
-              form
-                ul#dropdown1.dropdown-content
-                  li
-                    input.filled-in(type="checkbox" id="submit-time-0")
-                    label(for="submit-time-0") SHOW ALL
-                  hr
-                  li Show Only:
-                  li
-                    input.filled-in(type="checkbox" id="submit-time-1")
-                    label(for="submit-time-1")  2 Week
-                  li
-                   input.filled-in(type="checkbox" id="submit-time-2")
-                   label(for="submit-time-2") < 1 Week
-            .col.s2 
-              form
-                ul#dropdown2.dropdown-content
-                  li
-                    input.filled-in(type="checkbox" id="time-to-depart-0")
-                    label(for="time-to-depart-0") SHOW ALL
-                  hr
-                  li Show Only:
-                  li
-                    input.filled-in(type="checkbox" id="time-to-depart-1")
-                    label(for="time-to-depart-1") < 24 Hour
-                  li
-                   input.filled-in(type="checkbox" id="time-to-depart-2")
-                   label(for="time-to-depart-2") < 12 Hour
-            .col.s2 
-              form
-                ul#dropdown3.dropdown-content
-                  li
-                    input.filled-in(type="checkbox" id="fulfil-id-0")
-                    label(for="fulfil-id-0") SHOW ALL
-                  hr
-                  li Show Only:
-                  li
-                    input.filled-in(type="checkbox" id="fulfil-id-1")
-                    label(for="fulfil-id-1") ABACUS
-                  li
-                   input.filled-in(type="checkbox" id="fulfil-id-2")
-                   label(for="fulfil-id-2") GALILEO
-                  li
-                   input.filled-in(type="checkbox" id="fulfil-id-3")
-                   label(for="fulfil-id-3") SJ_trinusa
-                  li
-                   input.filled-in(type="checkbox" id="fulfil-id-4")
-                   label(for="fulfil-id-4") XN_trinusa
-            .col.s2 
-              form
-                ul#dropdown4.dropdown-content
-                  li
-                    input.filled-in(type="checkbox" id="status-0")
-                    label(for="status-0") SHOW ALL
-                  hr
-                  li Show Only:
-                  li
-                    input.filled-in(type="checkbox" id="status-1")
-                    label(for="status-1") ACTIVE
-                  li
-                   input.filled-in(type="checkbox" id="status-2")
-                   label(for="status-2") WAITING FOR PAYMENT
-                  li
-                   input.filled-in(type="checkbox" id="status-3")
-                   label(for="status-3") PAYMENT VERIFIED
-                  li
-                   input.filled-in(type="checkbox" id="status-4")
-                   label(for="status-4") CLOSED
-                  li
-                   input.filled-in(type="checkbox" id="status-5")
-                   label(for="status-5") CANCELLED
-                  li
-                   input.filled-in(type="checkbox" id="status-6")
-                   label(for="status-6") NON-RESCHEDULABLE
-                  li
-                   input.filled-in(type="checkbox" id="status-7")
-                   label(for="status-7") EXPIRED
+            each val, index in ['ACTIVE', 'NON-RESCHEDULABLE', 'WAITING-FOR-PAYMENT', 'PAYMENT-VERIFIED', 'CLOSED', 'CANCELED', 'EXPIRED']
+              tr
+                td 17:00 (Sab, 12 Feb 2016)
+                td
+                  a(href="#link-to-old-booking-id" title="Open Booking ID in new tab") 3452342
+                td
+                  a(href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab") 3452342
+                td 24 Hours
+                td ABACUS
+                td
+                  span.status(class="st-"+val)= val
+                td 
+                  a.button(href="tap_form.html" class="btn-"+val) Update ▸
+
+          .col.s2 
+            form
+              ul#dropdown1.dropdown-content
+                li
+                  input.filled-in(type="checkbox" id="submit-time-0")
+                  label(for="submit-time-0") SHOW ALL
+                hr
+                li Show Only:
+                li
+                  input.filled-in(type="checkbox" id="submit-time-1")
+                  label(for="submit-time-1")  2 Week
+                li
+                 input.filled-in(type="checkbox" id="submit-time-2")
+                 label(for="submit-time-2") < 1 Week
+          .col.s2 
+            form
+              ul#dropdown2.dropdown-content
+                li
+                  input.filled-in(type="checkbox" id="time-to-depart-0")
+                  label(for="time-to-depart-0") SHOW ALL
+                hr
+                li Show Only:
+                li
+                  input.filled-in(type="checkbox" id="time-to-depart-1")
+                  label(for="time-to-depart-1") < 24 Hour
+                li
+                 input.filled-in(type="checkbox" id="time-to-depart-2")
+                 label(for="time-to-depart-2") < 12 Hour
+          .col.s2 
+            form
+              ul#dropdown3.dropdown-content
+                li
+                  input.filled-in(type="checkbox" id="fulfil-id-0")
+                  label(for="fulfil-id-0") SHOW ALL
+                hr
+                li Show Only:
+                li
+                  input.filled-in(type="checkbox" id="fulfil-id-1")
+                  label(for="fulfil-id-1") ABACUS
+                li
+                 input.filled-in(type="checkbox" id="fulfil-id-2")
+                 label(for="fulfil-id-2") GALILEO
+                li
+                 input.filled-in(type="checkbox" id="fulfil-id-3")
+                 label(for="fulfil-id-3") SJ_trinusa
+                li
+                 input.filled-in(type="checkbox" id="fulfil-id-4")
+                 label(for="fulfil-id-4") XN_trinusa
+          .col.s2 
+            form
+              ul#dropdown4.dropdown-content
+                li
+                  input.filled-in(type="checkbox" id="status-0")
+                  label(for="status-0") SHOW ALL
+                hr
+                li Show Only:
+                li
+                  input.filled-in(type="checkbox" id="status-1")
+                  label(for="status-1") ACTIVE
+                li
+                 input.filled-in(type="checkbox" id="status-2")
+                 label(for="status-2") WAITING FOR PAYMENT
+                li
+                 input.filled-in(type="checkbox" id="status-3")
+                 label(for="status-3") PAYMENT VERIFIED
+                li
+                 input.filled-in(type="checkbox" id="status-4")
+                 label(for="status-4") CLOSED
+                li
+                 input.filled-in(type="checkbox" id="status-5")
+                 label(for="status-5") CANCELLED
+                li
+                 input.filled-in(type="checkbox" id="status-6")
+                 label(for="status-6") NON-RESCHEDULABLE
+                li
+                 input.filled-in(type="checkbox" id="status-7")
+                 label(for="status-7") EXPIRED
         div(id="modal1" class="modal")
           div(class="modal-content")
             h4 Old booking ID
