@@ -2310,7 +2310,7 @@ table {
   display: table; }
   table.bordered > thead > tr, table.bordered > tbody > tr {
     border-bottom: 1px solid #d0d0d0; }
-  table.striped > tbody > tr:nth-child(odd) {
+  table.striped > tbody > tr:nth-child(4n+1) {
     background-color: #f2f2f2; }
   table.striped > tbody > tr > td {
     border-radius: 0px; }

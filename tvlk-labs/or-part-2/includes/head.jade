@@ -18,6 +18,7 @@ script(src="js/leanModal.js")
 script(src="js/tooltip.js")
 script(src="js/dropdown.js")
 script(src="js/toasts.js")
+script(src="js/jExpand.js")
 //- script(src="js/buttons.js")
 //- script(src="js/velocity.min.js")
 //- script(src="js/tabs.js")
@@ -26,4 +27,9 @@ script.
     $(".dropdown-button").dropdown(function (){ hover: true });
   //modal for summary
     $('.modal-trigger').leanModal();
+    $("#reschedule-list").jExpand();
+    $('.status-changer').change(function(){
+      var data= $(this).val();
+      confirm("change to "+data+"?");            
+    });
   });

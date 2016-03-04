@@ -6,6 +6,18 @@ label {
   font-size: 1rem !important;
   color:#434343 !important;
 }
+tr.odd, .arrow {
+  cursor: pointer;
+}
+tbody > tr:not(.odd) {
+  background-color:#f8f8f8;
+}
+.arrow:after {
+content: "\25B6";︎
+}
+.close:after {
+content: "\25BC";︎
+}
 .status {
   font-size:0.7em;
   padding: 0.5em 1em;

@@ -16,11 +16,17 @@
     <script src="js/tooltip.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/toasts.js"></script>
+    <script src="js/jExpand.js"></script>
     <script>
       $( document ).ready(function() {
         $(".dropdown-button").dropdown(function (){ hover: true });
       //modal for summary
         $('.modal-trigger').leanModal();
+        $("#reschedule-list").jExpand();
+        $('.status-changer').change(function(){
+          var data= $(this).val();
+          confirm("change to "+data+"?");            
+        });
       });
     </script>
   </head>
@@ -54,9 +60,10 @@
           </div>
           <div class="col s7"><a href="#!" class="button right">Download CSV</a></div>
         </div>
-        <table class="striped responsive-table">
+        <table id="reschedule-list" class="striped responsive-table">
           <thead>
             <tr>
+              <th data-field="Expand"></th>
               <th data-field="Submission Time">Submission Time
               </th>
               <th data-field="Old Booking ID.">Old Booking ID.</th>
@@ -69,67 +76,487 @@
           </thead>
           <tbody>
             <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-ACTIVE">ACTIVE</span></td>
-              <td> <a href="tap_form.html" class="button btn-ACTIVE">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-ACTIVE">Update ›</a></td>
             </tr>
             <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE" selected>ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE">NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED">PAYMENT-VERIFIED</option>
+                        <option value="CLOSED">CLOSED</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-NON-RESCHEDULABLE">NON-RESCHEDULABLE</span></td>
-              <td> <a href="tap_form.html" class="button btn-NON-RESCHEDULABLE">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-NON-RESCHEDULABLE">Update ›</a></td>
             </tr>
             <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE" selected>NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED">PAYMENT-VERIFIED</option>
+                        <option value="CLOSED">CLOSED</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</span></td>
-              <td> <a href="tap_form.html" class="button btn-WAITING-FOR-PAYMENT">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-WAITING-FOR-PAYMENT">Update ›</a></td>
             </tr>
             <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE">NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT" selected>WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED">PAYMENT-VERIFIED</option>
+                        <option value="CLOSED">CLOSED</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-PAYMENT-VERIFIED">PAYMENT-VERIFIED</span></td>
-              <td> <a href="tap_form.html" class="button btn-PAYMENT-VERIFIED">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-PAYMENT-VERIFIED">Update ›</a></td>
             </tr>
             <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE">NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED" selected>PAYMENT-VERIFIED</option>
+                        <option value="CLOSED">CLOSED</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-CLOSED">CLOSED</span></td>
-              <td> <a href="tap_form.html" class="button btn-CLOSED">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-CLOSED">Update ›</a></td>
             </tr>
             <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE">NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED">PAYMENT-VERIFIED</option>
+                        <option value="CLOSED" selected>CLOSED</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-CANCELED">CANCELED</span></td>
-              <td> <a href="tap_form.html" class="button btn-CANCELED">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-CANCELED">Update ›</a></td>
             </tr>
             <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE">NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED">PAYMENT-VERIFIED</option>
+                        <option value="CLOSED">CLOSED</option>
+                        <option value="CANCELED" selected>CANCELED</option>
+                        <option value="EXPIRED">EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="arrow"></span></td>
               <td>17:00 (Sab, 12 Feb 2016)</td>
               <td><a href="#link-to-old-booking-id" title="Open Booking ID in new tab">3452342</a></td>
-              <td><a href="#link-to-rescheduled-booking-id" title="Open Rescheduled ID in new tab">3452342</a></td>
+              <td><a href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab">3452342</a></td>
               <td>24 Hours</td>
               <td>ABACUS</td>
               <td><span class="status st-EXPIRED">EXPIRED</span></td>
-              <td> <a href="tap_form.html" class="button btn-EXPIRED">Update ▸</a></td>
+              <td> <a href="tap_form.html" class="button btn-EXPIRED">Update ›</a></td>
+            </tr>
+            <tr>
+              <td colspan="8">
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>User ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"><a href="#!">123456</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Profile ID</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">1324672</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>User Email</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Phone number</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="row">
+                    <div class="col s4"><span>Status</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">
+                      <select style="height:2rem;padding:1em;border:1px solid black;" class="browser-default status-changer">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="NON-RESCHEDULABLE">NON-RESCHEDULABLE</option>
+                        <option value="WAITING-FOR-PAYMENT">WAITING-FOR-PAYMENT</option>
+                        <option value="PAYMENT-VERIFIED">PAYMENT-VERIFIED</option>
+                        <option value="CLOSED">CLOSED</option>
+                        <option value="CANCELED">CANCELED</option>
+                        <option value="EXPIRED" selected>EXPIRED</option>
+                        <option value="SCHEDULE_NOT_AVAILABLE">SCHEDULE_NOT_AVAILABLE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"> 
+                    <div class="col s4"><span>Fare Difference</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Reschedule Fee</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col s4"><span>Total Payment</span></div>
+                    <div class="col s1"><span>:</span></div>
+                    <div class="col s7">     <span>-</span></div>
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
           <div class="col s2"> 

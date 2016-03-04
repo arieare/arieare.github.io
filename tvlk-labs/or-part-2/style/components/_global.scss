@@ -370,7 +370,7 @@ table {
   }
 
   &.striped > tbody {
-    > tr:nth-child(odd) {
+    > tr:nth-child(4n+1) {
       background-color: $table-striped-color;
     }
 

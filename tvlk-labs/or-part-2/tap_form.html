@@ -16,11 +16,17 @@
     <script src="js/tooltip.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/toasts.js"></script>
+    <script src="js/jExpand.js"></script>
     <script>
       $( document ).ready(function() {
         $(".dropdown-button").dropdown(function (){ hover: true });
       //modal for summary
         $('.modal-trigger').leanModal();
+        $("#reschedule-list").jExpand();
+        $('.status-changer').change(function(){
+          var data= $(this).val();
+          confirm("change to "+data+"?");            
+        });
       });
     </script>
   </head>
@@ -33,14 +39,12 @@
     <div class="row">
       <div style="background-color:#dadada;padding-bottom:210%;" class="col s2"></div>
       <div class="col s10">
-        <div class="col s12">
-          <h5> <a href="index.html">Flight Online Rescheduling Tools</a><span> > Update</span></h5>
+        <div class="row">
+          <h5> <a href="index.html">Flight Online Rescheduling Tools</a><span> > Update Reschedule ID: 3452351</span></h5>
         </div>
         <div class="container col s12 form-card">
           <div class="row col s12">
-            <div class="col s9">
-              <h5>Update Reschedule ID: 3452351 (Sriwijaya)</h5>
-            </div>
+            <h5>Reschedule ID: 3452351 (Sriwijaya)</h5>
           </div>
           <div class="row col s5">    
             <div style="margin-bottom:0;" class="row">
@@ -152,7 +156,7 @@
         </div>
         <div class="container col s12 form-card">
           <div class="row col s12">
-            <h5>Update Reschedule ID: 3452351 (Express)</h5>
+            <h5>Reschedule ID: 3452351 (Express)</h5>
           </div>
           <div class="row col s5">    
             <div style="margin-bottom:0;" class="row">
@@ -252,9 +256,7 @@
         </div>
         <div class="container col s12 form-card">
           <div class="row col s12">
-            <div class="col s9">
-              <h5>Update Reschedule ID: 3452351 (Nok Air/Thai Smile)</h5>
-            </div>
+            <h5>Reschedule ID: 3452351 (Nok Air/Thai Smile)</h5>
           </div>
           <div class="row col s5">    
             <div style="margin-bottom:0;" class="row">
@@ -335,9 +337,7 @@
         </div>
         <div class="container col s12 form-card">
           <div class="row col s12">
-            <div class="col s9">
-              <h5>Update Reschedule ID: 3452351 (Galileo/Abacus)</h5>
-            </div>
+            <h5>Reschedule ID: 3452351 (Galileo/Abacus)</h5>
           </div>
           <div class="row col s5">    
             <div style="margin-bottom:0;" class="row">
@@ -381,9 +381,7 @@
         </div>
         <div class="container col s12 form-card">
           <div class="row col s12">
-            <div class="col s9">
-              <h5>Update Reschedule ID: 3452351 (GDS)</h5>
-            </div>
+            <h5>Reschedule ID: 3452351 (GDS)</h5>
           </div>
           <div class="row col s5">    
             <div style="margin-bottom:0;" class="row">
