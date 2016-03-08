@@ -11,20 +11,14 @@
     <link href="style/style.css" rel="stylesheet">
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/pseudoloc.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <div class="container">
-      <p id="originalString">pseudoloc</p>
-      <p id="pseudolocString"></p>
+      <div style="margin:1em;" class="row"><span>Button locale EN</span><a id="originalString" class="btn">sign in</a></div>
+      <div style="margin:1em;" class="row"><span>Button Extended</span><a id="extendedString" class="btn"></a></div>
+      <div style="margin:1em;" class="row"><span>Button locale TH</span><a id="pseudolocString" class="btn"></a></div>
+      <div style="margin:1em;" class="row"><span>Button locale TH</span><a class="btn">ลงชื่อเข้าใช้</a></div>
     </div>
   </body>
 </html>
-<script>
-  console.log($('#originalString').html());
-  var pseudoloced;
-  //- .on('click', function() {
-  pseudoloc.option.extend = 1.5;
-  pseudoloced = pseudoloc.str($('#originalString').html());
-  $('#pseudolocString').html(pseudoloced);
-  console.log(pseudoloced);
-</script>

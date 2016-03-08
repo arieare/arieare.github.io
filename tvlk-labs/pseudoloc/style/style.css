@@ -2,8 +2,9 @@ body {
   color: #434343;
   background-color: #f1f1f1;
 }
-#book {
+.btn {
   outline: none;
+  display: inline-block;
   border: 0;
   background: rgb(249,109,1);
   padding: 8px 20px 8px 20px;
@@ -13,15 +14,15 @@ body {
   letter-spacing: 0.0625em;
 
 }
-#book:hover {
+.btn:hover {
   background-color: #F57D00;
   transition: background-color 0.2s ease;
 }
-#book:active {
+.btn:active {
   background-color: #E26A00;
   transition: background-color 0.2s ease;
 }
-#book.disabled {
+.btn.disabled {
   background-color: rgba(249, 109, 1, 0.6);
   color: rgba(255, 255, 255, 0.6);
   cursor: not-allowed;

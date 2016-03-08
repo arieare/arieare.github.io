@@ -6,14 +6,19 @@ html(lang="en")
     include ./includes/head.jade
   body
     .container
-      p#originalString pseudoloc
-      p#pseudolocString
+      .row(style="margin:1em;")
+        span Button locale EN
+        a.btn#originalString sign in
+      .row(style="margin:1em;")
+        span Button Extended
+        a.btn#extendedString
 
-script.
-  console.log($('#originalString').html());
-  var pseudoloced;
-  //- .on('click', function() {
-  pseudoloc.option.extend = 0;
-  pseudoloced = pseudoloc.str($('#originalString').html());
-  $('#pseudolocString').html(pseudoloced);
-  console.log(pseudoloced);
+      .row(style="margin:1em;")
+        span Button locale TH
+        a.btn#pseudolocString
+
+      .row(style="margin:1em;")
+        span Button locale TH
+        a.btn ลงชื่อเข้าใช้
+
+          

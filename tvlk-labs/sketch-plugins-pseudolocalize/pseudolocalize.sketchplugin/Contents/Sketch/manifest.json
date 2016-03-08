@@ -1,0 +1,23 @@
+{
+  "author" : "arieare",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "pseudolocalize",
+      "identifier" : "pseudolocalize"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "pseudolocalize"
+    ],
+    "title" : "pseudolocalize"
+  },
+  "identifier" : "com.example.sketch.73daae51-da41-4430-8cd5-231d7fa11246",
+  "version" : "1.0",
+  "description" : "plugins to pseudolocalize your texts",
+  "authorEmail" : "arie.a.re@gmail.com",
+  "name" : "pseudolocalize"
+}

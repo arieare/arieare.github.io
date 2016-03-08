@@ -11,33 +11,4 @@ title= pagetitle
 link(href="style/style.css", rel="stylesheet")
 script(src="js/jquery-2.2.0.min.js")
 script(src="js/pseudoloc.js")
-
-script.
-  //- var pseudolocalize = function pseudolocalize(arg){
-  //-     if(typeof arg === 'string'){
-  //-         var elements = document.querySelectorAll(arg);
-  //-         for(var i=0, len=elements.length; i<len; i++){
-  //-             pseudolocalize(elements[i]);
-  //-         }
-  //-     } else if(arg.nodeType === 1){
-  //-         for(var i=0, len=arg.childNodes.length; i<len; i++){
-  //-             pseudolocalize(arg.childNodes[i]);
-  //-         }
-  //-     } else if(arg.nodeType === 3){
-  //-         arg.nodeValue = arg.nodeValue.replace(/(.)/g, '$1$1');
-  //-     }
-  //- }
-  var pseudolocalize = function pseudolocalize(arg){
-        if(typeof arg === 'string'){
-            var elements = document.querySelectorAll(arg);
-            for(var i=0, len=elements.length*1.3; i<len; i++){
-                pseudolocalize(elements[i]);
-            }
-        } else if(arg.nodeType === 1){
-            for(var i=0, len=arg.childNodes.length; i<len; i++){
-                pseudolocalize(arg.childNodes[i]);
-            }
-        } else if(arg.nodeType === 3){
-            arg.nodeValue = arg.nodeValue.replace(/(.)/g, '$1$1');
-        }
-    }
+script(src="js/script.js")
