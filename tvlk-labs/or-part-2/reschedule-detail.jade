@@ -1,0 +1,129 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Flight Online Rescheduling Tools"
+    - var author = "arieare"
+    include ./includes/head.jade
+  body(style="background-color:#fff;")
+    //- navbar start
+    .navbar-fixed
+      nav
+        .nav-wrapper
+          span.brand-logo.left(style="margin-left:1em;") TAP Agent Center
+      //- navbar end
+    .row
+      .col.s2(style="background-color:#dadada;padding-bottom:100vh;")
+      .col.s10
+        .row
+          h5
+            a(href="index.html") ← Back 
+            | | Reschedule ID: 3452342
+        .row(style="margin-bottom:0;")
+        table.striped.responsive-table
+          thead
+          tbody
+            each val, index in ['ACTIVE']
+              tr
+                td(colspan="8")
+                  .col.s6
+                    .row
+                      .col.s4
+                        span Submission Time
+                      .col.s1
+                        span :
+                      .col.s7
+                        span 10/03/2016 8:49                    
+                    .row
+                      .col.s4
+                        span User ID
+                      .col.s1
+                        span :
+                      .col.s7
+                        a(href="#!") 123456
+                    .row
+                      .col.s4
+                        span Profile ID
+                      .col.s1
+                        span :
+                      .col.s7 
+                        a(href="#!") 1324672
+                    .row
+                      .col.s4
+                        span User Email
+                      .col.s1
+                        span :
+                      .col.s7 
+                        a(href="#!") user@traveloka.com
+                    .row
+                      .col.s4
+                        span Phone number
+                      .col.s1
+                        span :
+                      .col.s7 
+                        a(href="#!") 0815 6123 1211
+                  .col.s6
+                    .row
+                      .col.s4
+                        span Status
+                      .col.s1
+                        span :
+                      .col.s7
+                        select.browser-default.status-changer(style="height:2rem;padding:1em;border:1px solid black;")
+                          if val=="ACTIVE"
+                            option(value="ACTIVE" selected) ACTIVE
+                          else
+                            option(value="ACTIVE") ACTIVE
+                          if val=="NON-RESCHEDULABLE"
+                            option(value="NON-RESCHEDULABLE" selected) NON-RESCHEDULABLE
+                          else
+                            option(value="NON-RESCHEDULABLE") NON-RESCHEDULABLE
+                          if val=="WAITING-FOR-PAYMENT"
+                            option(value="WAITING-FOR-PAYMENT" selected) WAITING-FOR-PAYMENT
+                          else
+                            option(value="WAITING-FOR-PAYMENT") WAITING-FOR-PAYMENT
+                          if val=="PAYMENT-VERIFIED"
+                            option(value="PAYMENT-VERIFIED" selected) PAYMENT-VERIFIED
+                          else
+                            option(value="PAYMENT-VERIFIED") PAYMENT-VERIFIED
+                          if val=="CLOSED"
+                            option(value="CLOSED" selected) CLOSED
+                          else
+                            option(value="CLOSED") CLOSED
+                          if val=="CANCELED"
+                            option(value="CANCELED" selected) CANCELED
+                          else
+                            option(value="CANCELED") CANCELED
+                          if val=="EXPIRED"
+                            option(value="EXPIRED" selected) EXPIRED
+                          else
+                            option(value="EXPIRED") EXPIRED
+                          if val=="SCHEDULE_NOT_AVAILABLE"
+                            option(value="SCHEDULE_NOT_AVAILABLE" selected) SCHEDULE_NOT_AVAILABLE
+                          else
+                            option(value="SCHEDULE_NOT_AVAILABLE") SCHEDULE_NOT_AVAILABLE
+                    .row  
+                      .col.s4
+                        span Fare Difference
+                      .col.s1
+                        span :
+                      .col.s7      
+                        span -
+                    .row
+                      .col.s4
+                        span Reschedule Fee
+                      .col.s1
+                        span :
+                      .col.s7      
+                        span -
+                    .row
+                      .col.s4
+                        span Total Payment
+                      .col.s1
+                        span :
+                      .col.s7      
+                        span -
+              tr
+                td
+                  a.button.right(href="tap_form.html" class="btn-"+val) Update ›
+
+

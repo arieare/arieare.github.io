@@ -34,10 +34,11 @@ html(lang="en")
           //- .col.s8.input-field
           //-   label(for="password") Cari
           //-     input(id="password" type="text" class="")
-        table#reschedule-list.striped.responsive-table
+          //- #reschedule-list
+        table.striped.responsive-table 
           thead
             tr
-              th(data-field="Expand")
+              //- th(data-field="Expand")
               th(data-field="Submission Time")
                 //- a.dropdown-button(data-activates="dropdown1") Submission Time ▾
                 | Submission Time
@@ -52,10 +53,12 @@ html(lang="en")
               th(data-field="Update") 
           tbody
             each val, index in ['ACTIVE', 'NON-RESCHEDULABLE', 'WAITING-FOR-PAYMENT', 'PAYMENT-VERIFIED', 'CLOSED', 'CANCELED', 'EXPIRED']
-              tr
+              tr.reschedule-row
+                //- td
+                //-   a(href="reschedule-detail.html") ⇱
                 td
-                  span.arrow
-                td 17:00 (Sab, 12 Feb 2016)
+                  a(href="reschedule-detail.html") 10/03/2016 8:49 
+                    span(style="display:inline-block;transform: scale(1, -1);") ⇲
                 td
                   a(href="#link-to-old-booking-id" title="Open Booking ID in new tab") 3452342
                 td
@@ -66,98 +69,98 @@ html(lang="en")
                   span.status(class="st-"+val)= val
                 td 
                   a.button(href="tap_form.html" class="btn-"+val) Update ›
-              tr
-                td(colspan="8")
-                  .col.s6
-                    .row
-                      .col.s4
-                        span User ID
-                      .col.s1
-                        span :
-                      .col.s7
-                        a(href="#!") 123456
-                    .row
-                      .col.s4
-                        span Profile ID
-                      .col.s1
-                        span :
-                      .col.s7 
-                        a(href="#!") 1324672
-                    .row
-                      .col.s4
-                        span User Email
-                      .col.s1
-                        span :
-                      .col.s7 
-                        a(href="#!") user@traveloka.com
-                    .row
-                      .col.s4
-                        span Phone number
-                      .col.s1
-                        span :
-                      .col.s7 
-                        a(href="#!") 0815 6123 1211
-                  .col.s6
-                    .row
-                      .col.s4
-                        span Status
-                      .col.s1
-                        span :
-                      .col.s7
-                        select.browser-default.status-changer(style="height:2rem;padding:1em;border:1px solid black;")
-                          if val=="ACTIVE"
-                            option(value="ACTIVE" selected) ACTIVE
-                          else
-                            option(value="ACTIVE") ACTIVE
-                          if val=="NON-RESCHEDULABLE"
-                            option(value="NON-RESCHEDULABLE" selected) NON-RESCHEDULABLE
-                          else
-                            option(value="NON-RESCHEDULABLE") NON-RESCHEDULABLE
-                          if val=="WAITING-FOR-PAYMENT"
-                            option(value="WAITING-FOR-PAYMENT" selected) WAITING-FOR-PAYMENT
-                          else
-                            option(value="WAITING-FOR-PAYMENT") WAITING-FOR-PAYMENT
-                          if val=="PAYMENT-VERIFIED"
-                            option(value="PAYMENT-VERIFIED" selected) PAYMENT-VERIFIED
-                          else
-                            option(value="PAYMENT-VERIFIED") PAYMENT-VERIFIED
-                          if val=="CLOSED"
-                            option(value="CLOSED" selected) CLOSED
-                          else
-                            option(value="CLOSED") CLOSED
-                          if val=="CANCELED"
-                            option(value="CANCELED" selected) CANCELED
-                          else
-                            option(value="CANCELED") CANCELED
-                          if val=="EXPIRED"
-                            option(value="EXPIRED" selected) EXPIRED
-                          else
-                            option(value="EXPIRED") EXPIRED
-                          if val=="SCHEDULE_NOT_AVAILABLE"
-                            option(value="SCHEDULE_NOT_AVAILABLE" selected) SCHEDULE_NOT_AVAILABLE
-                          else
-                            option(value="SCHEDULE_NOT_AVAILABLE") SCHEDULE_NOT_AVAILABLE
-                    .row  
-                      .col.s4
-                        span Fare Difference
-                      .col.s1
-                        span :
-                      .col.s7      
-                        span -
-                    .row
-                      .col.s4
-                        span Reschedule Fee
-                      .col.s1
-                        span :
-                      .col.s7      
-                        span -
-                    .row
-                      .col.s4
-                        span Total Payment
-                      .col.s1
-                        span :
-                      .col.s7      
-                        span -
+              //- tr
+              //-   td(colspan="8")
+              //-     .col.s6
+              //-       .row
+              //-         .col.s4
+              //-           span User ID
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7
+              //-           a(href="#!") 123456
+              //-       .row
+              //-         .col.s4
+              //-           span Profile ID
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7 
+              //-           a(href="#!") 1324672
+              //-       .row
+              //-         .col.s4
+              //-           span User Email
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7 
+              //-           a(href="#!") user@traveloka.com
+              //-       .row
+              //-         .col.s4
+              //-           span Phone number
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7 
+              //-           a(href="#!") 0815 6123 1211
+              //-     .col.s6
+              //-       .row
+              //-         .col.s4
+              //-           span Status
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7
+              //-           select.browser-default.status-changer(style="height:2rem;padding:1em;border:1px solid black;")
+              //-             if val=="ACTIVE"
+              //-               option(value="ACTIVE" selected) ACTIVE
+              //-             else
+              //-               option(value="ACTIVE") ACTIVE
+              //-             if val=="NON-RESCHEDULABLE"
+              //-               option(value="NON-RESCHEDULABLE" selected) NON-RESCHEDULABLE
+              //-             else
+              //-               option(value="NON-RESCHEDULABLE") NON-RESCHEDULABLE
+              //-             if val=="WAITING-FOR-PAYMENT"
+              //-               option(value="WAITING-FOR-PAYMENT" selected) WAITING-FOR-PAYMENT
+              //-             else
+              //-               option(value="WAITING-FOR-PAYMENT") WAITING-FOR-PAYMENT
+              //-             if val=="PAYMENT-VERIFIED"
+              //-               option(value="PAYMENT-VERIFIED" selected) PAYMENT-VERIFIED
+              //-             else
+              //-               option(value="PAYMENT-VERIFIED") PAYMENT-VERIFIED
+              //-             if val=="CLOSED"
+              //-               option(value="CLOSED" selected) CLOSED
+              //-             else
+              //-               option(value="CLOSED") CLOSED
+              //-             if val=="CANCELED"
+              //-               option(value="CANCELED" selected) CANCELED
+              //-             else
+              //-               option(value="CANCELED") CANCELED
+              //-             if val=="EXPIRED"
+              //-               option(value="EXPIRED" selected) EXPIRED
+              //-             else
+              //-               option(value="EXPIRED") EXPIRED
+              //-             if val=="SCHEDULE_NOT_AVAILABLE"
+              //-               option(value="SCHEDULE_NOT_AVAILABLE" selected) SCHEDULE_NOT_AVAILABLE
+              //-             else
+              //-               option(value="SCHEDULE_NOT_AVAILABLE") SCHEDULE_NOT_AVAILABLE
+              //-       .row  
+              //-         .col.s4
+              //-           span Fare Difference
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7      
+              //-           span -
+              //-       .row
+              //-         .col.s4
+              //-           span Reschedule Fee
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7      
+              //-           span -
+              //-       .row
+              //-         .col.s4
+              //-           span Total Payment
+              //-         .col.s1
+              //-           span :
+              //-         .col.s7      
+              //-           span -
 
           .col.s2 
             form

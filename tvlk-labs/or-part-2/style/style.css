@@ -6,12 +6,19 @@ label {
   font-size: 1rem !important;
   color:#434343 !important;
 }
-tr.odd, .arrow {
-  cursor: pointer;
+// tr {
+//   cursor: pointer;
+// }
+// tr:hover {
+//   background-color: #fafafa;
+// }
+input[type=text]:disabled {
+  color: rgba(0, 0, 0, 0.6);
+  //border-bottom: none;
 }
-tbody > tr:not(.odd) {
-  background-color:#f8f8f8;
-}
+// tbody > tr:not(.odd) {
+//   background-color:#f8f8f8;
+// }
 .arrow:after {
 content: "\25B6";︎
 }

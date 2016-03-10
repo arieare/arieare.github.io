@@ -182,9 +182,11 @@ var onRun = function(context) {
     }
     //function duplicate current page
     function duplicatePageForLocale(localeName) {
+
       var doc = context.document
       var page = doc.currentPage()
       var newPage = [page copy]
+      newPage.pageDelegate = page.pageDelegate();
       newPage.setName(page.name() + " " + localeName);
       
       [[doc documentData] addPage:newPage];
