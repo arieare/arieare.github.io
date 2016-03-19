@@ -1,10 +1,10 @@
 doctype html
-html(lang="en")
+html(lang="en" style="font-size:80%;")
   head
     - var pagetitle = "Flight Online Rescheduling Tools"
     - var author = "arieare"
     include ./includes/head.jade
-  body(style="background-color:#fff;")
+  body(style="background-color:#fafafa;")
     //- navbar start
     .navbar-fixed
       nav
@@ -16,6 +16,7 @@ html(lang="en")
       .col.s10
         .row
           h5 Flight Online Rescheduling Tools
+          h6.card-form-title.comment [Note, text inside [ ] bracket like this is for commentary purpose.]
         .row(style="margin-bottom:0;")
           .col.s1
             h6 Sort By:
@@ -52,116 +53,22 @@ html(lang="en")
                 a.dropdown-button(data-activates="dropdown4") Status ▾
               th(data-field="Update") 
           tbody
-            each val, index in ['ACTIVE', 'NON-RESCHEDULABLE', 'WAITING-FOR-PAYMENT', 'PAYMENT-VERIFIED', 'CLOSED', 'CANCELED', 'EXPIRED']
+            each val, index in ['ACTIVE', 'NON-RESCHEDULABLE', 'WAITING-FOR-PAYMENT', 'PAYMENT-VERIFIED', 'CLOSED', 'CANCELED', 'EXPIRED', 'SCHEDULE-NOT-AVAILABLE']
               tr.reschedule-row
-                //- td
-                //-   a(href="reschedule-detail.html") ⇱
                 td
                   a(href="reschedule-detail.html") 10/03/2016 8:49 
+                td
+                  a(href="#link-to-old-booking-id" target="_blank" title="Open Booking ID in new tab") 3452342 
                     span(style="display:inline-block;transform: scale(1, -1);") ⇲
                 td
-                  a(href="#link-to-old-booking-id" title="Open Booking ID in new tab") 3452342
-                td
-                  a(href="http://traveloka.com" target="_blank" title="Open Rescheduled ID in new tab") 3452342
+                  a(href="#link-to-new-booking-id" target="_blank" title="Open Rescheduled ID in new tab") 3452342 
+                    span(style="display:inline-block;transform: scale(1, -1);") ⇲
                 td 24 Hours
                 td ABACUS
                 td
                   span.status(class="st-"+val)= val
                 td 
                   a.button(href="tap_form.html" class="btn-"+val) Update ›
-              //- tr
-              //-   td(colspan="8")
-              //-     .col.s6
-              //-       .row
-              //-         .col.s4
-              //-           span User ID
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7
-              //-           a(href="#!") 123456
-              //-       .row
-              //-         .col.s4
-              //-           span Profile ID
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7 
-              //-           a(href="#!") 1324672
-              //-       .row
-              //-         .col.s4
-              //-           span User Email
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7 
-              //-           a(href="#!") user@traveloka.com
-              //-       .row
-              //-         .col.s4
-              //-           span Phone number
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7 
-              //-           a(href="#!") 0815 6123 1211
-              //-     .col.s6
-              //-       .row
-              //-         .col.s4
-              //-           span Status
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7
-              //-           select.browser-default.status-changer(style="height:2rem;padding:1em;border:1px solid black;")
-              //-             if val=="ACTIVE"
-              //-               option(value="ACTIVE" selected) ACTIVE
-              //-             else
-              //-               option(value="ACTIVE") ACTIVE
-              //-             if val=="NON-RESCHEDULABLE"
-              //-               option(value="NON-RESCHEDULABLE" selected) NON-RESCHEDULABLE
-              //-             else
-              //-               option(value="NON-RESCHEDULABLE") NON-RESCHEDULABLE
-              //-             if val=="WAITING-FOR-PAYMENT"
-              //-               option(value="WAITING-FOR-PAYMENT" selected) WAITING-FOR-PAYMENT
-              //-             else
-              //-               option(value="WAITING-FOR-PAYMENT") WAITING-FOR-PAYMENT
-              //-             if val=="PAYMENT-VERIFIED"
-              //-               option(value="PAYMENT-VERIFIED" selected) PAYMENT-VERIFIED
-              //-             else
-              //-               option(value="PAYMENT-VERIFIED") PAYMENT-VERIFIED
-              //-             if val=="CLOSED"
-              //-               option(value="CLOSED" selected) CLOSED
-              //-             else
-              //-               option(value="CLOSED") CLOSED
-              //-             if val=="CANCELED"
-              //-               option(value="CANCELED" selected) CANCELED
-              //-             else
-              //-               option(value="CANCELED") CANCELED
-              //-             if val=="EXPIRED"
-              //-               option(value="EXPIRED" selected) EXPIRED
-              //-             else
-              //-               option(value="EXPIRED") EXPIRED
-              //-             if val=="SCHEDULE_NOT_AVAILABLE"
-              //-               option(value="SCHEDULE_NOT_AVAILABLE" selected) SCHEDULE_NOT_AVAILABLE
-              //-             else
-              //-               option(value="SCHEDULE_NOT_AVAILABLE") SCHEDULE_NOT_AVAILABLE
-              //-       .row  
-              //-         .col.s4
-              //-           span Fare Difference
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7      
-              //-           span -
-              //-       .row
-              //-         .col.s4
-              //-           span Reschedule Fee
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7      
-              //-           span -
-              //-       .row
-              //-         .col.s4
-              //-           span Total Payment
-              //-         .col.s1
-              //-           span :
-              //-         .col.s7      
-              //-           span -
-
           .col.s2 
             form
               ul#dropdown1.dropdown-content
@@ -220,25 +127,28 @@ html(lang="en")
                 li Show Only:
                 li
                   input.filled-in(type="checkbox" id="status-1")
-                  label(for="status-1") ACTIVE
+                  label(for="status-1") Active
                 li
                  input.filled-in(type="checkbox" id="status-2")
-                 label(for="status-2") WAITING FOR PAYMENT
+                 label(for="status-2") Waiting For Payment
                 li
                  input.filled-in(type="checkbox" id="status-3")
-                 label(for="status-3") PAYMENT VERIFIED
+                 label(for="status-3") Paymenr Verified
                 li
                  input.filled-in(type="checkbox" id="status-4")
-                 label(for="status-4") CLOSED
+                 label(for="status-4") Closed
                 li
                  input.filled-in(type="checkbox" id="status-5")
-                 label(for="status-5") CANCELLED
+                 label(for="status-5") Canceled
                 li
                  input.filled-in(type="checkbox" id="status-6")
-                 label(for="status-6") NON-RESCHEDULABLE
+                 label(for="status-6") Non-Reschedulable
                 li
                  input.filled-in(type="checkbox" id="status-7")
-                 label(for="status-7") EXPIRED
+                 label(for="status-7") Expired
+                li
+                 input.filled-in(type="checkbox" id="status-8")
+                 label(for="status-8") Schedule Not Available
         div(id="modal1" class="modal")
           div(class="modal-content")
             h4 Old booking ID

@@ -15,7 +15,7 @@ var onRun = function(context) {
       case 0: // Thailand
         // if not cancelled
         if (choice[0] == "1000"){
-          expansion = 0.15; //expansion rate for Thailand 15%
+          expansion = -0.15; //expansion rate for Thailand 15%
           context.document.showMessage("Pseudolocalize from EN to TH, expansion rate: " + expansion);
           main("TH");
         }
@@ -56,6 +56,7 @@ var onRun = function(context) {
               if (layer.isKindOfClass(MSTextLayer) && !layer.isLocked()) {
                   log((i + 1) + '. ' + layer.name() + ': ' + layer.stringValue());
                   log(layer.stringValue().length());
+                  var originalText = layer.stringValue();
                   var newtext = textExpand(layer.stringValue(), layer.stringValue().length(), expansion);
                   if(selectedLocale == "TH"){
                     //for thailand remove spaces from string
@@ -65,17 +66,15 @@ var onRun = function(context) {
                   //call pseudolocalization
                   newtext = switchChar(newtext);
                   //add to json object
-                  localeObject[layer.stringValue()] = newtext;
+                  localeObject[originalText] = newtext;
                   //set new value
                   layer.setStringValue(newtext);
                   //locale string from text layers
                   //resize text layer fit its content
                   [layer adjustFrameToFit];
-                  //refresh view
-                  var view = context.document.currentView()
-                  view.refresh;
               }
           }
+          localeObject = swapJSON(localeObject);
           var localeJsonString = JSON.stringify(localeObject, undefined, 2);
           log("JSON file:");
           log(localeJsonString);
@@ -283,6 +282,61 @@ var onRun = function(context) {
         i++;
       }
       return prepend + result + append;
+    }
+
+//translate page with json
+  function translatePageWithFilePicker(page) {
+        var openPanel = [NSOpenPanel openPanel];
+
+        var defaultDirectory = [NSURL fileURLWithPath:"~/Documents/"];
+        if([doc fileURL]) {
+            defaultDirectory = [[doc fileURL] URLByDeletingLastPathComponent]]
+        }
+
+        [openPanel setCanChooseDirectories:true];
+        [openPanel setCanChooseFiles:true];
+        [openPanel setAllowedFileTypes:['json']];
+        [openPanel setCanCreateDirectories:false];
+        [openPanel setDirectoryURL:defaultDirectory];
+        [openPanel setAllowsMultipleSelection: true]
+
+        [openPanel setTitle:"Pick a translation file"];
+        [openPanel setPrompt:"Translate"];
+
+        if ([openPanel runModal] == NSOKButton) {
+            var urls = [openPanel URLs];
+            var errorCount = 0;
+
+            var url, filename, getString;
+            for (var i = 0; i < urls.count(); i++) {
+                url = urls[i];
+                filename = [[url lastPathComponent] stringByDeletingPathExtension];
+                getString = NSString.stringWithContentsOfFile_encoding_error(url, NSUTF8StringEncoding, null);
+
+                if(getString){
+                    data = JSON.parse(getString.toString());
+                    errorCount += this.translatePageWithData(page, filename, data);
+                }
+            }
+            if (errorCount > 0){
+                this.alert('Translation completed with ' + errorCount + ' errors.', null);
+            }else{
+                this.alert('Translation completed successfully', null);
+            }
+        }
+
+        return true;
+    }
+    //swap JSON
+    function swapJSON(input) {
+        var one, output = {};
+        for (one in input) {
+            if (input.hasOwnProperty(one)) {
+                var looper = input[one];
+                output[looper] = one;
+            }
+        }
+        return output;
     }
     //refresh view
     var view = context.document.currentView()

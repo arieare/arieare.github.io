@@ -35,4 +35,8 @@ script.
     //- $(".reschedule-row").on('click', function(){
     //-  window.location = "reschedule-detail.html";    
     //- });
+    $('.tooltipped').tooltip({delay: 50});
+    $('.back-from-update').click(function(){
+      confirm("Save change?");            
+    });
   });

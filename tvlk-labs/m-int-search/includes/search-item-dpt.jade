@@ -119,7 +119,10 @@ each val, index in dpt
     a.flight-detail-trigger.right(href="#" data-control) Detail ▾
     .row(style="padding:0;margin:0;margin-bottom:0.5em;")
       //- airlines name
-      span.left= dpt[index].airlines
+      //- span.left= dpt[index].airlines
+      span(style="color:#434343;") Round-trip Price
+      strong(id="dpt-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")   
+      strong.currency.left(id="dpt-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= dpt[index].price
     
     .row(style="padding:0;margin:0;")
       .col.s6(style="padding-left:0")
@@ -138,13 +141,14 @@ each val, index in dpt
     hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")  
     .row.valign-wrapper(style="padding:0;margin:0;")
       .col.s5(style="padding-left:0;position:relative;")
-        span(style="color:#434343;") Round-trip Price
+        //- span(style="color:#434343;") Round-trip Price
       .col.s7.right-align(style="padding-right:0;position:relative;")
         unless dpt[index].price_before == 0
           span.currency(style="color:#b4b4b4; text-decoration:line-through;")= dpt[index].price_before
           br
-        strong(id="dpt-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")   
-        strong.currency(id="dpt-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= dpt[index].price
+        //- used to the place for prices
+        //- strong(id="dpt-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")   
+        //- strong.currency(id="dpt-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= dpt[index].price
         span(style="color:rgb(249,109,1);") /pax
     input(type="radio" name="dpt" value=dpt[index].price data-route= dpt[index].airport_route_out+" – "+dpt[index].airport_route_arvl data-time= dpt[index].time_out+" – "+dpt[index].time_arvl data-duration=dpt[index].time_duration)
     //- flight details

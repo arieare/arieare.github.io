@@ -1,23 +1,130 @@
+h6.card-form-title.comment [GDS]
 .container.col.s12.form-card
-  .row.col.s12
-    h5 Old Booking ID: 
-      a(href="#!") 3452351
-      | →
-      |  Reschedule ID: 
-      a(href="#!") 3452351
-      |  (GDS)
+  //- old booking ID    
+  .row.col.s3(syle="border: dotted 1px #8f8f8f;")
+      .row
+        .col.s12
+          h6.card-form-title Old Booking ID: 
+            a(href="#!") 3452351
+      .row(style="margin-bottom:0;")
+        .col.s6
+          label
+            strong Flight Number
+            input(type="text" value="SJ-123" disabled) 
+        .col.s6(style="margin-bottom:0;")
+          label
+            strong Route
+            input(type="text" value="CGK – DPS" disabled)
 
+      .row(style="margin-bottom:0;")
+        .col.s6
+          label
+            strong Departure
+            input(type="text" value="10/03/2016 8:49" disabled) 
+        .col.s6
+          label
+            strong Arrival
+            input(type="text" value="10/03/2016 8:49" disabled) 
+      .row(style="margin-bottom:0;")
+        .col.s12
+          label
+            strong Fullfilment ID
+            input(type="text" value="ABACUS" disabled)
+      .row(style="margin-bottom:0;")
+        .col.s6
+          label
+            strong Provider PNR
+            input(type="text" value="1234324" disabled) 
+        .col.s6
+          label
+            strong Airlines PNR
+            input(type="text" value="1234324" disabled)
+  .row.col.s1
+  //- new booking ID
+  .row.col.s3
+      .row
+        .col.s12
+          h6.card-form-title New Booking ID: 
+            a(href="#!") 3452351
+      .row(style="margin-bottom:0;")
+        .col.s6
+          label
+            strong Flight Number
+            input(type="text" value="SJ-123" disabled) 
+        .col.s6(style="margin-bottom:0;")
+          label
+            strong Route
+            input(type="text" value="CGK – DPS" disabled)
+
+      .row(style="margin-bottom:0;")
+        .col.s6
+          label
+            strong Departure
+            input(type="text" value="10/03/2016 8:49" disabled) 
+        .col.s6(style="margin-bottom:0;")
+          label
+            strong Arrival
+            input(type="text" value="10/03/2016 8:49" disabled) 
+      .row(style="margin-bottom:0;")
+        .col.s12
+          label
+            strong Fullfilment ID
+            input(type="text" value="ABACUS" disabled)
+      .row(style="margin-bottom:0;")
+        .col.s6
+          label
+            strong Provider PNR
+            input(type="text" value="1234324") 
+        .col.s6
+          label
+            strong Airlines PNR
+            input(type="text" value="1234324")
+  .row.col.s1
+  //- passenger list
+  .row.col.s3(syle="border: dotted 1px #8f8f8f;")
+      .row
+        .col.s12
+          label
+            h6.card-form-title Passenger Details
+      .row(style="margin-bottom:0;")
+        .col.s3
+          label
+            strong Title 
+            input(type="text" value="Mr" disabled) 
+        .col.s6
+          label
+            strong Passenger name
+            input(type="text" value="Budi Setiawan" disabled) 
+        .col.s3
+          label
+            strong type
+            input(type="text" value="adult" disabled)
+      .row(style="margin-bottom:0;")
+        .col.s3
+          label
+            strong Title 
+            input(type="text" value="Mrs" disabled) 
+        .col.s6
+          label
+            strong Passenger name
+            input(type="text" value="Ani Suciati" disabled) 
+        .col.s3
+          label
+            strong type
+            input(type="text" value="adult" disabled)          
+
+  .row
+    hr
+  .row.col.s12
+      label
+        h6.card-form-title Update Form 
+          span.comment [unless stated, hanya editable untuk status sebelum Paid]
   .row.col.s5     
     .row(style="margin-bottom:0;")
       .col.s12
         strong Total Airline Fee
       .col.s3
-        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
-        //-   option(value="Rp") Rp.
-        //-   option(value="Dollar") $
-        //-   option(value="yen") ¥
-        //- input(type="text" value="Rp.")
-        select.browser-default(style="height:2rem;padding:1em;border:1px solid black;margin-top:0.8em;")
+        select.browser-default
           option(value="Rp") Rp.
           option(value="THB") THB.
       .col.s9
@@ -26,36 +133,30 @@
       .col.s12
         strong Wholesaler Fee
       .col.s3
-        //- select.browser-default(style="height:2rem;padding:1em;border:1px solid black;" disabled)
-        //-   option(value="Rp") Rp.
-        //-   option(value="Dollar") $
-        //-   option(value="yen") ¥
-        select.browser-default(style="height:2rem;padding:1em;border:1px solid black;margin-top:0.8em;")
+        select.browser-default
           option(value="Rp") Rp.
           option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
+  .row.col.s1            
+  .row.col.s5
+    .row(style="margin-bottom:0;")
+      .col.s12
+        Strong Actual Airline Fee 
+          span.comment [hanya diisi/muncul ketika status sudah Paid]
+      .col.s3
+        select.browser-default
+          option(value="Rp") Rp.
+          option(value="THB") THB.
+      .col.s9
+        input(type="number" placeholder="Amount" required)    
     .row
       .col.s12
         form(action="#")
           label 
             strong Payment Limit
-            select.browser-default(style="height:2rem;padding:1em;border:1px solid black;margin-top:0.8em;")
+            select.browser-default
               option(value="15") 15 Minutes
               option(value="20") 20 Minutes
               option(value="25") 25 Minutes
-              option(value="30") 30 Minutes
-  .row.col.s1            
-  .row.col.s5
-    .row.col.s12(style="margin-bottom:0;")
-      //- h5 Provider PNR
-      label
-        strong Provider PNR
-        input(type="text" value="1234324") 
-    .row.col.s12(style="margin-bottom:0;")
-      //- h5 Airlines PNR
-      label
-        strong Airlines PNR
-        input(type="text" value="1234324")
-    .row.col.s12
-      a.button(href="index.html" style="display:inline-block;margin: 0.82rem 0 0.656rem 0;") Done
+              option(value="30") 30 Minutes    

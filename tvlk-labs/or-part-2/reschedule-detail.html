@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size:80%;">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,27 +30,31 @@
         //- $(".reschedule-row").on('click', function(){
         //-  window.location = "reschedule-detail.html";    
         //- });
+        $('.tooltipped').tooltip({delay: 50});
+        $('.back-from-update').click(function(){
+          confirm("Save change?");            
+        });
       });
     </script>
   </head>
-  <body style="background-color:#fff;">
+  <body style="background-color:#fafafa;">
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper"><span style="margin-left:1em;" class="brand-logo left">TAP Agent Center</span></div>
       </nav>
     </div>
     <div class="row">
-      <div style="background-color:#dadada;padding-bottom:100vh;" class="col s2"></div>
+      <div style="background-color:#dadada;padding-bottom:150vh;" class="col s2"></div>
       <div class="col s10">
         <div class="row">
           <h5><a href="index.html">← Back </a>| Reschedule ID: 3452342</h5>
         </div>
         <div style="margin-bottom:0;" class="row"></div>
-        <table class="striped responsive-table">
+        <table style="margin-bottom:1em;" class="striped responsive-table">
           <thead></thead>
           <tbody>
             <tr>
-              <td colspan="8">
+              <td colspan="8" style="background:#f2f2f2;">
                 <div class="col s6">
                   <div class="row">
                     <div class="col s4"><span>Submission Time</span></div>
@@ -60,22 +64,22 @@
                   <div class="row">
                     <div class="col s4"><span>User ID</span></div>
                     <div class="col s1"><span>:</span></div>
-                    <div class="col s7"><a href="#!">123456</a></div>
+                    <div class="col s7"><span>123456</span></div>
                   </div>
                   <div class="row">
                     <div class="col s4"><span>Profile ID</span></div>
                     <div class="col s1"><span>:</span></div>
-                    <div class="col s7"> <a href="#!">1324672</a></div>
+                    <div class="col s7"> <span>1324672</span></div>
                   </div>
                   <div class="row">
                     <div class="col s4"><span>User Email</span></div>
                     <div class="col s1"><span>:</span></div>
-                    <div class="col s7"> <a href="#!">user@traveloka.com</a></div>
+                    <div class="col s7"> <a href="#create-new-email">user@traveloka.com</a></div>
                   </div>
                   <div class="row">
                     <div class="col s4"><span>Phone number</span></div>
                     <div class="col s1"><span>:</span></div>
-                    <div class="col s7"> <a href="#!">0815 6123 1211</a></div>
+                    <div class="col s7"> <a href="#call">0815 6123 1211</a></div>
                   </div>
                 </div>
                 <div class="col s6">
@@ -113,11 +117,170 @@
                 </div>
               </td>
             </tr>
-            <tr>
-              <td><a href="tap_form.html" class="button right btn-ACTIVE">Update ›</a></td>
-            </tr>
           </tbody>
         </table>
+        <h6 class="card-form-title comment">[Express]</h6>
+        <div class="container col s12 form-card">
+          <div syle="border: dotted 1px #8f8f8f;" class="row col s3">
+            <div class="row">
+              <div class="col s12">
+                <h6 class="card-form-title">Old Booking ID: <a href="#!">3452351</a></h6>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s6">
+                <label><strong>Flight Number</strong>
+                  <input type="text" value="SJ-123" disabled>
+                </label>
+              </div>
+              <div style="margin-bottom:0;" class="col s6">
+                <label><strong>Route</strong>
+                  <input type="text" value="CGK – DPS" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s6">
+                <label><strong>Departure</strong>
+                  <input type="text" value="10/03/2016 8:49" disabled>
+                </label>
+              </div>
+              <div class="col s6">
+                <label><strong>Arrival</strong>
+                  <input type="text" value="10/03/2016 8:49" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s12">
+                <label><strong>Fullfilment ID</strong>
+                  <input type="text" value="ABACUS" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s6">
+                <label><strong>Provider PNR</strong>
+                  <input type="text" value="1234324" disabled>
+                </label>
+              </div>
+              <div class="col s6">
+                <label><strong>Airlines PNR</strong>
+                  <input type="text" value="1234324" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s12">
+                <label><strong>Class</strong>
+                  <input type="text" value="Normal" disabled>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row col s1"></div>
+          <div class="row col s3">
+            <div class="row">
+              <div class="col s12">
+                <h6 class="card-form-title">New Booking ID: <a href="#!">3452351</a></h6>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s6">
+                <label><strong>Flight Number</strong>
+                  <input type="text" value="SJ-123" disabled>
+                </label>
+              </div>
+              <div style="margin-bottom:0;" class="col s6">
+                <label><strong>Route</strong>
+                  <input type="text" value="CGK – DPS" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s6">
+                <label><strong>Departure</strong>
+                  <input type="text" value="10/03/2016 8:49" disabled>
+                </label>
+              </div>
+              <div style="margin-bottom:0;" class="col s6">
+                <label><strong>Arrival</strong>
+                  <input type="text" value="10/03/2016 8:49" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s12">
+                <label><strong>Fullfilment ID</strong>
+                  <input type="text" value="ABACUS" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s6">
+                <label><strong>Provider PNR</strong>
+                  <input type="text" value="1234324" disabled>
+                </label>
+              </div>
+              <div class="col s6">
+                <label><strong>Airlines PNR</strong>
+                  <input type="text" value="1234324" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s12">
+                <label><strong>Class</strong>
+                  <input type="text" value="Flexi" disabled>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row col s1"></div>
+          <div syle="border: dotted 1px #8f8f8f;" class="row col s3">
+            <div class="row">
+              <div class="col s12">
+                <label>
+                  <h6 class="card-form-title">Passenger Details</h6>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s3">
+                <label><strong>Title </strong>
+                  <input type="text" value="Mr" disabled>
+                </label>
+              </div>
+              <div class="col s6">
+                <label><strong>Passenger name</strong>
+                  <input type="text" value="Budi Setiawan" disabled>
+                </label>
+              </div>
+              <div class="col s3">
+                <label><strong>type</strong>
+                  <input type="text" value="adult" disabled>
+                </label>
+              </div>
+            </div>
+            <div style="margin-bottom:0;" class="row">
+              <div class="col s3">
+                <label><strong>Title </strong>
+                  <input type="text" value="Mrs" disabled>
+                </label>
+              </div>
+              <div class="col s6">
+                <label><strong>Passenger name</strong>
+                  <input type="text" value="Ani Suciati" disabled>
+                </label>
+              </div>
+              <div class="col s3">
+                <label><strong>type</strong>
+                  <input type="text" value="adult" disabled>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div><a href="tap_form.html" class="button right btn-undefined">Update ›</a>
       </div>
     </div>
   </body>

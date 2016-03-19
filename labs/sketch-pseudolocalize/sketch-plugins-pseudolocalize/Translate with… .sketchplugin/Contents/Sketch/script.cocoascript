@@ -1,0 +1,2 @@
+#import 'library/translate.js'
+com.translate.translatePageWithFilePicker([doc currentPage]);

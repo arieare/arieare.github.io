@@ -12,6 +12,29 @@
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/pseudoloc.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      var yndxTranslate = new XMLHttpRequest();
+      var strURL = "https://translate.yandex.net/api/v1.5/tr.json/translate?"
+      var strAPIKey = "trnsl.1.1.20160312T022550Z.16d24de7fc1279c9.d9f8493a4ef038d1fb3cd6af6f8187f5c0a35c00"
+      strAPIKey = "key="+strAPIKey;
+      //loop all the text
+      var strTextToTranslate1 = "hello"
+      var strTextToTranslate2 = "can you hear me?"
+      var strTextToTranslate = "&text="+strTextToTranslate1+"&text="+strTextToTranslate2
+      var langOrigin = "en";
+      var langTranslate = "th"
+      var lang = "&lang="+langOrigin+"-"+langTranslate
+      var format = "&[format=plain]"
+      strURL=strURL+strAPIKey+strTextToTranslate+lang+format;
+      yndxTranslate.open("GET", strURL, false);
+      yndxTranslate.send();
+      
+      console.log(strURL);
+      console.log(yndxTranslate.status);
+      console.log(yndxTranslate.statusText);
+      console.log(yndxTranslate.responseText);
+      console.log(JSON.parse(yndxTranslate.responseText).text[1])
+    </script>
   </head>
   <body>
     <div class="container">

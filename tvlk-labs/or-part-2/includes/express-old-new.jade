@@ -1,4 +1,4 @@
-h6.card-form-title.comment [Galileo-Abacus]
+h6.card-form-title.comment [Express]
 .container.col.s12.form-card
   //- old booking ID    
   .row.col.s3(syle="border: dotted 1px #8f8f8f;")
@@ -39,6 +39,11 @@ h6.card-form-title.comment [Galileo-Abacus]
           label
             strong Airlines PNR
             input(type="text" value="1234324" disabled)
+      .row(style="margin-bottom:0;")
+        .col.s12
+          label
+            strong Class
+            input(type="text" value="Normal" disabled)
   .row.col.s1
   //- new booking ID
   .row.col.s3
@@ -74,11 +79,16 @@ h6.card-form-title.comment [Galileo-Abacus]
         .col.s6
           label
             strong Provider PNR
-            input(type="text" value="1234324") 
+            input(type="text" value="1234324" disabled) 
         .col.s6
           label
             strong Airlines PNR
-            input(type="text" value="1234324")
+            input(type="text" value="1234324" disabled)
+      .row(style="margin-bottom:0;")
+        .col.s12
+          label
+            strong Class
+            input(type="text" value="Flexi" disabled)
   .row.col.s1
   //- passenger list
   .row.col.s3(syle="border: dotted 1px #8f8f8f;")
@@ -111,44 +121,4 @@ h6.card-form-title.comment [Galileo-Abacus]
         .col.s3
           label
             strong type
-            input(type="text" value="adult" disabled)          
-
-  .row
-    hr
-
-  .row.col.s12
-      label
-        h6.card-form-title Update Form 
-          span.comment [unless stated, hanya editable untuk status sebelum Paid]
-  .row.col.s5
-    .row(style="margin-bottom:0;")     
-      .col.s12
-        strong Penalty Fee
-      .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
-      .col.s9
-        input(type="number" placeholder="Amount" required)
-  .row.col.s1            
-  .row.col.s5
-    .row(style="margin-bottom:0;")
-      .col.s12
-        Strong Actual Airline Fee 
-          span.comment [hanya diisi/muncul ketika status sudah Paid]
-      .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
-      .col.s9
-        input(type="number" placeholder="Amount" required)
-    .row
-      .col.s12
-        form(action="#")
-          label
-            strong Payment Limit
-            select.browser-default
-              option(value="15") 15 Minutes
-              option(value="20") 20 Minutes
-              option(value="25") 25 Minutes
-              option(value="30") 30 Minutes
+            input(type="text" value="adult" disabled)   

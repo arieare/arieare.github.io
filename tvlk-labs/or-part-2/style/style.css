@@ -6,15 +6,35 @@ label {
   font-size: 1rem !important;
   color:#434343 !important;
 }
+.card-form-title {
+  font-size:1.3em;
+  font-weight: bold;
+}
+.comment {
+  color: #c4c4c4;
+}
 // tr {
 //   cursor: pointer;
 // }
-// tr:hover {
-//   background-color: #fafafa;
-// }
+.reschedule-row:hover {
+ background-color: #E8E8E8 !important;
+}
 input[type=text]:disabled {
   color: rgba(0, 0, 0, 0.6);
-  //border-bottom: none;
+  border: 1px solid #dadada;
+}
+input[type=text]:active {
+  border: 1px solid #1b0ae2;
+}
+input[type=text],input[type=number]{
+  border: 1px solid #434343;
+  padding-left: 0.5rem;
+}
+select.browser-default{
+  height: 3rem;
+  padding: 1em;
+  border: 1px solid black;
+  margin-top: 0.1em;
 }
 // tbody > tr:not(.odd) {
 //   background-color:#f8f8f8;
@@ -47,7 +67,7 @@ content: "\25BC";︎
 .st-CLOSED, .st-CANCELED {
   background-color:SlateGray;
 }
-.st-EXPIRED {
+.st-EXPIRED, .st-SCHEDULE-NOT-AVAILABLE {
   background-color:GainsBoro;
   color: Grey;
 }
@@ -66,14 +86,14 @@ content: "\25BC";︎
   background-color: white;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.20), 0 2px 4px 0 rgba(0, 0, 0, 0.02); 
 }
-.btn-WAITING-FOR-PAYMENT, .btn-PAYMENT-VERIFIED, .btn-CLOSED, .btn-EXPIRED {
+.btn-WAITING-FOR-PAYMENT, .btn-PAYMENT-VERIFIED, .btn-CLOSED, .btn-EXPIRED, .btn-SCHEDULE-NOT-AVAILABLE {
   background-color: LightGray;
   color: Grey;
   box-shadow: none; 
   cursor: not-allowed;
   border: LightSlateGray 1px solid;
 }
-.btn-WAITING-FOR-PAYMENT:hover {
+.btn-WAITING-FOR-PAYMENT:hover , .btn-CLOSED:hover{
   background-color: LightGray;
   color: Grey;
   box-shadow: none; 
@@ -316,7 +336,7 @@ li.tab a{
   transform:translateX(100%);
 }        
 hr {
-    border: 0;
-    border-bottom: 1px solid #dadada;
-    margin: 0 -16px;
+border: 0;
+border-bottom: 1px dotted #434343;
+margin: 0px -1px;
 }
