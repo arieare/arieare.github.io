@@ -128,10 +128,15 @@ h6.card-form-title.comment [Express]
 
   .row
     hr
-  .row.col.s12
+  .row
+    .col.s6
       label
         h6.card-form-title Update Form 
           span.comment [unless stated, hanya editable untuk status sebelum Paid]
+    .col.s6
+        label
+          a(href="#!") Edit
+            span.comment [hanya muncul ketika status sudah Paid]
   .row.col.s5     
     .row(style="margin-bottom:0;")
       .col.s12
@@ -187,14 +192,14 @@ h6.card-form-title.comment [Express]
         input(type="number" placeholder="Amount" required)
     .row(style="margin-bottom:0;")
       .col.s12
-        Strong Total
+        Strong Total (previously Rp. 123456)
       .col.s3
         input(type="text" value="Rp." disabled)
         //- select.browser-default(disabled)
         //-   option(value="Rp") Rp.
         //-   option(value="THB") THB.
       .col.s9
-        input(type="number" placeholder="Amount" required)
+        input(type="number" placeholder="Amount" value="123456" required)
     .row
       .col.s12
         form(action="#")
@@ -209,16 +214,18 @@ h6.card-form-title.comment [Express]
             select.browser-default
               option(value="15") 15 Minutes
               option(value="30") 30 Minutes          
-    .row(style="margin-bottom:0;")
-      .col.s12
-        Strong Actual Reschedule Fee From Airline
-        span.comment  [hanya diisi/muncul ketika status sudah Paid]
-      .col.s3
-        input(type="text" value="Rp." disabled)
-        //- select.browser-default(disabled)
-        //-   option(value="Rp") Rp.
-        //-   option(value="THB") THB.
-      .col.s9
-        input(type="number" placeholder="Amount" required)
+    //- .row(style="margin-bottom:0;")
+    //-   .col.s12
+    //-     a(href="#!") Edit 
+    //-     span.comment  [hanya muncul ketika status sudah Paid]
+      //-   Strong Actual Reschedule Fee From Airline
+      //-   span.comment  [hanya diisi/muncul ketika status sudah Paid]
+      //- .col.s3
+      //-   input(type="text" value="Rp." disabled)
+      //-   //- select.browser-default(disabled)
+      //-   //-   option(value="Rp") Rp.
+      //-   //-   option(value="THB") THB.
+      //- .col.s9
+      //-   input(type="number" placeholder="Amount" required)
   
   
