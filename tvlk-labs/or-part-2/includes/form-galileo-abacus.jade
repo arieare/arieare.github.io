@@ -131,8 +131,28 @@ h6.card-form-title.comment [Galileo-Abacus]
         //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
+    .row(style="margin-bottom:0;")     
+      .col.s12
+        strong Additional Base Fare
+      .col.s3
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
+      .col.s9
+        input(type="number" placeholder="Amount" required)          
   .row.col.s1            
   .row.col.s5
+   .row(style="margin-bottom:0;")     
+      .col.s12
+        strong Additional Tax
+      .col.s3
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
+      .col.s9
+        input(type="number" placeholder="Amount" required)     
     .row
       .col.s12
         form(action="#")
