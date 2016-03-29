@@ -124,32 +124,24 @@ h6.card-form-title.comment [GDS]
       .col.s12
         strong Total Airline Fee
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
     .row(style="margin-bottom:0;")
       .col.s12
         strong Wholesaler Fee
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
   .row.col.s1            
   .row.col.s5
-    .row(style="margin-bottom:0;")
-      .col.s12
-        Strong Actual Airline Fee 
-          span.comment [hanya diisi/muncul ketika status sudah Paid]
-      .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
-      .col.s9
-        input(type="number" placeholder="Amount" required)    
     .row
       .col.s12
         form(action="#")
@@ -157,6 +149,16 @@ h6.card-form-title.comment [GDS]
             strong Payment Limit
             select.browser-default
               option(value="15") 15 Minutes
-              option(value="20") 20 Minutes
-              option(value="25") 25 Minutes
               option(value="30") 30 Minutes    
+    .row(style="margin-bottom:0;")
+      .col.s12
+        Strong Actual Reschedule Fee From Airline 
+        span.comment [hanya diisi/muncul ketika status sudah Paid]
+      .col.s3
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
+      .col.s9
+        input(type="number" placeholder="Amount" required)    
+    

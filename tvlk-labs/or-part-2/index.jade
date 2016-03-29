@@ -24,12 +24,12 @@ html(lang="en" style="font-size:80%;")
             select.browser-default(style="height:2rem;padding:1em;border:1px solid black;")
               option(value="Submission Time") Latest Submission Time (Default)
               option(value="Submission Time") Oldest Submission Time
-              option(value="Old Booking ID.") Old Booking ID.
-              option(value="Rescheduled ID.") Rescheduled ID.
-              option(value="Time to Departure") Shorter Time to Departure
-              option(value="Time to Departure") Longer Time to Departure
-              option(value="Fulfillment ID.") Fulfillment ID. A → Z
-              option(value="Status") Status A → Z
+              //- option(value="Old Booking ID.") Old Booking ID.
+              //- option(value="Rescheduled ID.") Rescheduled ID.
+              option(value="Time to Departure") Latest First Flight Time
+              option(value="Time to Departure") Oldest First Flight Time
+              //- option(value="Fulfillment ID.") Fulfillment ID. A → Z
+              //- option(value="Status") Status A → Z
           .col.s7
             a.button.right(href="#!") Download CSV
           //- .col.s8.input-field
@@ -45,8 +45,7 @@ html(lang="en" style="font-size:80%;")
                 | Submission Time
               th(data-field="Old Booking ID.") Old Booking ID.
               th(data-field="Rescheduled ID.") Rescheduled ID.
-              th(data-field="Time to Departure")
-                a.dropdown-button(data-activates="dropdown2") Time to Departure ▾
+              th(data-field="Time to Departure") First Flight Time
               th(data-field="Fullfilment ID.")
                 a.dropdown-button(data-activates="dropdown3") Fullfilment ID. ▾
               th(data-field="Status")
@@ -63,13 +62,13 @@ html(lang="en" style="font-size:80%;")
                 td
                   a(href="#link-to-new-booking-id" target="_blank" title="Open Rescheduled ID in new tab") 3452342 
                     span(style="display:inline-block;transform: scale(1, -1);") ⇲
-                td 24 Hours
+                td 10/03/2016 8:49 
                 td ABACUS
                 td
                   span.status(class="st-"+val)= val
                 td 
                   a.button(href="tap_form.html" class="btn-"+val) Update ›
-          .col.s2 
+          .col.s3 
             form
               ul#dropdown1.dropdown-content
                 li
@@ -83,26 +82,15 @@ html(lang="en" style="font-size:80%;")
                 li
                  input.filled-in(type="checkbox" id="submit-time-2")
                  label(for="submit-time-2") < 1 Week
-          .col.s2 
-            form
-              ul#dropdown2.dropdown-content
-                li
-                  input.filled-in(type="checkbox" id="time-to-depart-0")
-                  label(for="time-to-depart-0") SHOW ALL
-                hr
-                li Show Only:
-                li
-                  input.filled-in(type="checkbox" id="time-to-depart-1")
-                  label(for="time-to-depart-1") < 24 Hour
-                li
-                 input.filled-in(type="checkbox" id="time-to-depart-2")
-                 label(for="time-to-depart-2") < 12 Hour
-          .col.s2 
+          .col.s3 
             form
               ul#dropdown3.dropdown-content
                 li
                   input.filled-in(type="checkbox" id="fulfil-id-0")
                   label(for="fulfil-id-0") SHOW ALL
+                li
+                  input.filled-in(type="text" placeholder="search Fullfilment ID")
+                  //- label(for="fulfil-id-0") SHOW ALL                  
                 hr
                 li Show Only:
                 li

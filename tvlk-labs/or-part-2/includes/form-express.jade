@@ -137,36 +137,40 @@ h6.card-form-title.comment [Express]
       .col.s12
         strong Additional Base Fare – Adult
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
     .row(style="margin-bottom:0;")
       .col.s12
         strong Additional Base Fare – Child (If Any)
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount")
     .row(style="margin-bottom:0;")
       .col.s12
         strong Additional Base Fare – Infant (If Any)
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount")
     .row(style="margin-bottom:0;")
       .col.s12
         strong Biaya Lainnya
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
   .row.col.s1
@@ -175,28 +179,20 @@ h6.card-form-title.comment [Express]
       .col.s12
         strong Total Tax
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
     .row(style="margin-bottom:0;")
       .col.s12
         Strong Total
       .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
-      .col.s9
-        input(type="number" placeholder="Amount" required)
-    .row(style="margin-bottom:0;")
-      .col.s12
-        Strong Actual Airline Fee 
-          span.comment [hanya diisi/muncul ketika status sudah Paid]
-      .col.s3
-        select.browser-default
-          option(value="Rp") Rp.
-          option(value="THB") THB.
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
       .col.s9
         input(type="number" placeholder="Amount" required)
     .row
@@ -204,10 +200,25 @@ h6.card-form-title.comment [Express]
         form(action="#")
           label
             strong Payment Limit
+            //- p
+            //-   input(name="group1" type="radio" id="test1" checked)
+            //-   label(for="test1") 15 Minutes
+            //- p
+            //-   input(name="group1" type="radio" id="test2")
+            //-   label(for="test2") 30 minutes
             select.browser-default
               option(value="15") 15 Minutes
-              option(value="20") 20 Minutes
-              option(value="25") 25 Minutes
-              option(value="30") 30 Minutes
+              option(value="30") 30 Minutes          
+    .row(style="margin-bottom:0;")
+      .col.s12
+        Strong Actual Reschedule Fee From Airline
+        span.comment  [hanya diisi/muncul ketika status sudah Paid]
+      .col.s3
+        input(type="text" value="Rp." disabled)
+        //- select.browser-default(disabled)
+        //-   option(value="Rp") Rp.
+        //-   option(value="THB") THB.
+      .col.s9
+        input(type="number" placeholder="Amount" required)
   
   

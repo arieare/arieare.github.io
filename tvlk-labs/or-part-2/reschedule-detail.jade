@@ -14,14 +14,17 @@ html(lang="en" style="font-size:80%;")
     .row
       .col.s2(style="background-color:#dadada;padding-bottom:150vh;")
       .col.s10
-        .row
-          h5
-            a(href="index.html") ← Back 
-            | | Reschedule ID: 3452342
+        .row(style="padding-top:1em;")
+          .col.s6
+            h5
+              a(href="index.html") ← Back 
+              | | Reschedule ID: 3452342
+          .col.s6
+            a.button.right(href="tap_form.html" class="btn-"+val) Update              
         .row(style="margin-bottom:0;")
         include ./includes/summary-reschedule.jade
         include ./includes/express-old-new.jade
-        a.button.right(href="tap_form.html" class="btn-"+val) Update ›
+        //- a.button.right(href="tap_form.html" class="btn-"+val) Update ›
         //- table.striped.responsive-table
           thead
           tbody
