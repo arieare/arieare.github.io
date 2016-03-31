@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    - var pagetitle = "Flight"
+    - var author = "arieare"
+    link(href="style/main-screen-style.css", rel="stylesheet")
+    include ./includes/head.jade
+  body
+    //- navbar start
+    //- - var dpt_route_city =  'Jakarta – Seoul'
+    //- - var dpt_date =  'Sat, 20 Feb 2016'
+    //- - var rtn_route_city =  'Seoul – Jakarta'
+    //- - var rtn_date =  'Sun, 21 Feb 2016'
+    .navbar-fixed
+      nav
+        .nav-wrapper
+          span.brand-logo.center
+            strong.flight-route(style="margin:0;") Flight  
+          ul.left
+            li
+              a.back-button(href="index 3.html" style="font-size:2em;")
+                img(src="img/ic_arrow_back.png" width="32px" height="auto" style="margin-top:0.35em;")
+    //- navbar end
+    //- tab bar start
+    .container.flight-form-container(style="margin-bottom:1em;margin-top:1em;")
+      .row.s12.flight-spec-input(style="padding:0.5em 16px !important;margin:0;")
+        label(style="color:#8f8f8f;") Origin
+        span(style="font-size:1.3em;display:block;") Jakarta (JKTA)
+        hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row.s12.flight-spec-input(style="padding:0.5em 16px !important;margin:0;")
+        label(style="color:#8f8f8f;") Destination
+        span(style="font-size:1.3em;display:block;") London (LONA)
+        hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row.s12.flight-spec-input(style="padding:0.5em 16px !important;margin:0;")
+        label(style="color:#8f8f8f;") Departure Date
+        span(style="font-size:1.3em;display:block;") Friday, 4 Mar 2016
+        hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row.s12.flight-spec-input(style="padding:0.5em 16px !important;margin:0;")
+        label(style="color:#8f8f8f;") Return Date
+        span(style="font-size:1.3em;display:block;") Friday, 11 Mar 2016
+        hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+      .row.s12.flight-spec-input(style="padding:0.5em 16px !important;margin:0;")
+        label(style="color:#8f8f8f;") Passenger
+        span(style="font-size:1.3em;display:block;") 2 Adults
+        hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")
+    .container      
+      .row.s12.center-align
+        a#btn-search-fight(href="index.html" style="width:auto;margin-left:8px;margin-right:8px;margin-bottom:0;") Search Flight

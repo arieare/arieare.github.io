@@ -1,0 +1,22 @@
+#flight-detail-modal.modal
+  .modal-content(style="padding-top:1em;")
+    h5(style="display:inline;")= route
+    h5(style="display:inline;")
+      strong
+        a.right(href="#!").modal-action.modal-close ✕
+    hr(style="padding-top:8px;")
+    p(style="margin:0.4em 0;") 
+      strong Departure
+    p(id="selected-dpt-route" style="margin:0.4em 0;") CGK – ICN  
+      span= dpt_date
+    span(id="selected-dpt-time") 15:10 – 17:55 (1h 45m)
+    hr(style="padding-top:8px;")
+    p(style="margin:0.4em 0;")
+      strong Return
+    p(id="selected-rtn-route" style="margin:0.4em 0;") ICN – CGK 
+      span= rtn_date
+    span(id="selected-rtn-time") 15:10 – 17:55 (1h 45m)
+    hr(style="padding-top:8px;")
+    p(style="margin:0.4em 0;") 
+      strong Total Price for 2 passenger(s) 
+    strong#totalpricesummary.currency(style="color:rgb(249,109,1);") 0
