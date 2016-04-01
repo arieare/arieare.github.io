@@ -70,11 +70,21 @@ h6.card-form-title.comment [Galileo-Abacus]
           label
             strong Arrival
             input(type="text" value="10/03/2016 8:49" disabled) 
-      .row(style="margin-bottom:0;")
+      .row
         .col.s12
-          label
-            strong Fullfilment ID
-            input(type="text" value="ABACUS" disabled)
+          form(action="#")
+            label 
+              strong Fullfilment ID
+              select.browser-default
+                option(value="ABACUS") ABACUS
+                option(value="GALILEO") GALILEO
+                option(value="SJ_Trinusa") SJ_Trinusa
+                option(value="XN_Trinusa") XN_Trinusa                
+      //- .row(style="margin-bottom:0;")        
+      //-   .col.s12
+      //-     label
+      //-       strong Fullfilment ID
+      //-       input(type="text" value="ABACUS")
       .row(style="margin-bottom:0;")
         .col.s6
           label
