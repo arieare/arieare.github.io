@@ -116,35 +116,35 @@ each val, index in rtn
   label.col.s12.search-item(data-accordion)
     a.flight-detail-trigger.right(href="#" data-control) Detail ▾
     .row(style="padding:0;margin:0;margin-bottom:0.5em;")
-      //- airlines name
-      span.left= rtn[index].airlines
-
-    
-    .row(style="padding:0;margin:0;")
-      .col.s6(style="padding-left:0")
-        strong= rtn[index].time_out + " – " + rtn[index].time_arvl
-        unless !rtn[index].time_tomorrow
-          strong  (+1D)
+        strong(id="rtn-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")
+        strong.currency(id="rtn-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= rtn[index].price
+        span(style="color:rgb(249,109,1);") /pax
         br
-        span(style="color:#8f8f8f")= rtn[index].airport_route_out + " ⇄ " + rtn[index].airport_route_arvl
-      .col.s6.right-align(style="padding-right:0")
-        span=rtn[index].time_duration
+        span(style="color:#A8A8A8;") Total Price 
+        span(style="color:#727272;")  Rp1.832.000
+    hr(style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;")
+    .row(style="padding:0;margin:0;")
+      //- airlines name
+      .col.s1.valign-wrapper(style="padding-left:0;padding-top: 1.3em;")
+        span(style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;") ↪      
+      .col.s6(style="padding-left:0;")
+        span.left(style="color:#A8A8A8")= rtn[index].airlines 
+        br     
+        strong(style="color:#727272;")= rtn[index].time_out + " – " + rtn[index].time_arvl
+        unless !rtn[index].time_tomorrow
+          strong(style="color:#8f8f8f;")  (+1D)
+        br
+        span(style="color:#8f8f8f")= rtn[index].airport_route_out + " – " + rtn[index].airport_route_arvl
+      .col.s5.right-align(style="padding-right:0;margin-top:1.5em;")
+        span(style="color:#727272")=rtn[index].time_duration
         br
         if rtn[index].transit > 0
           span(style="color:#8f8f8f;")=rtn[index].transit + " transit(s)"
         else
           span(style="color:#8f8f8f;") direct flight
-    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")  
     .row.valign-wrapper(style="padding:0;margin:0;")
-      .col.s5(style="padding-left:0;position:relative;")
-        span(style="color:#434343;") Round-trip Price
       .col.s7.right-align(style="padding-right:0;position:relative;")
-        unless rtn[index].price_before == 0
-          span.currency(style="color:#b4b4b4; text-decoration:line-through;")= rtn[index].price_before
-          br
-        strong(id="rtn-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")
-        strong.currency(id="rtn-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= rtn[index].price
-        span(style="color:rgb(249,109,1);") /pax
+      //- asalnya isi price
     input(type="radio" name="rtn" value=rtn[index].price data-route= rtn[index].airport_route_out+" – "+rtn[index].airport_route_arvl data-time= rtn[index].time_out+" – "+rtn[index].time_arvl data-duration=rtn[index].time_duration)
     
     //- flight details

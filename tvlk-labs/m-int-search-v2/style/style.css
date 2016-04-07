@@ -1,6 +1,6 @@
 body {
   color: #434343;
-  background-color: #f1f1f1;
+  background-color: #F0F0F0;
 }
 #book {
   outline: none;
@@ -59,10 +59,10 @@ body {
   border-radius: 3px; 
   padding: 8px !important;
   display: block;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
   transition: .1s all ease-in;
   position: relative;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
 }
 .search-item:hover {
   background-color: #F6F6F6;
@@ -117,6 +117,7 @@ input[type="radio"]:after{
 .flight-detail-trigger {
   position: relative;
   z-index: 99;
+  margin-top: 1em;
 }
 .flight-detail-trigger:after {
   content:'';
@@ -131,10 +132,10 @@ input[type="radio"]:after{
   transition: .3s all ease-in;
 }
 .price-update {
-  background-color:#F6F6F6;
-  border-top: solid 1px #dadada;
+  background-color:#EFEFEF;
+  border-top: solid 1px #CCCCCC;
   margin-bottom: 0;
-  height: 48px;
+  height: 44px;
   position: fixed;
   bottom: 0;
   width: 100%;

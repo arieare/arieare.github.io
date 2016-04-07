@@ -1,0 +1,43 @@
+footer
+	position: static
+	bottom: 0
+	// height: 5em
+	text-align: center
+	color: $hitam-teks
+	font-family: $serif-fnt
+	margin-top: 15em
+	.copyright
+		padding: 1em 0
+		color: $cloud-tua
+		hr
+			border: none
+			border-top: thin dotted $cloud
+			width: 80%
+	.contact
+		display: inline-block
+		border: 0.2em solid $hitam-teks
+		padding: 0 1em
+		ul
+			margin: 0.5em 0
+			li
+				display: inline-block
+				margin: 0 1em
+	#via-twitter
+		display: block
+		margin: 1em 1em 0
+	.project-status
+		display: block
+		font-family: $sans-fnt
+		// font-weight: bold
+
+		margin: 1em 0
+		&:before
+			content: "\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7"
+		&:after
+			content: "\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7\00b7"		
+	#un-available
+		&:after
+			content: "I am currently not available for projects, say hi anyway!"
+	#available
+		&:after
+			content: "I am currently available for projects, let's talk!"

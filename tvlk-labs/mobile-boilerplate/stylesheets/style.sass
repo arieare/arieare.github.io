@@ -1,0 +1,160 @@
+// @import 'vendor/reset'
+// @import 'vendor/normalize'
+@import 'vendor/syntax'
+
+
+@import "modules/grid"
+@import "modules/color"
+@import "modules/typography"
+
+@import "partials/button"
+@import "partials/main"
+@import "partials/projectstatus"
+@import "partials/header"
+@import "partials/footer"
+
+@import "pages/home"
+@import "pages/blog"
+@import "pages/gallery"
+//MEDIA QUERIES
+
+@media only screen and (max-width: 768px) and (min-width: 640px)
+	article, article.gallery
+		width: 88%
+	h1
+		font-size: 4.5em
+	.description
+		display: none
+	main#blog
+		ol,ul
+			.post-list
+				margin: 0 1em 1rem
+@media only screen and (max-width: 640px) and (min-width: 480px)
+	// body, html
+	// 	margin-top: -1em
+	html
+		font-size: 90%
+		-moz-user-select: none
+		-webkit-user-select: none
+		-ms-user-select: none
+	article, article.gallery
+		width: 95%
+	h1
+		font-size: 4em
+	.description
+		display: none
+	.socmed-list
+		width: 25%
+	main#blog
+		ol,ul
+			.post-list
+				margin: 0 0 1rem
+	// //INDEX
+	// main#about
+	// 	h2.myname:after
+	// 		content: 'Arie A. Nugraha'
+@media only screen and (min-width: 320px) and (max-width: 480px)
+	// body, html
+	// 	margin-top: -1em
+	html
+		font-size: 80%
+		-moz-user-select: none
+		-webkit-user-select: none
+		-ms-user-select: none
+	article, article.gallery, article.gallery-post
+		width: 95%
+		padding-left: 1em
+		padding-right: 1em
+	h2
+		font-size: 3em
+	//INDEX
+	main#about
+		h2.myname:after
+			content: 'Arie A. Nugraha'
+	//CONTACT
+	main#contact
+		section.socmed-list 
+			width: 100%
+	main#blog
+		ol,ul
+			.post-list
+				margin: 0 0 1rem
+	main#post
+		#post-footer
+			padding-bottom: 1em
+		.page-navigation
+			padding-bottom: 1em
+	main#gallery-post
+		#page-navigation-makes
+			padding-bottom: 1em
+	footer
+		.project-status
+			font-size: 100%
+		#via-twitter
+			font-size: 80%
+@media only screen and (max-width: 320px)
+	// body, html
+	// 	margin-top: -1em
+	html
+		font-size: 75%
+		-moz-user-select: none
+		-webkit-user-select: none
+		-ms-user-select: none
+	header
+		#page-title
+			padding-left: 1em
+			padding-right: 1em
+			.title-anchor#title
+				padding-left: 0
+				padding-right: 0
+			.subtitle
+				padding-left: 0
+				padding-right: 0
+
+
+	article, article.gallery, article.gallery-post
+		width: 100%
+		padding-left: 1em
+		padding-right: 1em
+	h2
+		font-size: 2.5em
+
+	//NAV
+	//INDEX
+	main#about
+		h2.myname:abter
+			content: 'r\00E8'
+	//CONTACT
+	main#contact
+		section.socmed-list 
+			width: 100%
+	//POST
+	#page-navigation
+		a
+			padding: 1em 0
+		.next-prev
+			width: 100%
+			float: none
+
+	main#blog
+		ol,ul
+			.post-list
+				margin: 0 0 1rem
+	main#post
+		#post-footer
+			padding-bottom: 1em
+		.page-navigation
+			padding-bottom: 1em
+	main#gallery-post
+		#page-navigation-makes
+			padding-bottom: 1em
+	footer
+		.project-status
+			font-size: 100%
+			&:before
+				content: ""
+			&:after
+				content: ""	
+		#via-twitter
+			font-size: 2em
+@media only screen and (orientation : landscape)

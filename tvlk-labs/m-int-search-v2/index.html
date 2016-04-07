@@ -43,20 +43,32 @@
       </nav>
     </div>
     <div id="tab-content-container" class="col s12">
-      <div id="view-port-container">
+      <div id="tab-nav-container" style="z-index:100;display:none;">
+        <ul class="row tab-nav-wrapper">
+          <div class="active-indicator"></div>
+          <li class="tab col s6 center-align"><a href="#go-to-dpt-column" style="padding: 1em 1em;"><span id="bullet-number-1" class="bullet-number">1</span><span>&ensp;Departure</span></a></li>
+          <li class="tab col s6 center-align"><a href="#go-to-rtn-column" style="padding: 1em 1em;"><span id="bullet-number-2" class="bullet-number">2</span>&ensp;Return</a></li>
+        </ul>
+      </div>
+      <div id="view-port-container" style="margin-top:-48px;">
         <div id="dpt-column">
           <form id="only-one" action="" data-accordion-group class="dpt-column"><span id="dpt-route" class="hide">Jakarta – London</span><span id="dpt-flight-date" class="hide">Fri, 4 mar 2016</span>
-            <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="col s12"><span>10 departure flights found, sorted by round-trip price.</span></div>
+            <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="row"><span>10 departure flights found, sorted by round-trip price.</span></div>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-0" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-0" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-0" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-0" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>00:05 – 15:00</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">00:05 – 15:00</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>21h 55m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">21h 55m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -104,15 +116,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-1" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-1" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-1" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-1" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>05:15 – 17:30</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">05:15 – 17:30</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>19h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">19h 15m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -160,15 +177,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-2" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-2" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-2" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-2" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>05:15 – 20:10</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">05:15 – 20:10</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>21h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">21h 15m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -216,15 +238,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-3" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-3" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">6971550</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-3" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-3" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">6971550</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>13:05 – 06:20</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Thai</span><br><strong style="color:#727272">13:05 – 06:20</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>24h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">24h 15m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -272,15 +299,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-4" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-4" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7038200</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-4" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-4" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7038200</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>17:45 – 06:40</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Emirates</span><br><strong style="color:#727272">17:45 – 06:40</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>19h 55m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">19h 55m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -328,15 +360,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-5" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-5" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7143050</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-5" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-5" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7143050</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>00:15 – 11:50</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Emirates</span><br><strong style="color:#727272">00:15 – 11:50</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>18h 35m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">18h 35m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -384,15 +421,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-6" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-6" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-6" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-6" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>20:35 – 09:10</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK ⇄ LGW</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Turkish Airlines</span><br><strong style="color:#727272">20:35 – 09:10</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK – LGW</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>21h 20m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">21h 20m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -440,15 +482,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-7" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-7" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-7" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-7" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>20:35 – 10:55</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK ⇄ LGW</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Turkish Airlines</span><br><strong style="color:#727272">20:35 – 10:55</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK – LGW</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>21h 20m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">21h 20m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -496,15 +543,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-8" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-8" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-8" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-8" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>20:35 – 15:45</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK ⇄ LGW</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Turkish Airlines</span><br><strong style="color:#727272">20:35 – 15:45</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK – LGW</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>26h 20m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">26h 20m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -552,15 +604,20 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#434343;">Round-trip Price</span><strong id="dpt-plussign-9" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-9" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7499300</strong><span style="color:rgb(249,109,1);">/pax</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span style="color:#A8A8A8;">Round-trip Price</span><br><strong id="dpt-plussign-9" style="color:rgb(249,109,1);font-size:1.2em;">  </strong><strong id="dpt-price-9" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7499300</strong><span style="color:rgb(249,109,1);">/pax</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>14:25 – 08:45</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK ⇄ LHR</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">SriLankan</span><br><strong style="color:#727272">14:25 – 08:45</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">CGK – LHR</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>25h 20m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272">25h 20m</span><br><span style="color:#8F8F8F;">1 transit(s)</span>
                 </div>
+                <hr style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;">
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↩</span></div>
+                <div style="padding-left:0" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
+                </div>
+                <div style="padding-right:0;margin-top: 1.5em;" class="col s5 right-align"><span style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em">+10</span><br><span style="color:#8f8f8f;">Return Options</span></div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
                 <div style="padding-left:0;position:relative;" class="col s5">
                 </div>
@@ -611,21 +668,24 @@
         </div>
         <div id="rtn-column">
           <form id="only-one" action="" data-accordion-group class="rtn-column"><span id="rtn-route" class="hide">London – Jakarta</span><span id="rtn-flight-date" class="hide">Fri, 11 Mar 2016</span>
-            <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="col s12"><span>10 return flights found, sorted by round-trip price.</span></div>
+            <div style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;" class="row"><span>10 return flights found, sorted by round-trip price.</span></div>
+            <div style="background-color: #fff;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;height:48px;border-bottom:1px solid #dadada" class="row">
+              <div style="padding-left:0.5em;padding-top: 0.5em;" class="col s1 valign-wrapper"><span style="display:inline-block;color:#A8A8A8;">✈️</span></div>
+              <div style="margin-top:-0.5em;" class="col s6"><span style="font-size:0.8em;">Departure Flight </span><br><span>Lion (Rp1.823.900)             </span></div>
+              <div class="col s5"><span style="margin-top:0.5em;" class="right"> <a href="#">Change</a></span></div>
+            </div>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Cathay</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-0" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-0" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>11:25 – 13:20</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LHR ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272;">11:25 – 13:20</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>18h 55m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">18h 55m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-0" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-0" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="5850450" data-route="LHR – CGK" data-time="11:25 – 13:20" data-duration="18h 55m">
               <div data-content class="row detail">
@@ -668,19 +728,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Cathay</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-1" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-1" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>18:05 – 19:50</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LHR ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272;">18:05 – 19:50</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>25h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">25h 15m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-1" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-1" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">5850450</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="5850450" data-route="LHR – CGK" data-time="18:05 – 19:50" data-duration="25h 15m">
               <div data-content class="row detail">
@@ -723,19 +781,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Cathay</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-2" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-2" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">6875450</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>22:00 – 22:55</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LHR ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Cathay</span><br><strong style="color:#727272;">22:00 – 22:55</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>17h 55m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">17h 55m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-2" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-2" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">6875450</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="6875450" data-route="LHR – CGK" data-time="22:00 – 22:55" data-duration="17h 55m">
               <div data-content class="row detail">
@@ -778,19 +834,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Thai</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-3" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-3" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">6971550</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>11:50 – 11:55</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LHR ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Thai</span><br><strong style="color:#727272;">11:50 – 11:55</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LHR – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>17h 5m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">17h 5m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-3" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-3" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">6971550</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="6971550" data-route="LHR – CGK" data-time="11:50 – 11:55" data-duration="17h 5m">
               <div data-content class="row detail">
@@ -833,19 +887,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Emirates</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-4" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-4" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7038200</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>13:35 – 22:10</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LGW ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Emirates</span><br><strong style="color:#727272;">13:35 – 22:10</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LGW – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>25h 35m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">25h 35m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-4" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-4" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7038200</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="7038200" data-route="LGW – CGK" data-time="13:35 – 22:10" data-duration="25h 35m">
               <div data-content class="row detail">
@@ -888,19 +940,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Emirates</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-5" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-5" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7056200</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>09:40 – 22:10</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LGW ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Emirates</span><br><strong style="color:#727272;">09:40 – 22:10</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LGW – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>29h 30m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">29h 30m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-5" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-5" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7056200</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="7056200" data-route="LGW – CGK" data-time="09:40 – 22:10" data-duration="29h 30m">
               <div data-content class="row detail">
@@ -943,19 +993,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Turkish Airlines</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-6" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-6" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>10:10 – 18:10</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LGW ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Turkish Airlines</span><br><strong style="color:#727272;">10:10 – 18:10</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LGW – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>25h</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">25h</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-6" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-6" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="7416150" data-route="LGW – CGK" data-time="10:10 – 18:10" data-duration="25h">
               <div data-content class="row detail">
@@ -998,19 +1046,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Turkish Airlines</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-7" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-7" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>12:35 – 18:10</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LGW ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Turkish Airlines</span><br><strong style="color:#727272;">12:35 – 18:10</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LGW – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>22h 35m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">22h 35m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-7" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-7" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7416150</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="7416150" data-route="LGW – CGK" data-time="12:35 – 18:10" data-duration="22h 35m">
               <div data-content class="row detail">
@@ -1053,19 +1099,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Emirates</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-8" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-8" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7587000</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>09:40 – 15:45</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LGW ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Emirates</span><br><strong style="color:#727272;">09:40 – 15:45</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LGW – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>23h 30m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">23h 30m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-8" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-8" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7587000</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="7587000" data-route="LGW – CGK" data-time="09:40 – 15:45" data-duration="23h 30m">
               <div data-content class="row detail">
@@ -1108,19 +1152,17 @@
               </div>
             </label>
             <label data-accordion class="col s12 search-item"><a href="#" data-control class="flight-detail-trigger right">Detail ▾</a>
-              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><span class="left">Emirates</span>
-              </div>
+              <div style="padding:0;margin:0;margin-bottom:0.5em;" class="row"><strong id="rtn-plussign-9" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-9" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7587000</strong><span style="color:rgb(249,109,1);">/pax</span><br><span style="color:#A8A8A8;">Total Price </span><span style="color:#727272;"> Rp1.832.000</span></div>
+              <hr style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;">
               <div style="padding:0;margin:0;" class="row">
-                <div style="padding-left:0" class="col s6"><strong>13:35 – 15:45</strong><strong> (+1D)</strong><br><span style="color:#8f8f8f">LGW ⇄ CGK</span>
+                <div style="padding-left:0;padding-top: 1.3em;" class="col s1 valign-wrapper"><span style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;">↪      </span></div>
+                <div style="padding-left:0;" class="col s6"><span style="color:#A8A8A8" class="left">Emirates</span><br><strong style="color:#727272;">13:35 – 15:45</strong><strong style="color:#8f8f8f;"> (+1D)</strong><br><span style="color:#8f8f8f">LGW – CGK</span>
                 </div>
-                <div style="padding-right:0" class="col s6 right-align"><span>19h 10m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
+                <div style="padding-right:0;margin-top:1.5em;" class="col s5 right-align"><span style="color:#727272">19h 10m</span><br><span style="color:#8f8f8f;">1 transit(s)</span>
                 </div>
               </div>
-              <hr style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;">
               <div style="padding:0;margin:0;" class="row valign-wrapper">
-                <div style="padding-left:0;position:relative;" class="col s5"><span style="color:#434343;">Round-trip Price</span></div>
-                <div style="padding-right:0;position:relative;" class="col s7 right-align"><strong id="rtn-plussign-9" style="color:rgb(249,109,1);font-size:1.2em;"></strong><strong id="rtn-price-9" style="color:rgb(249,109,1);font-size:1.2em;" class="currency">7587000</strong><span style="color:rgb(249,109,1);">/pax</span>
-                </div>
+                <div style="padding-right:0;position:relative;" class="col s7 right-align"></div>
               </div>
               <input type="radio" name="rtn" value="7587000" data-route="LGW – CGK" data-time="13:35 – 15:45" data-duration="19h 10m">
               <div data-content class="row detail">
@@ -1166,16 +1208,10 @@
         </div>
       </div>
     </div>
-    <div class="row"> 
-      <div style="bottom: 56px; right: 8px;" class="fixed-action-btn click-to-toggle horizontal"><a style="font-size:2em;line-height:33px;" class="btn-floating grey center-align"><img src="img/ic_tune.png" width="24px" height="auto" style="margin-top:6px;"></a>
-        <ul style="right: 24px;top: 15%;">
-          <li><a style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius: 8px 0 0 8px;transition: .15s" class="btn-floating grey">Sort</a><a style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;transition: .15s" class="btn-floating grey">Filter</a><a style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius:0 8px 8px 0;transition: .15s" class="btn-floating grey">Change Date</a></li>
-        </ul>
-      </div>
-    </div>
     <div style="z-index:100;" class="row price-update valign-wrapper">
-      <div class="col s7"><span class="col s12"><a href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;" class="flight-detail-modal-trigger modal-trigger"><span style="color:#434343;">Round-trip Price • </span><strong>Summary</strong></a></span><span style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;" class="col s12">Rp <strong id="totalprice" class="currency odometer">0</strong></span></div>
-      <div class="col s5"><a id="book" class="right disabled">Book Now</a></div>
+      <div class="col s3 center"><span> <a href="#">SORT</a></span></div>
+      <div class="col s4 center"><span> <a href="#">FILTER</a></span></div>
+      <div class="col s5 center"><span> <a href="#">CHANGE DATE        </a></span></div>
     </div>
   </body>
   <div id="flight-detail-modal" class="modal">

@@ -1,0 +1,119 @@
+//NAV
+header
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	background-attachment: fixed
+	// -webkit-filter: grayscale(100%)
+	#page-title
+		text-shadow: 0 2px 3px rgba($hitam-bg, 0.9)
+		top: 0
+		background-color: rgba($hitam-dark,0.5)
+		margin: 0
+		padding: 7em 2em 4em
+		opacity: 0.98
+		text:
+			align: center
+		color: $post-title-col
+		a
+			border-bottom: thin dotted $putih-bg
+		//border: none
+		#title-divider
+			width: 7em
+			border: 0.1em solid $putih-bg
+		.title-anchor
+			font-style: normal
+			padding: 0 1em
+			line-height: 1
+			&#title
+				font-variant: small-caps
+				font-weight: bold
+				font-family: $serif-fnt
+				margin-bottom: 0
+			&#caption
+				font-weight: 300
+				font-family: $sans-fnt
+				border: 0.08em solid
+				display: inline-block
+				padding: 0.1em 0.3em
+		.subtitle
+			padding: 0.8em 2em 0
+			font-variant: normal
+			line-height: 1.5
+			margin: 0 auto
+			font:
+				weight: normal
+				style: normal
+		.meta-tag
+			margin: 2em 0 0
+			display: block
+			font-weight: normal
+			text-align: center
+			opacity: 0.4
+			&:before
+				content: '\b7\a0'
+			&:after
+				content: '\a0\b7'		
+		.sub-subtitle
+			font-weight: normal	
+.navbar
+	padding: 0.3em 0
+	text-align: center
+	// background-color: rgba($broken-white,0.5)
+	position: absolute
+	z-index: 98
+	width: 100%
+	a,ul
+		margin: 0
+		color: $broken-white
+	img
+		width: 48px
+	li
+		display: inline-block
+		padding: 0 1.5em
+		font-size: 1.25rem
+		font-weight: bold
+		text-transform: lowercase
+		font-variant: small-caps
+		margin-bottom: 0.3em
+		font-family: $sans-fnt
+		text-shadow: 0 1px 1px rgba($hitam-dark,0.5)
+	.nav-divider
+		width: 50%
+		border-bottom: none
+		border-left: none
+		border-right: none
+		border-top: thin solid $broken-white
+#dark
+	a,ul
+		color: $hitam-bg
+	li
+		text-shadow: none
+	.nav-divider
+		border-top: thin solid $hitam-teks
+
+body 
+	overflow: hidden
+
+
+/* Preloader */
+#preloader 
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0 
+	background-color: rgba($putih-bg,0.95)
+	z-index: 99 
+
+
+#status 
+	width: 200px
+	height: 200px
+	position: absolute
+	left: 50% 
+	top: 50% 
+	background-image: url(https://dl.dropboxusercontent.com/u/19515285/arieare/_assets/images/status.gif)
+	background-repeat: no-repeat
+	background-position: center
+	margin: -100px 0 0 -100px

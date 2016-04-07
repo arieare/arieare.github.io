@@ -24,7 +24,7 @@ html(lang="en")
     //- navbar end
     //- tab bar start
     #tab-content-container.col.s12
-      //- #tab-nav-container(style="z-index:100;")
+      #tab-nav-container(style="z-index:100;display:none;")
         ul.row.tab-nav-wrapper
           .active-indicator
           li.tab.col.s6.center-align
@@ -37,14 +37,14 @@ html(lang="en")
             a(href="#go-to-rtn-column" style="padding: 1em 1em;")
               span#bullet-number-2.bullet-number 2
               | &ensp;Return
-      #view-port-container
+      #view-port-container(style="margin-top:-48px;")
         #dpt-column
           form#only-one.dpt-column(action="" data-accordion-group)
             span#dpt-route.hide= dpt_route_city
             span#dpt-flight-date.hide= dpt_date
             //- search result
 
-            .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
+            .row(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
               span 10 departure flights found, sorted by round-trip price.
             include ./includes/search-item-dpt.jade
             //- search result
@@ -53,31 +53,30 @@ html(lang="en")
             span#rtn-route.hide= rtn_route_city
             span#rtn-flight-date.hide= rtn_date
             //- search result
-            .col.s12(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
+            .row(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
               span 10 return flights found, sorted by round-trip price.
+            .row(style="background-color: #fff;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;height:48px;border-bottom:1px solid #dadada")
+              .col.s1.valign-wrapper(style="padding-left:0.5em;padding-top: 0.5em;")
+                span(style="display:inline-block;color:#A8A8A8;") ✈️
+              .col.s6(style="margin-top:-0.5em;")
+                span(style="font-size:0.8em;") Departure Flight 
+                br
+                span Lion (Rp1.823.900)             
+              .col.s5
+                span.right(style="margin-top:0.5em;") 
+                  a(href="#") Change
             include ./includes/search-item-rtn.jade
             //- search result
-        
-    .row 
-      .fixed-action-btn.click-to-toggle.horizontal(style="bottom: 56px; right: 8px;")
-        a.btn-floating.grey.center-align(style="font-size:2em;line-height:33px;")
-          //- strong ⌗
-          img(src="img/ic_tune.png" width="24px" height="auto" style="margin-top:6px;")
-        ul(style="right: 24px;top: 15%;")
-          li
-            a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius: 8px 0 0 8px;transition: .15s") Sort
-            a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;transition: .15s") Filter
-            a.btn-floating.grey(style="width:auto;padding:0 1em;border-radius:0;margin-left:0.1em;line-height:32px;height:auto;border-radius:0 8px 8px 0;transition: .15s") Change Date
     .row.price-update.valign-wrapper(style="z-index:100;")
-      .col.s7
-        span.col.s12
-          a.flight-detail-modal-trigger.modal-trigger(href="#flight-detail-modal" style="padding: 1em 0em; font-size:0.8em;")
-            span(style="color:#434343;") Round-trip Price • 
-            strong Summary
-        span.col.s12(style="margin-top: -0.3em;margin-bottom: 0;font-size:1.3em;") Rp 
-          strong#totalprice.currency.odometer 0
-      .col.s5
-        a#book.right.disabled Book Now
+      .col.s3.center
+        span 
+          a(href="#") SORT
+      .col.s4.center
+        span 
+          a(href="#") FILTER
+      .col.s5.center
+        span 
+          a(href="#") CHANGE DATE        
  
   include ./includes/modal-flight-summary.jade 
   include ./includes/modal-smart-combo.jade

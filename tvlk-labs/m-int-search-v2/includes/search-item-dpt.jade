@@ -118,27 +118,47 @@ each val, index in dpt
   label.col.s12.search-item(data-accordion)
     a.flight-detail-trigger.right(href="#" data-control) Detail ▾
     .row(style="padding:0;margin:0;margin-bottom:0.5em;")
-      //- airlines name
-      //- span.left= dpt[index].airlines
-      span(style="color:#434343;") Round-trip Price
+      span(style="color:#A8A8A8;") Round-trip Price
+      br
       strong(id="dpt-plussign-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")   
       strong.currency(id="dpt-price-"+ [index] style="color:rgb(249,109,1);font-size:1.2em;")= dpt[index].price
       span(style="color:rgb(249,109,1);") /pax
+    hr(style="width:100%;margin:0.5em 0;border-bottom:1px solid #dadada;")        
     .row(style="padding:0;margin:0;")
+      .col.s1.valign-wrapper(style="padding-left:0;padding-top: 1.3em;")
+        span(style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;") ↪
       .col.s6(style="padding-left:0")
-        strong= dpt[index].time_out + " – " + dpt[index].time_arvl
+        //- airlines name
+        span.left(style="color:#A8A8A8")= dpt[index].airlines
+        br
+        strong(style="color:#727272")= dpt[index].time_out + " – " + dpt[index].time_arvl
         unless !dpt[index].time_tomorrow
           strong  (+1D)
         br
-        span(style="color:#8f8f8f")= dpt[index].airport_route_out + " ⇄ " + dpt[index].airport_route_arvl
-      .col.s6.right-align(style="padding-right:0")
-        span=dpt[index].time_duration
+        span(style="color:#8f8f8f")= dpt[index].airport_route_out + " – " + dpt[index].airport_route_arvl
+      .col.s5.right-align(style="padding-right:0;margin-top: 1.5em;")
+        span(style="color:#727272")=dpt[index].time_duration
         br
         if dpt[index].transit > 0
-          span(style="color:#8f8f8f;")=dpt[index].transit + " transit(s)"
+          span(style="color:#8F8F8F;")=dpt[index].transit + " transit(s)"
         else
           span(style="color:#8f8f8f;") direct flight
-    hr(style="width:100%;margin:0.5em auto;border-bottom:1px dashed #e5e5e5;")  
+      hr(style="width:85%;margin-left:2em;margin-bottom: 0.6em;padding: 0.2em 0em 0.5em 1em;border-bottom:1px solid #dadada;")  
+      //- the cheapest return
+      .col.s1.valign-wrapper(style="padding-left:0;padding-top: 1.3em;")
+        span(style="display:inline-block;transform: scale(1, -1);color:#A8A8A8;") ↩
+      .col.s6(style="padding-left:0")
+        //- airlines name
+        span.left(style="color:#A8A8A8") Cathay
+        br
+        strong(style="color:#727272") 11:25 – 13:20
+        strong(style="color:#8f8f8f;")  (+1D)
+        br
+        span(style="color:#8f8f8f") LHR – CGK
+      .col.s5.right-align(style="padding-right:0;margin-top: 1.5em;")
+        span(style="color:#727272;background:#F0F0F0;border-radius:3px;padding:0.2em 0.5em") +10
+        br
+        span(style="color:#8f8f8f;") Return Options
     .row.valign-wrapper(style="padding:0;margin:0;")
       .col.s5(style="padding-left:0;position:relative;")
         //- span(style="color:#434343;") Round-trip Price

@@ -1,0 +1,38 @@
+//PROJECT-STATUS
+div.project-status
+	clear: both
+	text-align: center
+	padding: 0.6em 0
+	line-height: 1.2em
+	a
+		display: inline-block
+		border: none
+		font-weight: bolder
+		padding: 0
+	&#available
+		background-color: $emerald
+		color: $emerald-tua
+		a
+			color: $emerald-tua
+			&:hover,&:active
+				color: $putih-bg
+		span#fulltime
+			&:before
+				content: " I am available for full-time projects. "
+		span#parttime
+			&:before
+				content: " I am available for small projects. "
+		a.hire:after
+			content: "Call me, maybe? \00BB"
+		&#un-available
+			background-color: $cloud
+			color: $cloud-tua
+			a
+				color: $cloud-tua
+				&:hover,&:active
+					color: $putih-bg
+			span:before
+				content: " I am currently not available for projects. "
+			a.hire:after
+				content: "Say Hi anyway! \00BB"
+//PROJECT-STATUS
