@@ -8,9 +8,9 @@ html(lang="en")
     //- navbar start
     - var route = 'Jakarta ⇄ London'
     - var dpt_route_city = 'Jakarta – London'
-    - var dpt_date = 'Fri, 4 mar 2016'
+    - var dpt_date = 'Thu, 5 May 2016'
     - var rtn_route_city = 'London – Jakarta'
-    - var rtn_date = 'Fri, 11 Mar 2016'
+    - var rtn_date = 'Sun, 8 May 2016'
     .navbar-fixed
       nav
         .nav-wrapper
@@ -45,7 +45,7 @@ html(lang="en")
             //- search result
 
             .row(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 10 departure flights found, sorted by round-trip price.
+              span Select departure flight, 10 options found.
             include ./includes/search-item-dpt.jade
             //- search result
         #rtn-column
@@ -54,17 +54,18 @@ html(lang="en")
             span#rtn-flight-date.hide= rtn_date
             //- search result
             .row(style="background-color: #0d80ce;font-size: 0.8em;color: #ffffff;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;")
-              span 10 return flights found, sorted by round-trip price.
+              span Select return flight, 10 options found.
             .row(style="background-color: #fff;color: #8f8f8f;margin-left: -6px;margin-right: -6px;margin-top: -0.7em;padding: 0.5em 8px 0.3em;letter-spacing: 0.04em;margin-bottom: 0.5em;height:48px;border-bottom:1px solid #dadada")
               .col.s1.valign-wrapper(style="padding-left:0.5em;padding-top: 0.5em;")
                 span(style="display:inline-block;color:#A8A8A8;") ✈️
               .col.s6(style="margin-top:-0.5em;")
-                span(style="font-size:0.8em;") Departure Flight 
+                span(style="font-size:0.8em;color:#434343;") Total for 2 pax
                 br
-                span Lion (Rp1.823.900)             
+                //- span Lion (Rp1.823.900)  
+                strong#totalpricesummary.currency(style="color:#434343;") 0           
               .col.s5
                 span.right(style="margin-top:0.5em;") 
-                  a(href="#") Change
+                  a(style="font-size:0.8em;" href="#go-to-dpt-column") Change Departure
             include ./includes/search-item-rtn.jade
             //- search result
     .row.price-update.valign-wrapper(style="z-index:100;")
