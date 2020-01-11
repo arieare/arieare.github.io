@@ -1,10 +1,37 @@
+html {font-size: 100%;} /*16px*/
+
 body {
     margin: 60px auto;
     width: 60%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
     background-color: #191515;
-    color: #edf7fa;
+    color: #edf7fa;     
+    line-height: 1.65;
 }
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209em;
+  color: #a32f80;  
+}
+
+h2 {font-size: 3.157em;}
+
+h3 {font-size: 2.369em;}
+
+h4 {font-size: 1.777em;}
+
+h5 {font-size: 1.333em;}
+
+small, .text_small {font-size: 0.75em;}
+
 nav ul, footer ul {
     padding: 0px;
     list-style: none;
@@ -21,21 +48,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
-    font-size: 20px;
-    color: #a32f80;
-}
-p {
-    font-size: 1em;
-    line-height: 1.25em;
-}
+
 footer {
-    font-size: .8em;
+    font-size: .75em;
 }
 
 ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1.5em;
 }
 
 ul.posts li {
