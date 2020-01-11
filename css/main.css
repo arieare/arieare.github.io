@@ -2,8 +2,8 @@ body {
     margin: 60px auto;
     width: 60%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-    background-color: rgb(21, 32, 43);
-    color: white;
+    background-color: #000272;
+    color: #edf7fa;
 }
 nav ul, footer ul {
     padding: 0px;
@@ -16,7 +16,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #a32f80;
 }
 a:hover {
     text-decoration: underline;
