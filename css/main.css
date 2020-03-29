@@ -57,10 +57,10 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 a {
-    text-decoration: none;
-font-size: 18px;
-line-height: 26px;
-color: #0F121C;
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: #0F121C;
 }
 a:hover {
     text-decoration: underline;
@@ -92,7 +92,8 @@ ul.posts li {
   flex: none;
   order: 0;
   align-self: center;
-  margin: 20px 10px;
+  margin: 0px;
+  margin-right: 10px;
 }
 
 .head-nav {
