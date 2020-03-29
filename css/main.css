@@ -81,22 +81,27 @@ ul.posts li {
   display: flex;
 flex-direction: row;
 padding: 0px 6px;
-
 position: static;
 width: 63px;
 height: 26px;
 left: 0px;
 top: 0px;
-
 /* Thunder */
-
 background: #FFF501;
 border-radius: 3px;
-
 /* Inside Auto Layout */
-
 flex: none;
 order: 0;
 align-self: center;
 margin: 20px 0px;
+}
+
+.head-nav {
+ display: flex;
+flex-direction: row;
+padding: 0px;
+
+position: relative;
+width: 424px;
+height: 26px; 
 }
