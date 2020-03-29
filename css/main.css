@@ -100,4 +100,6 @@ ul.posts li {
   flex-direction: row;
   padding: 0px;
   position: relative;
+  max-width: 650px; /* For large screens */
+  margin: auto; /* Center the container in the viewport */
 }
