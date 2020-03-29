@@ -58,50 +58,46 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #0F121C;
-    background-color: #FFF501;
+font-size: 18px;
+line-height: 26px;
+color: #0F121C;
 }
 a:hover {
     text-decoration: underline;
 }
 
 footer {
-    font-size: .75em;
+  font-size: .75em;
 }
 
 ul.posts { 
-    margin: 20px auto 40px; 
+  margin: 20px auto 40px; 
 }
 
 ul.posts li {
-    list-style: none;
+  list-style: none;
 }
 
 .button-link {
   display: flex;
-flex-direction: row;
-padding: 0px 6px;
-position: static;
-width: 63px;
-height: 26px;
-left: 0px;
-top: 0px;
-/* Thunder */
-background: #FFF501;
-border-radius: 3px;
-/* Inside Auto Layout */
-flex: none;
-order: 0;
-align-self: center;
-margin: 20px 0px;
+  flex-direction: row;
+  padding: 0px 6px;
+  position: static;
+  left: 0px;
+  top: 0px;
+  /* Thunder */
+  background: #FFF501;
+  border-radius: 3px;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  align-self: center;
+  margin: 20px 10px;
 }
 
 .head-nav {
- display: flex;
-flex-direction: row;
-padding: 0px;
-
-position: relative;
-width: 424px;
-height: 26px; 
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  position: relative;
 }
