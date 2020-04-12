@@ -1,0 +1,383 @@
+I"�=<p>Reference</p>
+
+<p>Operationalizing Design Operations
+<a href="https://medium.com/amplify-design/operationalizing-design-operations-7846a23bc99b">https://medium.com/amplify-design/operationalizing-design-operations-7846a23bc99b</a></p>
+
+<p>Introducing DesignOps
+<a href="https://www.designbetter.co/designops-handbook/introducing-designops">https://www.designbetter.co/designops-handbook/introducing-designops</a></p>
+
+<p>Why DesignOps? Why now?
+<a href="https://blog.nordkapp.fi/why-designops-why-now-c256500595a7">https://blog.nordkapp.fi/why-designops-why-now-c256500595a7</a></p>
+
+<p>DesignOps: the questions you’re probably asking yourself now
+<a href="https://uxdesign.cc/designops-the-questions-youre-probably-asking-yourself-now-fdac491bfe4f">https://uxdesign.cc/designops-the-questions-youre-probably-asking-yourself-now-fdac491bfe4f</a></p>
+
+<p>Six months as a DesignOps manager
+<a href="https://uxdesign.cc/six-months-as-a-designops-manager-e227870b8619">https://uxdesign.cc/six-months-as-a-designops-manager-e227870b8619</a></p>
+
+<p>Operationalising Design in Traveloka Context</p>
+
+<p>An excerpt from The Time to Operate is Now! (by Meredith Black) And Introduction to Design Ops (by Dave Malouf). Main point: Convince the design team about the structure of new DesignOps in Traveloka. And what the team can do.</p>
+
+<p>“What should designers do?” Is a simple question which answer is not always easy. Designer’s role can be different from one company to another, depend on many factors such as organisation structure and business challenges to name a few.</p>
+
+<p>It’s only natural to ask around “what should designers do?”, especially if you are a team of one person in a company that recently exploring value of design. Questions like “should designers code?” reflect the state of many design organisation, especially in digital start up company.</p>
+
+<p>Fast forward, when a company is entering hyper-growth mode. Every department tend to grow and scale as well, and design department is no exception — like in Traveloka.</p>
+
+<p>Along with the scale, scope of works becoming increasingly complex. More people brought in, jobs are broken down. Roles start to handle specialised responsibilities — often in the absence of clear cut boundaries. Good collaboration is no longer optional.</p>
+
+<p>Hyper-growth sometimes feels like sweeping a bunch of leaves on the road in autumn. Firefighting is the norm around. Without realising, it feels too many things to do! [gasp].</p>
+
+<p>Back then, designers used to handle everything “design”. We were comfortable working with little to no process, undocumented design decisions, and it’s finally catching up to us. While navigating the role specialisation, we still think some works are normal and necessary as part of our daily to-dos. If we’re not careful, these “other than design” works can creep up and eating our time away.</p>
+
+<p>Understanding DesignOps
+Understanding DesignOps can be tricky. It’s new, borrowed from mature role in software development called DevOps. From the outset, it seems just like another design role.</p>
+
+<p>Similar to design roles that can be different in each company, DesignOps also called differently in different companies. Some call it Design Program Managers, Project Coordinator, Chief of Staff, Research Ops, Research Coordinator, Product Design Producer (borrowing from movie-making producers), and Design Ops.</p>
+
+<p>The point is, design organisation everywhere might experience similar problem in growing and scaling, but there is no silver bullet. It’s really important to put designOps in context.</p>
+
+<p>According to Dave Malouf, Design Ops is Everything that supports high quality crafts, methods, and processes (in context of design). Basically anything to keep designers focus on designing.</p>
+
+<p>What should we focus on instead? Whatever your title is, in general designers should focus on designing:</p>
+
+<ul>
+  <li>Understanding problem in context, from multiple perspectives.</li>
+  <li>Facilitate solving those problems through series of activites.</li>
+  <li>Take into account branches of consideration.</li>
+  <li>Form an intention.</li>
+  <li>Rendering those intentions.</li>
+  <li>Making sure the intentions are conveyed to the users.</li>
+</ul>
+
+<p>What is designOps? DesignOps is team inside design department that will take care the operational aspect of design.</p>
+
+<p>But in daily activities, we as designers often doing things that is not designing.</p>
+
+<p>We are not aiming to be the bottleneck, obvioiusly. We are trying to making process transparent and help you walk through it. With transparency we can manage expectation, with expecation managed we can build comfort and trust in the end. This always be our goals from the start.</p>
+
+<p>What is operation? Series of functions and tasks that are involved in a single process. For example, a manufacturing operation.
+So it will help designers in design team with repeat-able procedure and practice that can be performed to achieve expected outputs.</p>
+
+<p>Scopes of Ops
+Operating in context
+There is no silver bullet.</p>
+
+<ul>
+  <li>Workflow: how the design work flows within the company</li>
+  <li>Tools: what they need to get the job done</li>
+  <li>Governance: who needs to see the work, and when</li>
+  <li>Infrastructure: what the team needs to work more efficiently</li>
+  <li>Budget: how much running that team costs, and why</li>
+  <li>Headcount: how many people are needed, with which skills</li>
+  <li>Pipeline: projects coming up and how well staffed the team is</li>
+  <li>Retention: how to make people want to stay</li>
+  <li>Education: what skills are missing and how to learn them</li>
+  <li>Evangelization: help the org understand the value of design</li>
+  <li>According to Meredith Black from Pinterest, key areas for DesignOps are:
+    <ul>
+      <li>Design process</li>
+      <li>Build relationships</li>
+      <li>Provide visibility</li>
+    </ul>
+  </li>
+  <li>Drive operations</li>
+</ul>
+
+<p>Anything to keep designers focus on designing. The purpose of DesignOps is to keep designers focused on designing.</p>
+
+<p>To empower designer to focus on work that matters and collaborate confidently</p>
+
+<p>Again, it’s very important to put operation in context. To be extremely honest, there is no one single correct solution for DesignOps out there.
+We are only facing similar problems in different context of company.
+Some company like Pinterest apply resourcing, program management, team onboarding, and Team morale and education,
+While others divide it into: Process, People, Priorities.
+Other model is from Courtney Kaplan (Director of Design Program Manager at Facebook):</p>
+
+<ul>
+  <li>Operation Health of design team through data</li>
+  <li>Program Onboarding, education, inspiration</li>
+  <li>Product (partner with product) Teamwork, key initiatives, tools &amp; standards</li>
+</ul>
+
+<p>ThoughtBox: What is our DesignOps Model?
+Through those examples alone, it’s obvious that DesignOps can be very different in each organization.</p>
+
+<p>The signs of design ops needs
+(You tell me if we do have these symptomps)</p>
+
+<ul>
+  <li>Specialization of role. Design roles in the company are getting specific, no more “fullstack designer”. This resulting in higher need of clearer collaboration model.</li>
+  <li>Hard to keep everyone in sync resulting in communication gap</li>
+  <li>Designers just give up and say just tell me what to do Safe haven, synptomp</li>
+  <li>Constant Changes risk of duplicating works</li>
+  <li>Scaling up</li>
+</ul>
+
+<p>Proposal: how
+DesignOps is important and please help them help you.
+What will they help?</p>
+
+<p>Bedanya dengan Ops Ops lain
+supporting operational di hotel dari customer ke hotel dan sebaliknya.
+Sosialisasi
+Impact ke desainer?
+Jangan lagi adanya procurement sendiri-sendiri
+kaitannya ke development produk</p>
+
+<p>What is the importance of designOps? current condition kayak apa sih? emangnya butuh designOps?
+Scope of designOps and how it might help Traveloka design?</p>
+
+<ol>
+  <li>Discussion &amp; Call to action
+    <ol>
+      <li>DesignOps in Traveloka context (operating in context)</li>
+      <li>Give visibility about DesignOps plan from day1 to year 1</li>
+      <li>Prioritize where it hurts (brainstorming?
+        <ul>
+          <li>For example:
+    - Looking for participants to understand the user needs.
+    - Preparing contract document to work with design / research agency
+    - Communicating up-down-across
+    - Sync, so many sync.
+    - Create and propose budget for design activities
+    - Knowing what other designers and team been working on
+    - Updating design assets
+    - Keeping track of</li>
+          <li>DesignOps treat operation problems as design problems.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p>Design Process</p>
+
+<ol>
+  <li>Meeting design hygiene like meeting hygiene</li>
+  <li>Prioritization</li>
+</ol>
+
+<p>Design Quality</p>
+
+<ol>
+  <li>Standard review, feedback, critiques practice</li>
+</ol>
+
+<p>Information Management &amp; Communication</p>
+
+<ol>
+  <li>Who’s doing what?</li>
+  <li>What is design team doing?</li>
+  <li>How to do what?</li>
+  <li>Where do we keep information about that?</li>
+  <li>Keep everyone in sync, what are the designer’s doing?</li>
+  <li>Communicating design works up and down</li>
+  <li>Socialization</li>
+  <li>Knowledge management</li>
+  <li>Information management</li>
+  <li>This creates better organizational awareness of design, and mitigates misconceptions that “designers design in a black hole” or that design projects take too long.</li>
+</ol>
+
+<p>Operational</p>
+
+<ol>
+  <li>Designer’s leave management</li>
+  <li>Design library management</li>
+  <li>Recruitment</li>
+</ol>
+
+<p>Planning</p>
+
+<ol>
+  <li>Forecast work and needs</li>
+  <li>Headcount planning (helping design leads)</li>
+</ol>
+
+<p>Budgeting &amp; Procurement</p>
+
+<ol>
+  <li>Oversee budgets</li>
+</ol>
+
+<p>Partnership</p>
+
+<ol>
+  <li>Agency</li>
+  <li>Third parties</li>
+</ol>
+
+<p>Administration</p>
+
+<ol>
+  <li>Filing System</li>
+  <li>Leave Scheduling</li>
+</ol>
+
+<p>Program Management</p>
+
+<ol>
+  <li>Design Studio</li>
+  <li>Regular Feedback Session</li>
+  <li>Designer’s All Hands</li>
+</ol>
+
+<p>Facilitation</p>
+
+<ol>
+  <li>Facilitate alignment, for example sync with design leads</li>
+  <li>Build external relationship</li>
+  <li>Build cross-functional relationship</li>
+</ol>
+
+<p>People Growth</p>
+
+<ul>
+  <li>Alignment (of expectation/workflow)</li>
+</ul>
+
+<p>Wait, WHY DesignOps?
+Don’t we have CDC? Exactly akan ada banyak intersection antara CDC dan DesignOps. You may even think about DesignOps as executive extension from CDC.
+bisa di-expect ngapain aja?
+How to start?</p>
+
+<ul>
+  <li>Go slow what are our quick wins</li>
+  <li>Start small: meeting notes, documenting culture, Weekly Visual status</li>
+  <li>Don’t force process</li>
+  <li>Don’t tell people what to do :)</li>
+</ul>
+
+<p>Quick wins</p>
+
+<ul>
+  <li>Efficient onboardings</li>
+  <li>education program</li>
+  <li>new design tools &amp; license management (how do we assess this)</li>
+  <li>Audience building for research</li>
+</ul>
+
+<p>ThoughtBox what are our Quick wins as design ops?</p>
+
+<p>How do we know if design ops is succesful:</p>
+
+<ul>
+  <li>Teams will be better organized</li>
+  <li>Leadership will gain a better understanding of what makes their teams tick</li>
+  <li>Cross-functional teams will have more visibility into—and a better understanding of—the design process. No more blackbox (design demistified, design is not magic)</li>
+  <li>Do you know what are the design team working on?</li>
+  <li>By making design process more transparent, trust will be built</li>
+  <li>Manage resourcing, drive the day-to-day project flows, , support team health, and basically facilitate anything that allows creative teams to focus on what they do best</li>
+  <li>Team health is the kpi?
+DesignOps in Traveloka?
+posisinya dia in a grander scheme of structure.
+    <ol>
+      <li>Identify needs</li>
+      <li>Define roles, responsibilities, scope</li>
+      <li>Determine orbiting roles</li>
+    </ol>
+  </li>
+</ul>
+
+<p>DEFINING DESIGN OPS IN TRAVELOKA CAN TRY USING THE CANVAS
+Conversation starter for DesignOps:</p>
+
+<ul>
+  <li>Do you have visibility into what the design team is working on?</li>
+  <li>Do you know if the team is working well cross-functionally with product and engineering colleagues?</li>
+  <li>Does the team have clear and actionable goals they are driving toward, and are they meeting them?</li>
+  <li>Are there regular design critiques or feedback sessions?</li>
+  <li>Are the product manager, engineer, and designer aligned with what’s shipping?</li>
+  <li>Is the team meeting deadlines?</li>
+</ul>
+
+<p>From DesignOps Canvas by Dave Malouf, Abby Covert, Kristin Skinner, Lou Rosenfeld, Dave Mastronardi
+What do we do?</p>
+
+<ul>
+  <li>What is the value we provide?</li>
+  <li>What does “good” look like?</li>
+  <li>What is our process &amp; or operating rhythm?</li>
+  <li>What methods and tools do we use?</li>
+  <li>What are our inputs &amp; outputs?</li>
+  <li>How do we work together?</li>
+</ul>
+
+<p>Who are we?
+Teammates</p>
+
+<ul>
+  <li>Who are we looking for?</li>
+  <li>How do we recruit people?</li>
+  <li>How do we develop our people?</li>
+  <li>How do we retain people?</li>
+</ul>
+
+<p>Stakeholders</p>
+
+<ul>
+  <li>Who are our most valuable partners?</li>
+  <li>What makes them successful?</li>
+  <li>What obstacles stand in their way?</li>
+  <li>How do we work with them?</li>
+</ul>
+
+<p>Support</p>
+
+<ul>
+  <li>What support and resources do we need?</li>
+</ul>
+
+<p>How do we communicate</p>
+
+<ul>
+  <li>Internally within our teams?</li>
+  <li>externally with other stakeholders?</li>
+  <li>How we educate &amp; evangelize design?</li>
+  <li>How do we give and get feedback?</li>
+  <li>How do we share our knowledge and new learnings?</li>
+</ul>
+
+<p>What constrains us</p>
+
+<ul>
+  <li>What regulatory, security, or other realities constrain what is possible?</li>
+  <li>How do we manage conflicts &amp; tradeoffs?</li>
+  <li>How do we manage risk?</li>
+</ul>
+
+<p>How are we structured</p>
+
+<ul>
+  <li>How do we balance autonomy &amp; the common good?</li>
+  <li>(autonomy being the freedom and independence we need to do great work)</li>
+  <li>(common good being the things we need to do consistently in order to work well together)</li>
+</ul>
+
+<p>Management</p>
+
+<ul>
+  <li>What is our mission?</li>
+  <li>How do we set goals?</li>
+  <li>How do we track and measure success?</li>
+  <li>How are we structured?</li>
+  <li>Who is responsible for what?</li>
+</ul>
+
+<p>What else should we be thinking about?
+Setting up Design Ops team for success
+*</p>
+
+<p>manage communications and coordination across all teams and projects.
+Establish structure
+ensure consistent quality at scale. DesignOps is uniquely adept at defining, socializing, and maintaining these type of workflows.
+Burnout hustle zen
+Creative teams are uniquely vulnerable to the subjective nature of their work. On any given project, they might receive bad feedback, late feedback, conflicting feedback, and even feedback from unknown parties with no apparent involvement in a project.
+managing contracts—setting the scope of work, negotiating rates and terms, coordinating with the finance team—is absolutely crucial for team success. A DesignOps function can manage this responsibility, giving both the design team and external resources an informed and helpful point of contact
+Understand every single design process and every role contribution to it
+areas include design tooling and systems,, team development, and budgeting.</p>
+
+<p>Conclusion
+DesignOps gak bisa kerja sendiri. Please help them help you</p>
+:ET

@@ -2,24 +2,31 @@
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
+			<meta charset="utf-8">
+			<meta name="description" content="My description">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">			
 			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="stylesheet" type="text/css" href="/css/arieare.css">
+			<!--Favicons-->
+			<link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
+			<link rel="icon" type="image/png" sizes="32x32" href="/src/favicon/favicon-32x32.png">
+			<link rel="icon" type="image/png" sizes="16x16" href="/src/favicon/favicon-16x16.png">
+			<link rel="manifest" href="/src/favicon/site.webmanifest">
 		</head>
 		<body>
-			<nav class="head-nav">
-
-<a class="button-link" href="/">Home</a>
-<a class="button-link" href="/blog">Blog</a>
+			<header>
+			<nav>
+				<a href="/"><img alt="Logo" src="/src/Logo.png" height="56"></a>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/blog">Web-Log</a></li>
+					<li><a href="/">Email</a></li>
+					<li><a href="/">Who's Arie</a></li>
+				</ul>				
 			</nav>
-			<div class="container">
-			
+			</header>
 			{{ content }}
-			
-			</div><!-- /.container -->
 			<footer>
-	    		<ul>
-	        		<li><a href="mailto:arie.a.re@gmail.com">email</a></li>
-				</ul>
 			</footer>
 		</body>
 	</html>
