@@ -1,5 +1,5 @@
 :root {
-    --border-radius: 12px;
+    --border-radius: 8px;
     --box-shadow: 2px 2px 10px;
     --color: #118bee;
     --color-accent: #118bee0b;
@@ -24,10 +24,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color: #0097fc;
+        --color: #FFF501;
         --color-accent: #0097fc4f;
         --color-bg: #0F121C;
-        --color-bg-secondary: #383B43;
+        --color-bg-secondary: #191C26;
         --color-secondary: #FFF501;
         --color-secondary-accent: #e20de94f;
         --color-shadow: #bbbbbb20;
@@ -264,7 +264,7 @@ button {
     font-weight: bold;
     line-height: var(--line-height);
     margin: 1.5rem 0 0.5rem 0;
-    padding: 1rem 2rem;
+    padding: 0.5rem 0.75rem;
 }
 
 button {
