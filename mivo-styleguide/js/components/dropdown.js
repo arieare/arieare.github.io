@@ -1,11 +1,11 @@
 /*!
- * Bootstrap v3.3.4 (http://getbootstrap.com)
+ * Bootstrap v3.3.4 (https://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=f07fd579a19d4b4a19df)
+ * Generated using the Bootstrap Customizer (https://getbootstrap.com/customize/?id=f07fd579a19d4b4a19df)
  * Config saved to config.json and https://gist.github.com/f07fd579a19d4b4a19df
  */
 if (typeof jQuery === 'undefined') {
@@ -21,7 +21,7 @@ if (typeof jQuery === 'undefined') {
 
 /* ========================================================================
  * Bootstrap: dropdown.js v3.3.2
- * http://getbootstrap.com/javascript/#dropdowns
+ * https://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)

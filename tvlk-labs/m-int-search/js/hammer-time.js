@@ -1,5 +1,5 @@
 /* Hammer-time - v0.3.0
- * http://github.com/hammerjs/hammer-time
+ * https://github.com/hammerjs/hammer-time
  *
  * Copyright Alexander Schmitz and other contributors
  * Released under the MIT license

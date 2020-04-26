@@ -7,9 +7,9 @@
  * Created by Robert J. Knothe on 2010-10-25. Please report any bugs to https://github.com/BobKnothe/autoNumeric
  * Contributor by Sokolov Yura on 2010-11-07
  *
- * Copyright (c) 2011 Robert J. Knothe http://www.decorplanit.com/plugin/
+ * Copyright (c) 2011 Robert J. Knothe https://www.decorplanit.com/plugin/
  *
- * The MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * The MIT License (https://www.opensource.org/licenses/mit-license.php)
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation

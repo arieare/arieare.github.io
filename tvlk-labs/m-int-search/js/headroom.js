@@ -1,6 +1,6 @@
 /*!
  * headroom.js v0.7.0 - Give your page some headroom. Hide your header until you need it
- * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/headroom.js
+ * Copyright (c) 2014 Nick Williams - https://wicky.nillia.ms/headroom.js
  * License: MIT
  */
 
@@ -19,7 +19,7 @@
   
   /**
    * Handles debouncing of events via requestAnimationFrame
-   * @see http://www.html5rocks.com/en/tutorials/speed/animations/
+   * @see https://www.html5rocks.com/en/tutorials/speed/animations/
    * @param {Function} callback The callback to handle whichever event
    */
   function Debouncer (callback) {
@@ -241,7 +241,7 @@
   
     /**
      * Gets the height of the viewport
-     * @see http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript
+     * @see https://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript
      * @return {int} the height of the viewport in pixels
      */
     getViewportHeight : function () {
@@ -252,7 +252,7 @@
   
     /**
      * Gets the height of the document
-     * @see http://james.padolsey.com/javascript/get-document-height-cross-browser/
+     * @see https://james.padolsey.com/javascript/get-document-height-cross-browser/
      * @return {int} the height of the document in pixels
      */
     getDocumentHeight : function () {
