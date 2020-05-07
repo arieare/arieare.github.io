@@ -1,3 +1,5 @@
 name: Arie Aulia Nugraha
 markdown: kramdown
 permalink: /weblog/:year/:month/:day/:title
+plugins:
+  - jekyll-feed
