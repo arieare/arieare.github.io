@@ -1,0 +1,18 @@
+---
+layout: default
+title: Web-Log
+permalink: /weblog/
+---
+<main>
+	<h1>{{ page.title }}</h1>
+
+	  {% for post in site.posts %}
+	 <article>
+	  <aside class="weblog-post-card">
+		<span><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></span>
+		<br>	
+		<small>Updated {{ post.date | date_to_string }}</small>
+	</aside>
+</article> 	  
+	  {% endfor %}
+</main>
