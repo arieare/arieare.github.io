@@ -9,9 +9,9 @@ permalink: /weblog/
 	  {% for post in site.posts %}
 	 <article>
 	  <aside class="weblog-post-card">
-		<span><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></span>
-		<br>	
 		<small>Updated {{ post.date | date_to_string }}</small>
+		<h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+		
 	</aside>
 </article> 	  
 	  {% endfor %}
