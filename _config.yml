@@ -3,3 +3,8 @@ markdown: kramdown
 permalink: /weblog/:year/:month/:day/:title
 plugins:
   - jekyll-feed
+# Jekyll Collections
+collections:
+  pages:
+    output: true # Set to render files in _pages folder
+    permalink: /:title/ # Set the format of the permalink by default
