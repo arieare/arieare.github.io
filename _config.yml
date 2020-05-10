@@ -1,5 +1,6 @@
 name: Arie Aulia Nugraha
 markdown: kramdown
 permalink: /weblog/:year/:month/:day/:title
+url: "https://arieare.fyi"
 plugins:
   - jekyll-feed
