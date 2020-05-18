@@ -16,7 +16,7 @@
 		<body>
 			<header>
 			<nav>
-				<a href="/"><img alt="Logo" src="/src/Logo.png" height="48"></a>
+				<a class="link-home" href="/"><img alt="Logo" src="/src/Logo.png" height="48"></a>
 				<ul>
 					<li><a class="head-nav first" href="/weblog">web-log</a></li>
 					<li><a class="head-nav second" href="/follow">follow</a></li>
@@ -27,11 +27,12 @@
 			</header>
 			{{ content }}
 			<footer>
-				<!-- <nav role="navigation">
+				<nav class="mobile-menu" role="navigation">
+					<a class="link-home" href="/"><img alt="Logo" src="/src/Logo.png" height="48"></a>	
 					<div id="menuToggle">
-	
+						
 					  <input type="checkbox" />
-
+					  
 					  <span>🍔</span>
 					  
 					  <ul id="menu"> 
@@ -41,7 +42,7 @@
 						<li><a class="head-nav fourth" href="/direviewarie">#direviewarie</a></li>
 					</ul>
 					</div>
-				  </nav> -->
+				  </nav>
 			</footer>
 			<script src="/src/script/mailgo.min.js"></script>
 		</body>

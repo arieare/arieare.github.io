@@ -167,7 +167,7 @@ header a strong {
 }
 
 header nav img {
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 
 section header {
@@ -563,4 +563,116 @@ blockquote footer {
     display: flex;
     font-weight: normal;
     justify-content: flex-start;
+}
+
+.mobile-menu {
+    position: fixed;
+    width: 95vw;
+    max-width: var(--width-content);
+    bottom: 0;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.link-home {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover
+{
+  color: tomato;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  /* top: -7px;
+  left: -5px; */
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   height: 100vh;
+   top: -100vh;
+   left: -100vw;
+   padding: 50px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   transform-origin: 0% 0%;
+   transform: translate(120%, 100%);
+   transition: transform 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+ #menuToggle span
+{
+  display: block;
+  width: 48px;
+  height: 48px;
+  
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 99px;
+  
+  z-index: 1;
+  
+  transform-origin: 0px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+main{
+    margin-bottom: 2rem;
 }
