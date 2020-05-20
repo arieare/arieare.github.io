@@ -7,6 +7,7 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">			
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/arieare.css">
+			<link rel="stylesheet" type="text/css" href="/css/sitenav.css">
 			<!--Favicons-->
 			<link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
 			<link rel="icon" type="image/png" sizes="32x32" href="/src/favicon/favicon-32x32.png">
@@ -15,7 +16,7 @@
 		</head>
 		<body>
 			<header>
-			<nav>
+			<nav class="desktop-menu">
 				<a class="link-home" href="/"><img alt="Logo" src="/src/Logo.png" height="48"></a>
 				<ul>
 					<li><a class="head-nav first" href="/weblog">web-log</a></li>
@@ -28,7 +29,6 @@
 			{{ content }}
 			<footer>
 				<nav class="mobile-menu" role="navigation">
-					<a class="link-home" href="/"><img alt="Logo" src="/src/Logo.png" height="48"></a>	
 					<div id="menuToggle">
 						
 					  <input type="checkbox" />
@@ -36,6 +36,7 @@
 					  <span>🍔</span>
 					  
 					  <ul id="menu"> 
+						<li><a class="head-nav first" href="/">home</a></li>
 						<li><a class="head-nav first" href="/weblog">web-log</a></li>
 						<li><a class="head-nav second" href="/follow">follow</a></li>
 						<li><a class="head-nav third" href="/now">now</a></li>
@@ -43,6 +44,8 @@
 					</ul>
 					</div>
 				  </nav>
+				  <!-- <a href="/"><small>/arieare.co</small></a>
+				  <a href="/"><small>/twitter</small></a> -->
 			</footer>
 			<script src="/src/script/mailgo.min.js"></script>
 		</body>
