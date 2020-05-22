@@ -1,20 +1,25 @@
 ---
 layout: default
-title: Web-Log
+title: web-log
 permalink: /weblog/
 ---
 <main>
 	<h1>{{ page.title }}</h1>
 
-	  {% for post in site.posts %}
-	 <article>
-		 <p>The idea behind web-log might be a bit different than a typical blog post. While happen to be public, this space meant to be a way to help me structuring my thoughts through writings.</p>
-		 <p>Here you may find old notes got updated and reiterated as I gain more informations or as my perspective changes. Thus the list below will also sorted based on posts (new or old) that recently get updated.</p>
-	  <aside class="weblog-post-card">
-		<small>Updated {{ post.date | date_to_string }}</small>
-		<h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-		
-	</aside>
-</article> 	  
-	  {% endfor %}
+
+	<article>
+		<p>The idea behind web-log might be a bit different than a typical blog post. While happen to be public, this
+			space meant to be a way to help me structuring my thoughts through writings.</p>
+		<p>Here you may find old notes got updated and reiterated as I gain more informations or as my perspective
+			changes. Thus the list below will also sorted based on posts (new or old) that recently get updated.</p>
+
+		{% for post in site.posts %}
+		<aside class="weblog-post-card">
+			<small>Updated {{ post.date | date_to_string }}</small>
+			<h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+
+		</aside>
+		{% endfor %}
+	</article>
+
 </main>

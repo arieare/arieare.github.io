@@ -12,14 +12,13 @@
 #menuToggle a
 {
   text-decoration: none;
-  color: #232323;
-  
+  /* color: #4D5F8E; */
   transition: color 0.3s ease;
 }
-#menuToggle a:hover
+/* #menuToggle a:hover
 {
-  color: tomato;
-}
+  color: #89FF95;
+} */
 #menuToggle input
 {
   display: block;
@@ -53,7 +52,7 @@
    left: -300px;
    padding: 50px;
    
-   background: #ededed;
+   background: #191C26;
    list-style-type: none;
    -webkit-font-smoothing: antialiased;
    /* to stop flickering of text in safari */
@@ -65,8 +64,11 @@
  #menu li
  {
    padding: 10px 0;
-   font-size: 22px;
+   font-size: 1.25rem;
    display:list-item;
+   text-transform: lowercase;
+   font-variant: small-caps;
+   margin-bottom: 0.25rem;
  }
  
  /*

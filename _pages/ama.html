@@ -1,0 +1,57 @@
+---
+layout: default
+title: Ask Anonymously
+permalink: /ask/
+---
+<main>
+	<h1>{{ page.title }}</h1>
+	<p>An attempt to answer non-serious questions seriously, and <em>vice versa</em>.</p>
+	<script type="text/javascript">
+		var submitted = false;
+	</script>
+
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="
+		if(submitted) {
+			window.alert('Thanks for the question! Check back later for the answers.');
+			$('#ama-form').val('');
+			$('#ama-button').hide();
+		}">
+	</iframe>
+
+	<form
+		action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe_OYyfbX3LvAtkfYW4BK8Xjnk_m4FFtYPdDDg66cz0rZibVA/formResponse"
+		method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+		<!-- <div class="form-group"> -->
+		<!-- <label for="ama-form">Ask me Anything</label> -->
+		<textarea id="ama-form" placeholder="Your question" name="entry.862588467"></textarea>
+		<input type="submit" id="ama-button" class="button" value="Ask Away" />
+		<!-- </div> -->
+	</form>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#ama-button").hide();
+		});
+
+		$("#ama-form").keyup(function () {
+			if ($(this).val()) {
+				$("#ama-button").show();
+			} else {
+				$("#ama-button").hide();
+			}
+		});
+	</script>
+	<hr />
+	<article>
+		{% assign sortedans = site.answers | sort: "updated" | reverse %}
+		{% for qna in sortedans %}
+		<sup>Answered {{ qna.date | date_to_string }}</sup>
+		<sup>Updated {{ qna.updated | date_to_string }}</sup>
+		<h3><em>{{ qna.question }}</em></h3>
+		{{ qna.content | markdownify }}
+		<hr />
+		{% endfor %}
+
+	</article>
+
+</main>

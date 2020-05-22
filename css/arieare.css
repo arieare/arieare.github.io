@@ -1,6 +1,7 @@
 :root {
     --border-radius: 8px;
     --border-radius-small: 3px;
+    --border-radius-max: 99px;
     --box-shadow: 2px 2px 10px;
 
     --color-palette-frost: #7CE9F8;
@@ -9,6 +10,7 @@
     --color-palette-green: #89FF95;
     --color-palette-mute-green: #CDE9D4;
     --color-palette-lavender: #D77CF8;
+    --color-palette-ink: #4D5F8E;
 
     --color: var(--color-palette-thunder);
     --color-accent: #0097fc4f;
@@ -20,9 +22,8 @@
     --color-text: var(--color-palette-mute-frost);
     --color-text-secondary: var(--color-palette-mute-green);
 
-    
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    
+
     --hover-brightness: 1.1;
     --justify-important: center;
     --justify-normal: left;
@@ -31,7 +32,7 @@
     --width-card: 285px;
     --width-card-medium: 460px;
     --width-card-wide: 800px;
-    --width-content: 650px; 
+    --width-content: 650px;
 }
 
 
@@ -54,10 +55,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
 }
 
 /**
@@ -66,8 +71,9 @@ textarea {
  */
 
 button,
-input { /* 1 */
-  overflow: visible;
+input {
+    /* 1 */
+    overflow: visible;
 }
 
 /**
@@ -76,8 +82,9 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
-  text-transform: none;
+select {
+    /* 1 */
+    text-transform: none;
 }
 
 /**
@@ -88,9 +95,9 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  /* -webkit-appearance: button; */
-  -webkit-appearance: none;
--webkit-border-radius:0px;
+    /* -webkit-appearance: button; */
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
 }
 
 
@@ -123,8 +130,8 @@ main {
 hr {
     background-color: var(--color-bg-secondary);
     border: none;
-    height: 1px;
-    margin: 4rem 0;
+    height: 0.5px;
+    margin: 2rem 0;
 }
 
 section {
@@ -260,6 +267,10 @@ h6 {
     line-height: var(--line-height);
 }
 
+h4 {
+    margin: 0.5rem 0;
+}
+
 mark {
     padding: 0.1rem;
 }
@@ -270,7 +281,7 @@ ul li {
 }
 
 p {
-    margin: 0.75rem 0 1.75rem;
+    margin: 0.25rem 0 1.25rem;
     padding: 0;
 }
 
@@ -291,15 +302,17 @@ small {
 }
 
 sup {
-    background-color: var(--color-secondary);
-    border-radius: var(--border-radius);
-    color: var(--color-bg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius-max);
+    color: var(--color-text-secondary);
     font-size: xx-small;
-    font-weight: bold;
-    margin: 0.2rem;
-    padding: 0.2rem 0.3rem;
+    font-weight: normal;
+    margin-right: 0.2rem;
+    padding: 0.2rem 0.5rem;
     position: relative;
     top: -2px;
+    text-transform: lowercase;
+    font-variant: small-caps;
 }
 
 /* Links */
@@ -410,6 +423,10 @@ select,
 textarea {
     display: block;
     font-size: inherit;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
     max-width: var(--width-card-wide);
 }
 
@@ -524,28 +541,43 @@ blockquote footer {
     letter-spacing: 0.075em;
     font-weight: normal;
 }
+
 .head-nav:hover {
     cursor: pointer;
     filter: brightness(var(--hover-brightness));
     text-decoration: none;
-    
+
 }
-.head-nav.first{
+
+.head-nav.zero {
+    color: var(--color-mute-frost);
+}
+
+.head-nav.first {
     color: var(--color-palette-thunder);
 }
-.head-nav.second{
+
+.head-nav.second {
     color: var(--color-palette-green);
 }
-.head-nav.third{
+
+.head-nav.third {
     color: var(--color-palette-lavender);
 }
-.head-nav.fourth{
+
+.head-nav.fourth {
     color: var(--color-palette-frost);
+}
+.head-nav.fourth {
+    color: var(--color-palette-frost);
+}
+.head-nav.fifth {
+    color: var(--color-palette-ink);
 }
 
 
 
-.svg-icon{
+.svg-icon {
     display: inline-flex;
     align-self: center;
     top: .125em;
@@ -559,10 +591,12 @@ blockquote footer {
     font-size: small;
     line-height: var(--line-height);
 }
+
 .subscription-input-button {
     margin: 0;
 }
-.subscription-input{
+
+.subscription-input {
     align-items: center;
     display: flex;
     font-weight: normal;
@@ -585,6 +619,6 @@ blockquote footer {
     margin-right: 1rem;
 }
 
-main{
+main {
     margin-bottom: 2rem;
 }

@@ -13,21 +13,32 @@
 			<link rel="icon" type="image/png" sizes="32x32" href="/src/favicon/favicon-32x32.png">
 			<link rel="icon" type="image/png" sizes="16x16" href="/src/favicon/favicon-16x16.png">
 			<link rel="manifest" href="/src/favicon/site.webmanifest">
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		</head>
 		<body>
 			<header>
-			<nav class="desktop-menu">
+			<nav>
 				<a class="link-home" href="/"><img alt="Logo" src="/src/Logo.jpg" height="48"></a>
 				<ul>
-					<li><a class="head-nav first" href="/weblog">web-log</a></li>
-					<li><a class="head-nav second" href="/follow">follow</a></li>
-					<li><a class="head-nav third" href="/now">now</a></li>
-					<li><a class="head-nav fourth" href="/direviewarie">#direviewarie</a></li>
+					<li><a class="head-nav first desktop-menu" href="/weblog">web-log</a></li>
+					<li><a class="head-nav second desktop-menu" href="/follow">follow</a></li>
+					<li><a class="head-nav third desktop-menu" href="/now">now</a></li>
+					<li><a class="head-nav fourth desktop-menu" href="/ask">ask</a></li>
+					<li><a class="head-nav fifth desktop-menu" href="/direviewarie">#direviewarie</a></li>
 				</ul>				
 			</nav>
 			</header>
 			{{ content }}
 			<footer>
+				<small style="font-family: 'Roboto Mono', 'Helvetica Neue', Arial, sans-serif;
+				font-weight: 400;
+				-webkit-font-smoothing: antialiased;
+				font-size: 12px;
+				letter-spacing: 1px;
+				color: #C8CACA;
+				text-decoration: none;font-variant: small-caps;">Indonesia, 2020 × arieare.co made with ☕️</small>
+
 				<nav class="mobile-menu" role="navigation">
 					<div id="menuToggle">
 						
@@ -36,17 +47,18 @@
 					  <span class="checkburger">🍔</span>
 					  
 					  <ul id="menu"> 
-						<li><a class="head-nav first" href="/">home</a></li>
+						<li><a class="head-nav zero" href="/">home</a></li>
 						<li><a class="head-nav first" href="/weblog">web-log</a></li>
 						<li><a class="head-nav second" href="/follow">follow</a></li>
 						<li><a class="head-nav third" href="/now">now</a></li>
-						<li><a class="head-nav fourth" href="/direviewarie">#direviewarie</a></li>
+						<li><a class="head-nav fourth" href="/ask">ask</a></li>
+						<li><a class="head-nav fifth" href="/direviewarie">#direviewarie</a></li>
 					</ul>
 					</div>
 				  </nav>
 				  <!-- <a href="/"><small>/arieare.co</small></a>
 				  <a href="/"><small>/twitter</small></a> -->
-				  <small style="opacity:50%;font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;">arieare.co made with ☕️</small>
+
 			</footer>
 			<script src="/src/script/mailgo.min.js"></script>
 		</body>
