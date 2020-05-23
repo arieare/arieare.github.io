@@ -20,7 +20,7 @@ permalink: /weblog/
 			font-size: x-small;
 			-webkit-font-smoothing: antialiased;
 			text-transform: uppercase;
-			text-decoration: none;margin-right:1rem;">{{ post.date | date_to_string }}</small>
+			text-decoration: none;margin-right:1rem;">{{ post.date | date: "%Y/%m/%d" }}</small>
 			<h4><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
 		</aside>
 		{% endfor %}
