@@ -117,6 +117,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     padding: 1rem 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 footer,
@@ -190,9 +191,12 @@ section header {
 nav {
     align-items: center;
     display: flex;
-    font-weight: normal;
+    font-weight: 300;
     justify-content: space-between;
     margin-bottom: 5rem;
+    font-family: 'DM Mono', 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    font-size: small;
 }
 
 nav ul {
@@ -265,8 +269,12 @@ h4,
 h5,
 h6 {
     line-height: var(--line-height);
+    font-family: 'DM Mono', 'Roboto Mono', monospace;
+    font-weight: 100;
 }
-
+h3,h4 {
+    font-weight: 500;
+}
 h4 {
     margin: 0.5rem 0;
 }
@@ -306,13 +314,14 @@ sup {
     border-radius: var(--border-radius-max);
     color: var(--color-text-secondary);
     font-size: xx-small;
+    letter-spacing: 1px;
     font-weight: normal;
     margin-right: 0.2rem;
     padding: 0.2rem 0.5rem;
     position: relative;
     top: -2px;
-    text-transform: lowercase;
-    font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: 'DM Mono', 'Roboto Mono', monospace;
 }
 
 /* Links */
@@ -621,4 +630,12 @@ blockquote footer {
 
 main {
     margin-bottom: 2rem;
+}
+
+.weblog-post-card {
+    display: flex;
+    align-items: center;
+    background-color: none;
+    /* justify-content: center; */
+
 }

@@ -5,7 +5,7 @@ permalink: /ask/
 ---
 <main>
 	<h1>{{ page.title }}</h1>
-	<p>An attempt to answer non-serious questions seriously, and <em>vice versa</em>. The answers below are my own opinions.</p>
+	<p>An attempt to answer non-serious questions seriously — <em>vice versa</em>. The answers below are my own opinions.</p>
 	<script type="text/javascript">
 		var submitted = false;
 	</script>
@@ -47,7 +47,7 @@ permalink: /ask/
 		{% for qna in sortedans %}
 		<sup>Answered {{ qna.date | date_to_string }}</sup>
 		<sup>Updated {{ qna.updated | date_to_string }}</sup>
-		<h3><em>{{ qna.question }}</em></h3>
+		<h3 id="{{ qna.qnaid }}"><em>{{ qna.question }}</em></h3>
 		{{ qna.content | markdownify }}
 		<hr />
 		{% endfor %}

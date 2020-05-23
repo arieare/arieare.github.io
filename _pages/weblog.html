@@ -1,6 +1,6 @@
 ---
 layout: default
-title: web-log
+title: Web-Log
 permalink: /weblog/
 ---
 <main>
@@ -15,9 +15,13 @@ permalink: /weblog/
 
 		{% for post in site.posts %}
 		<aside class="weblog-post-card">
-			<small>Updated {{ post.date | date_to_string }}</small>
-			<h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-
+			<small style="font-family: 'DM Mono', 'Roboto Mono', monospace;
+			font-weight: 100;
+			font-size: x-small;
+			-webkit-font-smoothing: antialiased;
+			text-transform: uppercase;
+			text-decoration: none;margin-right:1rem;">{{ post.date | date_to_string }}</small>
+			<h4><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
 		</aside>
 		{% endfor %}
 	</article>
