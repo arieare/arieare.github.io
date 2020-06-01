@@ -45,7 +45,7 @@ permalink: /ask/
 	<article>
 		{% assign sortedans = site.answers | sort: "updated" | reverse %}
 		{% for qna in sortedans %}
-		<sup>Answered {{ qna.date | date_to_string }}</sup>
+		<!-- <sup>Answered {{ qna.date | date_to_string }}</sup> -->
 		<sup>Updated {{ qna.updated | date_to_string }}</sup>
 		<h3 id="{{ qna.qnaid }}"><em>{{ qna.question }}</em></h3>
 		{{ qna.content | markdownify }}
