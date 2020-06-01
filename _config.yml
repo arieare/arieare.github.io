@@ -1,7 +1,7 @@
 name: arieare
 markdown: kramdown
-permalink: /weblog/:year/:month/:day/:title
-url: "https://arieare.fyi"
+permalink: /weblog/:title
+url: "https://arieare.co"
 plugins:
   - jekyll-feed
 # Jekyll Collections

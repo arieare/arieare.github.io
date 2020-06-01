@@ -3,8 +3,10 @@ layout: default
 ---
 <main>
   <header>
+    <hr>
 <h1>{{ page.title }}</h1>
-<p class="meta">Updated {{ page.date | date_to_string }}</p>
+<small class="meta">Updated {{ page.date | date_to_string }}</small>
+<hr>
 </header>
 <article>
   {{ content }}

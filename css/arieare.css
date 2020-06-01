@@ -11,11 +11,12 @@
     --color-palette-mute-green: #CDE9D4;
     --color-palette-lavender: #D77CF8;
     --color-palette-ink: #4D5F8E;
+    --color-palette-grey: #383B43;
 
     --color: var(--color-palette-thunder);
     --color-accent: #0097fc4f;
     --color-bg: #0F121C;
-    --color-bg-secondary: #191C26;
+    --color-bg-secondary: var(--color-palette-grey);
     --color-secondary: var(--color-palette-thunder);
     --color-secondary-accent: #920de90b;
     --color-shadow: #bbbbbb20;
@@ -48,6 +49,10 @@
         --color-text: var(--color-palette-mute-frost);
         --color-text-secondary: var(--color-palette-mute-green);
     }
+}
+
+html {
+    font-size: 120%;
 }
 
 button,
@@ -273,7 +278,7 @@ h6 {
     font-weight: 300;
 }
 h3,h4 {
-    font-weight: 500;
+    font-weight: 400;
 }
 h4 {
     margin: 0.5rem 0;
@@ -291,6 +296,7 @@ ul li {
 p {
     margin: 0.25rem 0 1.25rem;
     padding: 0;
+    opacity: 0.85;
 }
 
 pre {
@@ -332,7 +338,8 @@ a {
 
 a:hover {
     filter: brightness(var(--hover-brightness));
-    text-decoration: underline;
+    color: var(--color-palette-green);
+    /* text-decoration: underline; */
 }
 
 a b,
@@ -540,49 +547,6 @@ blockquote footer {
     filter: brightness(var(--hover-brightness));
 }
 
-.head-nav {
-    border-radius: var(--border-radius-small);
-    display: inline-block;
-    line-height: var(--line-height);
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-variant: small-caps;
-    letter-spacing: 0.075em;
-    font-weight: normal;
-}
-
-.head-nav:hover {
-    cursor: pointer;
-    filter: brightness(var(--hover-brightness));
-    text-decoration: none;
-
-}
-
-.head-nav.zero {
-    color: var(--color-mute-frost);
-}
-
-.head-nav.first {
-    color: var(--color-palette-thunder);
-}
-
-.head-nav.second {
-    color: var(--color-palette-green);
-}
-
-.head-nav.third {
-    color: var(--color-palette-lavender);
-}
-
-.head-nav.fourth {
-    color: var(--color-palette-frost);
-}
-.head-nav.fourth {
-    color: var(--color-palette-frost);
-}
-.head-nav.fifth {
-    color: var(--color-palette-ink);
-}
 
 
 
@@ -634,7 +598,7 @@ main {
 
 .weblog-post-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background-color: none;
     /* justify-content: center; */
 
