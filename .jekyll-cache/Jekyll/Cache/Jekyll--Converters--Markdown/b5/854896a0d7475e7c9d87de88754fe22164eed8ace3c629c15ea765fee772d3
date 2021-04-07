@@ -1,16 +1,0 @@
-I"<p>Okay, this one took me longer to answer since I need to find better analogy than a LEGO block to illustrate a design system. It’s easy to imagine, yes, but that’s not entirely accurate. So thank you for this question!</p>
-
-<p>A system is not something you build and expect to yield exact same results everytime, especially when it involves <em>people</em>. You can, of course, control every aspect of the system, making sure every gears doing its job properly. But again since it involves people, at best they will use the system grumpily and at worst they will simply abandon it.</p>
-
-<p>Thus, a good design system must bake changes in it to enable itself grows as people use it. LEGO block is not a good analogy for it.</p>
-
-<p>We have the first integral part of a design system. <strong>👥 The people</strong> who will use it esentially becoming part of the system. Who can approve the change? Who’s responsible to make the change happens? All of this are about people. People is the integral part of a design system.</p>
-
-<p>What the people care about? Making their job easier. Having a degree of clarity. Can I use this? Why can’t I use this? Can I change it? How to change it? Why can’t I change it? Why this thing was built this way?</p>
-
-<p>All of those questions should be made clear, preferably documented somewhere to be used as a quick and reliable reference (I’m trying my best to avoid <em>source of truth</em> as a term because remember, we want to bake changes in the system). All the know-how must be aligned and agreed between people. Way of working must be formalized and evaluated over time. Existing rituals must be preserved and improved upon, thus the second integral part of a design system; <strong>🔄 the process</strong>. Documented guidelines and workflow falls under this part of a design system.</p>
-
-<p>Then the last but not least integral part of a design system, the thing that we work upon; <strong>🧰 the tool</strong> itself. UI Kit, Icon Kit, and other kits including plugins, snippets, anything that can be packaged in reusable bits to make the process more efficient. Personally I’m a bit sad with all the “how to build a design system” articles out there that only touch the tooling part. It’s allright, but doesn’t give a full picture of what a design system is. My hypothesis is this might be the most fun and the most visible part of building a design system (while people is the least fun part 😜).</p>
-
-<p>With <em>people</em>, <em>process</em>, and <em>tools</em> as integral part of a design system take notes that; each company comprise of different set of people with different backgrounds and goals (notice that I haven’t mention any designers in this answer because people in design system includes everyone who builds the digital product; including the engineers and product managers). Each team also has different rituals and way of working. I believe there are no two identical design system. It’s a really good concept and idea, but might take different forms in your organization.</p>
-:ET
